@@ -1,0 +1,40 @@
+<h3>New Event</h3>
+
+<form action="<%= events_url %>" method="post">
+  <input type="hidden" name="authenticity_token"
+                       value="<%= form_authenticity_token %>" >
+
+  <label>Group</label>
+  <select name="event[group_id]">
+    <% current_user.managed_groups.each do |group| %>
+      <option value="<%= group.id %>"><%= group.name %></option>
+    <% end %>
+  </select>
+  <br>
+
+  <label>Title</label>
+  <input type="text" name="event[title]" value="<%= @event.title %>">
+  <br>
+
+  <label>Date</label>
+  <!-- <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+    <input class="span2" size="16" type="text" value="12-02-2012">
+    <span class="add-on"><i class="icon-th"></i></span>
+  </div> -->
+  <input type="date" name="event[date]" value="<%= @event.date %>">
+  <br>
+
+  <label>Time</label>
+  <!-- <input id="timepicker" data-template="modal" data-minute-step="1" data-modal-backdrop="true" type="text"/> -->
+  <input type="time" name="event[time]">
+  <br>
+
+  <label>Location</label>
+  <input type="text" name="event[location]" value="<%= @event.location %>">
+  <br>
+
+  <label>Description</label>
+  <input type="textarea" name="event[description]" value="<%= @event.description %>">
+
+  <input type="submit">
+</form>
