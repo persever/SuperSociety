@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require composite_view
 //= require_tree .

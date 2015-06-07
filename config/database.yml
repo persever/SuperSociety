@@ -5,8 +5,8 @@ default: &default
 
 development:
   <<: *default
-  database: powerup_app_development
+  database: supersociety_development
 
 test:
   <<: *default
-  database: powerup_app_test
+  database: supersociety_test
