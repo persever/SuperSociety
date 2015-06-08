@@ -6,10 +6,9 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to event_url(@event)
+      render json: @group
     else
-      flash.now[:errors] = @event.errors.full_messages
-      render :new
+      render json: @event.errors.full_messages, status: :unprecessable_entity
     end
   end
 

@@ -5,16 +5,17 @@ class Api::GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+    @group.creator_id = current_user.id
     if @group.save
-      redirect_to group_url(@group)
+      render json: @group
     else
-      flash.now[:errors] = @group.errors.full_messages
-      render :new
+      render json: @group.errors.full_messages, status: :unprecessable_entity
     end
   end
 
   def show
     @group = Group.find(params[:id])
+    render json: @group
   end
 
   def index

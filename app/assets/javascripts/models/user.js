@@ -1,8 +1,8 @@
 SuperSocietyApp.Models.User = Backbone.Model.extend({
   url: "/",
 
-  initialize: function () {
-    this.id = currentUser.id;
+  initialize: function (options) {
+    this.id = options.id;
   },
 
   managedGroups: function () {

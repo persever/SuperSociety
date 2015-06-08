@@ -5,6 +5,10 @@ window.SuperSocietyApp = {
   Routers: {},
   test: "test",
   initialize: function() {
+
+    SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({ id: currentUserId});
+    SuperSocietyApp.currentUser.fetch();
+
     SuperSocietyApp.groups = new SuperSocietyApp.Collections.Groups();
     SuperSocietyApp.groups.fetch({ reset: true });
 

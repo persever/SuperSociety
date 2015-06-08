@@ -4,7 +4,8 @@
 
   <label>Group</label>
   <select name="event[group_id]">
-    <% currentUserManagedGroups.each(function (group) { %>
+    <% groups.each(function (group) { %>
+      <option value="<%= group.id %>"><%= group.escape("name") %></option>
       <option value="<%= group.id %>"><%= group.escape("name") %></option>
     <% }) %>
   </select>
@@ -32,7 +33,7 @@
   <br>
 
   <label>Description</label>
-  <input type="textarea" name="event[description]" value="<%= event.escape("description") %>">
+  <textarea name="event[description]" value="<%= event.escape("description") %>"></textarea>
 
   <input type="submit">
 </form>
