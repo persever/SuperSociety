@@ -18,8 +18,10 @@
     <script type="text/javascript">
         window.currentUserManagedGroupIds = "<%= [] %>"
     </script>
-    <%= link_to "Sign In", new_user_url %>
-    <%= link_to "Sign Up", new_user_url %>
+    <% if request.env['PATH_INFO'] != "/users/new" && request.env['PATH_INFO'] != "/users" %>
+      <%= link_to "Sign In", new_user_url %>
+      <%= link_to "Sign Up", new_user_url %>
+    <% end %>
   <% end %>
 
   <%= yield %>

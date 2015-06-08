@@ -20,7 +20,6 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();
-    console.log(attrs)
     this.model.save(attrs, {
       success: function () {
         SuperSocietyApp.groups.add(this.model);

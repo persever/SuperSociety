@@ -1,5 +1,11 @@
-- make user signup/login single form with two separate options
-- remove session route when this works
+- signout goes to session url, fix that to redirect to new users (very low priority)
+
+- currentusermanagedgroups is all groups because no groups spcified so it auto fetches all in namespace init
+
+- filepicker for sign up but not sign in...
+- make users/new route something more appropriate to dual functionality...
+- make new users form not shared anymore? you need to make the naming more clear
+- look up good practices for making single-page sing in/ups
 
 - make group composite view for eventshow or eventsindex
 
