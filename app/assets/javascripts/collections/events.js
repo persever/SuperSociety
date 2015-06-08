@@ -11,6 +11,19 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
   },
 
   getOrFetch: function (id) {
+    var event = this.get(id);
+    var events = this;
+    if (event) {
+      event.fetch();
+    } else {
+      event = new SuperSocietyApp.Models.Event({ id: id });
+      event.fetch({
+        success: function () {
+          events.add(event);
+        }
+      });
+    }
 
+    return event;
   }
 });
