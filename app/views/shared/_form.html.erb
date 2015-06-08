@@ -1,0 +1,12 @@
+<h3><%= heading %></h3>
+
+<form action="<%= url %>" method="post">
+  <input type="hidden" name="authenticity_token"
+                       value="<%= form_authenticity_token %>" >
+  <label>Username</label>
+  <input type="text" name="user[username]" value="<%= instance.username %>"></input>
+  <label>Password</label>
+  <input type="password"name="user[password]" value="<%= instance.password %>"></input>
+
+  <input type="submit" value="Sign Up" name="submission"></input><input type="submit" value="Log In" name="submission"></input>
+</form>

@@ -1,4 +1,5 @@
 - make user signup/login single form with two separate options
+- remove session route when this works
 
 - make group composite view for eventshow or eventsindex
 
@@ -6,3 +7,5 @@
 
 
 - make filepicker more site appropriate
+
+- make appropriate rails route hits redirect to appropriate static page route

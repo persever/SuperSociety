@@ -1,12 +1,1 @@
-<h3>Sign In</h3>
-
-<form action="<%= session_url %>" method="post">
-  <input type="hidden" name="authenticity_token"
-                       value="<%= form_authenticity_token %>" >
-  <label for="username">Username</label>
-  <input type="text" id="username" name="session[username]" value="<%= @user.username %>"></input>
-  <label for="password">Password</label>
-  <input type="password" id="password" name="session[password]" value="<%= @user.password %>"></input>
-
-  <input type="submit"></input>
-</form>
+<%= render "shared/form", heading: "Sign In", url: session_url, type: "session", instance: @session %>
