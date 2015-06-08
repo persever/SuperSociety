@@ -16,14 +16,29 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     return this;
   },
 
+  uploadPhoto: function () {
+    // filepicker stuff
+    Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
+  },
+
   submit: function (event) {
     event.preventDefault();
     var attrs = $(event.target).serializeJSON();
     this.model.save(attrs, {
       success: function () {
         SuperSocietyApp.groups.add(this.model);
+
+        // this.uploadPhoto;
         Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
-      }.bind(this)
+      }.bind(this),
+
+      error: function (model, response) {
+        $(".errors").empty();
+        response.responseJSON.forEach(function (message) {
+          var $messageLi = $("<li>").text(message);
+          $(".errors").append($messageLi);
+        })
+      }
     });
   }
 });

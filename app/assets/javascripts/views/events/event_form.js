@@ -1,11 +1,15 @@
 SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   template: JST["events/form"],
 
+  events: {
+    "submit form": "submit"
+  },
+
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
     SuperSocietyApp.groups.fetch();
-    SuperSocietyApp.currentUser.fetch();
-    this.listenTo(SuperSocietyApp.currentUser, "sync", this.render);
+    // SuperSocietyApp.currentUser.fetch();
+    // this.listenTo(SuperSocietyApp.currentUser, "sync", this.render);
   },
 
   render: function () {
@@ -23,7 +27,15 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       success: function () {
         SuperSocietyApp.events.add(this.model);
         Backbone.history.navigate("events/" + this.model.id, { trigger: true });
-      }.bind(this)
+      }.bind(this),
+
+      error: function (model, response) {
+        $(".errors").empty();
+        response.responseJSON.forEach(function (message) {
+          var $messageLi = $("<li>").text(message);
+          $(".errors").append($messageLi);
+        })
+      }
     });
   }
 });
