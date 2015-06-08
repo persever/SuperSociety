@@ -19,6 +19,12 @@ class User < ActiveRecord::Base
     user
   end
 
+  def managed_group_ids
+    ids = []
+    self.managed_groups.each { |group| ids << group.id }
+    ids
+  end
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

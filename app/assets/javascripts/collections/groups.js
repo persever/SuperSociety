@@ -3,9 +3,9 @@ SuperSocietyApp.Collections.Groups = Backbone.Collection.extend({
   url: "/api/groups",
 
   initialize: function (options) {
-    if (options) {
-      this.id = options.id;
-    }
+    // if (options) {
+    //   this.id = options.id;
+    // }
   },
 
   getOrFetch: function (id) {
