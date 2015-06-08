@@ -16,7 +16,7 @@ Api::EventsController (create, new, destroy, update, edit)
 
 ### Views
 * GroupForm
-* PostForm
+* EventForm
 
 ## Gems/Libraries
 * Filepicker

@@ -21,9 +21,9 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // modal subview
   newGroup: function () {
-    // var group = new SuperSocietyApp.Models.Group();
-    // var groupForm = new SuperSocietyApp.Views.GroupForm({ model: group });
-    // this.$rootEl.html(groupForm.render().$el);
+    var group = new SuperSocietyApp.Models.Group();
+    var groupForm = new SuperSocietyApp.Views.GroupForm({ model: group });
+    this.$rootEl.html(groupForm.render().$el);
   },
 
   // composite view
@@ -43,9 +43,9 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // modal subview
   newEvent: function () {
-    // var event = new SuperSocietyApp.Models.Event();
-    // var eventForm = new SuperSocietyApp.Views.EventForm({ model: event });
-    // this.$rootEl.html(eventForm.render().$el);
+    var event = new SuperSocietyApp.Models.Event();
+    var eventForm = new SuperSocietyApp.Views.EventForm({ model: event });
+    this.$rootEl.html(eventForm.render().$el);
   },
 
   // subview

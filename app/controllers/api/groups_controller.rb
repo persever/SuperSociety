@@ -22,6 +22,15 @@ class Api::GroupsController < ApplicationController
     render json: @groups
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
   private
 
     def group_params

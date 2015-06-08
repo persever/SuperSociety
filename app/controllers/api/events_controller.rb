@@ -23,6 +23,15 @@ class Api::EventsController < ApplicationController
     render json: @events
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
   private
 
     def event_params
