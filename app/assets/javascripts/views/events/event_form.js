@@ -7,23 +7,21 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    // SuperSocietyApp.groups.fetch();
-    // this.listenTo(SuperSocietyApp.groups, "sync", this.render);
     SuperSocietyApp.currentUserManagedGroups.fetch();
     this.listenTo(SuperSocietyApp.currentUserManagedGroups, "sync", this.render);
   },
 
   render: function () {
-    console.log(SuperSocietyApp.currentUserManagedGroups);
     this.$el.html(this.template({
       event: this.model,
-      // groups: SuperSocietyApp.groups
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
     return this;
   },
 
   submit: function () {
+    event.preventDefault();
+
     var attrs = $(event.target).serializeJSON();
     this.model.save(attrs, {
       success: function () {

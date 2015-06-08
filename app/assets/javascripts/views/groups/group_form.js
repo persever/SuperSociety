@@ -23,6 +23,7 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
 
   submit: function (event) {
     event.preventDefault();
+
     var attrs = $(event.target).serializeJSON();
     this.model.save(attrs, {
       success: function () {

@@ -6,16 +6,12 @@ window.SuperSocietyApp = {
   test: "test",
   initialize: function() {
 
-    // SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({ id: currentUserId});
-    // SuperSocietyApp.currentUser.fetch();
-
     SuperSocietyApp.currentUserManagedGroups = new SuperSocietyApp.Collections.Groups();
     var groupIds = JSON.parse(currentUserManagedGroupIds)
     groupIds.forEach(function (id) {
       var groupModel = new SuperSocietyApp.Models.Group({ id: id });
       SuperSocietyApp.currentUserManagedGroups.add(groupModel);
     });
-    SuperSocietyApp.currentUserManagedGroups.fetch();
 
     SuperSocietyApp.groups = new SuperSocietyApp.Collections.Groups();
     SuperSocietyApp.groups.fetch({ reset: true });

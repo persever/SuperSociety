@@ -1,4 +1,8 @@
 // SuperSocietyApp.Models.User = Backbone.Model.extend({
+//
+//  MAY STILL WANT FOR MEMBER SIDEBARS!!! (and profiles if you get there)
+//  KEEP EVERYTHING SENSITIVE PRIVATE!!!
+//
 //   url: "/",
 //
 //   initialize: function (options) {
