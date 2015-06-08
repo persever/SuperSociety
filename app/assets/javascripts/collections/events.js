@@ -6,7 +6,11 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
     this.group = options.group;
   },
 
-  comparator: function (ssevent) {
-    return ssevent.get("date");
+  comparator: function (event) {
+    return event.get("date");
+  },
+
+  getOrFetch: function (id) {
+
   }
 });

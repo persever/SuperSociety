@@ -6,7 +6,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   },
 
   render: function () {
-    this.$el.html(this.template({ ssevent: this.model }));
+    this.$el.html(this.template({ event: this.model }));
     return this;
   }
 });

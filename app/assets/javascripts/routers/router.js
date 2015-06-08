@@ -28,7 +28,8 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   // subview
   groupsIndex: function () {
     var groups = this.groups.fetch();
-    new SuperSocietyApp.Views.GroupsIndex({ collection: groups });
+    var groupsIdx = new SuperSocietyApp.Views.GroupsIndex({ collection: groups });
+    this.$rootEl.html(groupsIdx.render().$el);
   },
 
   // modal subview
@@ -39,9 +40,10 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // subview
   eventsIndex: function () {
-    var events = this.events.fetch();
-    console.log(SuperSocietyApp.Views);
-    new SuperSocietyApp.Views.EventsIndex({ collection: events });
+    var events = this.events;
+    events.fetch();
+    var eventsIdx = new SuperSocietyApp.Views.EventsIndex({ collection: events });
+    this.$rootEl.html(eventsIdx.render().$el);
   },
 
   _swapView: function (view) {
