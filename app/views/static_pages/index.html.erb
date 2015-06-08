@@ -1,1 +1,13 @@
 <div id="content"></div>
+
+<script>
+    if (window.currentUserManagedGroupIds !== undefined) {
+      SuperSocietyApp.currentUserManagedGroups = new SuperSocietyApp.Collections.Groups();
+      var groupIds = JSON.parse(currentUserManagedGroupIds);
+      groupIds.forEach(function (id) {
+        var groupModel = new SuperSocietyApp.Models.Group({ id: id });
+        SuperSocietyApp.currentUserManagedGroups.add(groupModel);
+      });
+    }
+    console.log(SuperSocietyApp.currentUserManagedGroups);
+</script>
