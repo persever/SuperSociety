@@ -45,13 +45,13 @@ SuperSociety is a clone of Meetup built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Basic Groups and Events (~1 day)
+### Phase 1: User Authentication, Basic Groups and Events (<1 day)
 I will implement user authentication in Rails, and enable users to create groups
 and events with simple Rails view forms.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Group and Event Shows (~1-2 days)
+### Phase 2: Viewing Group and Event Shows (<1 day)
 I will add API routes to serve group and event data as JSON, then add Backbone
 models and collections that fetch data from those routes. The group show view
 will be a composite view, and the event show view will be nested inside of that

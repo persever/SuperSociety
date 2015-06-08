@@ -13,9 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require underscore
 //= require backbone
 //= require composite_view
-//= require bootstrap-datepicker
-//= require bootstrap-timepicker
+//= require super_society_app
+//= require_tree ../templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree .
