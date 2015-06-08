@@ -1,7 +1,7 @@
 SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   routes: {
-    "": "index",
+    "": "root",
     "groups/new": "newGroup",
     "groups/:id": "groupShow",
     "groups": "groupsIndex",
@@ -12,22 +12,44 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
+    this.groups = options.groups;
+    this.events = options.events;
   },
 
-  index: function () {},
+  // home/search, composite view
+  root: function () {},
 
+  // modal subview
   newGroup: function () {},
 
+  // composite view
   groupShow: function () {},
 
-  groupsIndex: function () {},
+  // subview
+  groupsIndex: function () {
+    var groups = this.groups.fetch();
+    new SuperSocietyApp.Views.GroupsIndex({ collection: groups });
+  },
 
+  // modal subview
   newEvent: function () {},
 
+  // subview
   eventShow: function () {},
 
-  eventsIndex: function () {},
+  // subview
+  eventsIndex: function () {
+    var events = this.events.fetch();
+    console.log(SuperSocietyApp.Views);
+    new SuperSocietyApp.Views.EventsIndex({ collection: events });
+  },
 
-  _swapView: function (view) {}
+  _swapView: function (view) {
+    if (this._currentView) {
+      this._currentView.remove();
+    }
+    this._currentView = view;
+    this.$rootEl.html(view.render().$el);
+  }
 
 });
