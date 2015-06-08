@@ -16,20 +16,14 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     return this;
   },
 
-  uploadPhoto: function () {
-    // filepicker stuff
-    Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
-  },
-
   submit: function (event) {
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();
+    console.log(attrs)
     this.model.save(attrs, {
       success: function () {
         SuperSocietyApp.groups.add(this.model);
-
-        // this.uploadPhoto;
         Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
       }.bind(this),
 

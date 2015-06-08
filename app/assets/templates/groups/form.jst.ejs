@@ -1,9 +1,14 @@
 <h3>New Group</h3>
 
+<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+
 <form>
 
   <label>Name</label>
   <input type="text" name="group[name]" value="<%= group.escape("name") %>">
+  <br>
+
+  <input type="filepicker" name="group[filepicker_url]" data-fp-apikey="Abm0dWPxnTQq5GImNFmOIz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-maxsize="15M" data-fp-store-location="s3" data-fp-services="CLOUDDRIVE,COMPUTER,DROPBOX,FACEBOOK,GITHUB,GOOGLE_DRIVE,FLICKR,GMAIL,INSTAGRAM,SKYDRIVE,IMAGE_SEARCH,URL,WEBCAM">
   <br>
 
   <label>Description</label>
