@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#index'
 
   resource :session, only: [:destroy]
-  resources :users, only: [:new, :create], path: "bifrost"
+  resources :users, only: [:new, :create], path: "welcome"
 
   namespace :api, defaults: { format: :json } do
     resources :groups

@@ -1,5 +1,4 @@
 (phase 2)
-- make group composite view for eventshow/eventsindex > just need to finish _swapSubview, remove not working
 - button to go back to all of the group's events
 
 (phase 3)
