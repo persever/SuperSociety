@@ -7,7 +7,7 @@
 
 (phase 3)
 - do indices have to be composite views?
-- make links for groups and events index items!
+- make links for groups and events index items! (but only when not in group show......... or something...)
 - toggle join/unjoin buttons for group and event shows, and events indexitems!!!!!!
 
 (phase 4)
@@ -21,7 +21,6 @@
 - if there are no notes above this, update the readme time expectations, close the issues, and push
 
 - fix currentUserManagedGroups assoc? can you make it like the groups' events one?
-- using where? pluck?
 
 - make every route call redirect to signin page if no current user... currently tacks it on....
 
@@ -29,4 +28,4 @@
 - make appropriate rails route hits redirect to appropriate static page route
 
 - add snippets to readme at very end
-> currentUserManagedGroups! (or not, because bb colls have a way to do that -_-)
+> currentUserManagedGroups? clean that up...

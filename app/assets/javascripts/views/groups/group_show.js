@@ -3,37 +3,43 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    // console.log(this.model.events());
     SuperSocietyApp.events.fetch({
       success: function () {
         this._events = SuperSocietyApp.events.where({ group_id: this.model.id });
-        // this._events.each(function (event) {
-        //   event.fetch();
-        // })
         this.addEventsIndexSubview();
       }.bind(this)
     })
   },
 
   addEventsIndexSubview: function () {
-    $("div.events").empty();
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
       collection: this._events
       });
+    this._swapSubview(eventsIdxView);
     this.addSubview(".events", eventsIdxView);
   },
 
-  // events: {
-  //   "click .events li": "addEventSubview"
-  // },
-  //
-  // addEventShowSubview: function (event) {
-  //   $("div.events").empty();
-  //   // var event.target.model..................
-  // },
+  events: {
+    "click .events li": "addEventShowSubview"
+  },
+
+  addEventShowSubview: function (event) {
+    var id = $(event.currentTarget).data("id");
+    var eventToShow = SuperSocietyApp.events.findWhere({ id: id });
+    var eventShowView = new SuperSocietyApp.Views.EventShow({ model: eventToShow })
+    this._swapSubview(eventShowView);
+    this.addSubview(".events", eventShowView);
+  },
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     return this;
+  },
+
+  _swapSubview: function (view) {
+    if (this._currentSubview) {
+      this.removeSubview(".events", this._currentSubview);
+    }
+    this._currentSubview = view;
   }
 });

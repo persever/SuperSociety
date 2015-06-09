@@ -3,6 +3,10 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
 
   url: "/api/events",
 
+  // initialize: function () {
+  //   this.groupId = options.groupId
+  // },
+
   comparator: function (event) {
     return event.get("date");
   },
