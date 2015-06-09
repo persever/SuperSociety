@@ -1,17 +1,32 @@
-- signout goes to session url, fix that to redirect to new users (very low priority)
+- SEE FEEDBACK
+> datetime
 
-- currentusermanagedgroups is all groups because no groups spcified so it auto fetches all in namespace init
+(phase 2)
+- make group composite view for eventshow/eventsindex
+-button to go back to all of the group's events
 
+(phase 3)
+- do indices have to be composite views?
+- make links for groups and events index items!
+- toggle join/unjoin buttons for group and event shows, and events indexitems!!!!!!
+
+(phase 4)
 - filepicker for sign up but not sign in...
 - make users/new route something more appropriate to dual functionality...
 - make new users form not shared anymore? you need to make the naming more clear
 - look up good practices for making single-page sing in/ups
 
-- make group composite view for eventshow or eventsindex
+- make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
-- make group and events forms modals
+- if there are no notes above this, update the readme time expectations, close the issues, and push
 
+- fix currentUserManagedGroups assoc? can you make it like the groups' events one?
+- using where? pluck?
+
+- make every route call redirect to signin page if no current user... currently tacks it on....
 
 - make filepicker more site appropriate
-
 - make appropriate rails route hits redirect to appropriate static page route
+
+- add snippets to readme at very end
+> currentUserManagedGroups! (or not, because bb colls have a way to do that -_-)

@@ -9,7 +9,7 @@ window.SuperSocietyApp = {
     SuperSocietyApp.groups = new SuperSocietyApp.Collections.Groups();
     SuperSocietyApp.groups.fetch({ reset: true });
 
-    SuperSocietyApp.events = new SuperSocietyApp.Collections.Events({ group: null });
+    SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
     SuperSocietyApp.groups.each(function (group) {
       SuperSocietyApp.events.push(group.events());
     });

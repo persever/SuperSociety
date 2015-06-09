@@ -59,7 +59,7 @@ group view. Excepting auth, the app will now be a single page Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Viewing Group and Event Indices (~1 day)
+### Phase 3: Viewing Group and Event Indices (<1 day)
 I will add Backbone views for the group and event indices and index items. I
 will also add toggle buttons to the group show view, event show view, and event
 index item, enabling users to subscribe or unsubscribe to a group, and join or
@@ -67,12 +67,13 @@ leave events.
 
 [Details][phase-three]
 
-### Phase 4: Creating and Editing Groups and Events (~1-2 days)
+### Phase 4: Creating and Editing Groups and Events (<1 day)
 I will create modal forms for groups and events. Filepicker will be integrated.
+Filepicker will also be integrated with the user signup.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Groups and Events (~2 days)
+### Phase 5: Searching for Groups and Events (~1 day)
 Finally, I will assemble the search composite view, creating a search bar that
 separates searches for groups and events. The subviews will respond to input
 immediately. This will be the landing page after a user logs in. (They will also
