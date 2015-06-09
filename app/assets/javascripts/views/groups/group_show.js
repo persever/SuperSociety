@@ -3,12 +3,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
+    // this.listenTo(this.model.events(), "sync", this.render);
     SuperSocietyApp.events.fetch({
       success: function () {
         this._events = SuperSocietyApp.events.where({ group_id: this.model.id });
         this.addEventsIndexSubview();
       }.bind(this)
-    })
+    });
   },
 
   addEventsIndexSubview: function () {
@@ -16,19 +17,18 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       collection: this._events
       });
     this._swapSubview(eventsIdxView);
-    this.addSubview(".events", eventsIdxView);
   },
 
   events: {
-    "click .events li": "addEventShowSubview"
+    "click .events li": "addEventShowSubview",
+    "click h2": "addEventsIndexSubview"
   },
 
   addEventShowSubview: function (event) {
     var id = $(event.currentTarget).data("id");
     var eventToShow = SuperSocietyApp.events.findWhere({ id: id });
-    var eventShowView = new SuperSocietyApp.Views.EventShow({ model: eventToShow })
+    var eventShowView = new SuperSocietyApp.Views.EventShow({ model: eventToShow });
     this._swapSubview(eventShowView);
-    this.addSubview(".events", eventShowView);
   },
 
   render: function () {
@@ -36,10 +36,19 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     return this;
   },
 
+  // _swapSubview: function (view) {
+  //   if (this._currentSubview) {
+  //     this.removeSubview(".events", this._currentSubview);
+  //   }
+  //   this._currentSubview = view;
+  // }
+
   _swapSubview: function (view) {
     if (this._currentSubview) {
-      this.removeSubview(".events", this._currentSubview);
+      this._currentSubview.remove();
     }
     this._currentSubview = view;
+
+    this.addSubview(".events", view);
   }
 });

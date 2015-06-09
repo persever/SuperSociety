@@ -34,7 +34,6 @@ class Api::EventsController < ApplicationController
   private
 
     def event_params
-      params.require(:event).permit(:group_id, :title, :date,
-                                    :time, :location, :description)
+      params.require(:event).permit(:group_id, :title, :datetime, :location, :description)
     end
 end

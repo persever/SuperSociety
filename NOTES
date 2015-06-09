@@ -1,9 +1,11 @@
 - SEE FEEDBACK
-> datetime
+> datetime (could add db validation.... forget it, just update the form and controller)
+
+> start some seed file data
 
 (phase 2)
-- make group composite view for eventshow/eventsindex
--button to go back to all of the group's events
+- make group composite view for eventshow/eventsindex > just need to finish _swapSubview, remove not working
+- button to go back to all of the group's events
 
 (phase 3)
 - do indices have to be composite views?
@@ -19,6 +21,8 @@
 - make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
 - if there are no notes above this, update the readme time expectations, close the issues, and push
+
+- upgrade heroku
 
 - fix currentUserManagedGroups assoc? can you make it like the groups' events one?
 

@@ -3,9 +3,7 @@ SuperSocietyApp.Models.Group = Backbone.Model.extend({
 
   // events: function () {
   //   if (!this._events) {
-  //     this._events = new SuperSocietyApp.Collections.Events([], { grouId: this.id });
-  //       }.bind(this)
-  //     })
+  //     this._events = new SuperSocietyApp.Collections.Events({ groupId: this.id });
   //   }
   //
   //   return this._events;
