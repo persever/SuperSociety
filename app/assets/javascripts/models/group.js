@@ -1,18 +1,17 @@
 SuperSocietyApp.Models.Group = Backbone.Model.extend({
   urlRoot: "/api/groups",
 
-  events: function () {
-    if (!this._events) {
-      console.log("here");
-      this._events = new SuperSocietyApp.Collections.Events([], { group: this });
+  ssevents: function () {
+    if (!this._ssevents) {
+      this._ssevents = new SuperSocietyApp.Collections.Events([], { group: this });
     }
 
-    return this._events;
+    return this._ssevents;
   },
 
   parse: function (response) {
     if (response.events) {
-      this.events().set(response.lists, { parse: true });
+      this.ssevents().set(response.events, { parse: true });
       delete response.events;
     }
    return response;

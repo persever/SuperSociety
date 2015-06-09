@@ -4,9 +4,9 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
   url: "/api/events",
 
   initialize: function (models, options) {
-    // if (options) {
+    if (options) {
       this.group = options.group;
-    // }
+    }
   },
 
   comparator: function (event) {
