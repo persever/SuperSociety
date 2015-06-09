@@ -29,7 +29,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   // composite view
   groupShow: function (id, eventId) {
     var group = this.groups.getOrFetch(id);
-    var groupShow = null
+    var groupShow = null;
     if (eventId) {
       groupShow = new SuperSocietyApp.Views.GroupShow({ model: group, subEventId: eventId });
     } else {

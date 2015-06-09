@@ -11,13 +11,17 @@
 
 - make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
-- get rid of currentUserManagedGroups assoc -- make user model (and update readme)
-- make nav (bootstrap navbar!!), see notes from lightnig lec
-- guest signin autotype
 
 - if there are no notes above this, update the readme time expectations, close the issues, and push
 - upgrade heroku, get it working
 
+- phase 5
+- make events index load with gorup info in search view, not in group view
+
+- get rid of currentUserManagedGroups assoc -- make user model (and update readme)
+> what's your current user assoc for group creation look like?? did you lose it??
+- make nav (bootstrap navbar!!), see notes from lightnig lec
+- guest signin autotype
 
 - make every route call redirect to signin page if no current user... currently tacks it on....
 
