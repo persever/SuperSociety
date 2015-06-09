@@ -1,11 +1,17 @@
 SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   template: JST["groups/show"],
 
-  initialize: function () {
+  initialize: function (options) {
+    this.model = options.model;
     this.listenTo(this.model, "sync", this.render);
     this._modelEvents = this.model.ssevents();
     this._modelEvents.fetch();
-    this.listenTo(this._modelEvents, "sync", this.addEventsIndexSubview);
+    if (options.subEventId === 0) {
+      this.listenTo(this._modelEvents, "sync", this.addEventsIndexSubview);
+    } else {
+      var ssevent = this._modelEvents.get(options.subEventId);
+      this.addEventShowSubview(ssevent);
+    }
   },
 
   addEventsIndexSubview: function () {
@@ -21,9 +27,14 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   addEventShowSubview: function (event) {
-    var id = $(event.currentTarget).data("id");
-    var eventToShow = SuperSocietyApp.events.findWhere({ id: id });
-    var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
+    var eventToShow = null;
+    if (!event.constructor) {
+      var id = $(event.currentTarget).data("id");
+      eventToShow = SuperSocietyApp.events.findWhere({ id: id });
+    } else {
+      eventToShow = event;
+    }
+      var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
     this._swapSubview(eventShowView);
   },
 

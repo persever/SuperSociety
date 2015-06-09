@@ -18,7 +18,7 @@
     <script type="text/javascript">
         window.currentUserManagedGroupIds = "<%= [] %>"
     </script>
-    <% if request.env['PATH_INFO'] != "/enter/new" && request.env['PATH_INFO'] != "/enter" %>
+    <% if request.env['PATH_INFO'].to_s.include?("enter") %>
       <%= link_to "Sign In", new_user_url %>
       <%= link_to "Sign Up", new_user_url %>
     <% end %>

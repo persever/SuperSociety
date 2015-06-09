@@ -27,9 +27,14 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   },
 
   // composite view
-  groupShow: function (id) {
+  groupShow: function (id, eventId) {
     var group = this.groups.getOrFetch(id);
-    var groupShow = new SuperSocietyApp.Views.GroupShow({ model: group });
+    var groupShow = null
+    if (eventId) {
+      groupShow = new SuperSocietyApp.Views.GroupShow({ model: group, subEventId: eventId });
+    } else {
+      groupShow = new SuperSocietyApp.Views.GroupShow({ model: group, subEventId: 0 });
+    }
     this.$rootEl.html(groupShow.render().$el);
   },
 
@@ -43,15 +48,17 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // modal subview
   newEvent: function () {
-    var event = new SuperSocietyApp.Models.Event();
-    var eventForm = new SuperSocietyApp.Views.EventForm({ model: event });
+    var ssevent = new SuperSocietyApp.Models.Event();
+    var eventForm = new SuperSocietyApp.Views.EventForm({ model: ssevent });
     this.$rootEl.html(eventForm.render().$el);
   },
 
   // subview
   eventShow: function (id) {
-    var event = this.events.getOrFetch(id);
-    var eventShow = new SuperSocietyApp.Views.EventShow({ model: event });
+    var ssevent = this.events.getOrFetch(id);
+    var eventShow = new SuperSocietyApp.Views.EventShow({ model: ssevent });
+    var groupId = event.escape("group_id");
+    this.groupShow(groupId, id);
     this.$rootEl.html(eventShow.render().$el);
   },
 

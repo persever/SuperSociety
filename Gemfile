@@ -12,15 +12,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
-<<<<<<< HEAD
 gem 'filepicker-rails'
 gem 'puma'
-# gem 'rails_12factor', group: :production
-# gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-# gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-=======
 gem 'rails_12factor'
->>>>>>> 8ca844e088a50dd904e49cd6c7e94701d73c1341
 
 group :development, :test do
   gem 'byebug'

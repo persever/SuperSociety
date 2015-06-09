@@ -25,3 +25,4 @@ Event.create(group: Group.find_by({ name: "The Avengers"}), title: "After Party"
 Event.create(group: Group.find_by({ name: "The Avengers"}), title: "Training", datetime: "2015-06-20 10:00:00+00", location: "Nevada Desert", description: "A chance to hone our skills.")
 Event.create(group: Group.find_by({ name: "The Avengers"}), title: "Teamwork Training", datetime: "2015-06-20 10:00:00+00", location: "Sierra Mountains", description: "Mostly for Stark.")
 Event.create(group: Group.find_by({ name: "Asgardians"}), title: "Ego Pump", datetime: "2015-06-09 08:00:00+00", location: "Asgard", description: "We will regale each other with stories of our glorious triumphs.")
+Event.create(group: Group.find_by({ name: "Antiheroes"}), title: "Dark Stuff", datetime: "2015-06-10 20:00:00+00", location: "Wayne Manor", description: "Alternative to the party the Marvel kids are throwing.")

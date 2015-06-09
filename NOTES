@@ -1,8 +1,5 @@
-(phase 2)
-- fix group event show "back to events" button to include group name
-
 (phase 3)
-- do indices have to be composite views?
+- make event index composite view beause subs are dynamic, has buttons in it (group ii just linked image)
 - make links for groups and events index items! (but only when not in group show......... or something...)
 - toggle join/unjoin buttons for group and event shows, and events indexitems!!!!!!
 
@@ -14,12 +11,13 @@
 
 - make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
+- get rid of currentUserManagedGroups assoc -- make user model (and update readme)
+- make nav (bootstrap navbar!!), see notes from lightnig lec
+- guest signin autotype
+
 - if there are no notes above this, update the readme time expectations, close the issues, and push
 - upgrade heroku, get it working
 
-- get rid of currentUserManagedGroups assoc -- make user model
-- make nav (bootstrap navbar!!), see notes from lightnig lec
-- guest signin autotype
 
 - make every route call redirect to signin page if no current user... currently tacks it on....
 
