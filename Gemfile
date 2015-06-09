@@ -13,6 +13,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
 gem 'filepicker-rails'
+gem 'puma'
+# gem 'rails_12factor', group: :production
+# gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+# gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 
 group :development, :test do
   gem 'byebug'

@@ -3,13 +3,20 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    // this.listenTo(this.model.events(), "sync", this.render);
-    SuperSocietyApp.events.fetch({
-      success: function () {
-        this._events = SuperSocietyApp.events.where({ group_id: this.model.id });
-        this.addEventsIndexSubview();
-      }.bind(this)
-    });
+
+    // toggle for current event id
+    // in render, f current event id, render that single subview, else render index
+    // clicking an event sets current event id, rerenders entire view
+    console.log(this.model);
+    // this.model.events().fetch() // fetch each??
+    this.listenTo(this.model.events(), "sync", this.render);
+
+    // SuperSocietyApp.events.fetch({
+    //   success: function () {
+    //     this._events = SuperSocietyApp.events.where({ group_id: this.model.id });
+    //     this.addEventsIndexSubview();
+    //   }.bind(this)
+    // });
   },
 
   addEventsIndexSubview: function () {
