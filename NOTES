@@ -1,5 +1,5 @@
 (phase 2)
-- button to go back to all of the group's events
+- fix group event show "back to events" button to include group name
 
 (phase 3)
 - do indices have to be composite views?
@@ -17,12 +17,14 @@
 - if there are no notes above this, update the readme time expectations, close the issues, and push
 - upgrade heroku, get it working
 
-- fix currentUserManagedGroups assoc? can you make it like the groups' events one?
+- get rid of currentUserManagedGroups assoc -- make user model
+- make nav (bootstrap navbar!!), see notes from lightnig lec
+- guest signin autotype
 
 - make every route call redirect to signin page if no current user... currently tacks it on....
 
 - make filepicker more site appropriate
 - make appropriate rails route hits redirect to appropriate static page route
+- make group genuine composite view, without that event show subview button navigating?
 
 - add snippets to readme at very end
-> currentUserManagedGroups? clean that up...

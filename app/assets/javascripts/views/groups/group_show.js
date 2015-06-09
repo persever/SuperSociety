@@ -17,13 +17,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   events: {
     "click .events li": "addEventShowSubview",
-    "click h2": "addEventsIndexSubview"
+    "click h2.groupname": "addEventsIndexSubview"
   },
 
   addEventShowSubview: function (event) {
     var id = $(event.currentTarget).data("id");
     var eventToShow = SuperSocietyApp.events.findWhere({ id: id });
-    var eventShowView = new SuperSocietyApp.Views.EventShow({ model: eventToShow });
+    var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
     this._swapSubview(eventShowView);
   },
 
@@ -31,6 +31,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({ group: this.model }));
     return this;
   },
+
   _swapSubview: function (view) {
     if (this._currentSubview) {
       this._currentSubview.remove();

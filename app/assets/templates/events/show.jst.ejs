@@ -1,5 +1,8 @@
+<button class="eventsIdx">Back to <%= group.escape("name") %>'s Events</button>
+
 <h2><%= event.escape("title") %></h2>
-<%= event.escape("date") %> at <%= event.escape("time") %>
+<%= event.escape("datetime") %>
+<br>
 <%= event.escape("location") %>
-<p>
+<br>
 <%= event.escape("description") %>

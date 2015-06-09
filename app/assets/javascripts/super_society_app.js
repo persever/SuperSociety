@@ -15,7 +15,7 @@ window.SuperSocietyApp = {
     });
     SuperSocietyApp.events.fetch({ reset: true });
 
-    var router = new SuperSocietyApp.Routers.Router({
+    SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
       $rootEl: $("#content"),
       groups: SuperSocietyApp.groups,
       events: SuperSocietyApp.events
