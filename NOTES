@@ -5,9 +5,7 @@
 - get rid of currentUserManagedGroups assoc
 
 (phase 4)
-- filepicker for sign up but not sign in...
-- make new users form not shared anymore? you need to make the naming more clear
->>> look up good practices for making single-page sign in/ups
+- filepicker for sign up
 
 - make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
