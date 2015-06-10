@@ -1,33 +1,35 @@
-<h3>New Event</h3>
+<div class="card-modal-backdrop">
+</div>
 
-<%= groups %>
+<div class="card-modal">
 
-<form>
+  <form>
+    <label>Group</label>
+    <select name="event[group_id]">
+      <% groups.each(function (group) { %>
+        <option value="<%= group.id %>"><%= group.escape("name") %></option>
+      <% }) %>
+    </select>
+    <br>
 
-  <label>Group</label>
-  <select name="event[group_id]">
-    <% groups.each(function (group) { %>
-      <option value="<%= group.id %>"><%= group.escape("name") %></option>
-    <% }) %>
-  </select>
-  <br>
+    <label>Title</label>
+    <input type="text" name="event[title]" value="<%= event.escape("title") %>">
+    <br>
 
-  <label>Title</label>
-  <input type="text" name="event[title]" value="<%= event.escape("title") %>">
-  <br>
+    <label>When</label>
+    <input type="datetime" name="event[datetime]" value="<%= event.escape("date") %>">
+    <br>
 
-  <label>When</label>
-  <input type="datetime" name="event[datetime]" value="<%= event.escape("date") %>">
-  <br>
+    <label>Where</label>
+    <input type="text" name="event[location]" value="<%= event.escape("location") %>">
+    <br>
 
-  <label>Where</label>
-  <input type="text" name="event[location]" value="<%= event.escape("location") %>">
-  <br>
+    <label>Description</label>
+    <textarea name="event[description]" value="<%= event.escape("description") %>"></textarea>
 
-  <label>Description</label>
-  <textarea name="event[description]" value="<%= event.escape("description") %>"></textarea>
+    <input type="submit">
+  </form>
 
-  <input type="submit">
-</form>
+  <div class="errors"></div>
 
-<div class="errors"></div>
+</div>

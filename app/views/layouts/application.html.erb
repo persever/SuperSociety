@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <% if current_user %>
+    <script type="text/javascript">
+        window.CURRENT_USER_ID = "<%= current_user.id %>"
+        window.CURRENT_USER_NAME = "<%= current_user.username %>"
+        window.currentUserManagedGroupIds = "<%= current_user.managed_group_ids %>"
+    </script>
+    <%= button_to "Log Out", session_url, method: :delete %>
+  <% else %>
+    <script type="text/javascript">
+        window.currentUserManagedGroupIds = "<%= [] %>"
+    </script>
+  <% end %>
+
   <script>
       if (window.currentUserManagedGroupIds !== undefined) {
         SuperSocietyApp.currentUserManagedGroups = new SuperSocietyApp.Collections.Groups();
@@ -17,19 +31,6 @@
         });
       }
   </script>
-
-  <% if current_user %>
-    <script type="text/javascript">
-        window.CURRENT_USER_ID = "<%= current_user.id %>"
-        window.currentUserManagedGroupIds = "<%= current_user.managed_group_ids %>"
-    </script>
-    <%= current_user.username %>
-    <%= button_to "Sign Out", session_url, method: :delete %>
-  <% else %>
-    <script type="text/javascript">
-        window.currentUserManagedGroupIds = "<%= [] %>"
-    </script>
-  <% end %>
 
   <%= yield %>
 

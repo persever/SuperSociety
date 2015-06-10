@@ -21,6 +21,11 @@ window.SuperSocietyApp = {
       events: SuperSocietyApp.events
     });
 
+    SuperSocietyApp.navbar = new SuperSocietyApp.Views.Navbar({
+      router: SuperSocietyApp.router,
+      $el: $("#nav"),
+    });
+
     Backbone.history.start();
   }
 };

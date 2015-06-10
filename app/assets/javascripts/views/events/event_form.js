@@ -9,12 +9,13 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.render);
     SuperSocietyApp.currentUserManagedGroups.each(function (model) {
       model.fetch();
-    })
+    });
     this.listenTo(SuperSocietyApp.currentUserManagedGroups, "sync", this.render);
   },
 
   render: function () {
-    this.$el.html(this.template({
+    console.log(this.model);
+    $("#modal").append(this.template({
       event: this.model,
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
@@ -36,7 +37,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
         response.responseJSON.forEach(function (message) {
           var $messageLi = $("<li>").text(message);
           $(".errors").append($messageLi);
-        })
+        });
       }
     });
   }

@@ -2,10 +2,10 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "root",
-    "groups/new": "newGroup",
+    // "groups/new": "newGroup",
     "groups/:id": "groupShow",
     "groups": "groupsIndex",
-    "events/new": "newEvent",
+    // "events/new": "newEvent",
     "events/:id": "eventShow",
     "events": "eventsIndex"
   },
@@ -20,11 +20,11 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   root: function () {},
 
   // modal subview
-  newGroup: function () {
-    var group = new SuperSocietyApp.Models.Group();
-    var groupForm = new SuperSocietyApp.Views.GroupForm({ model: group });
-    this.$rootEl.html(groupForm.render().$el);
-  },
+  // newGroup: function () {
+  //   var group = new SuperSocietyApp.Models.Group();
+  //   var groupForm = new SuperSocietyApp.Views.GroupForm({ model: group });
+  //   this.$rootEl.html(groupForm.render().$el);
+  // },
 
   // composite view
   groupShow: function (id, eventId) {
@@ -47,11 +47,11 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   },
 
   // modal subview
-  newEvent: function () {
-    var ssevent = new SuperSocietyApp.Models.Event();
-    var eventForm = new SuperSocietyApp.Views.EventForm({ model: ssevent });
-    this.$rootEl.html(eventForm.render().$el);
-  },
+  // newEvent: function () {
+  //   var ssevent = new SuperSocietyApp.Models.Event();
+  //   var eventForm = new SuperSocietyApp.Views.EventForm({ model: ssevent });
+  //   this.$rootEl.html(eventForm.render().$el);
+  // },
 
   // subview
   eventShow: function (id) {

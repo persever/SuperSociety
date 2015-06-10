@@ -1,3 +1,20 @@
-// Place all the styles related to the Events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.event-modal-backdrop {
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1031;
+}
+
+.event-modal {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  z-index: 1032;
+  background-color: rgb(240, 240, 240);
+  border-radius: 3px;
+  padding: 15px;
+}

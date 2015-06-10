@@ -4,11 +4,8 @@
 - toggle join/unjoin buttons for event shows, and events indexitems!!!!!! then for group show
 - get rid of currentUserManagedGroups assoc
 
-(phase 4)
-- filepicker for sign up
-
-- make group and events forms modals (also phase 4) (see trello project!!!!!!)
-
+- make logout button on nav work
+- make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
 ---
 
 - if there are no notes above this, update the readme time expectations, close the issues, and push
@@ -24,8 +21,17 @@
 
 ---
 
-- make nav (bootstrap navbar!!), see notes from lightnig lec
+- make bootstrap grid for group index
+
+- internal scroll: overflow y scroll to scroll
+
+- seed live action photos for users and groups
+
+- root url background video behind semi-transparent black screen behind buttons if no current user
+
 - guest signin autotype
+
+- custom mouse image (white circle? comic book bang effect image?)
 
 - make every route call redirect to signin page if no current user... currently tacks it on....
 
@@ -33,8 +39,21 @@
 - make appropriate rails route hits redirect to appropriate static page route
 - make group genuine composite view, without that event show subview button navigating?
 
+- edit groups and events!!!
+- ensure browser back button works :O
+
 - add snippets to readme at very end
 > filepicker redirect?
 > frontend assocs? (toggle?)
+
+- check out app in firefox
+
+- search bar in nav if not on search page? (if on group page)
+
+- clean up all comments, KEEP LINES WITHIN LENGTH LIMIT, refactor long and messy things, make sure naming is comprehensible
+
+- super low priority: upcoming events count in nav
+
+- note used bootstrap nav, search bar plugin, other big snipps
 
 Why did you call them events -_-

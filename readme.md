@@ -6,7 +6,8 @@
 
 ## Description
 
-SuperSociety is a social event planning site for superheroes.
+SuperSociety is a social event planning site for the superhero community.
+Excluding authorization, the app is a single-page Backbone app.
 
 ## Technologies
 
@@ -23,8 +24,6 @@ SuperSociety is a social event planning site for superheroes.
 
 ## Minimum Viable Product
 SuperSociety is a clone of Meetup built on Rails and Backbone. Users can:
-
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [ ] Create accounts
 - [ ] Create sessions (log in)
