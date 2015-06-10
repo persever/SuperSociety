@@ -1,6 +1,7 @@
 (phase 3)
-- CREATE USER MODEL (update readme)
-- toggle join/unjoin buttons for group and event shows, and events indexitems!!!!!!
+- CREATE USER MODEL (update phases)
+- wait, just access server attendings/subscriptions with CURRENT_USER/event/group ids??????
+- toggle join/unjoin buttons for event shows, and events indexitems!!!!!! then for group show
 - get rid of currentUserManagedGroups assoc
 
 (phase 4)

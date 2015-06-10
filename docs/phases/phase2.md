@@ -8,8 +8,6 @@ Api::GroupsController (show)
 Api::EventsController (show)
 
 ### Views
-groups/show.json.jbuilder
-events/show.json.jbuilder
 
 ## Backbone
 ### Models

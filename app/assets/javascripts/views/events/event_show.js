@@ -25,6 +25,23 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   },
 
   toggleEventAttending: function () {
-    // if (this.model.escape("attenders").include(current user.....));
-  }
+    var o = this._toggleHelper(this.model.get("attenders"), CURRENT_USER_ID);
+    if (o) {
+      var newAttenders = this.model.get("attenders").delete(o);
+      this.model.set("attenders", newAttenders);
+    } else {
+      var currentUser = // user model
+      var newAttenders = this.model.get("attenders").push(currentUser);
+    }
+  },
+
+  _toggleHelper: function (array, userId) {
+    var o = null;
+    array.some(function (obj) {
+      if (obj.id === userId) {
+        o = obj;
+        return true;
+    }
+    return o;
+  });
 });

@@ -63,7 +63,7 @@ group view. Excepting auth, the app will now be a single page Backbone app.
 I will add Backbone views for the group and event indices and index items. I
 will also add toggle buttons to the group show view, event show view, and event
 index item, enabling users to subscribe or unsubscribe to a group, and join or
-leave events.
+leave events. I will need to create a frontend user model.
 
 [Details][phase-three]
 

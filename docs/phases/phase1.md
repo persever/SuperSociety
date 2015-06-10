@@ -16,9 +16,9 @@
 * users/new.html.erb
 * session/new.html.erb
 * groups/new.html.erb
-* groups/show.html.erb
+* groups/show.json.jbuilder
 * events/new.html.erb
-* events/show.html.erb
+* events/show.json.jbuilder
 
 ## Backbone
 ### Models
