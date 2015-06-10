@@ -2,21 +2,30 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   template: JST["groups/show"],
 
   initialize: function (options) {
+    this.collection = this.model.ssevents();
+    this._subEventId = options.subEventId;
     this.model = options.model;
     this.listenTo(this.model, "sync", this.render);
-    this._modelEvents = this.model.ssevents();
-    this._modelEvents.fetch();
-    if (options.subEventId === 0) {
-      this.listenTo(this._modelEvents, "sync", this.addEventsIndexSubview);
-    } else {
-      var ssevent = this._modelEvents.get(options.subEventId);
-      this.addEventShowSubview(ssevent);
-    }
+
+    // if (options.subEventId === 0) {
+    //   this.collection.fetch();
+    //   this.listenTo(this.collection, "sync", this.addEventsIndexSubview);
+    // } else {
+    //   this.collection.fetch({
+    //     success: function () {
+    //       var ssevent = this.collection.getOrFetch(options.subEventId);
+    //       this.addEventShowSubview(ssevent);
+    //     }.bind(this)
+    //   });
+    // }
   },
 
   addEventsIndexSubview: function () {
+    if (this._subEventId) {
+      this._subEventId = 0;
+    }
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
-      collection: this._modelEvents
+      collection: this.collection
       });
     this._swapSubview(eventsIdxView);
   },
@@ -28,18 +37,30 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   addEventShowSubview: function (event) {
     var eventToShow = null;
-    if (!event.constructor) {
+    if (event.constructor !== SuperSocietyApp.Models.Event) {
       var id = $(event.currentTarget).data("id");
+      this._subEventId = id;
       eventToShow = SuperSocietyApp.events.findWhere({ id: id });
     } else {
+      this._subEventId = event.id;
       eventToShow = event;
     }
-      var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
+    var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
     this._swapSubview(eventShowView);
   },
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
+
+    if (this._subEventId !== 0) {
+      var ssevent = this.collection.getOrFetch(this._subEventId);
+      this.addEventShowSubview(ssevent);
+    } else if (this._subEventId === 0) {
+      this.addEventsIndexSubview();
+    } else {
+      console.log("EventShow must be rendered with a subEventId argument.");
+    }
+
     return this;
   },
 

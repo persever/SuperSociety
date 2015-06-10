@@ -5,6 +5,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     this.model = options.model;
     this.group = options.group;
     this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.group, "sync", this.render);
   },
 
   events: {

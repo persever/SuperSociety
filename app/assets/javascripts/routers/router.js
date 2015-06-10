@@ -55,11 +55,29 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // subview
   eventShow: function (id) {
-    var ssevent = this.events.getOrFetch(id);
-    var eventShow = new SuperSocietyApp.Views.EventShow({ model: ssevent });
-    var groupId = event.escape("group_id");
-    this.groupShow(groupId, id);
-    this.$rootEl.html(eventShow.render().$el);
+
+    var successF = function () {
+      var groupId = ssevent.escape("group_id");
+      this.groupShow(groupId, id);
+      // var eventShow = new SuperSocietyApp.Views.EventShow({ model: ssevent, groupId: groupId });
+      // this.$rootEl.html(eventShow.render().$el);
+    }.bind(this);
+
+    var ssevent = this.events.get(id);
+    var events = this;
+    if (ssevent) {
+      ssevent.fetch({
+        success: successF
+      });
+    } else {
+      ssevent = new SuperSocietyApp.Models.Event({ id: id });
+      ssevent.fetch({
+        success: function () {
+          this.events.add(ssevent);
+          successF();
+        }.bind(this)
+      });
+    }
   },
 
   // subview
