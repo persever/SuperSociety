@@ -2,9 +2,9 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   template: JST["groups/show"],
 
   initialize: function (options) {
+    this.model = options.model;
     this.collection = this.model.ssevents();
     this._subEventId = options.subEventId;
-    this.model = options.model;
     this.listenTo(this.model, "sync", this.render);
 
     // if (options.subEventId === 0) {

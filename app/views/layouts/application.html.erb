@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script>
+      if (window.currentUserManagedGroupIds !== undefined) {
+        SuperSocietyApp.currentUserManagedGroups = new SuperSocietyApp.Collections.Groups();
+        var groupIds = JSON.parse(currentUserManagedGroupIds);
+        groupIds.forEach(function (id) {
+          var groupModel = new SuperSocietyApp.Models.Group({ id: id });
+          SuperSocietyApp.currentUserManagedGroups.add(groupModel);
+        });
+      }
+  </script>
 
   <% if current_user %>
     <script type="text/javascript">

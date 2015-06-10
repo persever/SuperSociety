@@ -1,7 +1,7 @@
 (phase 3)
-- make event index composite view beause subs are dynamic, has buttons in it (group ii just linked image)
-- make links for groups and events index items! (but only when not in group show......... or something...)
+- CREATE USER MODEL (update readme)
 - toggle join/unjoin buttons for group and event shows, and events indexitems!!!!!!
+- get rid of currentUserManagedGroups assoc
 
 (phase 4)
 - filepicker for sign up but not sign in...
@@ -18,7 +18,6 @@
 - phase 5
 - make events index load with gorup info in search view, not in group view
 
-- get rid of currentUserManagedGroups assoc -- make user model (and update readme)
 > what's your current user assoc for group creation look like?? did you lose it??
 - make nav (bootstrap navbar!!), see notes from lightnig lec
 - guest signin autotype

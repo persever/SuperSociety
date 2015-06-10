@@ -59,7 +59,7 @@ group view. Excepting auth, the app will now be a single page Backbone app.
 
 [Details][phase-two]
 
-### Phase 3: Viewing Group and Event Indices (<1 day)
+### Phase 3: Viewing Group and Event Indices (~1 day)
 I will add Backbone views for the group and event indices and index items. I
 will also add toggle buttons to the group show view, event show view, and event
 index item, enabling users to subscribe or unsubscribe to a group, and join or

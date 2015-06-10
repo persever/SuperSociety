@@ -15,7 +15,7 @@ class Api::GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    render json: @group, include: :events
+    render json: @group, include: :events, include: :subscribers
   end
 
   def index
