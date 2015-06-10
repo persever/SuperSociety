@@ -2,13 +2,13 @@
   <input type="hidden" name="authenticity_token"
                        value="<%= form_authenticity_token %>" >
   <label>Username</label>
-  <input type="text" name="user[username]" value="<%= instance.username %>"></input>
+  <input type="text" name="<%= type %>[username]" value="<%= instance.username %>"></input>
   <br>
   <label>Password</label>
-  <input type="password"name="user[password]" value="<%= instance.password %>"></input>
+  <input type="password"name="<%= type %>[password]" value="<%= instance.password %>"></input>
   <br>
 
-  <input type="submit" value="Log In" name="submission"></input><input type="submit" value="Sign Up" name="submission"></input>
+  <input type="submit" value="<%= submit_value %>"></input>
 </form>
 <br>
 <%= flash[:errors] if flash[:errors] %>

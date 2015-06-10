@@ -1,25 +1,31 @@
 (phase 3)
-- CREATE USER MODEL (update phases)
+- CREATE USER MODEL???? (update phases)
 - wait, just access server attendings/subscriptions with CURRENT_USER/event/group ids??????
 - toggle join/unjoin buttons for event shows, and events indexitems!!!!!! then for group show
 - get rid of currentUserManagedGroups assoc
 
 (phase 4)
 - filepicker for sign up but not sign in...
-- make users/new route something more appropriate to dual functionality...
 - make new users form not shared anymore? you need to make the naming more clear
-- look up good practices for making single-page sing in/ups
+>>> look up good practices for making single-page sign in/ups
 
 - make group and events forms modals (also phase 4) (see trello project!!!!!!)
 
+---
 
 - if there are no notes above this, update the readme time expectations, close the issues, and push
-- upgrade heroku, get it working
+
+---
 
 - phase 5
 - make events index load with gorup info in search view, not in group view
 
-> what's your current user assoc for group creation look like?? did you lose it??
+---
+
+- upgrade heroku, get it working (do this in classtime in case you need ta help!!)
+
+---
+
 - make nav (bootstrap navbar!!), see notes from lightnig lec
 - guest signin autotype
 
@@ -30,5 +36,7 @@
 - make group genuine composite view, without that event show subview button navigating?
 
 - add snippets to readme at very end
+> filepicker redirect?
+> frontend assocs? (toggle?)
 
 Why did you call them events -_-

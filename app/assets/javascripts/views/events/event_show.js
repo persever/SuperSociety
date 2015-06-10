@@ -29,9 +29,9 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     if (o) {
       var newAttenders = this.model.get("attenders").delete(o);
       this.model.set("attenders", newAttenders);
-    } else {
-      var currentUser = // user model
-      var newAttenders = this.model.get("attenders").push(currentUser);
+    // } else {
+      // var currentUser = // user model
+      // var newAttenders = this.model.get("attenders").push(currentUser);
     }
   },
 
@@ -41,7 +41,8 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       if (obj.id === userId) {
         o = obj;
         return true;
-    }
+      }
+    });
     return o;
-  });
+  }
 });
