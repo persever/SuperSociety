@@ -6,6 +6,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.collection = this.model.ssevents();
     this._subEventId = options.subEventId;
     this.listenTo(this.model, "sync", this.render);
+
+    var subscription = this.model.currentUserSubscription();
+    if (subscription) {
+      this.button = new SuperSocietyApp.Views.SubscriptionButton({ model: subscription, group_id: this.model.id });
+    } else {
+      this.button = new SuperSocietyApp.Views.SubscriptionButton();
+    }
   },
 
   addEventsIndexSubview: function () {
@@ -39,15 +46,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
-
-    var subscription = this.model.currentUserSubscription();
-    var button = null;
-    if (subscription) {
-      button = new SuperSocietyApp.Views.SubscriptionButton({ model: subscription, group_id: this.model.id });
-    } else {
-      button = new SuperSocietyApp.Views.SubscriptionButton();
-    }
-    this.$("#subscription-button").html(button.render().$el);
+    this.$("#subscription-button").html(this.button.render().$el);
 
     if (this._subEventId !== 0) {
       var ssevent = this.collection.getOrFetch(this._subEventId);

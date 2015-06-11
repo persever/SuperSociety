@@ -12,10 +12,9 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    console.log(this.model);
     this.delegateEvents();
 
-    if (this.model.get("user_id") === CURRENT_USER_ID) {
+    if (!this.model.isNew()) {
       this.$el.html("Unsubscribe");
       this.$el.addClass("subscribed");
     } else {
