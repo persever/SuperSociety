@@ -1,6 +1,6 @@
-json.array!(@events) do |event|
+json.array!(@groups) do |group|
 
-  json.extract!(event, :id, :group, :title, :datetime, :location, :description)
+  json.extract!(group, :id, :name, :description)
 
   # why is the wrap necessary??
   if current_user

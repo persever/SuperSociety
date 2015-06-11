@@ -8,7 +8,6 @@ SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
   // },
 
   initialize: function () {
-    this.model.fetch();
     this.listenTo(this.model, "sync", this.render);
   },
 

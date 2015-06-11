@@ -32,6 +32,6 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   },
 
   switchToEventsIndexSubview: function () {
-    Backbone.history.navigate("groups/" + this.group.id);
+    SuperSocietyApp.router.groupShow(this.group.id);
   }
 });

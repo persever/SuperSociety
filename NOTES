@@ -1,3 +1,5 @@
+>>> why is it quering for the current user so many times???
+
 - (phase 3)
 1 (ta help) toggle attending buttons for event shows, and events indexitems...
 2 (ta help) make logout button on nav work properly
@@ -7,7 +9,7 @@
 4 (cj lec) event and group editing
 
 - (phase 5)
-0 DO PHASE 5
+0 make search work!
 - make sure redirections working
 > make events index click through to group show page with that eventId...
 > make events index load with group info in search view/route, but not in group view/route
@@ -18,6 +20,10 @@ PHOTO UPLOADS!!
 
 ---
 
+see notes in notebook
+
+---
+
 - if there are no notes above this, update the readme time expectations and phase files, close the github issues, and push
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
 - clean up your notes here and elsewhere, organize to make an efficient plan from here, emphasizing bang-for-buck
@@ -25,6 +31,7 @@ PHOTO UPLOADS!!
 ---
 
 all BASIC styliing/ui organizing before fun designing
+in header bar on home page, put count of upcoming events (which switches in approp index subv)
 
 ---
 

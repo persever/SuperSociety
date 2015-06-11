@@ -2,15 +2,15 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   template: JST["search/home"],
 
   initialize: function (options) {
-    this.events = options.ssevents;
-    this.events.fetch();
+    this.ssevents = options.ssevents;
+    // this.events.fetch();
     this.groups = options.groups;
-    this.groups.fetch();
+    // this.groups.fetch();
     this.view = "Events";
 
     //wrap in conditional... wait you might not need this...
     this.listenTo(this.groups, "sync", this.render);
-    this.listenTo(this.events, "sync", this.render);
+    this.listenTo(this.ssevents, "sync", this.render);
 
     // first render should show cU's events -- see how you did that for group show...
     // // pass in router or cull here? will need all, but starting with subcollection...
@@ -40,11 +40,13 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
   redirectToEvent: function (event) {
     var eventId = $(event.currentTarget).data("id");
-    console.log($(event.currentTarget).data("id"));
+    var ssevent = this.ssevents.get(eventId);
+    var groupId = ssevent.get("group_id");
+    SuperSocietyApp.router.groupShow(groupId, eventId);
   },
 
   renderEventsIndexSubview: function () {
-    var collection = this.events;
+    var collection = this.ssevents;
 
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
       collection: collection

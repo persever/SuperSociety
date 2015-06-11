@@ -1,4 +1,4 @@
-json.extract!(@event, :group, :title, :datetime, :location, :description)
+json.extract!(@event, :id, :group, :title, :datetime, :location, :description)
 
 attending = Attending.find_by({ user_id: current_user.id })
 

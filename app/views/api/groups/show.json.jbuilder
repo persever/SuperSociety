@@ -1,4 +1,4 @@
-json.extract!(@group, :name, :description, :events)
+json.extract!(@group, :id, :name, :description, :events)
 
 subscription = Subscription.find_by({ user_id: current_user.id })
 
