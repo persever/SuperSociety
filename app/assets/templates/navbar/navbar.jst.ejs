@@ -12,14 +12,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-        <li><a class="form-button" data-id="new-group">New Group</a></li>
-        <li><a class="form-button" data-id="new-event">New Event</a></li>
+        <li><button type="button" class="btn navbar-btn newGroup" data-id="new-group">New Group</a></li>
+        <li><button type="button" class="btn navbar-btn newEvent" data-id="new-event">New Event</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= CURRENT_USER_NAME %>
-          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-        </li>
+        <li><a class="form-button"><%= CURRENT_USER_NAME %></a><li>
+        <li><a class="form-button"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

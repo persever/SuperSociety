@@ -8,22 +8,36 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     if (window.CURRENT_USER_NAME) {
       this.render();
     }
-    // this.listenTo(this.router, "route", this.activate);
+    this.listenTo(this.router, "route", this.activate);
   },
 
   events: {
-    "click .form-button": "loadForm"
+    "click .form-button": "loadForm",
+    "click .glyphicon-log-out": "logOut"
   },
 
-  // activate: function (source, path) {
-  //   this.$(".active").removeClass("active");
-  //   this.$("route").addClass("active");
-  // },
+  activate: function (router, route, params) {
+    this.$(".active").removeClass("active");
+    this.$("." + router).addClass("active");
+  },
 
   render: function () {
     this.delegateEvents();
     this.$el.html(this.template());
+
     return this;
+  },
+
+  logOut: function (event) {
+    event.stopImmediatePropagation();
+    $.ajax({
+      url: "welcome",
+      type: "DELETE",
+      // success: function () {
+      //   window.location.assign("http://supersociety.us");
+      // }
+    });
+    window.location.assign("http://localhost:3000/");
   },
 
   // DO THIS >>>>>>>>>>>>>>>>>>>> // loadForm: function (event) {

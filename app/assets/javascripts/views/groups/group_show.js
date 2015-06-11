@@ -8,11 +8,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync", this.render);
 
     var subscription = this.model.currentUserSubscription();
-    if (subscription) {
-      this.button = new SuperSocietyApp.Views.SubscriptionButton({ model: subscription, group_id: this.model.id });
-    } else {
-      this.button = new SuperSocietyApp.Views.SubscriptionButton();
-    }
+    this.button = new SuperSocietyApp.Views.SubscriptionButton({ model: subscription, group_id: this.model.id });
   },
 
   addEventsIndexSubview: function () {
@@ -54,7 +50,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     } else if (this._subEventId === 0) {
       this.addEventsIndexSubview();
     } else {
-      console.log("EventShow must be rendered with a subEventId argument.");
+      throw "EventShow must be rendered with a subEventId argument.";
     }
 
     return this;

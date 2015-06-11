@@ -11,7 +11,7 @@ SuperSocietyApp.Models.Group = Backbone.Model.extend({
 
   currentUserSubscription: function () {
     if (!this._currentUserSubscription) {
-      this._currentUserSubscription = new SuperSocietyApp.Models.Subscription({group_id: this.id});
+      this._currentUserSubscription = new SuperSocietyApp.Models.Subscription({ group_id: this.id });
     }
 
     return this._currentUserSubscription;

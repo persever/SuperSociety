@@ -1,13 +1,7 @@
 (phase 3)
-- CREATE USER MODEL???? (update phases)
-- wait, just access server attendings/subscriptions with CURRENT_USER/event/group ids??????
-- toggle join/unjoin buttons for event shows, and events indexitems!!!!!! then for group show
-- get rid of currentUserManagedGroups assoc
+- toggle buttons for event shows, and events indexitems...
 
 - make logout button on nav work
-// ajax request
-// delete the session
-// in success set window location to where we want to redirect
 - make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
 ---
 
@@ -15,12 +9,17 @@
 
 ---
 
-- phase 5
+- (phase 5)
 - make events index load with gorup info in search view, not in group view
 
 ---
 
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
+
+---
+
+- CREATE USER MODEL???? (update phases)
+- get rid of currentUserManagedGroups assoc
 
 ---
 
@@ -64,5 +63,7 @@
 - super low priority: upcoming events count in nav
 
 - note used bootstrap nav, search bar plugin, other big snipps
+- REMOVE COMMENTS
+- simplicity! tidiness!
 
 Why did you call them events -_-

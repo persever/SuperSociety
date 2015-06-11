@@ -2,6 +2,7 @@ class Api::AttendingsController < ApplicationController
 
   def create
     @attending = Attending.new(attending_params)
+    @attending.user = current_user
     if @attending.save
       render json: @attending
     else
@@ -10,6 +11,9 @@ class Api::AttendingsController < ApplicationController
   end
 
   def destroy
+    attending = Attending.find(params[:id])
+    attending.destroy
+    render json: {}
   end
 
   private

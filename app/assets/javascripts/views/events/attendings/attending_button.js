@@ -1,8 +1,8 @@
-SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
+SuperSocietyApp.Views.AttendingButton = Backbone.CompositeView.extend({
   tagName: "button",
 
   initialize: function (options) {
-    this.group_id = options.group_id;
+    this.event_id = options.event_id;
     this.listenTo(this.model, "sync", this.render);
   },
 
@@ -14,11 +14,11 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
     this.delegateEvents();
 
     if (!this.model.isNew()) {
-      this.$el.html("Unsubscribe");
-      this.$el.addClass("subscribed");
+      this.$el.html("Leave");
+      this.$el.addClass("joined");
     } else {
-      this.$el.html("Subscribe");
-      this.$el.addClass("not-subscribed");
+      this.$el.html("Join");
+      this.$el.addClass("not-joined");
     }
 
     return this;
@@ -30,7 +30,7 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
       this.model.clear();
       this.render();
     } else {
-      this.model.save({ group_id: this.group_id });
+      this.model.save({ event_id: this.event_id });
       this.render();
     }
   }

@@ -6,43 +6,23 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     this.group = options.group;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.group, "sync", this.render);
+
+    var attending = this.model.currentUserAttending();
+    this.button = new SuperSocietyApp.Views.AttendingButton({ model: attending, event_id: this.model.id });
   },
 
   events: {
-    "click button.eventsIdx": "switchToEventsIndexSubview",
-    "click button.eventToggle": "toggleEventAttending"
+    "click button.eventsIdx": "switchToEventsIndexSubview"
   },
 
   render: function () {
     this.$el.html(this.template({ event: this.model, group: this.group }));
-    // if...
-    // this.$("button.eventToggle").text("Join");
+    this.$("#attending-button").html(this.button.render().$el);
+    
     return this;
   },
 
   switchToEventsIndexSubview: function () {
     SuperSocietyApp.router.groupShow(this.group.id);
-  },
-
-  toggleEventAttending: function () {
-    var o = this._toggleHelper(this.model.get("attenders"), CURRENT_USER_ID);
-    if (o) {
-      var newAttenders = this.model.get("attenders").delete(o);
-      this.model.set("attenders", newAttenders);
-    // } else {
-      // var currentUser = // user model
-      // var newAttenders = this.model.get("attenders").push(currentUser);
-    }
-  },
-
-  _toggleHelper: function (array, userId) {
-    var o = null;
-    array.some(function (obj) {
-      if (obj.id === userId) {
-        o = obj;
-        return true;
-      }
-    });
-    return o;
   }
 });
