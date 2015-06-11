@@ -31,7 +31,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     if (event.constructor !== SuperSocietyApp.Models.Event) {
       var id = $(event.currentTarget).data("id");
       this._subEventId = id;
-      eventToShow = SuperSocietyApp.events.findWhere({ id: id });
+      eventToShow = this.collection.findWhere({ id: id });
     } else {
       this._subEventId = event.id;
       eventToShow = event;
@@ -43,7 +43,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     this.$("#subscription-button").html(this.button.render().$el);
-    if (CURRENT_USER_ID === this.get("creator_id")) {
+    if (CURRENT_USER_ID === this.model.get("creator_id")) {
       // var editButton = // button to pop up modal
       this.$("button.edit").html(editButton);
     }

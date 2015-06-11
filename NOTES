@@ -1,5 +1,5 @@
 - (phase 3)
-1 (ta help) toggle buttons for event shows, and events indexitems...
+1 (ta help) toggle attending buttons for event shows, and events indexitems...
 2 (ta help) make logout button on nav work properly
 3 (cj lec) make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
 
@@ -9,6 +9,7 @@
 - (phase 5)
 0 DO PHASE 5
 - make sure redirections working
+> make events index click through to group show page with that eventId...
 > make events index load with group info in search view/route, but not in group view/route
 
 ---
@@ -34,6 +35,7 @@ all BASIC styliing/ui organizing before fun designing
 ---
 
 - make bootstrap grid for group index
+- make bootstrap nav collapse at like 300px, no bigger
 
 - internal scroll: overflow y scroll to scroll
 

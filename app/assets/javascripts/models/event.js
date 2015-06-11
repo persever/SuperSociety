@@ -1,5 +1,5 @@
 SuperSocietyApp.Models.Event = Backbone.Model.extend({
-  urlRoot: "/api/attendings",
+  urlRoot: "/api/events",
 
   currentUserAttending: function () {
     if (!this._currentUserAttending) {

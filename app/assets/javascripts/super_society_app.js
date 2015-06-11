@@ -10,9 +10,6 @@ window.SuperSocietyApp = {
     SuperSocietyApp.groups.fetch({ reset: true });
 
     SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
-    SuperSocietyApp.groups.each(function (group) {
-      SuperSocietyApp.events.push(group.events());
-    });
     SuperSocietyApp.events.fetch({ reset: true });
 
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
