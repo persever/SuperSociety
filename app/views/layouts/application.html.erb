@@ -14,7 +14,6 @@
         window.CURRENT_USER_NAME = "<%= current_user.username %>"
         window.currentUserManagedGroupIds = "<%= current_user.managed_group_ids %>"
     </script>
-    <%= button_to "Log Out", session_url, method: :delete %>
   <% else %>
     <script type="text/javascript">
         window.currentUserManagedGroupIds = "<%= [] %>"

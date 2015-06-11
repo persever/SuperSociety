@@ -1,31 +1,36 @@
-(phase 3)
-- toggle buttons for event shows, and events indexitems...
+- (phase 3)
+1 (ta help) toggle buttons for event shows, and events indexitems...
+2 (ta help) make logout button on nav work properly
+3 (cj lec) make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
 
-- make logout button on nav work
-- make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
----
-
-- if there are no notes above this, update the readme time expectations, close the issues, and push
-
----
+- (phase 4)
+4 (cj lec) event and group editing
 
 - (phase 5)
-- make events index load with gorup info in search view, not in group view
+0 DO PHASE 5
+- make sure redirections working
+> make events index load with group info in search view/route, but not in group view/route
 
 ---
 
+- if there are no notes above this, update the readme time expectations and phase files, close the github issues, and push
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
+- clean up your notes here and elsewhere, organize to make an efficient plan from here, emphasizing bang-for-buck
 
 ---
 
+- create members subview for group show
 - CREATE USER MODEL???? (update phases)
-- get rid of currentUserManagedGroups assoc
+- get rid of currentUserManagedGroups assoc and any other related mess
 
 ---
 
 - make bootstrap grid for group index
 
 - internal scroll: overflow y scroll to scroll
+
+- handle enter key in search
+- handle enter ans esc keys on modal forms
 
 - seed live action photos for users and groups
 

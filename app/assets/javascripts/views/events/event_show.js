@@ -18,7 +18,11 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   render: function () {
     this.$el.html(this.template({ event: this.model, group: this.group }));
     this.$("#attending-button").html(this.button.render().$el);
-    
+    if (CURRENT_USER_ID === this.group.get("creator_id")) {
+      // var editButton = // button to pop up modal
+      this.$("button.edit").html(editButton);
+    }
+
     return this;
   },
 

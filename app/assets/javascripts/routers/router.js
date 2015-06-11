@@ -17,7 +17,10 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   },
 
   // home/search, composite view
-  root: function () {},
+  root: function () {
+    var home = new SuperSocietyApp.Views.Search();
+    this.$rootEl.html(home.render().$el);
+  },
 
   // modal subview
   // newGroup: function () {
