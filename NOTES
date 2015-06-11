@@ -5,6 +5,9 @@
 - get rid of currentUserManagedGroups assoc
 
 - make logout button on nav work
+// ajax request
+// delete the session
+// in success set window location to where we want to redirect
 - make group and events forms modals (also phase 4) (see trello project!!!!!!) ... load from other file.....
 ---
 
@@ -39,12 +42,18 @@
 - make appropriate rails route hits redirect to appropriate static page route
 - make group genuine composite view, without that event show subview button navigating?
 
+- delete events and groups
+> reset db every night at a weird hour! set enough seeds for a day of employers to delete!!!
 - edit groups and events!!!
 - ensure browser back button works :O
 
 - add snippets to readme at very end
 > filepicker redirect?
 > frontend assocs? (toggle?)
+
+- sign in and out and do things with multiple users, make sure that's not messing up
+
+- clear out old unused files, unless useful to show process... but you have that in your readme so it probably just looks cluttered. it is just clutter.
 
 - check out app in firefox
 

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :groups
+    resources :subscriptions, only: [:create, :destroy]
     resources :events
+    resources :attendings, only: [:create, :destroy]
   end
 end

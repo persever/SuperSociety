@@ -14,12 +14,12 @@ class Api::EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    render json: @event, include: { :attenders => { only: :id } }
+    render json: @event, include: :attendings
   end
 
   def index
     @events = Event.all
-    render json: @events, include: { :attenders => { only: :id } }
+    render json: @events, include: :attendings
   end
 
   def edit
