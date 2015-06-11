@@ -1,3 +1,11 @@
+#searchbar {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
 #search-input {
   margin:0;
   margin-top: 10px;

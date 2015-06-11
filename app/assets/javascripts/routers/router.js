@@ -18,7 +18,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // home/search, composite view
   root: function () {
-    var home = new SuperSocietyApp.Views.Search();
+    var home = new SuperSocietyApp.Views.Home();
     this.$rootEl.html(home.render().$el);
   },
 
