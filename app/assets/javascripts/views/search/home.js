@@ -7,11 +7,13 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.groups = options.groups;
     // this.groups.fetch();
     this.searchType = "event-search";
+    this.init = true;
 
     //wrap in conditional... wait you might not need this...
     this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.ssevents, "sync", this.render);
-    // this.$("#searchbar.search-query").on("input", this.search);
+    // this.$("input.search-query").on("input", this.search);
+    this.$("input.search-query").on("input", this.search);
 
     // first render should show cU's events -- see how you did that for group show...
     // // pass in router or cull here? will need all, but starting with subcollection...
@@ -21,16 +23,19 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
   events: {
     "click .search-button": "setSearchType",
-    "click .results li": "redirectToEvent",
+    "click .results li": "redirect",
     "submit #searchbar": "search"
   },
 
   render: function () {
     this.delegateEvents();
+
     this.$el.html(this.template());
     this.addSearchSubview();
 
-    if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
+    if (this.init) {
+      this.renderEventsIndexSubview(this.ssevents); // just the cU's events!!
+    } else if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
       this.renderEventsIndexSubview(this.ssevents);
     } else {
       this.renderGroupsIndexSubview(this.groups);
@@ -39,21 +44,32 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     return this;
   },
 
-  setSearchType: function () {
+  setSearchType: function (event) {
     this.searchType = $(event.currentTarget).data("id");
+    this.search();
   },
 
   search: function (event) {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
 
     var query = $(".search-query").val();
 
     if (this.searchType === "event-search"){
-      var events = this.filter(this.ssevents, query);
-      this.renderEventsIndexSubview(events);
+      if (query === "") {
+        this.renderEventsIndexSubview(this.ssevents);
+      } else {
+        var events = this.filter(this.ssevents, query);
+        this.renderEventsIndexSubview(events);
+      }
     } else {
-      this.filter(this.groups, query);
-      this.renderGroupsIndexSubview(groups);
+      if (query === "") {
+        this.renderGroupsIndexSubview(this.groups);
+      } else {
+        var groups = this.filter(this.groups, query);
+        this.renderGroupsIndexSubview(groups);
+      }
     }
   },
 
@@ -82,11 +98,16 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.$("#searchbar").html(searchbar.render().$el);
   },
 
-  redirectToEvent: function (event) {
-    var eventId = $(event.currentTarget).data("id");
-    var ssevent = this.ssevents.get(eventId);
-    var groupId = ssevent.get("group_id");
-    SuperSocietyApp.router.groupShow(groupId, eventId);
+  redirect: function (event) {
+    var id = $(event.currentTarget).data("id");
+    if (this.searchType === "event-search") {
+      var ssevent = this.ssevents.get(id);
+      var groupId = ssevent.get("group").id;
+      Backbone.history.navigate("groups/" + id);
+      SuperSocietyApp.router.groupShow(groupId, id);
+    } else {
+      Backbone.history.navigate("groups/" + id, { trigger: true});
+    }
   },
 
   renderEventsIndexSubview: function (collection) {

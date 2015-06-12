@@ -9,6 +9,8 @@ SuperSocietyApp.Views.GroupsIndexItem = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
+    this.$el.attr("data-id", this.model.id);
+
     return this;
   }
 });
