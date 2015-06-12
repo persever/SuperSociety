@@ -25,7 +25,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     "click .search-button": "setSearchType",
     "click .results li": "redirect",
     "submit #searchbar": "search",
-    "keydown input.search-query": "search"
+    "input input.search-query": "search"
   },
 
   inputChanged: function(e){
@@ -55,8 +55,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   search: function (event) {
-    console.log(event.type)
-    if (event.type !== "keydown") {
+    if (event && event.type !== "input") {
       event.preventDefault();
     }
 
@@ -82,15 +81,29 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   filter: function (collection, query) {
     var results = collection.clone();
 
+    var filterHelper = function (string, query) {
+      if (string.includes("The")) {
+        string = string.slice(4);
+      }
+      if (string.slice(0, query.length).toLowerCase() === query.toLowerCase()) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
     if (collection === this.ssevents) {
       collection.each(function(model) {
-        if (!(model.get("title") === query || model.get("location") === query)) {
+        var titleTruthiness = filterHelper(model.get("title"), query);
+        var locationTruthiness = filterHelper(model.get("location"), query);
+        if (!(titleTruthiness || locationTruthiness)) {
           results.remove(model);
         }
       });
     } else {
       collection.each(function(model) {
-        if (model.get("name") !== query) {
+        var nameTruthiness = filterHelper(model.get("name"), query);
+        if (!nameTruthiness) {
           results.remove(model);
         }
       });
