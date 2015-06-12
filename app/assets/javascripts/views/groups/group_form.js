@@ -4,7 +4,8 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
   events: {
     "submit form": "submit",
     "click .close": "remove",
-    "click .m-backdrop": "remove"
+    "click .m-backdrop": "remove",
+    "click .photo-upload": "uploadPhoto"
   },
 
   initialize: function () {
@@ -39,6 +40,19 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     var hOffset = ($(window).width() - 500) / 2;
     $modal.css("margin-top", vOffset);
     $modal.css("margin-left", hOffset);
+  },
+
+  uploadPhoto: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget(
+      CLOUDINARY_SETTINGS,
+      function (error, result) {
+        var url = result[0].url;
+        this.$(".save-photo").val(url);
+        // this.model.set("photo_url", result[0].url);
+        this.$("button.photo-upload").text("Photo Saved!").removeClass("btn-primary").addClass("btn-danger");
+      }.bind(this)
+    );
   },
 
   submit: function (event) {

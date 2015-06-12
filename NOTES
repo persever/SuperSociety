@@ -3,8 +3,8 @@
 ---
 
 PHOTO UPLOADS!!
-- cloudinary
-- remove everything filepicker
+- resize
+- where set variables?
 seed and insert group header photos
 show profile photo in navbar!
 
@@ -14,6 +14,9 @@ show profile photo in navbar!
 - pre-select group value in event edit form!!
 - form error messages appear inside offending inputs???
 see notes in notebook
+
+- handle enter from description textarea to submit form
+- group subscribe from index
 
 ---
 
@@ -43,7 +46,7 @@ all BASIC styliing/ui organizing before fun designing
 ---
 
 - get rid of currentUserManagedGroups assoc and any other related mess
-- why is server running/showing everything twice? low priority
+- why is server running/showing association things twice? low priority
 
 
 - handle enter key in search

@@ -8,7 +8,8 @@
 
   <form>
 
-    <input class="btn btn-primary form-control" name="group[photo_url]">
+    <button class="photo-upload btn btn-primary form-control">Upload Photo</button>
+    <input class="save-photo" type="hidden" name="group[photo_url]" value="<%= group.escape("photo_url") %>">
     <br>
     <br>
 
