@@ -82,14 +82,16 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     var results = collection.clone();
 
     var filterHelper = function (string, query) {
-      if (string.includes("The")) {
-        string = string.slice(4);
+      var words = string.split(" ");
+      var i = 0;
+      while (i < words.length) {
+        console.log(words.length);
+        if (words[i].slice(0, query.length).toLowerCase() === query.toLowerCase()) {
+          return true;
+        }
+        i++;
       }
-      if (string.slice(0, query.length).toLowerCase() === query.toLowerCase()) {
-        return true;
-      } else {
-        return false;
-      }
+      return false;
     };
 
     if (collection === this.ssevents) {
