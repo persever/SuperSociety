@@ -13,7 +13,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.ssevents, "sync", this.render);
     // this.$("input.search-query").on("input", this.search);
-    this.$("input.search-query").on("input", this.search);
+    // this.$("input.search-query").on("keydown", this.search);
 
     // first render should show cU's events -- see how you did that for group show...
     // // pass in router or cull here? will need all, but starting with subcollection...
@@ -24,7 +24,12 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   events: {
     "click .search-button": "setSearchType",
     "click .results li": "redirect",
-    "submit #searchbar": "search"
+    "submit #searchbar": "search",
+    "keydown input.search-query": "search"
+  },
+
+  inputChanged: function(e){
+
   },
 
   render: function () {
@@ -50,20 +55,21 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   search: function (event) {
-    if (event) {
+    console.log(event.type)
+    if (event.type !== "keydown") {
       event.preventDefault();
     }
 
     var query = $(".search-query").val();
 
-    if (this.searchType === "event-search"){
+    if (this.searchType === "event-search") {
       if (query === "") {
         this.renderEventsIndexSubview(this.ssevents);
       } else {
         var events = this.filter(this.ssevents, query);
         this.renderEventsIndexSubview(events);
       }
-    } else {
+    } else if (this.searchType === "group-search") {
       if (query === "") {
         this.renderGroupsIndexSubview(this.groups);
       } else {
