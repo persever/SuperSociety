@@ -21,6 +21,13 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       event: this.model,
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
+
+    if (this.model.isNew()) {
+      this.$("h3").text("New Event");
+    } else {
+      this.$("h3").text("Edit " + "\"" + this.model.get("title") + "\"");
+    }
+
     this.center();
 
     return this;
@@ -38,10 +45,18 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();
+    var isNew = false;
+    if (this.model.isNew()) {
+      isNew = true;
+    }
     this.model.save(attrs, {
       success: function () {
-        SuperSocietyApp.events.add(this.model);
-        Backbone.history.navigate("events/" + this.model.id, { trigger: true });
+        if (isNew) {
+          SuperSocietyApp.events.add(this.model);
+        }
+        var groupId = this.model.get("group_id");
+        this.remove();
+        SuperSocietyApp.router.groupShow(groupId, this.model.id);
       }.bind(this),
 
       error: function (model, response) {

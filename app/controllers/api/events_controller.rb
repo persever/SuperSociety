@@ -26,7 +26,7 @@ class Api::EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    if @event.save(event_params)
+    if @event.update(event_params)
       render json: @event
     else
       render json: @event.errors.full_messages, status: :unprecessable_entity

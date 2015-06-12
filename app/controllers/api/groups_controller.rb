@@ -27,7 +27,7 @@ class Api::GroupsController < ApplicationController
 
   def update
     @group = Group.find(params[:id])
-    if @group.save
+    if @group.update(group_params)
       render json: @group
     else
       render json: @group.errors.full_messages, status: :unprecessable_entity

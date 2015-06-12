@@ -53,9 +53,6 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
     $("body").prepend(form.render().$el);
     form.delegateEvents();
-
-    // var modalContent = form.render().$el;
-    // modalContent.modal();
   }
 
 });

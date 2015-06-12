@@ -1,4 +1,4 @@
-json.extract!(@group, :id, :name, :description)
+json.extract!(@group, :id, :name, :description, :creator_id)
 
 json.events do
   json.array! @group.events, partial: "api/shared/events", as: :event

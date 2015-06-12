@@ -2,7 +2,8 @@
 
 <div class="m-content group">
 
-  <h3>New Group<button type="button" class="close pull-right">&times;</button></h3>
+  <div><button type="button" class="close pull-right">&times;</button></div>
+  <h3></h3>
   <br>
 
   <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
@@ -18,8 +19,7 @@
     <br>
 
     <label>Description</label>
-    <textarea name="group[description]" class="form-control" value="<%= group.escape("description") %>">
-    </textarea>
+    <textarea name="group[description]" class="form-control"><%= group.escape("description") %></textarea>
 
     <br>
     <input type="submit" class="submit btn btn-primary pull-right">

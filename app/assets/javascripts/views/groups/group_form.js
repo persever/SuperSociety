@@ -16,6 +16,13 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     this.$el.html(this.template({
       group: this.model
       }));
+
+    if (this.model.isNew()) {
+      this.$("h3").text("New Group");
+    } else {
+      this.$("h3").text("Edit " + "\"" + this.model.get("name") + "\"");
+    }
+
     this.center();
 
     return this;
@@ -28,8 +35,8 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     // console.log($modal.height());
     // console.log($modal.width());
 
-    var vOffset = ($(window).height() - 400) / 2;
-    var hOffset = ($(window).width() - 300) / 2;
+    var vOffset = ($(window).height() - 450) / 2;
+    var hOffset = ($(window).width() - 500) / 2;
     $modal.css("margin-top", vOffset);
     $modal.css("margin-left", hOffset);
   },
@@ -38,10 +45,17 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();
+    var isNew = false;
+    if (this.model.isNew()) {
+      isNew = true;
+    }
     this.model.save(attrs, {
       success: function () {
-        SuperSocietyApp.groups.add(this.model);
-        Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
+        if (isNew) {
+          SuperSocietyApp.events.add(this.model);
+        }
+        this.remove();
+        SuperSocietyApp.router.groupShow(this.model.id);
       }.bind(this),
 
       error: function (model, response) {

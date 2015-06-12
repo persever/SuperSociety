@@ -23,7 +23,8 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   events: {
     "click .events .title": "addEventShowSubview",
-    "click h2.groupname": "addEventsIndexSubview"
+    "click h2.groupname": "addEventsIndexSubview",
+    "click button.edit-group": "edit"
   },
 
   addEventShowSubview: function (event) {
@@ -44,9 +45,9 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({ group: this.model }));
     this.$("#subscription-button").html(this.button.render().$el);
 
-    if (CURRENT_USER_ID === this.model.get("creator_id")) {
-      // var editButton = // button to pop up modal
-      this.$("button.edit").html(editButton);
+    if (CURRENT_USER_ID == this.model.get("creator_id")) {
+      var editButton = "<button class=\"edit-group\">Edit</button>";
+      this.$(".edit-button").html(editButton);
     }
     if (this._subEventId !== 0) {
       var ssevent = this.collection.getOrFetch(this._subEventId);
@@ -58,6 +59,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     }
 
     return this;
+  },
+
+  edit: function (event) {
+    var form = new SuperSocietyApp.Views.GroupForm({ model: this.model });
+
+    $("body").prepend(form.render().$el);
+    form.delegateEvents();
   },
 
   _swapSubview: function (view) {

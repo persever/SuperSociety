@@ -12,19 +12,27 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   },
 
   events: {
-    "click button.eventsIdx": "switchToEventsIndexSubview"
+    "click button.eventsIdx": "switchToEventsIndexSubview",
+    "click button.edit": "edit"
   },
 
   render: function () {
     this.$el.html(this.template({ ssevent: this.model, group: this.group }));
     this.$("#attending-button").html(this.button.render().$el);
 
-    if (CURRENT_USER_ID === this.group.get("creator_id")) {
-      // var editButton = // button to pop up modal
-      this.$("button.edit").html(editButton);
+    if (CURRENT_USER_ID == this.group.get("creator_id")) {
+      var editButton = "<button class=\"edit\">Edit</button>";
+      this.$(".edit-button").html(editButton);
     }
 
     return this;
+  },
+
+  edit: function (event) {
+    var form = new SuperSocietyApp.Views.EventForm({ model: this.model });
+
+    $("body").prepend(form.render().$el);
+    form.delegateEvents();
   },
 
   switchToEventsIndexSubview: function () {

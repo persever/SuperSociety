@@ -2,14 +2,19 @@
 
 <div class="m-content event">
 
-  <h3>New Event<button type="button" class="close pull-right">&times;</button></h3>
+  <div><button type="button" class="close pull-right">&times;</button></div>
+  <h3></h3>
   <br>
 
   <form>
     <label>Group</label>
     <select name="event[group_id]">
       <% groups.each(function (group) { %>
-        <option value="<%= group.id %>"><%= group.escape("name") %></option>
+        <% if (group.id != event.escape("group_id")) { %>
+          <option value="<%= group.id %>"><%= group.escape("name") %></option>
+        <% } else { %>
+          <option value="<%= group.id %>" selected><%= group.escape("name") %></option>
+        <% } %>
       <% }) %>
     </select>
     <br>
@@ -20,7 +25,7 @@
     <br>
 
     <label>When</label>
-    <input class="form-control" type="datetime" name="event[datetime]" value="<%= event.escape("date") %>">
+    <input class="form-control" type="datetime" name="event[datetime]" value="<%= event.escape("datetime") %>">
     <br>
 
     <label>Where</label>
@@ -28,7 +33,7 @@
     <br>
 
     <label>Description</label>
-    <textarea name="event[description]" class="form-control" value="<%= event.escape("description") %>"></textarea>
+    <textarea name="event[description]" class="form-control"><%= event.escape("description") %></textarea>
 
     <br>
     <input type="submit" class="submit btn btn-primary pull-right">
