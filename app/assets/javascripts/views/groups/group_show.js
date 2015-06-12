@@ -11,6 +11,12 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.button = new SuperSocietyApp.Views.SubscriptionButton({ model: subscription, group_id: this.model.id });
   },
 
+  events: {
+    "click .events .title": "addEventShowSubview",
+    "click h2.groupname": "addEventsIndexSubview",
+    "click button.edit-group": "edit"
+  },
+
   addEventsIndexSubview: function () {
     if (this._subEventId) {
       this._subEventId = 0;
@@ -19,12 +25,6 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       collection: this.collection
       });
     this._swapSubview(eventsIdxView);
-  },
-
-  events: {
-    "click .events .title": "addEventShowSubview",
-    "click h2.groupname": "addEventsIndexSubview",
-    "click button.edit-group": "edit"
   },
 
   addEventShowSubview: function (event) {

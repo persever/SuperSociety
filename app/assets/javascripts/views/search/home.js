@@ -6,11 +6,12 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     // this.events.fetch();
     this.groups = options.groups;
     // this.groups.fetch();
-    this.view = "Events";
+    this.searchType = "event-search";
 
     //wrap in conditional... wait you might not need this...
     this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.ssevents, "sync", this.render);
+    // this.$("#searchbar.search-query").on("input", this.search);
 
     // first render should show cU's events -- see how you did that for group show...
     // // pass in router or cull here? will need all, but starting with subcollection...
@@ -19,18 +20,61 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   events: {
+    "click .search-button": "setSearchType",
     "click .results li": "redirectToEvent",
+    "submit #searchbar": "search"
   },
 
   render: function () {
+    this.delegateEvents();
     this.$el.html(this.template());
     this.addSearchSubview();
 
-    if (this.view === "Events") {
-      this.renderEventsIndexSubview();
+    if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
+      this.renderEventsIndexSubview(this.ssevents);
+    } else {
+      this.renderGroupsIndexSubview(this.groups);
     }
 
     return this;
+  },
+
+  setSearchType: function () {
+    this.searchType = $(event.currentTarget).data("id");
+  },
+
+  search: function (event) {
+    event.preventDefault();
+
+    var query = $(".search-query").val();
+
+    if (this.searchType === "event-search"){
+      var events = this.filter(this.ssevents, query);
+      this.renderEventsIndexSubview(events);
+    } else {
+      this.filter(this.groups, query);
+      this.renderGroupsIndexSubview(groups);
+    }
+  },
+
+  filter: function (collection, query) {
+    var results = collection.clone();
+
+    if (collection === this.ssevents) {
+      collection.each(function(model) {
+        if (!(model.get("title") === query || model.get("location") === query)) {
+          results.remove(model);
+        }
+      });
+    } else {
+      collection.each(function(model) {
+        if (model.get("name") !== query) {
+          results.remove(model);
+        }
+      });
+    }
+
+    return results;
   },
 
   addSearchSubview: function () {
@@ -45,18 +89,14 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     SuperSocietyApp.router.groupShow(groupId, eventId);
   },
 
-  renderEventsIndexSubview: function () {
-    var collection = this.ssevents;
-
+  renderEventsIndexSubview: function (collection) {
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
       collection: collection
       });
     this._swapSubview(eventsIdxView);
   },
 
-  renderGroupsIndexSubview: function () {
-    var collection = this.groups;
-
+  renderGroupsIndexSubview: function (collection) {
     var groupsIdxView = new SuperSocietyApp.Views.GroupsIndex({
       collection: collection
       });
@@ -69,6 +109,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     }
     this._currentSubview = view;
 
+    this.view = view;
     this.addSubview(".results", view);
   }
 });
