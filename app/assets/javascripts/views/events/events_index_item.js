@@ -13,6 +13,10 @@ SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
   render: function () {
     this.$el.html(this.template({ event: this.model }));
     this.$("#attending-button").html(this.button.render().$el);
+    if (Backbone.history.getFragment() === "") {
+      this.$("#group-name").text(this.model.get("group").name);
+    }
+
     this.$el.attr("data-id", this.model.id);
 
     return this;
