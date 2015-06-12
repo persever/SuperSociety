@@ -13,24 +13,24 @@ SuperSocietyApp.Views.AttendingButton = Backbone.CompositeView.extend({
   render: function () {
     this.delegateEvents();
 
-    if (!this.model.isNew()) {
-      this.$el.html("Leave");
-      this.$el.addClass("joined");
-    } else {
+    if (this.model.isNew()) {
       this.$el.html("Join");
-      this.$el.addClass("not-joined");
+      // this.$el.addClass("not-joined");
+    } else {
+      this.$el.html("Leave");
+      // this.$el.addClass("joined");
     }
 
     return this;
   },
 
   toggle: function () {
-    if (!this.model.isNew()) {
-      this.model.destroy();
-      this.model.clear();
+    if (this.model.isNew()) {
+      this.model.save({ event_id: this.event_id });
       this.render();
     } else {
-      this.model.save({ event_id: this.event_id });
+      this.model.destroy();
+      this.model.clear();
       this.render();
     }
   }

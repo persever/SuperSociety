@@ -1,5 +1,3 @@
->>> why is it quering for the current user so many times???
-
 - (phase 3)
 1 (ta help) toggle attending buttons for event shows, and events indexitems...
 2 (ta help) make logout button on nav work properly
@@ -24,6 +22,10 @@ see notes in notebook
 
 ---
 
+MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
+
+---
+
 - if there are no notes above this, update the readme time expectations and phase files, close the github issues, and push
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
 - clean up your notes here and elsewhere, organize to make an efficient plan from here, emphasizing bang-for-buck
@@ -38,6 +40,7 @@ in header bar on home page, put count of upcoming events (which switches in appr
 - create members subview for group show
 - CREATE USER MODEL???? (update phases)
 - get rid of currentUserManagedGroups assoc and any other related mess
+- why is server running/showing everything twice? low priority
 
 ---
 

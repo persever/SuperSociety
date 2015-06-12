@@ -13,24 +13,24 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
   render: function () {
     this.delegateEvents();
 
-    if (!this.model.isNew()) {
-      this.$el.html("Unsubscribe");
-      this.$el.addClass("subscribed");
-    } else {
+    if (this.model.isNew()) {
       this.$el.html("Subscribe");
-      this.$el.addClass("not-subscribed");
+      // this.$el.addClass("not-subscribed");
+    } else {
+      this.$el.html("Unsubscribe");
+      // this.$el.addClass("subscribed");
     }
 
     return this;
   },
 
   toggle: function () {
-    if (!this.model.isNew()) {
-      this.model.destroy();
-      this.model.clear();
+    if (this.model.isNew()) {
+      this.model.save({ group_id: this.group_id });
       this.render();
     } else {
-      this.model.save({ group_id: this.group_id });
+      this.model.destroy();
+      this.model.clear();
       this.render();
     }
   }

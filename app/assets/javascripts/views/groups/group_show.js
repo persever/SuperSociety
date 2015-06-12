@@ -43,6 +43,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     this.$("#subscription-button").html(this.button.render().$el);
+    
     if (CURRENT_USER_ID === this.model.get("creator_id")) {
       // var editButton = // button to pop up modal
       this.$("button.edit").html(editButton);
