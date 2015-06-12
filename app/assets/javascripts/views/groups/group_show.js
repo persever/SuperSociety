@@ -22,28 +22,28 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .events li": "addEventShowSubview",
+    "click .events .title": "addEventShowSubview",
     "click h2.groupname": "addEventsIndexSubview"
   },
 
   addEventShowSubview: function (event) {
     var eventToShow = null;
     if (event.constructor !== SuperSocietyApp.Models.Event) {
-      var id = $(event.currentTarget).data("id");
+      var id = $($(event.currentTarget).closest("li")).data("id");
       this._subEventId = id;
       eventToShow = this.collection.findWhere({ id: id });
     } else {
       this._subEventId = event.id;
       eventToShow = event;
     }
-    var eventShowView = new SuperSocietyApp.Views.EventShow( { model: eventToShow, group: this.model } );
+    var eventShowView = new SuperSocietyApp.Views.EventShow({ model: eventToShow, group: this.model });
     this._swapSubview(eventShowView);
   },
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     this.$("#subscription-button").html(this.button.render().$el);
-    
+
     if (CURRENT_USER_ID === this.model.get("creator_id")) {
       // var editButton = // button to pop up modal
       this.$("button.edit").html(editButton);

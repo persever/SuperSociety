@@ -41,6 +41,7 @@ in header bar on home page, put count of upcoming events (which switches in appr
 - CREATE USER MODEL???? (update phases)
 - get rid of currentUserManagedGroups assoc and any other related mess
 - why is server running/showing everything twice? low priority
+- make mouse note turn into text identifier on text hover... make it just be one of two things for clickable and not
 
 ---
 

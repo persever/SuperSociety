@@ -2,7 +2,6 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   template: JST["events/show"],
 
   initialize: function (options) {
-    // console.log(options);
     this.model = options.model;
     this.group = options.group;
     this.listenTo(this.model, "sync", this.render);
@@ -17,7 +16,6 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   },
 
   render: function () {
-    // console.log(this.model.currentUserAttending.id);
     this.$el.html(this.template({ ssevent: this.model, group: this.group }));
     this.$("#attending-button").html(this.button.render().$el);
 

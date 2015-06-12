@@ -3,21 +3,19 @@ SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
 
   template: JST["events/index_item"],
 
-  // events: {
-  //   "click": "routeToShow",
-  // },
-
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
+
+    var attending = this.model.currentUserAttending();
+    this.button = new SuperSocietyApp.Views.AttendingButton({ model: attending, event_id: this.model.id });
   },
 
   render: function () {
     this.$el.html(this.template({ event: this.model }));
+    this.$("#attending-button").html(this.button.render().$el);
     this.$el.attr("data-id", this.model.id);
-    return this;
-  }//,
 
-  // routeToShow: function () {
-  //   Backbone.history.navigate("events/" + this.model.id);
-  // }
+    return this;
+  }
+
 });
