@@ -2,7 +2,9 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   template: JST["events/form"],
 
   events: {
-    "submit form": "submit"
+    "submit form": "submit",
+    "click .close": "remove",
+    "click .m-backdrop": "remove",
   },
 
   initialize: function () {
@@ -11,15 +13,25 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       model.fetch();
     });
     this.listenTo(SuperSocietyApp.currentUserManagedGroups, "sync", this.render);
+    $(window).on("resize", this.center);
   },
 
   render: function () {
-    console.log(this.model);
-    $("#modal").append(this.template({
+    this.$el.html(this.template({
       event: this.model,
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
+    this.center();
+
     return this;
+  },
+
+  center: function () {
+    var $modal = this.$(".m-content");
+    var vOffset = ($(window).height() - $modal.height()) / 2;
+    var hOffset = ($(window).width() - $modal.width()) / 2;
+    $modal.css("margin-top", vOffset);
+    $modal.css("margin-left", hOffset);
   },
 
   submit: function () {

@@ -24,6 +24,55 @@
   border-radius: 3px;
 }
 
+.m-backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.m-content {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  padding: 40px;
+  border-radius: 5px;
+  z-index: 101;
+}
+
+.m-content.group {
+  height: 400px;
+}
+
+.m-content.group button.upload {
+  margin: 0 auto;
+}
+
+textarea {
+  resize: none;
+}
+
+// .m-content {
+//   z-index: 101;
+//   background-color: white;
+//   border-radius: 3px;
+//   padding: 20px;
+//   height: 256px;
+//   width: 564px;
+//   position: fixed;
+//   /* margin: 0 auto; */
+//   margin-top: 66px;
+//   left: 25%;
+// }
+
 .float-left {
   float: left;
 }

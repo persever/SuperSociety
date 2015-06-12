@@ -12,7 +12,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   },
 
   events: {
-    "click .form-button": "loadForm",
+    "click li button.navbar-btn": "loadForm",
     "click .glyphicon-log-out": "logOut"
   },
 
@@ -40,22 +40,22 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     window.location.assign("http://localhost:3000/");
   },
 
-  // DO THIS >>>>>>>>>>>>>>>>>>>> // loadForm: function (event) {
-  // //   var formType = $(event.currentTarget).data("id");
-  // //   var form = null;
-  // //   if (formType === "new-group") {
-  // //     var group = new SuperSocietyApp.Models.Group();
-  // //     form = new SuperSocietyApp.Views.GroupForm({ model: group });
-  // //   } else if (formType === "new-event") {
-  // //     var ssevent = new SuperSocietyApp.Models.Event();
-  // //     form = new SuperSocietyApp.Views.EventForm({ model: ssevent });
-  // //   }
-  // //
-  // //   $('body').prepend(form.render().$el);
-  // //   form.delegateEvents();
-  // //
-  // //   // var modalContent = form.render().$el;
-  // //   // modalContent.modal();
-  // // }
+  loadForm: function (event) {
+    var formType = $(event.currentTarget).data("id");
+    var form = null;
+    if (formType === "new-group") {
+      var group = new SuperSocietyApp.Models.Group();
+      form = new SuperSocietyApp.Views.GroupForm({ model: group });
+    } else if (formType === "new-event") {
+      var ssevent = new SuperSocietyApp.Models.Event();
+      form = new SuperSocietyApp.Views.EventForm({ model: ssevent });
+    }
+
+    $("body").prepend(form.render().$el);
+    form.delegateEvents();
+
+    // var modalContent = form.render().$el;
+    // modalContent.modal();
+  }
 
 });

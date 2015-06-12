@@ -1,21 +1,30 @@
-<h3>New Group</h3>
+<div class="m-backdrop"></div>
 
-<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+<div class="m-content group">
 
-<form>
-
-  <label>Name</label>
-  <input type="text" name="group[name]" value="<%= group.escape("name") %>">
+  <h3>New Group<button type="button" class="close pull-right">&times;</button></h3>
   <br>
 
-  <input type="filepicker" name="group[filepicker_url]" data-fp-button-text="Upload Photo" data-fp-apikey="Abm0dWPxnTQq5GImNFmOIz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-maxsize="15M" data-fp-store-location="s3" data-fp-services="CLOUDDRIVE,COMPUTER,DROPBOX,FACEBOOK,GITHUB,GOOGLE_DRIVE,FLICKR,GMAIL,INSTAGRAM,SKYDRIVE,IMAGE_SEARCH,URL,WEBCAM">
-  <br>
+  <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 
-  <label>Description</label>
-  <textarea name="group[description]" value="<%= group.escape("description") %>">
-  </textarea>
+  <form>
 
-  <input type="submit" value="Next">
-</form>
+    <input class="btn btn-primary form-control" type="filepicker" name="group[filepicker_url]" data-fp-button-text="Upload Photo" data-fp-apikey="Abm0dWPxnTQq5GImNFmOIz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-maxsize="15M" data-fp-store-location="s3" data-fp-services="CLOUDDRIVE,COMPUTER,DROPBOX,FACEBOOK,GITHUB,GOOGLE_DRIVE,FLICKR,GMAIL,INSTAGRAM,SKYDRIVE,IMAGE_SEARCH,URL,WEBCAM">
+    <br>
+    <br>
 
-<div class="errors"></div>
+    <label>Name</label>
+    <input class="form-control" type="text" name="group[name]" value="<%= group.escape("name") %>">
+    <br>
+
+    <label>Description</label>
+    <textarea name="group[description]" class="form-control" value="<%= group.escape("description") %>">
+    </textarea>
+
+    <br>
+    <input type="submit" class="submit btn btn-primary pull-right">
+  </form>
+
+  <div class="errors"></div>
+
+</div>

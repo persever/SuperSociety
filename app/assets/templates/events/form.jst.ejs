@@ -1,7 +1,9 @@
-<div class="card-modal-backdrop">
-</div>
+<div class="m-backdrop"></div>
 
-<div class="card-modal">
+<div class="m-content event">
+
+  <h3>New Event<button type="button" class="close pull-right">&times;</button></h3>
+  <br>
 
   <form>
     <label>Group</label>
@@ -11,23 +13,25 @@
       <% }) %>
     </select>
     <br>
+    <br>
 
     <label>Title</label>
-    <input type="text" name="event[title]" value="<%= event.escape("title") %>">
+    <input class="form-control" type="text" name="event[title]" value="<%= event.escape("title") %>">
     <br>
 
     <label>When</label>
-    <input type="datetime" name="event[datetime]" value="<%= event.escape("date") %>">
+    <input class="form-control" type="datetime" name="event[datetime]" value="<%= event.escape("date") %>">
     <br>
 
     <label>Where</label>
-    <input type="text" name="event[location]" value="<%= event.escape("location") %>">
+    <input class="form-control" type="text" name="event[location]" value="<%= event.escape("location") %>">
     <br>
 
     <label>Description</label>
-    <textarea name="event[description]" value="<%= event.escape("description") %>"></textarea>
+    <textarea name="event[description]" class="form-control" value="<%= event.escape("description") %>"></textarea>
 
-    <input type="submit">
+    <br>
+    <input type="submit" class="submit btn btn-primary pull-right">
   </form>
 
   <div class="errors"></div>
