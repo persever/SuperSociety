@@ -9,8 +9,7 @@
   <br>
 
   <% if type == "user" %>
-    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
-    <input type="filepicker" name="user[filepicker_url]" data-fp-button-text="Upload Photo" data-fp-apikey="Abm0dWPxnTQq5GImNFmOIz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-maxsize="15M" data-fp-store-location="s3" data-fp-services="CLOUDDRIVE,COMPUTER,DROPBOX,FACEBOOK,GITHUB,GOOGLE_DRIVE,FLICKR,GMAIL,INSTAGRAM,SKYDRIVE,IMAGE_SEARCH,URL,WEBCAM">
+    <input class="btn btn-primary form-control" name="user[photo_url]">
     <br>
   <% end %>
 

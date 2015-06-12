@@ -40,6 +40,6 @@ class Api::GroupsController < ApplicationController
   private
 
     def group_params
-      params.require(:group).permit(:name, :description, :creator_id, :filepicker_url)
+      params.require(:group).permit(:name, :description, :creator_id, :photo_url)
     end
 end
