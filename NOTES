@@ -1,16 +1,11 @@
 0 GET HEROKU WORKING
-
-3 make search work!
-- DYNAMIC INPUT RESPONSE!!!
->> by start of title/name/location!
-
-- make sure redirections are working
 - (ta help) make logout button on nav work properly
 
 ---
 
 PHOTO UPLOADS!!
-- if stick with filepicker, reset api key, make secure
+- cloudinary
+- remove everything filepicker
 seed and insert group header photos
 show profile photo in navbar!
 

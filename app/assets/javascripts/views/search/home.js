@@ -124,7 +124,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     if (this.searchType === "event-search") {
       var ssevent = this.ssevents.get(id);
       var groupId = ssevent.get("group").id;
-      Backbone.history.navigate("groups/" + id);
+      Backbone.history.navigate("groups/" + groupId);
       SuperSocietyApp.router.groupShow(groupId, id);
     } else {
       Backbone.history.navigate("groups/" + id, { trigger: true});
