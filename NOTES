@@ -1,10 +1,4 @@
-- (ta help) make logout button on nav work properly
-
----
-
-PHOTO UPLOADS!!
-- resize before saving?
-seed and insert group header photos
+seed group photos
 show profile photo in navbar!
 
 ---
@@ -20,15 +14,17 @@ see notes in notebook
 ---
 
 MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
+- guest login
 
 ---
 
 - if there are no notes above this, update the readme time expectations and phase files, close the github issues, and push
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
-- clean up your notes here and elsewhere, organize to make an efficient plan from here, emphasizing bang-for-buck
+- clean up your notes here and elsewhere (notebook, other file[s]), organize to make an efficient plan from here, emphasizing bang-for-buck
 
 ---
 
+- (ta help) make logout button on nav work properly
 all BASIC styliing/ui organizing before fun designing
 
 ---
@@ -66,7 +62,8 @@ all BASIC styliing/ui organizing before fun designing
 - make appropriate rails route hits redirect to appropriate static page route
 - make group genuine composite view, without that event show subview button navigating?
 
-- delete events and groups
+- allow user to change photo
+- enable deletion of events and groups
 > reset db every night at a weird hour! set enough seeds for a day of employers to delete!!!
 - edit groups and events!!!
 - ensure browser back button works :O

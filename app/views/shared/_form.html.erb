@@ -1,20 +1,40 @@
-<form action="<%= url %>" method="post">
+<form class="user-form" action="<%= url %>" method="post">
   <input type="hidden" name="authenticity_token"
                        value="<%= form_authenticity_token %>" >
   <label>Username</label>
-  <input type="text" name="<%= type %>[username]" value="<%= instance.username %>"></input>
+  <input type="text" class="form-control" name="<%= type %>[username]" value="<%= instance.username %>"></input>
   <br>
   <label>Password</label>
-  <input type="password"name="<%= type %>[password]" value="<%= instance.password %>"></input>
+  <input type="password" class="form-control" name="<%= type %>[password]" value="<%= instance.password %>"></input>
   <br>
 
   <% if type == "user" %>
-    <button class="photo-upload btn btn-primary form-control">Upload Photo</button>
-    <input class="save-photo" type="hidden" name="name[photo_url]" value="<%= name.photo_url %>">
-    <br>
+    <div class="photo-uploading">
+    <button id="user-photo-upload" class="btn btn-primary form-control">Upload Photo</button>
+    <input id="save-user-photo" type="hidden" name="user[photo_url]" value="<%= instance.photo_url %>">
+    </div>
+    <script type="text/javascript">
+      document.getElementById("user-photo-upload").addEventListener("click",
+        function(event) {
+          event.preventDefault();
+          cloudinary.openUploadWidget(
+            CLOUDINARY_SETTINGS,
+            function(error, result) {
+              var url = result[0].url;
+              var $input = document.getElementById("save-user-photo");
+              $input.value = url;
+              var $button = document.getElementById("user-photo-upload");
+              $button.remove();
+              $(".photo-uploading").prepend("<button id=\"user-photo-upload\" class=\"btn btn-danger form-control\">Photo Saved!</button>");
+            }
+          );
+        }, false
+      );
+    </script>
   <% end %>
 
-  <input type="submit" value="<%= submit_value %>"></input>
+  <br>
+  <input type="submit" class="form-control btn btn-primary" value="<%= submit_value %>"></input>
 </form>
 <br>
 <%= flash[:errors] if flash[:errors] %>

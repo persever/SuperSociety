@@ -49,7 +49,6 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
       function (error, result) {
         var url = result[0].url;
         this.$(".save-photo").val(url);
-        // this.model.set("photo_url", result[0].url);
         this.$("button.photo-upload").text("Photo Saved!").removeClass("btn-primary").addClass("btn-danger");
       }.bind(this)
     );
