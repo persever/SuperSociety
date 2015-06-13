@@ -9,8 +9,8 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template());
-    this.collection.each(function (event) {
-      var item = new SuperSocietyApp.Views.EventsIndexItem({ model: event });
+    this.collection.each(function (ssevent) {
+      var item = new SuperSocietyApp.Views.EventsIndexItem({ model: ssevent });
       this.$el.append(item.render().$el);
     }.bind(this));
 

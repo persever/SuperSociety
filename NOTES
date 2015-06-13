@@ -45,6 +45,7 @@ all BASIC styliing/ui organizing before fun designing
 ---
 
 - get rid of currentUserManagedGroups assoc and any other related mess
+- rename all "ssevent(s)" and all "event(s)" that are actually ssevents to "gatherings" or whateverfor comprehension
 - why is server running/showing association things twice? low priority
 
 
