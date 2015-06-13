@@ -1,34 +1,33 @@
-seed group photos
-show profile photo in navbar!
-
----
+- show profile photo in navbar!
+- seed group and (pre-shrunk and cropped) user photos
 
 - DATETIME PICKER
 - pre-select group value in event edit form!!
-- form error messages appear inside offending inputs???
-see notes in notebook
+- make form error messages appear inside offending inputs???
 
 - handle enter from description textarea to submit form
-- group subscribe from index
 
----
-
-MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
+- MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
 - guest login
 
 ---
 
-- if there are no notes above this, update the readme time expectations and phase files, close the github issues, and push
+SATURDAY MINIMUM: GET THROUGH THIS SECTION
+
+- if there are no notes above this, update the readme time expectations and phase files, close the github issues, db reset both and push to both
 - upgrade heroku, get it working (do this in classtime in case you need ta help!!)
 - clean up your notes here and elsewhere (notebook, other file[s]), organize to make an efficient plan from here, emphasizing bang-for-buck
 
 ---
 
-- (ta help) make logout button on nav work properly
+SATURDAY PREFERRED: BASIC STYLING
+
 all BASIC styliing/ui organizing before fun designing
 
 ---
 
+- group subscribe from index
+- (ta help?) make logout button on nav work properly
 - create members subview for group show
 - CREATE USER MODEL???? (update phases) or just through the subscriptions, get the users' photos......
 - make mouse note turn into text identifier on text hover... make it just be one of two things for clickable and not
