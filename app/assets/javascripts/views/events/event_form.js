@@ -28,10 +28,6 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       this.$("h3").text("Edit " + "\"" + this.model.get("title") + "\"");
     }
 
-    // this.$("#datetimepicker1").data("DateTimePicker").defaultDate(this.model.escape("datetime"));
-    // console.log(moment());
-    // console.log(moment(this.model.escape("datetime")));
-
     this.center();
 
     return this;

@@ -1,13 +1,13 @@
 SUNDAY:
 
-- DATETIME PICKER
-- format datetime on event index items and show
 - preselect datetime
 - pre-select group value in event edit form!!
 - make errors on forms look a little nicer
 - handle "enter" key from description textarea to submit form
 
 - are all groups showing all users???? multiple times????
+
+- if search empty, should only show user's events/groups!!
 
 - MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
 
@@ -16,6 +16,7 @@ SUNDAY:
 - MAKE GAMEPLAN THROUGH DEADLINE THURS!!! (Then time to do cracking the coding interview problems!!)
 
 - BLOG POST
+- change all ssevents to such
 
 ---
 

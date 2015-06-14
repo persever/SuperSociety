@@ -1,7 +1,7 @@
 <button class="eventsIdx">Back to <%= group.escape("name") %>'s Events</button>
 <br>
 <h2><%= ssevent.escape("title") %></h2><div class="edit-button"></div>
-<%= ssevent.escape("datetime") %>
+<%= moment(ssevent.escape("datetime")).format("MMMM Do, h:mm A") %>
 <br>
 <%= ssevent.escape("location") %>
 <br>

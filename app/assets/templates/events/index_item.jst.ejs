@@ -1,6 +1,6 @@
 <div id="group-name"></div>
 <h3 class="heading title"><%= event.escape("title") %></h3>
-<%= event.escape("datetime") %>
+<%= moment(event.escape("datetime")).format("MMMM Do, h:mm A") %>
 <br>
 <%= event.escape("location") %>
 <br>
