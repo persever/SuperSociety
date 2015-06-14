@@ -83,19 +83,17 @@ their upcoming events.
 
 [Details][phase-five]
 
-### Phase 6: Styling (3+ days)
-Seed data, and style the UI!
+### Phase 6: Frosting (3+ days)
+Touch up code, seed data, style the UI, and implement bonus features!
 
 ### Bonus Features (TBD)
-- [ ] Handle enter and esc keys on forms and search
-- [ ] Infinite scroll
+- [ ] Handle enter keys on forms and search
+- [ ] Automatic search response to input
+- [ ] Internal scroll
 - [ ] FriendlyId
-- [ ] Enable markdown in group and event descriptions
 - [ ] User calendar
 - [ ] Event comments
-- [ ] User profiles that show the user's groups, past and upcoming events
-- [ ] Create and search for groups and events with tags
-- [ ] Add other users as group managers
+- [ ] Tags for groups and events
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

@@ -13,12 +13,14 @@ SUNDAY:
 
 - BLOG POST
 
+- play around with Meetup more to feel out their mapping
+- read that UI article
+
 ---
 
 MONDAY:
 
 - guest login
-- GROUP AND USER PAST EVENTS
 - search should exclude past events
 - destroy groups and events
 - user User model to get rid of currentUserManagedGroups assoc and any other related mess
@@ -58,11 +60,19 @@ WEDNESDAY:
 - custom (simple circle) cursor for button/a/other clickable hover
 - guest login autotype
 - jQuery UI toggle class / color animation for smooth toggle button transitions
-- dimensionality
+- FriendlyId
+- dimensionality (diagonal slice on buttons, lighter above darker below)
 
----
+- section off subviews like Meetup does, over background
+- make event form modal not spazz its way on screen
 
 THURSDAY:
+
+- event comments
+
+- homepage button for user's past events index
+- tab on group page for past events index
+- past event views should have a frozen attending button
 
 - change signout button to power symbol
 - make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
@@ -75,8 +85,12 @@ THURSDAY:
 - group subscribe from index
 - remove button blue glow
 
+- click on any piece of information to edit it
+
+- group and event tags, searchable
+
 ---
 
 FRIDAY:
 
-Yay! Now do coding interview prep!
+Yay! Blog about it! And read the bonus material. Then do coding interview prep!
