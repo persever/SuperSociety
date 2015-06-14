@@ -28,10 +28,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     "input input.search-query": "search"
   },
 
-  inputChanged: function(e){
-
-  },
-
   render: function () {
     this.delegateEvents();
 
@@ -39,6 +35,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.addSearchSubview();
 
     if (this.init) {
+      this.$("[data-id=\"event-search\"]").addClass("active");
       this.renderEventsIndexSubview(this.ssevents); // just the cU's events!!
     } else if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
       this.renderEventsIndexSubview(this.ssevents);
@@ -51,6 +48,8 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
   setSearchType: function (event) {
     this.searchType = $(event.currentTarget).data("id");
+    this.$(".active").removeClass("active");
+    this.$("[data-id=\"" + this.searchType + "\"]").addClass("active");
     this.search();
   },
 

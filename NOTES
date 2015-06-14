@@ -1,7 +1,5 @@
 SUNDAY:
 
-- preselect datetime
-- pre-select group value in event edit form!!
 - make errors on forms look a little nicer
 - handle "enter" key from description textarea to submit form
 

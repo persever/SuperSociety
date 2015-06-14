@@ -17,10 +17,10 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     "click .logo.navbar-brand": "home"
   },
 
-  activate: function (router, route, params) {
-    this.$(".active").removeClass("active");
-    this.$("." + router).addClass("active");
-  },
+  // activate: function (router, route, params) {
+  //   this.$(".active").removeClass("active");
+  //   this.$("." + router).addClass("active");
+  // },
 
   render: function () {
     this.delegateEvents();

@@ -73,10 +73,14 @@ nav .glyphicon.glyphicon-log-out:hover {
 
 #searchbar {
   min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  padding-top: 165px;
+}
+
+#searchbar .container {
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #search-input {
@@ -85,16 +89,23 @@ nav .glyphicon.glyphicon-log-out:hover {
   padding: 0;
 }
 
-#search-input .search-query {
-  padding-right: 3px;
-  padding-right: 4px \9;
-  padding-left: 3px;
-  padding-left: 4px \9;
+input.search-query.form-control {
+  height: 34.667px;
+}
 
-  margin-bottom: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.search-button.btn.btn-danger {
+  width: 125px;
+  height: 34.667px;
+  line-height: 0px;
+  font-family: "sf-comic-script";
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+
+.search-button.btn.btn-danger.active, .search-button.btn.btn-danger:hover {
+  background-color: #CC0000;
 }
 
 .m-backdrop {
