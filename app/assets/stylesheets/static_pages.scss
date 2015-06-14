@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "sf-comic-script";
+  src: url("sf-comic-script.ttf");
+  src: url("sf-comic-script.ttf") format("truetype");
+}
+
 .navbar .navbar-btn {
   margin-left: 5px;
 }
@@ -40,6 +46,8 @@
 }
 
 .m-content {
+  // color: white;
+  // font-weight: lighter;
   position: absolute;
   background-color: white;
   display: flex;
@@ -77,4 +85,34 @@ textarea {
 
 .glyphicon.glyphicon-search.form-control-feedback {
   top: 0;
+}
+
+a.navbar-brand {
+  font-family: "sf-comic-script";
+  font-size: 20px;
+}
+
+h3.heading {
+  font-family: "sf-comic-script";
+  font-size: 30px;
+}
+
+button.submit, input.submit {
+  color: black;
+  background-color: #FFFF00;
+  font-family: "sf-comic-script";
+  font-size: 20px;
+  border-radius: 0px;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+}
+
+button.submit:hover, input.submit:hover {
+  color: black;
+  -webkit-transform: translate(5px,5px);
+  transform: translate(5px,5px);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
+  box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
 }
