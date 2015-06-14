@@ -176,3 +176,12 @@ button.submit:hover, input.submit:hover {
   -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
   box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
 }
+
+#datetimepicker1 {
+  transform: translateX(-15px);
+  width: 400px;
+}
+
+input#datetime.form-control {
+  height: 34.667px;
+}
