@@ -16,6 +16,8 @@ gem 'filepicker-rails'
 gem 'puma'
 gem 'figaro'
 gem 'rails_12factor'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
 
 group :development, :test do
   gem 'byebug'

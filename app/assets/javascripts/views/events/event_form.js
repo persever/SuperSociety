@@ -18,7 +18,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template({
-      event: this.model,
+      ssevent: this.model,
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
 
@@ -27,6 +27,10 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
     } else {
       this.$("h3").text("Edit " + "\"" + this.model.get("title") + "\"");
     }
+
+    // this.$("#datetimepicker1").data("DateTimePicker").defaultDate(this.model.escape("datetime"));
+    // console.log(moment());
+    // console.log(moment(this.model.escape("datetime")));
 
     this.center();
 
@@ -44,7 +48,10 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   submit: function () {
     event.preventDefault();
 
+
     var attrs = $(event.target).serializeJSON();
+    attrs.event.datetime = moment(this.$("input#datetime").val(), "MM/DD/YYY HH:mm").format("YYYY-MM-DD HH:mm:ss");
+
     var isNew = false;
     if (this.model.isNew()) {
       isNew = true;

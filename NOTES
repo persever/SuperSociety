@@ -7,6 +7,8 @@ SUNDAY:
 - make errors on forms look a little nicer
 - handle "enter" key from description textarea to submit form
 
+- are all groups showing all users???? multiple times????
+
 - MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
 
 - if there are no notes above this, update the readme time expectations and phase files, close the github issues, db reset both and push to both
@@ -17,7 +19,7 @@ SUNDAY:
 
 ---
 
-- basic clean coherent organization and design before details/reactivity/animation/etc
+- basic clean coherent organization and design before details/reactivity/cursorstyle/animation/etc
 - guest login
 - GROUP AND USER PAST EVENTS
 - search should exclude past events

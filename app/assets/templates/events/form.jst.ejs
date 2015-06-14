@@ -10,7 +10,7 @@
     <label>Group</label>
     <select name="event[group_id]">
       <% groups.each(function (group) { %>
-        <% if (group.id != event.escape("group_id")) { %>
+        <% if (group.id != ssevent.escape("group_id")) { %>
           <option value="<%= group.id %>"><%= group.escape("name") %></option>
         <% } else { %>
           <option value="<%= group.id %>" selected><%= group.escape("name") %></option>
@@ -21,19 +21,37 @@
     <br>
 
     <label>Title</label>
-    <input class="form-control" type="text" name="event[title]" value="<%= event.escape("title") %>">
+    <input class="form-control" type="text" name="event[title]" value="<%= ssevent.escape("title") %>">
     <br>
 
     <label>When</label>
-    <input class="form-control" type="datetime" name="event[datetime]" value="<%= event.escape("datetime") %>">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group date" id="datetimepicker1">
+                        <input type="text" class="form-control" id="datetime"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+        </div>
+    </div>
     <br>
 
     <label>Where</label>
-    <input class="form-control" type="text" name="event[location]" value="<%= event.escape("location") %>">
+    <input class="form-control" type="text" name="event[location]" value="<%= ssevent.escape("location") %>">
     <br>
 
     <label>Description</label>
-    <textarea name="event[description]" class="form-control"><%= event.escape("description") %></textarea>
+    <textarea name="event[description]" class="form-control"><%= ssevent.escape("description") %></textarea>
 
     <br>
     <input type="submit" class="submit btn pull-right">
