@@ -13,6 +13,8 @@
 ### Collections
 
 ### Views
-* Search (composite view, contains GroupsIndex or EventsIndex subview)
+* Nav
+* Home (composite view, contains Searchbar and GroupsIndex or EventsIndex)
+* Searchbar
 
 ## Gems/Libraries

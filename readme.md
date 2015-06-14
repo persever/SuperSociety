@@ -50,7 +50,7 @@ and events with simple Rails view forms.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Group and Event Shows (<1 day)
+### Phase 2: Viewing Group and Event Shows (~1 day)
 I will add API routes to serve group and event data as JSON, then add Backbone
 models and collections that fetch data from those routes. The group show view
 will be a composite view, and the event show view will be nested inside of that
@@ -66,13 +66,13 @@ leave events. I will need to create a frontend user model.
 
 [Details][phase-three]
 
-### Phase 4: Creating and Editing Groups and Events (<1 day)
+### Phase 4: Creating and Editing Groups and Events (~1 day)
 I will create modal forms for groups and events. Filepicker will be integrated.
 Filepicker will also be integrated with the user signup.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Groups and Events (~1 day)
+### Phase 5: Searching for Groups and Events (~2 days)
 Finally, I will assemble the search composite view, creating a search bar that
 separates searches for groups and events. The subviews will respond to input
 immediately. This will be the landing page after a user logs in. (They will also
@@ -84,10 +84,7 @@ their upcoming events.
 [Details][phase-five]
 
 ### Phase 6: Styling (3+ days)
-Seed data. Logo. CSS, boosted with Bootstrap and Sass. Dimensionality.
-Background. Reactive mouse. Fade effect for every main view container. Deletion
-confirmation modal. Custom errors and 404 pages. Slide in event index items.
-Autosize input fields.
+Seed data, and style the UI!
 
 ### Bonus Features (TBD)
 - [ ] Handle enter and esc keys on forms and search

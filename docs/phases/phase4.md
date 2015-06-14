@@ -19,4 +19,5 @@ Api::EventsController (create, new, destroy, update, edit)
 * EventForm
 
 ## Gems/Libraries
-* Filepicker
+* Cloudinary
+* Datetime Picker

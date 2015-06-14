@@ -1,93 +1,82 @@
 SUNDAY:
 
-- make errors on forms look a little nicer
-- handle "enter" key from description textarea to submit form
+- buttons on home pages (showing counts!!) to users's upcoming events and subscribed groups
+- init home page should show user's upcoming events
 
-- are all groups showing all users???? multiple times????
+- basic organizational styling (mostly group index, group show, event show; then eii buttons)
 
-- if search empty, should only show user's events/groups!!
+- allow user to change photo from navbar (silhouette placeholder)
+- now you can go back to a single signin page!!
 
-- MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY ASPECT, IN AND OUT
-
-- if there are no notes above this, update the readme time expectations and phase files, close the github issues, db reset both and push to both
-- clean up your notes here and elsewhere (notebook, other file[s])
-- MAKE GAMEPLAN THROUGH DEADLINE THURS!!! (Then time to do cracking the coding interview problems!!)
+- db reset both and push to both
+- clean up your notes here and elsewhere (notebook, readme bonuses, other file[s])
 
 - BLOG POST
-- change all ssevents to such
 
 ---
 
-- basic clean coherent organization and design before details/reactivity/cursorstyle/animation/etc
+MONDAY:
+
 - guest login
 - GROUP AND USER PAST EVENTS
 - search should exclude past events
-- 'no events' subview placeholder for groups with no events (like 'i have powers because science')
+- destroy groups and events
+- user User model to get rid of currentUserManagedGroups assoc and any other related mess
 
----
-
-- make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
-- group subscribe from index
-- (ta help?) make logout button on nav work properly
-- create members subview for group show
-- CREATE USER MODEL???? (update phases) or just through the subscriptions, get the users' photos......
-- make mouse note turn into text identifier on text hover... make it just be one of two things for clickable and not
-- internal scroll: overflow y scroll to scroll
-- make bootstrap grid for group index
-- make bootstrap nav collapse at like 300px, no bigger
-
-- in header bar on home page, put count of upcoming events (which switches in approp index subv)
-
-- event show attenders
-
----
-
-- get rid of currentUserManagedGroups assoc and any other related mess
-- rename all "ssevent(s)" and all "event(s)" that are actually ssevents to "gatherings" or whateverfor comprehension
-- why is server running/showing association things twice? low priority
-
-
-- handle enter key in search
-- handle enter ans esc keys on modal forms
-
-- seed live action photos for users and groups
-
-- root url background video behind semi-transparent black screen behind buttons if no current user
-
-- guest signin autotype
-
-- custom mouse image (white circle? comic book bang effect image?)
-
-- make every route call redirect to signin page if no current user... currently tacks it on....
-
-- make filepicker more site appropriate
-- make appropriate rails route hits redirect to appropriate static page route
-- make group genuine composite view, without that event show subview button navigating?
-
-- allow user to change photo
-- enable deletion of events and groups
-> reset db every night at a weird hour! set enough seeds for a day of employers to delete!!!
-- edit groups and events!!!
-- ensure browser back button works :O
-
-- add snippets to readme at very end
-> filepicker redirect?
-> frontend assocs? (toggle?)
-
+- MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
 - sign in and out and do things with multiple users, make sure that's not messing up
-
-- clear out old unused files, unless useful to show process... but you have that in your readme so it probably just looks cluttered. it is just clutter.
-
 - check out app in firefox
 
-- search bar in nav if not on search page? (if on group page)
+TUESDAY:
 
-- clean up all comments, KEEP LINES WITHIN LENGTH LIMIT, refactor long and messy things, make sure naming is comprehensible
+- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
+- clean up all comments
 
-- super low priority: upcoming events count in nav
+- see "Patterns" and other performance optimization readings
 
-- note used bootstrap nav, search bar plugin, other big snipps
-- REMOVE COMMENTS
-- simplicity! tidiness!
+- refactor long and messy things, and any logic that should be in a different file
+- KEEP LINES WITHIN LENGTH LIMIT
 
-Why did you call them events -_-
+- (ta help?) make logout button on nav work properly
+
+- add snippets to readme
+
+- auto reset heroku db every single night!
+- a few more iron man seeds in case some employers go crazy!!
+
+WEDNESDAY:
+
+- internal scroll (overflow y scroll to scroll)
+- slide in event index items (jQuery UI show effect)
+- welcome screen video and epic music behind login/signup modal (heimdall + bridge video???)
+- make errors on forms look a little nicer
+- handle "enter" key from description textarea to submit forms
+- deletion confirmation modal
+- simple custom 404 pages
+- 'no events' placeholder for groups with no events (like 'i have powers because science')
+- make bootstrap nav collapse at like 300px, no bigger
+- custom (simple circle) cursor for button/a/other clickable hover
+- guest login autotype
+- jQuery UI toggle class / color animation for smooth toggle button transitions
+- dimensionality
+
+---
+
+THURSDAY:
+
+- change signout button to power symbol
+- make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
+- logo
+- reactive mouse
+- make cloudinary more stylistically coherent
+- catchy one-liner on entry page (def if you stuck with the split login/signup, maybe if just login/signup screen but don't clutter it)
+- infinite scroll
+- fade effect on every route change
+- group subscribe from index
+- remove button blue glow
+
+---
+
+FRIDAY:
+
+Yay! Now do coding interview prep!

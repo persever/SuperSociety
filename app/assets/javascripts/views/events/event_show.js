@@ -3,6 +3,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
 
   initialize: function (options) {
     this.model = options.model;
+    this.model.fetch();
     this.group = options.group;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.group, "sync", this.render);
@@ -25,16 +26,13 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       this.$(".edit-button").html(editButton);
     }
 
-    var that = this;
-    var attenders = this.model.attenders();
-    attenders.fetch({
-      success: function () {
-        attenders.forEach(function(user) {
-          var img = $("<img>").attr("src", user.get("photo_url"));
-          that.$(".users").append(img);
-        });
-      }
-    });
+    if (this.model.get("attenders")) {
+      var attenders = this.model.get("attenders");
+      attenders.forEach(function(attender) {
+        var $img = $("<img>").attr("src", attender.photo_url);
+        this.$(".attenders").append($img);
+      });
+    }
 
     return this;
   },

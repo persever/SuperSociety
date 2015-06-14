@@ -1,3 +1,3 @@
-SuperSocietyApp.Models.User = Backbone.Model.extend({
-  urlRoot: "/users",
-});
+// SuperSocietyApp.Models.User = Backbone.Model.extend({
+//   urlRoot: "/users",
+// });

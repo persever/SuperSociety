@@ -50,16 +50,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       this.$(".edit-button").html(editButton);
     }
 
-    var that = this;
-    var subscribers = this.model.subscribers();
-    subscribers.fetch({
-      success: function () {
-        subscribers.forEach(function(user) {
-          var img = $("<img>").attr("src", user.get("photo_url"));
-          that.$(".users").append(img);
-        });
-      }
-    });
+    if (this.model.get("subscribers")) {
+      var subscribers = this.model.get("subscribers");
+      subscribers.forEach(function(subscriber) {
+        var $img = $("<img>").attr("src", subscriber.photo_url);
+        this.$(".subscribers").append($img);
+      });
+    }
 
     if (this._subEventId !== 0) {
       var ssevent = this.collection.getOrFetch(this._subEventId);

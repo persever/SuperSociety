@@ -16,8 +16,10 @@
 * users/new.html.erb
 * session/new.html.erb
 * groups/new.html.erb
+* groups/index.json.jbuilder
 * groups/show.json.jbuilder
 * events/new.html.erb
+* events/index.json.jbuilder
 * events/show.json.jbuilder
 
 ## Backbone

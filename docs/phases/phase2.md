@@ -4,8 +4,8 @@
 ### Models
 
 ### Controllers
-Api::GroupsController (show)
-Api::EventsController (show)
+(Move GroupsController to) Api::GroupsController (show)
+(Move EventsController to) Api::EventsController (show)
 
 ### Views
 
@@ -13,6 +13,8 @@ Api::EventsController (show)
 ### Models
 * Group (parses nested `events` association)
 * Event
+* Subscription
+* Attending
 
 ### Collections
 * Groups
@@ -21,5 +23,7 @@ Api::EventsController (show)
 ### Views
 * GroupShow (composite view, contains EventsIndex subview or EventShow subview)
 * EventShow
+* SubscriptionButton
+* AttendingButton
 
 ## Gems/Libraries

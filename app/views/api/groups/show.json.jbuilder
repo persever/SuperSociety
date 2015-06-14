@@ -11,3 +11,7 @@ if subscription
     json.extract! subscription, :id
   end
 end
+
+json.subscribers do
+  json.array!(@group.subscribers, :id, :photo_url)
+end

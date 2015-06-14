@@ -9,13 +9,13 @@ SuperSocietyApp.Models.Event = Backbone.Model.extend({
     return this._currentUserAttending;
   },
 
-  attenders: function () {
-    if (!this._attenders) {
-      this._attenders = new SuperSocietyApp.Collections.Users({ joinedEvent: this });
-    }
-
-    return this._attenders;
-  },
+  // attenders: function () {
+  //   if (!this._attenders) {
+  //     this._attenders = new SuperSocietyApp.Collections.Users([], { joined_event: this });
+  //   }
+  //
+  //   return this._attenders;
+  // },
 
   parse: function (response) {
     if (response.attending) {
