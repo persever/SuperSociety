@@ -11,7 +11,7 @@ nav.navbar {
   background-color: black;
 }
 
-nav button.logo.navbar-brand {
+nav a.logo.navbar-brand {
   background: rgba(0,0,0,0);
   border: none;
   font-family: "sf-comic-script";
@@ -20,9 +20,13 @@ nav button.logo.navbar-brand {
   margin-left: 10px;
 }
 
-nav button.logo.navbar-brand:hover {
-  color: red;
+nav a.logo.navbar-brand:hover {
+  color: grey;
 }
+
+// nav button.logo.navbar-brand:active {
+//   color: red;
+// }
 
 nav button.navbar-btn {
   width: 125px;

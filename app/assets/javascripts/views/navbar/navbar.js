@@ -13,7 +13,8 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
   events: {
     "click li button.navbar-btn": "loadForm",
-    "click .glyphicon-log-out": "logOut"
+    "click .glyphicon-log-out": "logOut",
+    "click .logo.navbar-brand": "home"
   },
 
   activate: function (router, route, params) {
@@ -26,6 +27,10 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     this.$el.html(this.template());
 
     return this;
+  },
+
+  home: function () {
+    Backbone.history.navigate("", { trigger: true });
   },
 
   logOut: function (event) {
