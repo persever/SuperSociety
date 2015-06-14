@@ -6,18 +6,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">SuperSociety</a>
+      <button class="logo navbar-brand">SuperSociety</button>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
         <li><button class="btn navbar-btn newGroup" data-id="new-group">New Group</a></li>
         <li><button class="btn navbar-btn newEvent" data-id="new-event">New Event</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="form-button"><%= CURRENT_USER_NAME %></a><li>
-        <li><a class="form-button btn btn-lg"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
+        <li class="username form-button"><%= CURRENT_USER_NAME %><li>
+        <img src="<%= CURRENT_USER_PHOTO %>">
+        <li><a class="form-button btn btn-lg"><span class="glyphicon glyphicon-log-out"></span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

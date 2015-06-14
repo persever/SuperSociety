@@ -4,9 +4,64 @@
   src: url("sf-comic-script.ttf") format("truetype");
 }
 
-.navbar .navbar-btn {
-  margin-left: 5px;
+nav.navbar {
+  padding: 10px;
+  height: 70px;
+  color: white;
+  background-color: black;
 }
+
+nav button.logo.navbar-brand {
+  background: rgba(0,0,0,0);
+  border: none;
+  font-family: "sf-comic-script";
+  font-size: 30px;
+  color: white;
+}
+
+nav a.logo.navbar-brand:hover {
+  font-family: "sf-comic-script";
+  font-size: 30px;
+  color: white;
+}
+
+nav li.username {
+  font-family: "sf-comic-script";
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+  border: 5px;
+  border-color: white;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+
+nav .glyphicon.glyphicon-log-out {
+  font-size: 25px;
+  color: grey;
+  margin-bottom: 10px;
+  transform: translateY(-5px);
+}
+
+nav .glyphicon.glyphicon-log-out:hover {
+  color: white;
+  text-shadow: 1px 0px 5px rgba(255, 255, 255, .75);
+}
+
+nav button.navbar-btn {
+  margin-left: 5px;
+  font-family: "sf-comic-script";
+  background-color: red;
+}
+
+nav button.navbar:hover {}
 
 #searchbar {
   min-height: 200px;
@@ -46,8 +101,6 @@
 }
 
 .m-content {
-  // color: white;
-  // font-weight: lighter;
   position: absolute;
   background-color: white;
   display: flex;
@@ -56,6 +109,8 @@
   height: 600px;
   width: 500px;
   padding: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   z-index: 101;
 }
@@ -87,11 +142,6 @@ textarea {
   top: 0;
 }
 
-a.navbar-brand {
-  font-family: "sf-comic-script";
-  font-size: 20px;
-}
-
 h3.heading {
   font-family: "sf-comic-script";
   font-size: 30px;
@@ -102,6 +152,8 @@ button.submit, input.submit {
   background-color: #FFFF00;
   font-family: "sf-comic-script";
   font-size: 20px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
   border-radius: 0px;
   -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
   -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
@@ -112,7 +164,7 @@ button.submit:hover, input.submit:hover {
   color: black;
   -webkit-transform: translate(5px,5px);
   transform: translate(5px,5px);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
-  box-shadow: 0px 0px 5px 0px rgba(255,255,153,1);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
+  box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
 }
