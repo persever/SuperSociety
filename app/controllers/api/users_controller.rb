@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
   def new
     redirect_to root_url if current_user
     @user = User.new
@@ -12,6 +12,10 @@ class UsersController < ApplicationController
       flash.now[:errors] = @user.errors.full_messages
       render :new
     end
+  end
+
+  def index
+    @users = User.all
   end
 
   private

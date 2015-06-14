@@ -25,6 +25,17 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       this.$(".edit-button").html(editButton);
     }
 
+    var that = this;
+    var attenders = this.model.attenders();
+    attenders.fetch({
+      success: function () {
+        attenders.forEach(function(user) {
+          var img = $("<img>").attr("src", user.get("photo_url"));
+          that.$(".users").append(img);
+        });
+      }
+    });
+
     return this;
   },
 

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create], path: "join-us"
 
   namespace :api, defaults: { format: :json } do
+    resources :users, only: [:index]
     resources :groups
     resources :subscriptions, only: [:create, :destroy]
     resources :events
