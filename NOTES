@@ -1,5 +1,7 @@
 MONDAY:
 
+- fix authorship
+
 > customgetorfetch
 > filter? but swap requires collection, not array
 > fetch models and sync eiis? individually?
