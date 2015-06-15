@@ -11,6 +11,14 @@ Black
 
 MONDAY:
 
+FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
+
+- home button not working
+- can't make event if don't have group!
+- cloudinary not working on heroku??
+
+- automatically join groups and events created
+
 - play around with Meetup more to feel out their mapping
 - read that UI article
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
@@ -25,6 +33,9 @@ MONDAY:
 - clean up controlelrs and routes
 
 - group name length validation
+
+- heroku drop db
+- set up secret keys w/ heroku
 
 ---
 

@@ -211,9 +211,9 @@ input.search-query.form-control {
 .m-content {
   position: absolute;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
   height: 600px;
   width: 500px;
   padding: 50px;
@@ -221,6 +221,10 @@ input.search-query.form-control {
   -moz-border-radius: 5px;
   border-radius: 5px;
   z-index: 101;
+  margin: 0 !important;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .m-content.group {
