@@ -26,6 +26,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   },
 
   home: function () {
+    Backbone.history.navigate("");
     SuperSocietyApp.router.root();
   },
 
