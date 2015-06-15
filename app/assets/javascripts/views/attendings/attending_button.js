@@ -1,4 +1,4 @@
-SuperSocietyApp.Views.AttendingButton = Backbone.CompositeView.extend({
+SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
   tagName: "button",
 
   initialize: function (options) {

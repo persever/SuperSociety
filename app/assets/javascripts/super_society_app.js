@@ -12,6 +12,9 @@ window.SuperSocietyApp = {
     SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
     SuperSocietyApp.events.fetch({ reset: true });
 
+    SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({ id: CURRENT_USER_ID });
+    SuperSocietyApp.currentUser.fetch();
+
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
       $rootEl: $("#content"),
       groups: SuperSocietyApp.groups,

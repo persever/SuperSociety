@@ -1,6 +1,6 @@
 SUNDAY:
 
-- buttons on home pages (showing counts!!) to users's upcoming events and subscribed groups
+- buttons on home page (showing counts!!) to users's upcoming events and subscribed groups
 - init home page should show user's upcoming events
 
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
@@ -25,7 +25,8 @@ MONDAY:
 - destroy groups and events
 - user User model to get rid of currentUserManagedGroups assoc and any other related mess
 
-- MAKE ALL LINKS WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
+- Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
+> no unintended effects! (like clicking join/leave from index also directing to show page!)
 - sign in and out and do things with multiple users, make sure that's not messing up
 - check out app in firefox
 
@@ -61,7 +62,7 @@ WEDNESDAY:
 - guest login autotype
 - jQuery UI toggle class / color animation for smooth toggle button transitions
 - FriendlyId
-- dimensionality (diagonal slice on buttons, lighter above darker below)
+- dimensionality (diagonal slice on buttons, lighter above darker below -- same for logo)
 
 - section off subviews like Meetup does, over background
 - make event form modal not spazz its way on screen

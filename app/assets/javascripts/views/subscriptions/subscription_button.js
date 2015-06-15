@@ -1,4 +1,4 @@
-SuperSocietyApp.Views.SubscriptionButton = Backbone.CompositeView.extend({
+SuperSocietyApp.Views.SubscriptionButton = Backbone.View.extend({
   tagName: "button",
 
   initialize: function (options) {
