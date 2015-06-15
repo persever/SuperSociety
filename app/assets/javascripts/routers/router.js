@@ -2,10 +2,10 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "root",
-    "groups/:id": "groupShow",
     "groups": "groupsIndex",
+    "groups/:id": "groupShow",
+    "events": "eventsIndex",
     "events/:id": "eventShow",
-    "events": "eventsIndex"
   },
 
   initialize: function (options) {
@@ -17,7 +17,11 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // home/search, composite view
   root: function () {
-    var home = new SuperSocietyApp.Views.Home({ groups: this.groups, ssevents: this.events, user: this.user });
+    var home = new SuperSocietyApp.Views.Home({
+      groups: this.groups,
+      ssevents: this.events,
+      user: this.user
+    });
     this.$rootEl.html(home.render().$el);
   },
 

@@ -12,7 +12,9 @@ window.SuperSocietyApp = {
     SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
     SuperSocietyApp.events.fetch({ reset: true });
 
-    SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({ id: CURRENT_USER_ID });
+    SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
+      id: CURRENT_USER_ID
+    });
     SuperSocietyApp.currentUser.fetch();
 
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
@@ -31,6 +33,8 @@ window.SuperSocietyApp = {
   }
 };
 
+
+// move to static page so it only runs when logged in
 $(document).ready(function(){
   SuperSocietyApp.initialize();
 });
