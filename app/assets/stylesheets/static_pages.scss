@@ -10,6 +10,8 @@ nav.navbar {
   color: white;
   background-color: black;
   margin-bottom: 0px;
+  border: none;
+  border-radius: 0px;
 }
 
 nav a.logo.navbar-brand {
@@ -151,6 +153,22 @@ input.search-query.form-control {
 
 .search-button.btn.btn-danger.active, .search-button.btn.btn-danger:hover {
   background-color: #CC0000;
+}
+
+.group-index-item {
+
+}
+
+.group-index-item img {
+
+}
+
+.group-index-item h3 {
+
+}
+
+.event-index-item {
+
 }
 
 .m-backdrop {
