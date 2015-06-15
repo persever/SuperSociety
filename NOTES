@@ -1,5 +1,11 @@
 MONDAY:
 
+> customgetorfetch
+> filter? but swap requires collection, not array
+> fetch models and sync eiis? individually?
+> see what you did for group members
+> go through search
+
 - play around with Meetup more to feel out their mapping
 - read that UI article
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
@@ -67,7 +73,7 @@ TUESDAY-WEDNESDAY:
 THURSDAY:
 
 - get rid of currentUserManagedGroups assoc and any other related mess
-- clean up associations, do .filter
+- clean up associations!!!
 
 - event comments
 
@@ -89,6 +95,8 @@ THURSDAY:
 - click on any piece of information to edit it
 
 - group and event tags, searchable
+
+- reduce queries
 
 ---
 

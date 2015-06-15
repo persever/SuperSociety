@@ -17,8 +17,11 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
-  end
+    if params[:attender]
+      @events = User.find(params[:attender][:id]).joined_events
+    else
+      @events = Event.all
+    end  end
 
   def edit
     @event = Event.find(params[:id])

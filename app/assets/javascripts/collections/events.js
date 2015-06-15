@@ -13,7 +13,7 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
   comparator: function (ssevent) {
     return ssevent.get("datetime");
   },
-  
+
   getOrFetch: function (id) {
     var event = this.get(id);
     var events = this;

@@ -7,15 +7,17 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.searchType = "event-search";
     this.init = true;
     this.user = options.user;
-
-    //wrap in conditional... wait you might not need this...
+    this.userEvents = new SuperSocietyApp.Collections.Events();
+    // wtf
+    this.userEvents.fetch({ data: { attender: this.user.toJSON() } });
+    this.userGroups = new SuperSocietyApp.Collections.Groups();
+    this.userGroups.fetch({ data: { subscriber: this.user.toJSON() } });
+    //refactor
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.user, "sync", this.render);
-    // this.$("input.search-query").on("input", this.search);
-    // this.$("input.search-query").on("keydown", this.search);
-
-    // first render should show cU's events -- see how you did that for group show...
+    this.listenTo(this.userEvents, "sync", this.render);
+    this.listenTo(this.userGroups, "sync", this.render);
   },
 
   events: {
@@ -80,13 +82,15 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    this.delegateEvents();
+    // this.delegateEvents();
 
     var numGroups = 0;
     var numEvents = 0;
     if (this.user.get("subscribed_groups") && this.user.get("joined_events")) {
       numGroups = this.user.get("subscribed_groups").subscribed_groups.length;
+      // numGroups = this.userGroups.length;
       numEvents = this.user.get("joined_events").joined_events.length;
+      // numEvents = this.userEvents.length;
     }
     this.$el.html(this.template({ numGroups: numGroups, numEvents: numEvents }));
     this.addSearchSubview();
@@ -99,6 +103,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
         // render no events view?
         this.renderEventsIndexSubview(this.ssevents);
       }
+      this.init = false;
     } else if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
       this.renderEventsIndexSubview(this.ssevents);
     } else {
@@ -154,31 +159,31 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   userEvents: function () {
-    var userEventsArr = this.user.get("joined_events").joined_events;
-    var userEventsIds = [];
-    userEventsArr.forEach(function(ssevent) {
-      userEventsIds.push(ssevent.id);
-    });
-    var userEvents = this.ssevents.filter(function(ssevent) {
-      if (userEventsIds.indexOf(ssevent.id) !== -1) {
-        return ssevent;
-      }
-    });
-    this.renderEventsIndexSubview(userEvents);
+    // var userEventsArr = this.user.get("joined_events").joined_events;
+    // var userEventsIds = [];
+    // userEventsArr.forEach(function(ssevent) {
+    //   userEventsIds.push(ssevent.id);
+    // });
+    // var userEvents = this.ssevents.filter(function(ssevent) {
+    //   if (userEventsIds.indexOf(ssevent.id) !== -1) {
+    //     return ssevent;
+    //   }
+    // });
+    this.renderEventsIndexSubview(this.userEvents);
   },
 
   userGroups: function () {
-    var userGroupsArr = this.user.get("subscribed_groups").subscribed_groups;
-    var userGroupsIds = [];
-    userGroupsArr.forEach(function(group) {
-      userGroupsIds.push(group.id);
-    });
-    var userGroups = this.groups.filter(function(group) {
-      if (userGroupsIds.indexOf(group.id) !== -1) {
-        return group;
-      }
-    });
-    this.renderGroupsIndexSubview(userGroups);
+    // var userGroupsArr = this.user.get("subscribed_groups").subscribed_groups;
+    // var userGroupsIds = [];
+    // userGroupsArr.forEach(function(group) {
+    //   userGroupsIds.push(group.id);
+    // });
+    // var userGroups = this.groups.filter(function(group) {
+    //   if (userGroupsIds.indexOf(group.id) !== -1) {
+    //     return group;
+    //   }
+    // });
+    this.renderGroupsIndexSubview(this.userGroups);
   },
 
   _swapSubview: function (view) {

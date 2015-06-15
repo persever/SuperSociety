@@ -18,7 +18,11 @@ class Api::GroupsController < ApplicationController
   end
 
   def index
-    @groups = Group.all
+    if params[:subscriber]
+      @groups = User.find(params[:subscriber][:id]).subscribed_groups
+    else
+      @groups = Group.all
+    end
   end
 
   def edit
