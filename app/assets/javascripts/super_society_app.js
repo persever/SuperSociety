@@ -18,7 +18,8 @@ window.SuperSocietyApp = {
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
       $rootEl: $("#content"),
       groups: SuperSocietyApp.groups,
-      events: SuperSocietyApp.events
+      events: SuperSocietyApp.events,
+      user: SuperSocietyApp.currentUser
     });
 
     SuperSocietyApp.navbar = new SuperSocietyApp.Views.Navbar({

@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :show]
     resources :groups
-    resources :subscriptions, only: [:create, :destroy]
+    resources :subscriptions, only: [:create, :destroy] #:index
     resources :events
-    resources :attendings, only: [:create, :destroy]
+    resources :attendings, only: [:create, :destroy] #:index
   end
 
   resource :session, only: [:new, :create, :destroy], path: "welcome"

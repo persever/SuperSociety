@@ -3,16 +3,17 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
 
   url: "/api/events",
 
+  // is this necessary??
   initialize: function (models, options) {
     if (options) {
       this.group = options.group;
     }
   },
 
-  comparator: function (event) {
-    return event.get("datetime");
+  comparator: function (ssevent) {
+    return ssevent.get("datetime");
   },
-
+  
   getOrFetch: function (id) {
     var event = this.get(id);
     var events = this;

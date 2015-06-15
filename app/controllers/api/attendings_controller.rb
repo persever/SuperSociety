@@ -16,6 +16,10 @@ class Api::AttendingsController < ApplicationController
     render json: {}
   end
 
+  # def index
+  #   render json: @attendings
+  # end
+
   private
 
     def attending_params

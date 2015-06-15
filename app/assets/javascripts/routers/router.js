@@ -12,11 +12,12 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl = options.$rootEl;
     this.groups = options.groups;
     this.events = options.events;
+    this.user = options.user;
   },
 
   // home/search, composite view
   root: function () {
-    var home = new SuperSocietyApp.Views.Home({ groups: this.groups, ssevents: this.events });
+    var home = new SuperSocietyApp.Views.Home({ groups: this.groups, ssevents: this.events, user: this.user });
     this.$rootEl.html(home.render().$el);
   },
 

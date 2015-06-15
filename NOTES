@@ -1,36 +1,33 @@
-SUNDAY:
+MONDAY:
 
-- buttons on home page (showing counts!!) to users's upcoming events and subscribed groups
-- init home page should show user's upcoming events
-
+- play around with Meetup more to feel out their mapping
+- read that UI article
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
 
 - allow user to change photo from navbar (silhouette placeholder)
 - now you can go back to a single signin page!!
 
-- db reset both and push to both
-- clean up your notes here and elsewhere (notebook, readme bonuses, other file[s])
+- guest login
+- search should exclude past events
 
-- BLOG POST
-
-- play around with Meetup more to feel out their mapping
-- read that UI article
+- eliminate code (models, colls, views!) not using
+- clean up controlelrs and routes
 
 ---
 
-MONDAY:
+TUESDAY:
 
-- guest login
-- search should exclude past events
 - destroy groups and events
-- user User model to get rid of currentUserManagedGroups assoc and any other related mess
 
 - Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
 > no unintended effects! (like clicking join/leave from index also directing to show page!)
 - sign in and out and do things with multiple users, make sure that's not messing up
 - check out app in firefox
 
-TUESDAY:
+- db reset both and push to both
+- BLOG POST
+
+- ensure everything is actually loading, sometimes it is but sometimes it looks like it's not syncing or second fetching
 
 - change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
 - clean up all comments
@@ -47,7 +44,7 @@ TUESDAY:
 - auto reset heroku db every single night!
 - a few more iron man seeds in case some employers go crazy!!
 
-WEDNESDAY:
+TUESDAY-WEDNESDAY:
 
 - internal scroll (overflow y scroll to scroll)
 - slide in event index items (jQuery UI show effect)
@@ -68,6 +65,9 @@ WEDNESDAY:
 - make event form modal not spazz its way on screen
 
 THURSDAY:
+
+- get rid of currentUserManagedGroups assoc and any other related mess
+- clean up associations, do .filter
 
 - event comments
 
