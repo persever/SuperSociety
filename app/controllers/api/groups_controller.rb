@@ -7,6 +7,7 @@ class Api::GroupsController < ApplicationController
     @group = Group.new(group_params)
     @group.creator_id = current_user.id
     if @group.save
+      @group.subscribers << current_user
       render json: @group
     else
       render json: @group.errors.full_messages, status: :unprecessable_entity

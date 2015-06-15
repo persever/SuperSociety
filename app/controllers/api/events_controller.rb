@@ -6,6 +6,7 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
+      @event.attenders << current_user
       render json: @event
     else
       render json: @event.errors.full_messages, status: :unprecessable_entity

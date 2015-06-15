@@ -15,7 +15,6 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - set precompile to true??
 - it's on the site, just in the wrong place...
 
-- can't make event if don't have group!
 - cloudinary not working on heroku??
 
 - automatically join groups and events created
@@ -100,7 +99,9 @@ THURSDAY:
 - get rid of currentUserManagedGroups assoc and any other related mess
 - clean up associations!!!
 
-- event comments
+- can't make event if don't have group!
+
+- event and group searchable tags
 
 - homepage button for user's past events index
 - tab on group page for past events index
