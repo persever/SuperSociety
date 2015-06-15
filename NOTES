@@ -12,12 +12,16 @@ Black
 MONDAY:
 
 FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
+- set precompile to true??
+- it's on the site, just in the wrong place...
 
 - home button not working
 - can't make event if don't have group!
 - cloudinary not working on heroku??
 
 - automatically join groups and events created
+
+- signout button should go to home page, currently going to localhost
 
 - play around with Meetup more to feel out their mapping
 - read that UI article
