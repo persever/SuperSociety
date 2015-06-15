@@ -24,6 +24,8 @@ MONDAY:
 - eliminate code (models, colls, views!) not using
 - clean up controlelrs and routes
 
+- group name length validation
+
 ---
 
 TUESDAY:

@@ -1,5 +1,5 @@
 SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
-  tagName: "li",
+  tagName: "div",
   className: "event-index-item",
 
   template: JST["events/index_item"],
