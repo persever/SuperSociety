@@ -28,6 +28,7 @@ window.SuperSocietyApp = {
       router: SuperSocietyApp.router,
       $el: $("#nav"),
     });
+    SuperSocietyApp.navbar.render();
 
     Backbone.history.start();
   }

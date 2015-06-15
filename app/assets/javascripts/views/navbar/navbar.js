@@ -4,7 +4,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   initialize: function (options) {
     this.router = options.router;
     this.$el = options.$el;
-    this.listenTo(this.router, "route", this.activate);
+    // this.listenTo(this.router, "route", this.activate);
   },
 
   events: {
