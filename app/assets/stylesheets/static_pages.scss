@@ -173,15 +173,23 @@ input.search-query.form-control {
 }
 
 .group-index-item .screen {
-  position: relative;
-  transform: translateY(-100px);
+  margin: 0 !important;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // position: relative;
+  // transform: translateY(-100px);
   height: 100px;
   width: 300px;
   background-color: rgba(0, 0, 0, .5);
-  z-index: 9;
+  // z-index: 9;
 }
 
 .group-index-item h3 {
+  margin: 0 !important;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 100px;
   width: 300px;
   text-wrap: normal;
@@ -211,16 +219,12 @@ input.search-query.form-control {
 .m-content {
   position: absolute;
   background-color: white;
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
   height: 600px;
   width: 500px;
   padding: 50px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  z-index: 101;
   margin: 0 !important;
   top: 50vh;
   left: 50%;
