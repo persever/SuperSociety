@@ -21,7 +21,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
   events: {
     "click .search-button": "setSearchType",
-    "click .results li": "redirect",
+    "click .results div": "redirect",
     "submit #searchbar": "search",
     "input input.search-query": "search",
     "click .counter.groups": "retrieveUserGroups",

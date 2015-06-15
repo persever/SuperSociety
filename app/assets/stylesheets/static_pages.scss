@@ -174,8 +174,10 @@ input.search-query.form-control {
 
 .group-index-item .screen {
   margin: 0 !important;
-  top: 50vh;
-  left: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   transform: translate(-50%, -50%);
   // position: relative;
   // transform: translateY(-100px);

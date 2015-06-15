@@ -30,7 +30,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   addEventShowSubview: function (event) {
     var eventToShow = null;
     if (event.constructor !== SuperSocietyApp.Models.Event) {
-      var id = $($(event.currentTarget).closest("li")).data("id");
+      var id = $($(event.currentTarget).closest("div")).data("id");
       this._subEventId = id;
       eventToShow = this.collection.findWhere({ id: id });
     } else {
