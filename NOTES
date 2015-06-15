@@ -35,7 +35,8 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - group name length validation
 
 - heroku drop db
-- set up secret keys w/ heroku
+
+- cloudinary heroku addon
 
 ---
 
