@@ -32,9 +32,3 @@ window.SuperSocietyApp = {
     Backbone.history.start();
   }
 };
-
-
-// move to static page so it only runs when logged in
-$(document).ready(function(){
-  SuperSocietyApp.initialize();
-});

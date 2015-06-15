@@ -1,6 +1,11 @@
 <% if current_user  %>
   <div id="nav"></div>
   <div id="content"></div>
+  <script>
+    $(document).ready(function(){
+      SuperSocietyApp.initialize();
+    });
+  </script>
 <% else %>
   <a href="<%= new_session_url %>">Log In</a><a href="<%= new_user_url %>">Sign Up</a>
 <% end %>

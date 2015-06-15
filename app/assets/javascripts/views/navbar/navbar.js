@@ -4,10 +4,6 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   initialize: function (options) {
     this.router = options.router;
     this.$el = options.$el;
-    // is the below necessary?
-    if (window.CURRENT_USER_NAME) {
-      this.render();
-    }
     this.listenTo(this.router, "route", this.activate);
   },
 

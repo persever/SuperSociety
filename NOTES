@@ -17,8 +17,6 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 
 - cloudinary not working on heroku??
 
-- signout button should go to home page, currently going to localhost
-
 - play around with Meetup more to feel out their mapping
 - read that UI article
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
