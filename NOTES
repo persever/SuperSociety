@@ -1,13 +1,5 @@
 MONDAY:
 
-- fix authorship
-
-> customgetorfetch
-> filter? but swap requires collection, not array
-> fetch models and sync eiis? individually?
-> see what you did for group members
-> go through search
-
 - play around with Meetup more to feel out their mapping
 - read that UI article
 - basic organizational styling (mostly group index, group show, event show; then eii buttons)
@@ -20,6 +12,15 @@ MONDAY:
 
 - eliminate code (models, colls, views!) not using
 - clean up controlelrs and routes
+
+CONSISTENT COLOR SCHEME:
+
+Red: (slightly darker than basic/current)
+Dark Red:
+Grey:
+Dark Grey: #303030
+White
+Black
 
 ---
 
