@@ -164,7 +164,7 @@ input.search-query.form-control {
   height: 100px;
   width: 300px;
   overflow: hidden;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
 }
 
@@ -173,35 +173,37 @@ input.search-query.form-control {
 }
 
 .group-index-item .screen {
-  margin: 0 !important;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  // position: relative;
+  position: absolute;
   // transform: translateY(-100px);
   height: 100px;
   width: 300px;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .7);
   // z-index: 9;
 }
 
-.group-index-item h3 {
-  margin: 0 !important;
-  top: 50vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.group-index-item .heading {
+  font-family: "sf-comic-script";
+  font-size: 20px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  top: 35%;
   height: 100px;
   width: 300px;
   text-wrap: normal;
-  // margin: 0 auto;
-  // transform: translateY(-80px);
-  position: relative;
+  position: absolute;
   z-index: 10;
   color: white;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
+
+// .group-index-item .heading.two-line {
+//   top: 20%;
+// }
 
 .event-index-item {
 

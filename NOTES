@@ -85,7 +85,9 @@ TUESDAY-WEDNESDAY:
 - jQuery UI toggle class / color animation for smooth toggle button transitions
 - FriendlyId
 - dimensionality (diagonal slice on buttons, lighter above darker below -- same for logo)
-- mouse reactivity!!
+- mouse reactivity!! (gii clear h3 and screen!)
+
+- how to handle groups with long names? it'd be nicer to have bigger name fonts... back to h3, ellipses cutting off after 10 char?
 
 - section off subviews like Meetup does, over background
 - make event form modal not spazz its way on screen

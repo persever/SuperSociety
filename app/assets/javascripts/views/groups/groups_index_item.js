@@ -11,6 +11,9 @@ SuperSocietyApp.Views.GroupsIndexItem = Backbone.View.extend({
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     this.$el.attr("data-id", this.model.id);
+    // if (this.model.get("name").split("").length > 15) {
+    //   this.$("h3").addClass("two-line");
+    // }
 
     return this;
   }
