@@ -21,6 +21,9 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       ssevent: this.model,
       groups: SuperSocietyApp.currentUserManagedGroups
       }));
+    if (SuperSocietyApp.currentUserManagedGroups.length === 0) {
+      this.$(".errors").text("Events can only be added to groups you manage. Start a group!");
+    }
 
     if (this.model.isNew()) {
       this.$("h3").text("New Event");
