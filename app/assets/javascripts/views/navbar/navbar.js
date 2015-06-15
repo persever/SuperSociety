@@ -30,7 +30,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   },
 
   home: function () {
-    Backbone.history.navigate("", { trigger: true });
+    SuperSocietyApp.router.root();
   },
 
   logOut: function (event) {
