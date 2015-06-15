@@ -42,7 +42,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
       //   window.location.assign("http://supersociety.us");
       // }
     });
-    window.location.assign("http://localhost:3000/");
+    window.location.assign("http://supersociety.us");
   },
 
   loadForm: function (event) {
