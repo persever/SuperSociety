@@ -1,7 +1,7 @@
 SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   template: JST["events/show"],
 
-  // className: "event-show",
+  className: "event-show",
 
   initialize: function (options) {
     this.model = options.model;
@@ -21,7 +21,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template({ ssevent: this.model, group: this.group }));
-    this.$("#attending-button").html(this.button.render().$el);
+    this.$(".attending-button").html(this.button.render().$el);
 
     if (CURRENT_USER_ID == this.group.get("creator_id")) {
       var editButton = "<button class=\"edit\">Edit</button>";

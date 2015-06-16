@@ -419,12 +419,12 @@ input#datetime.form-control {
   text-shadow: 0px 0px 20px black;
 }
 
-.group .edit-button {
+.group .group-edit-button {
   margin-top: 13px;
   float:left;
 }
 
-.group .edit-button button {
+.group .group-edit-button button {
   border: none;
   background-color: grey;
   color: white;
@@ -460,7 +460,7 @@ input#datetime.form-control {
   margin-bottom: 10px;
 }
 
-.group .subscribers img {
+.group .subscribers img, .event-show .attenders img {
   float: left;
   height: 50px;
   border-radius: 25px;
@@ -473,7 +473,7 @@ input#datetime.form-control {
   padding: 40px;
 }
 
-.group .description {
+.group .group-description {
   margin-bottom: 20px;
   text-wrap: normal;
   padding: 20px;
@@ -484,6 +484,25 @@ input#datetime.form-control {
 //   overflow-y: scroll;
 // }
 
-.group .desc-and-events .group-events ul {
-  padding-right: 20px;
+.event-show {
+  padding: 20px;
+}
+
+.event-show .attenders {
+  // justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  float: left;
+  width: 100%;
+}
+
+.event-show .attenders h3 {
+  text-align: left;
+  padding: 5px;
+  padding-left: 20px;
+  width: 200px;
+  transform: translateX(-20px);
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
 }

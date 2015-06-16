@@ -71,8 +71,10 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
         this.$(".subscribers").append($img);
       });
     }
+
     var height = this.$(".desc-and-events").height() + 80;
     this.$(".subscribers").css("height", height);
+
 
     this.stretch();
 
