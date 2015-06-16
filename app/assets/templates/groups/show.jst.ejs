@@ -4,10 +4,14 @@
 <div class="screen">
   <div class="screen-elements-container">
     <div class="edit-button"></div>
-    <h2><%= group.escape("name") %></h2>
+    <h2 class="name"><%= group.escape("name") %></h2>
     <div class="subscription-button"></div>
   </div>
 </div>
-<div class="description"><%= group.escape("description") %></div>
-<div class="subscribers"></div>
-<div class="group-events"></div>
+<div class="subscribers">
+  <h3>Members</h3>
+</div>
+<div class="desc-and-events">
+  <div class="description"><%= group.escape("description") %></div>
+  <div class="group-events"></div>
+</div>

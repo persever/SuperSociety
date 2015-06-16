@@ -75,6 +75,9 @@ TUESDAY:
 - auto reset heroku db every single night!
 - a few more iron man seeds in case some employers go crazy!!
 
+- fixed position search (sticks to top when scrolled past?)
+- fixed event counter in nav??!!
+
 TUESDAY-WEDNESDAY:
 
 - internal scroll (overflow y scroll to scroll)
@@ -134,10 +137,17 @@ THURSDAY:
 - ensure heroku working all day every day!
 
 - make group main images not stretched!
-- lose color? (including photos?)
+
+- at least a little responsiveness?
 
 ---
 
 FRIDAY:
+
+Leave for touch ups.
+
+--
+
+WEEKEND:
 
 Yay! Blog about it! And read the bonus material. Then do coding interview prep!

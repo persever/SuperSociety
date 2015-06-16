@@ -14,7 +14,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .events .title": "addEventShowSubview",
+    "click .group-events .title": "addEventShowSubview",
     "click h2.groupname": "addEventsIndexSubview",
     "click button.edit-group": "edit"
   },
@@ -50,14 +50,8 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     if (CURRENT_USER_ID == this.model.get("creator_id")) {
       var editButton = "<button class=\"edit-group\">Edit</button>";
       this.$(".edit-button").html(editButton);
-    }
-
-    if (this.model.get("subscribers")) {
-      var subscribers = this.model.get("subscribers");
-      subscribers.forEach(function(subscriber) {
-        var $img = $("<img>").attr("src", subscriber.photo_url);
-        this.$(".subscribers").append($img);
-      });
+    } else {
+      this.$(".edit-button").html($("<div>").css("width", 100));
     }
 
     if (this._subEventId !== 0) {
@@ -68,6 +62,16 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     } else {
       throw "EventShow must be rendered with a subEventId argument.";
     }
+
+    if (this.model.get("subscribers")) {
+      var subscribers = this.model.get("subscribers");
+      subscribers.forEach(function(subscriber) {
+        var $img = $("<img>").attr("src", subscriber.photo_url);
+        this.$(".subscribers").append($img);
+      });
+    }
+    var height = this.$(".desc-and-events").height();
+    this.$(".subscribers").css("height", height);
 
     return this;
   },

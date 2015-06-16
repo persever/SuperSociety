@@ -308,29 +308,26 @@ input#datetime.form-control {
 
 .group .img-container {
   position: relative;
-  height: 300px;
+  display: block;
+  height: 150px;
   width: 100%;
-  // overflow: hidden;
   text-align: center;
+  overflow: hidden;
 }
 
 .group img.main-img {
-  width: 1280;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .group .screen {
   position: relative;
-  // margin: 0;
-  // top: 80%;
-  // left: 50%;
-  // transform: translate(-50%, 0%);
-  // position: absolute;
-  height: 100px;
+  height: 50px;
   width: 100%;
   background-color: rgba(0, 0, 0, 1);
-  // z-index: 9;
   text-align: center;
-  // display: inline-block;
 }
 
 .group .screen .screen-elements-container {
@@ -343,11 +340,12 @@ input#datetime.form-control {
   height: 50px;
 }
 
-.group h2 {
+.group .name {
   float: left;
   font-family: "sf-comic-script";
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
+  padding-top: 8px;
   padding-left: 30px;
   padding-right: 30px;
   height: 100px;
@@ -362,27 +360,56 @@ input#datetime.form-control {
 }
 
 .group .edit-button {
+  margin-top: 13px;
   float:left;
 }
 
 .group .edit-button button {
-  margin-top: 10px;
   border: none;
   background-color: grey;
   color: white;
 }
 
 .group .subscription-button {
+  margin-top: 13px;
   float:left;
 }
 
 .subscription-button button {
-  margin-top: 10px;
   border: none;
   color: white;
   background-color: red;
 }
 
-.subscribers {
+.group .subscribers {
+  padding-top: 15px;
+  padding-bottom: 40px;
+  float: left;
+  width: 200px;
+  overflow-y: scroll;
+}
 
+.group .subscribers h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.group .subscribers img {
+  float: left;
+  height: 50px;
+  border-radius: 25px;
+  margin: 5px;
+  text-align: center;
+}
+
+.group .desc-and-events {
+  float: left;
+}
+
+.group .description {
+  margin: 40px;
+}
+
+.group .events {
+  overflow-y: scroll;
 }
