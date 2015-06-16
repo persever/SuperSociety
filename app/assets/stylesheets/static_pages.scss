@@ -4,9 +4,15 @@
   src: url("fonts/sf-comic-script.ttf") format("truetype");
 }
 
+button {
+  width: 100px;
+  font-family: "sf-comic-script";
+  font-size: 15px;
+}
+
 nav.navbar {
-  padding: 10px;
-  height: 70px;
+  padding: 5px;
+  height: 60px;
   color: white;
   background-color: black;
   margin-bottom: 0px;
@@ -28,26 +34,21 @@ nav a.logo.navbar-brand:hover {
 }
 
 nav button.navbar-btn {
-  width: 125px;
   margin-left: 5px;
-  font-family: "sf-comic-script";
   background-color: grey;
   color: white;
   border: none;
-  font-size: 20px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
 
 nav button.navbar-btn:hover {
-  font-size: 24px;
+  font-size: 18px;
   transform: translateY(-2px);
 }
 
 nav li.username {
-  font-family: "sf-comic-script";
-  font-size: 20px;
   color: white;
   margin: 10px;
   margin-right: 20px;
@@ -90,6 +91,7 @@ nav .glyphicon.glyphicon-log-out:hover {
 
 .counter-buttons {
   position: relative;
+  font-size: 30px;
   top: 50px;
   display: table;
   margin: 0 auto;
@@ -144,19 +146,22 @@ input.search-query.form-control {
   width: 125px;
   height: 34.667px;
   line-height: 0px;
-  font-family: "sf-comic-script";
   background-color: #FF0000;
   color: white;
   border: none;
-  font-size: 20px;
 }
 
 .search-button.btn.btn-danger.active, .search-button.btn.btn-danger:hover {
   background-color: #CC0000;
 }
 
+.results {
+  overflow: auto;
+  // overflow: scroll;
+}
+
 .group-index-item {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .group-index-item .img-container {
@@ -271,8 +276,6 @@ h3.heading {
 button.submit, input.submit {
   color: black;
   background-color: #FFFF00;
-  font-family: "sf-comic-script";
-  font-size: 20px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -297,4 +300,85 @@ button.submit:hover, input.submit:hover {
 
 input#datetime.form-control {
   height: 34.667px;
+}
+
+.group .img-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  // overflow: hidden;
+  text-align: center;
+}
+
+.group img.main-img {
+  width: 1280;
+}
+
+.group .screen {
+  position: relative;
+  // margin: 0;
+  // top: 80%;
+  // left: 50%;
+  // transform: translate(-50%, 0%);
+  // position: absolute;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  // z-index: 9;
+  text-align: center;
+  // display: inline-block;
+}
+
+.group .screen .screen-elements-container {
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+}
+
+.group h2 {
+  float: left;
+  font-family: "sf-comic-script";
+  font-size: 40px;
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100px;
+  text-wrap: normal;
+  z-index: 10;
+  color: white;
+  text-shadow: 0px 0px 20px black;
+}
+
+.group .description {
+
+}
+
+.group .edit-button {
+  float:left;
+}
+
+.group .edit-button button {
+  margin-top: 10px;
+  border: none;
+  background-color: grey;
+  color: white;
+}
+
+.group .subscription-button {
+  float:left;
+}
+
+.subscription-button button {
+  margin-top: 10px;
+  border: none;
+  color: white;
+  background-color: red;
+}
+
+.subscribers {
+
 }

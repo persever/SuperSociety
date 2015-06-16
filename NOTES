@@ -19,7 +19,11 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 
 - play around with Meetup more to feel out their mapping
 - read that UI article
-- basic organizational styling (mostly group index, group show, event show; eii boxes, then eii buttons)
+- basic organizational styling (group show, event show; eii boxes, then eii buttons)
+- main bar white
+- shrink it up
+
+- toggle colors with class toggle on button toggles
 
 - allow user to change photo from navbar (silhouette placeholder)
 - now you can go back to a single signin page!!
@@ -37,6 +41,8 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - cloudinary heroku addon
 
 - tags for groups and events top priority bonuses, and calendar!
+
+- all photos there? no broken images!
 
 ---
 
@@ -101,6 +107,8 @@ THURSDAY:
 
 - event and group searchable tags
 
+- sometimes can't access groups through index items?? from user subscribed groups???
+
 - homepage button for user's past events index
 - tab on group page for past events index
 - past event views should have a frozen attending button
@@ -122,6 +130,11 @@ THURSDAY:
 - group and event tags, searchable
 
 - reduce queries
+
+- ensure heroku working all day every day!
+
+- make group main images not stretched!
+- lose color? (including photos?)
 
 ---
 

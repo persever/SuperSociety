@@ -1,6 +1,8 @@
 SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   template: JST["groups/show"],
 
+  className: "group",
+
   initialize: function (options) {
     this.model = options.model;
     this.collection = this.model.ssevents();
@@ -43,7 +45,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
   render: function () {
     this.$el.html(this.template({ group: this.model }));
-    this.$("#subscription-button").html(this.button.render().$el);
+    this.$(".subscription-button").html(this.button.render().$el);
 
     if (CURRENT_USER_ID == this.model.get("creator_id")) {
       var editButton = "<button class=\"edit-group\">Edit</button>";
@@ -83,6 +85,6 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     }
     this._currentSubview = view;
 
-    this.addSubview(".events", view);
+    this.addSubview(".group-events", view);
   }
 });

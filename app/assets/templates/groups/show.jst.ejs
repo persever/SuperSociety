@@ -1,10 +1,13 @@
-<h2><%= group.escape("name") %></h2><div class="edit-button"></div>
-<br>
-<img src="<%= group.escape("photo_url") %>">
-<br>
-<div id="subscription-button"></div>
-<br>
-<%= group.escape("description") %>
-<br>
+<div class="img-container">
+  <img class="main-img" src="<%= group.escape("photo_url") %>"></img>
+</div>
+<div class="screen">
+  <div class="screen-elements-container">
+    <div class="edit-button"></div>
+    <h2><%= group.escape("name") %></h2>
+    <div class="subscription-button"></div>
+  </div>
+</div>
+<div class="description"><%= group.escape("description") %></div>
 <div class="subscribers"></div>
-<div class="events"></div>
+<div class="group-events"></div>
