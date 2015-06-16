@@ -1,7 +1,7 @@
 @font-face {
   font-family: "sf-comic-script";
-  src: url("fonts/sf-comic-script.ttf");
-  src: url("fonts/sf-comic-script.ttf") format("truetype");
+  src: url("sf-comic-script.ttf");
+  src: url("sf-comic-script.ttf") format("truetype");
 }
 
 #background {
@@ -20,12 +20,12 @@
 }
 
 h1, h2, h3 {
-  font-family: "sf-comic-script";
+  font-family: "sf-comic-script" !important;
 }
 
 button {
   width: 100px;
-  font-family: "sf-comic-script";
+  font-family: "sf-comic-script" !important;
   font-size: 15px;
   border: none;
   border-radius: 2px;

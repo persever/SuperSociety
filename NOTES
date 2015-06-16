@@ -13,6 +13,8 @@ Black
 
 TUESDAY:
 
+- ei on home needs bottom margin
+- center group name
 - too much space groups index right
 
 - make containers expand to content width when page resize responsiveness adds new lines
@@ -22,8 +24,6 @@ TUESDAY:
 FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - set precompile to true??
 - it's on the site, just in the wrong place...
-
-- cloudinary heroku addon
 
 - read that UI article
 - just model off meetup
