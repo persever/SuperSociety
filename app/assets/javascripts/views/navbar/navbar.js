@@ -71,8 +71,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
       CLOUDINARY_SETTINGS,
       function (error, result) {
         var url = result[0].url;
-        this.user.set("photo_url", url);
-        console.log(this.user);
+        this.user.save({ "photo_url": url });
       }.bind(this)
     );
   }
