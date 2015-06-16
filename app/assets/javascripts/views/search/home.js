@@ -21,7 +21,8 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
   events: {
     "click .search-button": "setSearchType",
-    "click .results div": "redirect",
+    "click .results .group-index-item": "redirectToGroup",
+    "click .results .event-index-item": "redirectToEvent",
     "submit #searchbar": "search",
     "input input.search-query": "search",
     "click .counter.groups": "retrieveUserGroups",
@@ -68,16 +69,17 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     return results;
   },
 
-  redirect: function (event) {
+  redirectToGroup: function (event) {
     var id = $(event.currentTarget).data("id");
-    if (this.searchType === "event-search") {
-      var ssevent = this.ssevents.get(id);
-      var groupId = ssevent.get("group").id;
-      Backbone.history.navigate("groups/" + groupId);
-      SuperSocietyApp.router.groupShow(groupId, id);
-    } else {
-      Backbone.history.navigate("groups/" + id, { trigger: true});
-    }
+    Backbone.history.navigate("groups/" + id, { trigger: true});
+  },
+
+  redirectToEvent: function (event) {
+    var id = $(event.currentTarget).data("id");
+    var ssevent = this.ssevents.get(id);
+    var groupId = ssevent.get("group").id;
+    Backbone.history.navigate("groups/" + groupId);
+    SuperSocietyApp.router.groupShow(groupId, id);
   },
 
   render: function () {

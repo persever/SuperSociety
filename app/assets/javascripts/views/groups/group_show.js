@@ -33,7 +33,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   addEventShowSubview: function (event) {
     var eventToShow = null;
     if (event.constructor !== SuperSocietyApp.Models.Event) {
-      var id = $($(event.currentTarget).closest("div")).data("id");
+      var id = $($(event.currentTarget).closest(".event-index-item")).data("id");
       this._subEventId = id;
       eventToShow = this.collection.findWhere({ id: id });
     } else {
@@ -71,7 +71,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
         this.$(".subscribers").append($img);
       });
     }
-    var height = this.$(".desc-and-events").height();
+    var height = this.$(".desc-and-events").height() + 80;
     this.$(".subscribers").css("height", height);
 
     this.stretch();
