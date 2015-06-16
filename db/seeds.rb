@@ -24,7 +24,7 @@ User.create(username: "Wolverine", password: "supersecretpassword", photo_url: "
 User.create(username: "Wonder Woman", password: "supersecretpassword", photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/wonderwoman_ct9sxu.jpg")
 
 
-Group.create(name: "The Avengers", description: "We assemble. For battles or parties.", creator: User.find_by({ username: "Captain America" }), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/avengers_joeenr.jpg")
+Group.create(name: "The Avengers", description: "We assemble. For battles, and parties.", creator: User.find_by({ username: "Captain America" }), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/avengers_joeenr.jpg")
 Group.create(name: "Asgardians", description: "The gods who guard the realms of men.", creator: User.find_by({ username: "Thor"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/asgardians_bz0th0.jpg")
 Group.create(name: "Antiheroes", description: "We will not fail our cities.", creator: User.find_by({ username: "Batman"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228253/antiheroes_hqjoha.jpg")
 Group.create(name: "Billionaire Heroes", description: "The only thing bigger than our wallets is our egos.", creator: User.find_by({ username: "Iron Man"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/billionaires_eudczj.jpg")

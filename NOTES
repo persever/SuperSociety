@@ -9,145 +9,108 @@ Black
 
 ***
 
-MONDAY:
+TUESDAY:
 
 FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - set precompile to true??
 - it's on the site, just in the wrong place...
 
-- cloudinary not working on heroku??
+- cloudinary heroku addon
 
-- play around with Meetup more to feel out their mapping
 - read that UI article
-- basic organizational styling (group show, event show; eii boxes, then eii buttons)
-- main bar white
-- shrink it up
+- just model off meetup
+- basic organizational styling (shrink; nav bar white?; group show [and background?], event show; eii boxes, then eii buttons)
+- fix any broken photos
 
-- toggle colors with class toggle on button toggles
+- switch colors with class toggle on attend/subscribe buttons
 
 - allow user to change photo from navbar (silhouette placeholder)
 - now you can go back to a single signin page!!
 
 - guest login
+- style the signin page
 - search should exclude past events
 
 - eliminate code (models, colls, views!) not using
-- clean up controlelrs and routes
-
-- group name length validation
-
-- heroku drop db
-
-- cloudinary heroku addon
-
-- tags for groups and events top priority bonuses, and calendar!
-
-- all photos there? no broken images!
+- clean up controllers and routes
 
 ---
 
-TUESDAY:
+WEDNESDAY:
 
 - destroy groups and events
 
-- Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
-> no unintended effects! (like clicking join/leave from index also directing to show page!)
-- sign in and out and do things with multiple users, make sure that's not messing up
-- check out app in firefox
-
-- db reset both and push to both
-- BLOG POST
-
-- ensure everything is actually loading, sometimes it is but sometimes it looks like it's not syncing or second fetching
-
-- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
-- clean up all comments
+- (ta help?) make logout button on nav work properly
 
 - see "Patterns" and other performance optimization readings
-
+- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
+- clean up all comments
 - refactor long and messy things, and any logic that should be in a different file
 - KEEP LINES WITHIN LENGTH LIMIT
 
-- (ta help?) make logout button on nav work properly
+- Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
+- ensure you can access groups through index items, from user subscribed groups and events!!
+- ensure everything is actually loading, sometimes it is but sometimes it looks like it's not syncing or second fetching
+- is the route ever saying "groups/undefined"?
+> no unintended effects! (like clicking join/leave from index also directing to show page!)
+- check out app in firefox, on a aa computer
+- ensure heroku will work all day every day!
 
+- db reset/drop and migrate and push to both
+
+- BLOG POST
 - add snippets to readme
 
 - auto reset heroku db every single night!
-- a few more iron man seeds in case some employers go crazy!!
+- a few more iron man seeds in case some employers delete a lot!!
 
-- fixed position search (sticks to top when scrolled past?)
-- fixed event counter in nav??!!
+WEDNESDAY-THURSDAY:
 
-TUESDAY-WEDNESDAY:
-
-- internal scroll (overflow y scroll to scroll)
+- gii clear h3 and screen, and magnify (grid should allow this! just shrink the margin to compensate)
+- jQuery UI toggle class / color animation for smooth toggle button transitions
+- custom (simple circle) cursor for button/a/other clickable hover
+- guest login autotype
 - slide in event index items (jQuery UI show effect)
+- fixed nav event counter
+- tags for groups and events top priority bonuses, and calendar!
 - welcome screen video and epic music behind login/signup modal (heimdall + bridge video???)
 - make errors on forms look a little nicer
 - handle "enter" key from description textarea to submit forms
-- deletion confirmation modal
-- simple custom 404 pages
-- 'no events' placeholder for groups with no events (like 'i have powers because science')
 - make bootstrap nav collapse at like 300px, no bigger
-- custom (simple circle) cursor for button/a/other clickable hover
-- guest login autotype
-- jQuery UI toggle class / color animation for smooth toggle button transitions
+- deletion confirmation modal
+- change signout button to power symbol
+
+- update readme, incl bonuses; check off boxes
+
+EXTRA:
+
+- 'no events' placeholder for groups with no events (like 'i have powers because science')
+- simple custom 404 pages
 - FriendlyId
 - dimensionality (diagonal slice on buttons, lighter above darker below -- same for logo)
 - mouse reactivity!! (gii clear h3 and screen!)
 
 - how to handle groups with long names? it'd be nicer to have bigger name fonts... back to h3, ellipses cutting off after 10 char?
 
-- section off subviews like Meetup does, over background
-- make event form modal not spazz its way on screen
-
-THURSDAY:
-
 - get rid of currentUserManagedGroups assoc and any other related mess
 - clean up associations!!!
 
 - can't make event if don't have group!
 
-- event and group searchable tags
-
-- sometimes can't access groups through index items?? from user subscribed groups???
-
+- footer
 - homepage button for user's past events index
 - tab on group page for past events index
 - past event views should have a frozen attending button
 
-- change signout button to power symbol
 - better looking select dropdown
 - make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
 - logo
 - reactive mouse
 - make cloudinary more stylistically coherent
-- catchy one-liner on entry page (def if you stuck with the split login/signup, maybe if just login/signup screen but don't clutter it)
 - infinite scroll
 - fade effect on every route change
 - group subscribe from index
 - remove button blue glow
-
 - click on any piece of information to edit it
-
-- group and event tags, searchable
-
 - reduce queries
-
-- ensure heroku working all day every day!
-
-- make group main images not stretched!
-
 - at least a little responsiveness?
-
----
-
-FRIDAY:
-
-Leave for touch ups.
-
---
-
-WEEKEND:
-
-Yay! Blog about it! And read the bonus material. Then do coding interview prep!

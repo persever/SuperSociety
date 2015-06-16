@@ -1,6 +1,8 @@
 SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   template: JST["events/show"],
 
+  // className: "event-show",
+
   initialize: function (options) {
     this.model = options.model;
     this.model.fetch();

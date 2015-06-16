@@ -31,11 +31,6 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
 
   center: function () {
     var $modal = this.$(".m-content");
-
-    // make this work when you get the chance
-    // console.log($modal.height());
-    // console.log($modal.width());
-
     var vOffset = ($(window).height() - 450) / 2;
     var hOffset = ($(window).width() - 500) / 2;
     $modal.css("margin-top", vOffset);
