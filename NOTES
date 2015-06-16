@@ -9,6 +9,8 @@ Black
 
 ***
 
+> Update readme bonuses as you go!
+
 TUESDAY:
 
 - make containers expand to content width when page resize responsiveness adds new lines
@@ -75,6 +77,7 @@ WEDNESDAY-THURSDAY:
 
 - gii clear h3 and screen, and magnify (grid should allow this! just shrink the margin to compensate)
 - jQuery UI toggle class / color animation for smooth toggle button transitions
+- stop cursor from turning into text indicator, make it just clickable or not
 - custom (simple circle) cursor for button/a/other clickable hover
 - guest login autotype
 - slide in event index items (jQuery UI show effect)
