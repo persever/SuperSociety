@@ -23,7 +23,7 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 
 - read that UI article
 - just model off meetup
-- basic organizational styling (group show [and background! just plain color, and add dimensional patten to it later, with shadows on boxes (like pinly! see css!)], event show; then eii buttons)
+- basic organizational styling (group show [and background! just plain color, and add texture to it later (ocmic book city??), with shadows on boxes (like pinly! see css!)], event show; then eii buttons)
 - fix any broken photos
 - make group show name swap in events index subview
 - center group members imgs
@@ -92,6 +92,7 @@ WEDNESDAY-THURSDAY:
 
 EXTRA:
 
+- make events lag and settle sliding on scroll
 - 'no events' placeholder for groups with no events (like 'i have powers because science')
 - simple custom 404 pages
 - FriendlyId
@@ -105,7 +106,7 @@ EXTRA:
 
 - can't make event if don't have group!
 
-- footer
+- footer (stuck below bottom!)
 - homepage button for user's past events index
 - tab on group page for past events index
 - past event views should have a frozen attending button
