@@ -513,7 +513,7 @@ input#datetime.form-control {
   padding: 20px;
 }
 
-.event-show h2.title {
+.event-show h2.event-show-title {
   margin-top: 0px;
   margin-bottom: 20px;
 }
@@ -532,14 +532,21 @@ input#datetime.form-control {
   // text-wrap: normal;
 }
 
+
+
+
+
+
+
+
 .event-show .attenders {
   // justify-content: center;
   // padding: 20px;
   // float: left;
   // width: 100%;
-  background: white;
-  margin-top: 20px;
-  border-radius: 2px;
+  // background: white;
+  // margin-top: 20px;
+  // border-radius: 2px;
 }
 
 .event-show .header-bar {
@@ -559,4 +566,52 @@ input#datetime.form-control {
   border-radius: 2px;
   margin-bottom: 10px;
   margin-top: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+.event-show .attenders-container {
+  // float: left;
+  width: 100%;
+  // margin-left: 40px;
+  margin-top:40px;
+  margin-bottom: 40px;
+}
+
+.event-show .header-bar {
+  background-color: black;
+  margin-top: 0px;
+  width: calc(100% + 80px);
+  transform: translateX(-40px);
+}
+
+.event-show .header-bar h3 {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  color: white;
+  padding: 5px;
+  padding-left: 20px;
+  font-size: 15px;
+  margin: 0;
+}
+
+.event-show .attenders {
+  // justify-content: center;
+  // do the smae bootstrap grid thing you did with giis!
+  // background: white;
+  // border-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  // padding-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // overflow-y: scroll;
 }

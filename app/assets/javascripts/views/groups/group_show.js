@@ -74,6 +74,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     }
 
     var height = this.$(".desc-and-events").height() - this.$(".header-bar h3").outerHeight();
+    // change to height of wrapped content!! in css file!!
     this.$(".subscribers").css("height", height);
 
 
