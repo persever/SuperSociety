@@ -82,7 +82,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   stretch: function () {
-    this.$(".desc-and-events").css("width", $(window).width() - 260);
+    this.$(".desc-and-events").css("width", $(window).width() - 320);
   },
 
   edit: function (event) {
