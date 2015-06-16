@@ -1,5 +1,5 @@
 SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
-  tagName: "ul",
+  tagName: "div",
 
   template: JST["groups/index"],
 

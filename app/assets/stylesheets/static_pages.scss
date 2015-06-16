@@ -8,6 +8,7 @@ button {
   width: 100px;
   font-family: "sf-comic-script";
   font-size: 15px;
+  border: none;
 }
 
 nav.navbar {
@@ -215,23 +216,33 @@ input.search-query.form-control {
 //   top: 20%;
 // }
 
-.results ul {
-  padding-right: 20px;
-  padding-left: 20px;
+.results {
+  padding-right: 40px;
+  padding-left: 40px;
 }
+
+// .results ul {
+//   padding: none;
+//   margin: none
+// }
 
 .event-index-item {
   padding: 20px;
   position: relative;
-  height: 120px;
-  margin: 20px;
-  margin-top: 0px;
+  height: 110px;
+  // margin: 20px;
+  margin-bottom: 20px;
   // margin-bottom: 10px;
   // border: 1px solid grey;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
   -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
   box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
+}
+
+.event-index-item.search-view {
+  // margin
+  height: 130px;
 }
 
 .event-index-item .group-name {
@@ -245,16 +256,15 @@ input.search-query.form-control {
 }
 
 .event-index-item h3.heading {
+  // display: inline-block;
   float: left;
   margin: 0;
   margin-right: 10px;
-  // display: inline-block;
 }
 
 .event-index-item .attending-button {
-  float: left;
-  background-color: yellow;
   // display: inline-block;
+  float: left;
 }
 
 .event-index-item .when-and-where {
@@ -264,9 +274,9 @@ input.search-query.form-control {
 }
 
 .event-index-item .when, .event-index-item .where {
-  font-size: 14px;
   // float: left;
   display: inline-block;
+  font-size: 14px;
   background-color: grey;
   margin-right: 5px;
   padding: 5px;
@@ -332,7 +342,7 @@ h3.heading {
   font-size: 25px;
 }
 
-button.submit, input.submit {
+button.submit, input.submit, .attending-button button {
   color: black;
   background-color: #FFFF00;
   -webkit-border-radius: 0px;
@@ -343,7 +353,7 @@ button.submit, input.submit {
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
 }
 
-button.submit:hover, input.submit:hover {
+button.submit:hover, input.submit:hover, .attending-button button:hover {
   color: black;
   -webkit-transform: translate(3px,3px);
   transform: translate(3px,3px);
