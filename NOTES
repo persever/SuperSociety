@@ -21,10 +21,6 @@ TUESDAY:
 (mostly eiis, group show header, subscribers/attenders)
 (incl description text wrap!)
 
-FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
-- set precompile to true??
-- it's on the site, just in the wrong place...
-
 - read that UI article
 - just model off meetup
 - fix any broken photos
@@ -87,6 +83,7 @@ WEDNESDAY-THURSDAY:
 - custom (simple circle) cursor for button/a/other clickable hover
 - guest login autotype
 - slide in event index items (jQuery UI show effect)
+- make eii buttons float beside the rest of the eii content, pulled-right still, vertically centered
 - fixed nav event counter
 - tags for groups and events top priority bonuses, and calendar!
 - welcome screen video and epic music behind login/signup modal (heimdall + bridge video???)
