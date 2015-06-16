@@ -1,15 +1,12 @@
-class Api::UsersController < ApplicationController
-  # def index
-  #   @users = User.all
-  # end
-
-  def show
-    @user = User.find(params[:id])
+class UsersController < ApplicationController
+  def new
+    redirect_to root_url if current_user
+    @user = User.new
   end
 
-  def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
+  def create
+    @user = User.new(user_params)
+    if @user.save
       sign_in(@user)
     else
       flash.now[:errors] = @user.errors.full_messages
