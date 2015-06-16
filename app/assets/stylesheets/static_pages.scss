@@ -241,12 +241,7 @@ input.search-query.form-control {
 }
 
 .event-index-item.search-view {
-  // margin
-  height: 130px;
-}
-
-.event-index-item .group-name {
-  font-size: 14px;
+  height: 150px;
 }
 
 .event-index-item .title-and-button{
@@ -273,7 +268,7 @@ input.search-query.form-control {
   height: 30px;
 }
 
-.event-index-item .when, .event-index-item .where {
+.event-index-item .when, .event-index-item .where, .event-index-item.search-view .group-name {
   // float: left;
   display: inline-block;
   font-size: 14px;
@@ -281,6 +276,10 @@ input.search-query.form-control {
   margin-right: 5px;
   padding: 5px;
   border-radius: 3px;
+}
+
+.event-index-item.search-view .group-name {
+  margin-bottom: 10px;
 }
 
 .m-backdrop {
@@ -471,12 +470,11 @@ input#datetime.form-control {
 
 .group .desc-and-events {
   float: left;
-  margin-right: 20px;
+  padding: 40px;
 }
 
 .group .description {
-  margin: 40px;
-  margin-right: 20px;
+  margin-bottom: 40px;
   text-wrap: normal;
 }
 
