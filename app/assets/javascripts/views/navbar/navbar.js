@@ -40,7 +40,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   logOut: function (event) {
     event.stopImmediatePropagation();
     $.ajax({
-      url: "welcome",
+      url: "session",
       type: "DELETE",
       // success: function () {
       //   window.location.assign("http://supersociety.us");

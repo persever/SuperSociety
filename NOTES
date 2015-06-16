@@ -29,9 +29,6 @@ TUESDAY:
 
 - switch colors with class toggle on attend/subscribe buttons
 
-- allow user to change photo from navbar (silhouette placeholder)
-- now you can go back to a single signin page!!
-- on signup, default profile photo!!
 
 - guest login
 - style the signin page
@@ -96,6 +93,8 @@ WEDNESDAY-THURSDAY:
 - update readme, incl bonuses; check off boxes
 
 EXTRA:
+
+- customize cloudinary a little (just colors and button!)
 
 - texture background (comic book city? semi-transparent?)
 - shadows on all boxes

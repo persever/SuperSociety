@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :attendings, only: [:create, :destroy] #:index
   end
 
-  resource :session, only: [:new, :create, :destroy], path: "welcome"
+  resource :session, only: [:destroy]
   resources :users, only: [:new, :create], path: "join-us"
 end

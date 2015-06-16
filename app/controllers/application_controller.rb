@@ -19,4 +19,8 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
+  def require_signed_in
+    redirect_to new_user_url unless current_user
+  end
+
 end
