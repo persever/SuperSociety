@@ -25,7 +25,11 @@ SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
   },
 
   stretch: function () {
-    this.$el.css("width", $(window).width() - 280);
-  },
+    if (Backbone.history.getFragment() === "") {
+      this.$el.css("width", $(window).width() - 80);
+    } else {
+      this.$el.css("width", $(window).width() - 320);
+    }
+  }
 
 });

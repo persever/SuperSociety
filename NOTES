@@ -11,6 +11,10 @@ Black
 
 TUESDAY:
 
+- make containers expand to content width when page resize responsiveness adds new lines
+(mostly eiis, group show header)
+(incl description text wrap!)
+
 FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - set precompile to true??
 - it's on the site, just in the wrong place...
@@ -34,6 +38,8 @@ FONTS!!! (NOT DOWNLOADING TO OTHER MACHINES???)
 - eliminate code (models, colls, views!) not using
 - clean up controllers and routes
 
+- custom button img (grey, red, yellow -- just background)
+
 ---
 
 WEDNESDAY:
@@ -51,7 +57,7 @@ WEDNESDAY:
 - Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
 - ensure you can access groups through index items, from user subscribed groups and events!!
 - ensure everything is actually loading, sometimes it is but sometimes it looks like it's not syncing or second fetching
-- is the route ever saying "groups/undefined"?
+- is the route ever saying "groups/undefined"? on back button?
 > no unintended effects! (like clicking join/leave from index also directing to show page!)
 - check out app in firefox, on a aa computer
 - ensure heroku will work all day every day!

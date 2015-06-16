@@ -76,6 +76,12 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     return this;
   },
 
+  stretch: function () {
+    if (Backbone.history.getFragment() === "") {
+      this.$(".desc-and-events").css("width", $(window).width() - 320);
+    }
+  },
+
   edit: function (event) {
     var form = new SuperSocietyApp.Views.GroupForm({ model: this.model });
 
