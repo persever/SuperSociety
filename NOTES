@@ -13,6 +13,8 @@ Black
 
 TUESDAY:
 
+- too much space groups index right
+
 - make containers expand to content width when page resize responsiveness adds new lines
 (mostly eiis, group show header, subscribers/attenders)
 (incl description text wrap!)
@@ -65,6 +67,8 @@ WEDNESDAY:
 - check out app in firefox, on a aa computer
 - ensure heroku will work all day every day!
 
+- everything a little smaller
+
 - db reset/drop and migrate and push to both
 
 - BLOG POST
@@ -72,6 +76,7 @@ WEDNESDAY:
 
 - auto reset heroku db every single night!
 - a few more iron man seeds in case some employers delete a lot!!
+- clear new from cloudinary regularly too...
 
 WEDNESDAY-THURSDAY:
 

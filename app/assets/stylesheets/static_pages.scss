@@ -75,6 +75,7 @@ nav li.username {
 }
 
 nav img {
+  margin-top: 3px;
   height: 43px;
   width: 43px;
   // border: 4px solid white;
@@ -84,7 +85,7 @@ nav img {
 nav .glyphicon.glyphicon-log-out {
   font-size: 20px;
   color: grey;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: 10px;
   transform: translateY(-5px);
 }

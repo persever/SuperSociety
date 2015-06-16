@@ -27,6 +27,7 @@ window.SuperSocietyApp = {
     SuperSocietyApp.navbar = new SuperSocietyApp.Views.Navbar({
       router: SuperSocietyApp.router,
       $el: $("#nav"),
+      user: SuperSocietyApp.currentUser
     });
     SuperSocietyApp.navbar.render();
 

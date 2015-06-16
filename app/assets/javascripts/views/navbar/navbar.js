@@ -4,13 +4,16 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
   initialize: function (options) {
     this.router = options.router;
     this.$el = options.$el;
+    this.user = options.user;
+    this.listenTo(this.user, "sync change", this.render);
     // this.listenTo(this.router, "route", this.activate);
   },
 
   events: {
     "click li button.navbar-btn": "loadForm",
     "click .glyphicon-log-out": "logOut",
-    "click .logo.navbar-brand": "home"
+    "click .logo.navbar-brand": "home",
+    "click img": "uploadPhoto"
   },
 
   // activate: function (router, route, params) {
@@ -20,7 +23,11 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
   render: function () {
     this.delegateEvents();
-    this.$el.html(this.template());
+    this.$el.html(this.template({
+      photoUrl: this.user.get("photo_url"),
+      username: this.user.get("username")
+      })
+    );
 
     return this;
   },
@@ -55,6 +62,19 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
     $("body").prepend(form.render().$el);
     form.delegateEvents();
+  },
+
+
+  uploadPhoto: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget(
+      CLOUDINARY_SETTINGS,
+      function (error, result) {
+        var url = result[0].url;
+        this.user.set("photo_url", url);
+        console.log(this.user);
+      }.bind(this)
+    );
   }
 
 });
