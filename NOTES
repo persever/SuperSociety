@@ -9,72 +9,38 @@ Black
 
 ***
 
-> Update readme bonuses as you go!
-
-TUESDAY:
-
-- event edit button!
-
-- subscribers div height??
-
-- ensure user's sub collection index links working!!
-
-- center group name
-- too much space groups index right
-
-- make containers expand to content width when page resize responsiveness adds new lines
-(mostly eiis, group show header, subscribers/attenders)
-(incl description text wrap!)
-
-- read that UI article
-- just model off meetup
-- fix any broken photos
-- make group show name swap in events index subview
-- center group members imgs
-
-- switch colors with class toggle on attend/subscribe buttons
-
-- guest login autotype
-
-- search should exclude past events
-
-- eliminate code (models, colls, views!) not using
-- clean up controllers and routes
-
-- resize modals?
-- do you need to handle their centering on window resize??
-
-- custom button img (grey, red, yellow -- just background)
-
-- signin vieo or (later!) animate electricity
-
-- ensure 'i have powers' title isn't crazy
-
----
-
 WEDNESDAY:
 
 - destroy groups and events
 
+- app name above signin form!!
+- event edit button!
+- subscribers div height??
+- too much space groups index right
+- make group show name swap in events index subview
+- search should exclude past events
+- resize modals
+- do you need to handle their centering on window resize??
+- custom button img (grey, red, yellow -- just background)
+- switch colors with class toggle on attend/subscribe buttons
+- signin video or (later!) animate electricity
+
 - (ta help?) make logout button on nav work properly
 
-- see "Patterns" and other performance optimization readings
-- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
+- eliminate code (models, colls, views!) not using
 - clean up all comments
+- clean up controllers and routes
 - refactor long and messy things, and any logic that should be in a different file
 - KEEP LINES WITHIN LENGTH LIMIT
 
 - Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
-- ensure you can access groups through index items, from user subscribed groups and events!!
-- ensure everything is actually loading, sometimes it is but sometimes it looks like it's not syncing or second fetching
 - is the route ever saying "groups/undefined"? on back button?
 > no unintended effects! (like clicking join/leave from index also directing to show page! or clicks from something that shouldn't be clickable, or clicks to somewhere wrong or double-handled!)
-- check out app in firefox, on a aa computer
-- ensure heroku will work all day every day!
+- check out app in firefox, on a aa computer!
 
-- everything a little smaller
+- more iron man seeds!
 
-- db reset/drop and migrate and push to both
+- db reset both (and migrate heroku) and push to both
 
 - BLOG POST
 - add snippets to readme
@@ -83,9 +49,14 @@ WEDNESDAY:
 - a few more iron man seeds in case some employers delete a lot!!
 - clear new from cloudinary regularly too...
 
-- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
+- reconsider colors (white nav?)
+- uncrowd group show... put the screen over images, not covering whole thing, semi-transparent, image behind blurred
 
-WEDNESDAY-THURSDAY:
+THURSDAY:
+
+- guest login autotype
+- sound
+- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
 
 - gii clear h3 and screen, and magnify (grid should allow this! just shrink the margin to compensate)
 - jQuery UI toggle class / color animation for smooth toggle button transitions
@@ -102,16 +73,21 @@ WEDNESDAY-THURSDAY:
 - make bootstrap nav collapse at like 300px, no bigger
 - deletion confirmation modal
 - change signout button to power symbol
+- marvel-esque google font for other font
 
 - update readme, incl bonuses; check off boxes
+
+- center things properly, with t/l:calc(50% - [].h/w / 2)
+- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
+
+- remove button blue glow
+- texture background (comic book city? semi-transparent?)
+- shadows on all boxes
+- member/attender banner dimensions
 
 EXTRA:
 
 - customize cloudinary a little (just colors and button!)
-
-- texture background (comic book city? semi-transparent?)
-- shadows on all boxes
-- member/attender banner dimensions
 
 - make events lag and settle sliding on scroll
 - 'no events' placeholder for groups with no events (like 'i have powers because science')
@@ -140,7 +116,6 @@ EXTRA:
 - infinite scroll
 - fade effect on every route change
 - group subscribe from index
-- remove button blue glow
 - click on any piece of information to edit it
 - reduce queries
 - at least a little responsiveness?

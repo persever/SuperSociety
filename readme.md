@@ -25,15 +25,16 @@ Excluding authorization, the app is a single-page Backbone app.
 ## Minimum Viable Product
 SuperSociety is a clone of Meetup built on Rails and Backbone. Users can:
 
-- [ ] Create accounts
-- [ ] Create sessions (log in)
-- [ ] Create groups
-- [ ] Create events for the groups they created
-- [ ] View groups and events
-- [ ] Subscribe to and leave groups
-- [ ] Join and leave events
-- [ ] View their subscribed groups and upcoming events
-- [ ] Search for groups by name, and for events by title and location
+- [x] Create accounts
+- [x] Create sessions (log in)
+- [x] Create groups
+- [x] Create events for the groups they created
+- [ ] Delete groups and events they created
+- [x] View groups and events
+- [x] Subscribe to and unsubscribe from groups
+- [x] Join and leave events
+- [x] View their subscribed groups and upcoming events
+- [x] Search for groups by name, and for events by title and location
 
 ## Design Docs
 * [View Wireframes][views]
@@ -87,6 +88,7 @@ their upcoming events.
 Touch up code, seed data, style the UI, and implement bonus features!
 
 ### Bonus Features (TBD)
+- [x] Some responsiveness
 - [ ] Handle enter keys on forms and search
 - [x] Automatic search response to input
 - [ ] User calendar
