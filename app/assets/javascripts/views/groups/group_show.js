@@ -19,6 +19,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     "click h2.groupname": "addEventsIndexSubview",
     "click .group-edit-button": "edit",
     "click .group-delete-button": "deleteConfirm",
+    "click .name": "addEventsIndexSubview"
   },
 
   addEventsIndexSubview: function () {

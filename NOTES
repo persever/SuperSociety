@@ -112,7 +112,8 @@ THURSDAY:
 - shadows on all boxes
 - member/attender banner dimensions
 
-- lose button hover glow, just make buttons go dark
+- lose button hover glow, just make buttons go dark (except join and submit)
+- make logout symbol power down (unlight)
 
 EXTRA:
 
