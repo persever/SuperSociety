@@ -1,9 +1,23 @@
 CONSISTENT COLOR SCHEME:
 
-Red: (slightly darker than basic/current)
-Dark Red:
-Grey:
-Dark Grey: #404040
+Light Red: #FF6864
+FF3E39
+Red: #FF0700
+C60500
+Dark Red: #9B0400
+
+Light Gold: #FFE064
+FFD839
+Gold: #FFCD00
+C69F00
+Dark Gold: #9B7D00
+
+Light Grey: #FAFAFA
+C6C6C6
+Grey: #9B9B9B
+6E6E6E
+Dark Grey: #363636
+
 White
 Black
 
@@ -11,8 +25,10 @@ Black
 
 WEDNESDAY:
 
-- destroy groups and events
-- add webkit and moz to scss as needed! radius, shadow, etc!
+- add webkit and moz to scss as needed! radius, shadow, gradients, etc!
+
+- style buttons/inputs by color class names!
+
 - app name above signin form!!
 - attenders min height
 - desc and events min width?
@@ -26,7 +42,7 @@ WEDNESDAY:
 - search should exclude past events
 - resize modals
 - do you need to handle their centering on window resize??
-- custom button img (grey, red, yellow -- just background)
+- gradient buttons
 - switch colors with class toggle on attend/subscribe buttons
 - signin video or (later!) animate electricity
 

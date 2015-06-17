@@ -4,6 +4,24 @@
   src: url("sf-comic-script.ttf") format("truetype");
 }
 
+* {
+  // font-family: 'Josefin Sans', sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: "sf-comic-script" !important;
+}
+
+button, .btn {
+  height: 25px;
+  width: 100px;
+  font-family: "sf-comic-script" !important;
+  font-size: 15px;
+  border: none;
+  // border-radius: 2px;
+}
+
 .signin {
   position: fixed;
   left: 0;
@@ -32,19 +50,57 @@
   text-align: center;
 }
 
+.signin .signin-logo {
+  z-index: 102;
+  font-family: "sf-comic-script";
+  font-size: 81px;
+  transform: rotate(-4deg) translateX(-40px);
+  margin-bottom: 5px;
+}
+
 .signin .user-form {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.6);
   color: white;
-  height: 250px;
+  height: 400px;
   width: 400px;
   padding: 0px;
   z-index: 101;
   border-radius: 2px;
   margin: auto;
-  top: 33vh;
+  top: calc(50% - 200px);
   left: 10%;
+}
+
+.signin input.btn {
+  font-size: 18px;
+  color: black;
+  // padding: none;
+  // background-color: #FFCC00;
+  border: none;
+  // background: linear-gradient(to bottom right, rgba(255, 230, 128,1) 45%, rgba(128, 102, 0,1) 55%);
+  background: linear-gradient(to bottom right, #9B7D00, #FFE064);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+// .signin input.btn #log-in {
+//   background-color: yellow;
+// }
+//
+// .signin input.btn #sign-up {
+//   background-color: white;
+// }
+//
+// .signin input.btn #guest {
+//   background-color: red;
+// }
+
+.signin input.btn:hover {
+  color: black;
+  // transform: translate(2px,2px);
+  box-shadow: 0px 0px 1px 2px #FFE680;
 }
 
 .user-form [id=sign-up] {
@@ -77,18 +133,6 @@
   max-width: 1024px;
 }
 
-h1, h2, h3 {
-  font-family: "sf-comic-script" !important;
-}
-
-button {
-  width: 100px;
-  font-family: "sf-comic-script" !important;
-  font-size: 15px;
-  border: none;
-  border-radius: 2px;
-}
-
 nav.navbar {
   padding: 5px;
   height: 60px;
@@ -112,18 +156,24 @@ nav a.logo.navbar-brand:hover {
   color: grey;
 }
 
-nav button.navbar-btn {
+#nav button.navbar-btn {
   margin-top: 12px;
   margin-right: 10px;
-  background-color: grey;
+  margin-left: 10px;
+  background: linear-gradient(to bottom right, #9B9B9B 49%, #6E6E6E 51%);
   color: white;
   border: none;
-  border-radius: 2px;
+  // border-radius: 2px;
 }
 
-nav button.navbar-btn:hover {
-  font-size: 18px;
-  transform: translateY(-2px);
+#nav button.navbar-btn:hover {
+  // background: #363636;
+  width: 104px;
+  height: 27px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 11px;
+  font-size: 15.3px;
 }
 
 nav li.username {
@@ -169,7 +219,7 @@ nav .glyphicon.glyphicon-log-out:hover {
 
 .counter-buttons {
   position: relative;
-  font-size: 30px;
+  font-size: 40px;
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -181,14 +231,14 @@ nav .glyphicon.glyphicon-log-out:hover {
   float: left;
   color: white;
   font-family: "sf-comic-script";
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   margin-right: 10px;
   margin-left: 10px;
 }
 
 .home-button {
-  font-size: 20px;
+  // font-size: 20px;
   border: none;
   background-color: white;
   color: #303030;
@@ -220,17 +270,20 @@ input.search-query.form-control {
   height: 34.667px;
 }
 
-.search-button.btn.btn-danger {
+.search-button.btn {
   width: 125px;
   height: 34.667px;
   line-height: 0px;
-  background-color: #FF0000;
+  background: linear-gradient(to bottom right, #FF0700 49%, #C60500 51%);
+  font-size: 20px;
   color: white;
   border: none;
 }
 
-.search-button.btn.btn-danger.active, .search-button.btn.btn-danger:hover {
-  background-color: #CC0000;
+.search-button.btn.active, .search-button.btn:hover {
+  border: none;
+  color: white;
+  background-color: #9B0400;
 }
 
 .group-index-item {
@@ -417,12 +470,12 @@ button.submit, input.submit, .attending-button button {
   color: black;
   background-color: #FFFF00;
   border-radius: 2px;
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 button.submit:hover, input.submit:hover, .attending-button button:hover, .submit-deletion:hover {
   color: black;
-  transform: translate(3px,3px);
+  transform: translate(2px,2px);
   box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
 }
 
@@ -560,7 +613,7 @@ input#datetime.form-control {
   color: black;
   background-color: red;
   border-radius: 2px;
-  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 .group .group-edit-button {
