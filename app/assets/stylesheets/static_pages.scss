@@ -8,7 +8,6 @@
   // font-family: 'Josefin Sans', sans-serif;
 }
 
-
 h1, h2, h3 {
   font-family: "sf-comic-script" !important;
 }
@@ -76,11 +75,8 @@ button, .btn {
 .signin input.btn {
   font-size: 18px;
   color: black;
-  // padding: none;
-  // background-color: #FFCC00;
   border: none;
-  // background: linear-gradient(to bottom right, rgba(255, 230, 128,1) 45%, rgba(128, 102, 0,1) 55%);
-  background: linear-gradient(to bottom right, #9B7D00, #FFE064);
+  background: linear-gradient(to bottom right, #FFD839, #C69F00);
   border-radius: 2px;
   box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
@@ -100,7 +96,7 @@ button, .btn {
 .signin input.btn:hover {
   color: black;
   // transform: translate(2px,2px);
-  box-shadow: 0px 0px 1px 2px #FFE680;
+  box-shadow: 0px 0px 1px 2px #FFCD00;
 }
 
 .user-form [id=sign-up] {
@@ -149,7 +145,7 @@ nav a.logo.navbar-brand {
   font-family: "sf-comic-script";
   font-size: 40px;
   color: red;
-  margin-left: 10px;
+  margin-right: 5px;
 }
 
 nav a.logo.navbar-brand:hover {
@@ -158,20 +154,19 @@ nav a.logo.navbar-brand:hover {
 
 #nav button.navbar-btn {
   margin-top: 12px;
-  margin-right: 10px;
-  margin-left: 10px;
-  background: linear-gradient(to bottom right, #9B9B9B 49%, #6E6E6E 51%);
+  margin-right: 5px;
+  margin-left: 5px;
+  background: linear-gradient(to bottom right, #C6C6C6, #6E6E6E);
   color: white;
-  border: none;
-  // border-radius: 2px;
+  border-radius: 2px;
 }
 
 #nav button.navbar-btn:hover {
   // background: #363636;
   width: 104px;
   height: 27px;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-right: 3px;
+  margin-left: 3px;
   margin-top: 11px;
   font-size: 15.3px;
 }
@@ -190,6 +185,10 @@ nav img {
   border-radius: 25px;
 }
 
+nav a.form-button.btn {
+  width: auto;
+}
+
 nav .glyphicon.glyphicon-log-out {
   font-size: 20px;
   color: grey;
@@ -200,7 +199,7 @@ nav .glyphicon.glyphicon-log-out {
 
 nav .glyphicon.glyphicon-log-out:hover {
   color: white;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, .75);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, .75);
 }
 
 .home-header {
@@ -210,7 +209,7 @@ nav .glyphicon.glyphicon-log-out:hover {
 .home-header-background {
   position: absolute;
   // z-index: 10;
-  background-color: #303030;
+  background-color: #6E6E6E;
   left: 0;
   height: 165px;
   width: 100%;
@@ -241,7 +240,7 @@ nav .glyphicon.glyphicon-log-out:hover {
   // font-size: 20px;
   border: none;
   background-color: white;
-  color: #303030;
+  color: #6E6E6E;
   height: 50px;
   width: 50px;
   // border: 4px solid white;
@@ -274,16 +273,20 @@ input.search-query.form-control {
   width: 125px;
   height: 34.667px;
   line-height: 0px;
-  background: linear-gradient(to bottom right, #FF0700 49%, #C60500 51%);
+  background: linear-gradient(to bottom right, #FF3E39, #C60500);
   font-size: 20px;
   color: white;
   border: none;
 }
 
-.search-button.btn.active, .search-button.btn:hover {
-  border: none;
+.search-button.btn:hover {
   color: white;
-  background-color: #9B0400;
+  background: #C60500;
+}
+
+.search-button.btn.active {
+  color: white;
+  background: #9B0400;
 }
 
 .group-index-item {
@@ -318,7 +321,7 @@ input.search-query.form-control {
 }
 
 .group-index-item .heading {
-  font-family: "sf-comic-script";
+  // font-family: "sf-comic-script";
   font-size: 20px;
   margin: 0;
   padding-left: 10px;
@@ -384,8 +387,8 @@ input.search-query.form-control {
 }
 
 .event-index-item .attending-button {
-  // display: inline-block;
-  float: left;
+  display: inline-block;
+  // float: left;
 }
 
 .event-index-item .when-and-where {
@@ -468,7 +471,7 @@ h3.heading {
 
 button.submit, input.submit, .attending-button button {
   color: black;
-  background-color: #FFFF00;
+  background: linear-gradient(to bottom right, #FFD839, #C69F00);
   border-radius: 2px;
   box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
@@ -740,13 +743,6 @@ input#datetime.form-control {
   margin-bottom: 20px;
   // text-wrap: normal;
 }
-
-
-
-
-
-
-
 
 .event-show .attenders {
   // justify-content: center;
