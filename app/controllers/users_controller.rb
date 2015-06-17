@@ -24,8 +24,7 @@ class UsersController < ApplicationController
         render :new
       end
     elsif params[:submission] == "Log In"
-      @user = User.find_by_credentials(user_params[:username],
-                                       user_params[:password])
+      @user = User.find_by_credentials(user_params)
       if @user
         sign_in(@user)
       else
