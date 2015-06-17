@@ -27,6 +27,7 @@ SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
   toggle: function () {
     if (this.model.isNew()) {
       this.model.save({ event_id: this.event_id });
+      // render on success?
       this.render();
     } else {
       this.model.destroy();
