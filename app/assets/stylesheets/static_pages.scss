@@ -18,7 +18,7 @@ button, .btn {
   font-family: "sf-comic-script" !important;
   font-size: 15px;
   border: none;
-  // border-radius: 2px;
+  border-radius: 2px;
 }
 
 .signin {
@@ -77,7 +77,7 @@ button, .btn {
   color: black;
   border: none;
   background: linear-gradient(to bottom right, #FFD839, #C69F00);
-  border-radius: 2px;
+  // border-radius: 2px;
   box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
@@ -321,7 +321,7 @@ input.search-query.form-control {
 }
 
 .group-index-item .heading {
-  // font-family: "sf-comic-script";
+  font-family: "sf-comic-script";
   font-size: 20px;
   margin: 0;
   padding-left: 10px;
@@ -479,7 +479,7 @@ button.submit, input.submit, .attending-button button {
 button.submit:hover, input.submit:hover, .attending-button button:hover, .submit-deletion:hover {
   color: black;
   transform: translate(2px,2px);
-  box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
+  box-shadow: 0px 0px 1px 2px rgba(255, 205, 0,1);
 }
 
 #datetimepicker1 {
@@ -569,12 +569,6 @@ input#datetime.form-control {
   background-color: rgba(0, 0, 0, 1);;
 }
 
-.group-delete-button button, .event-delete-button button {
-  border: none;
-  background-color: grey;
-  color: white;
-}
-
 // .blur {
 //   -webkit-filter: blur(10px);
 //   -moz-filter: blur(10px);
@@ -584,8 +578,6 @@ input#datetime.form-control {
 // }
 
 .deletion-confirmation-backdrop {
-  // blur the screen instead!!
-  // filter: blur(1px);
   position: fixed;
   background-color: rgba(0, 0, 0, .7);
   left: 0;
@@ -620,8 +612,6 @@ input#datetime.form-control {
 }
 
 .group .group-edit-button {
-  // margin-top: 13px;
-  // float:left;
   display: inline-block;
   transform: translateY(-8px)
 }
@@ -630,15 +620,19 @@ input#datetime.form-control {
   background: none;
 }
 
-.group .group-edit-button button {
+.group-edit-button button, .group-delete-button button,
+.event-edit-button button, .event-delete-button button {
   border: none;
-  background-color: grey;
+  background: linear-gradient(to bottom right, #C6C6C6, #6E6E6E);
   color: white;
 }
 
+.group-delete-button button:hover, .group-edit-button button:hover,
+.event-delete-button button:hover, .event-edit-button button:hover  {
+  box-shadow: 0px 0px 1px 2px #9B9B9B;
+}
+
 .group .subscription-button {
-  // margin-top: 13px;
-  // float:left;
   display: inline-block;
   transform: translateY(-8px)
 }
@@ -646,7 +640,11 @@ input#datetime.form-control {
 .subscription-button button {
   border: none;
   color: white;
-  background-color: red;
+  background: linear-gradient(to bottom right, #FF3E39, #C60500);
+}
+
+.subscription-button button:hover {
+  box-shadow: 0px 0px 1px 2px #FF0700;
 }
 
 .group .subscribers-container {
@@ -690,7 +688,7 @@ input#datetime.form-control {
 
 .group .subscribers img, .event-show .attenders img {
   // min height wrap contents
-  float: left;
+  display: inline-block;
   height: 43px;
   border-radius: 25px;
   text-align: center;
@@ -730,7 +728,14 @@ input#datetime.form-control {
   margin-bottom: 20px;
 }
 
+.event-edit-button, .event-delete-button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
 .event-show .when {
+  text-wrap: none;
   margin-bottom: 10px;
 }
 
@@ -742,16 +747,6 @@ input#datetime.form-control {
 .event-show .event-description {
   margin-bottom: 20px;
   // text-wrap: normal;
-}
-
-.event-show .attenders {
-  // justify-content: center;
-  // padding: 20px;
-  // float: left;
-  // width: 100%;
-  // background: white;
-  // margin-top: 20px;
-  // border-radius: 2px;
 }
 
 .event-show .header-bar {
@@ -774,11 +769,8 @@ input#datetime.form-control {
 }
 
 .event-show .attenders-container {
-  // float: left;
   width: 100%;
-  // margin-left: 40px;
-  margin-top:40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .event-show .header-bar {
@@ -808,6 +800,6 @@ input#datetime.form-control {
   border-top-right-radius: 0px;
   // padding-top: 15px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   // overflow-y: scroll;
 }

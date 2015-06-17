@@ -25,6 +25,8 @@ Black
 
 WEDNESDAY:
 
+- why is group search button adding border or width expanding or something on hover? see all "hover"s
+
 - add webkit and moz to scss as needed! radius, shadow, gradients, etc!
 - style buttons/inputs by color class names!
 

@@ -26,7 +26,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
 
     if (CURRENT_USER_ID == this.group.get("creator_id")) {
       var $editButton = "<button class=\"edit\">Edit</button>";
-      var $deleteButton = "<button class=\">Delete</button>";
+      var $deleteButton = "<button class=\"delete\">Delete</button>";
       this.$(".event-edit-button").html($editButton);
       this.$(".event-delete-button").html($deleteButton);
     }
