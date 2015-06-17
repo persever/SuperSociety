@@ -7,7 +7,6 @@ SuperSocietyApp.Views.EventsIndexItem = Backbone.View.extend({
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
     if (Backbone.history.getFragment() === "") {
-      console.log("here");
       $(window).on("resize", this.stretch.bind(this));
       this.$el.addClass("search-view");
     }

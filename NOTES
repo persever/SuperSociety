@@ -12,7 +12,7 @@ Black
 WEDNESDAY:
 
 - destroy groups and events
-
+- add webkit and moz to scss as needed! radius, shadow, etc!
 - app name above signin form!!
 - nicer fonts!
 - entry page one-liner!
@@ -30,9 +30,10 @@ WEDNESDAY:
 - (ta help?) make logout button on nav work properly
 
 - eliminate code (models, colls, views!) not using
-- clean up all comments
 - clean up controllers and routes
+- clean up all comments
 - refactor long and messy things, and any logic that should be in a different file
+- organize methods alphabetically
 - KEEP LINES WITHIN LENGTH LIMIT
 
 - Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY

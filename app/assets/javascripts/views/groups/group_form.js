@@ -10,7 +10,6 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    $(window).on("resize", this.center);
   },
 
   render: function () {
@@ -24,17 +23,7 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
       this.$("h3").text("Edit " + "\"" + this.model.get("name") + "\"");
     }
 
-    this.center();
-
     return this;
-  },
-
-  center: function () {
-    var $modal = this.$(".m-content");
-    var vOffset = ($(window).height() - 450) / 2;
-    var hOffset = ($(window).width() - 500) / 2;
-    $modal.css("margin-top", vOffset);
-    $modal.css("margin-left", hOffset);
   },
 
   uploadPhoto: function (event) {
@@ -63,7 +52,7 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
           SuperSocietyApp.events.add(this.model);
         }
         this.remove();
-        SuperSocietyApp.router.groupShow(this.model.id);
+        Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
       }.bind(this),
 
       error: function (model, response) {

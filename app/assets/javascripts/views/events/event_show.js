@@ -16,7 +16,8 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
 
   events: {
     "click button.eventsIdx": "switchToEventsIndexSubview",
-    "click button.edit": "edit"
+    "click .event-edit-button": "edit",
+    "click .event-delete-button": "deleteConfirm",
   },
 
   render: function () {
@@ -25,7 +26,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
 
     if (CURRENT_USER_ID == this.group.get("creator_id")) {
       var editButton = "<button class=\"edit\">Edit</button>";
-      this.$(".edit-button").html(editButton);
+      this.$(".event-edit-button").html(editButton);
     }
 
     if (this.model.get("attenders")) {
@@ -37,6 +38,11 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     }
 
     return this;
+  },
+
+  deleteConfirm: function () {
+    var confirmation = new SuperSocietyApp.Views.DeletionConfirmation({ model: this.model });
+    $("body").prepend(confirmation.render().$el);
   },
 
   edit: function (event) {

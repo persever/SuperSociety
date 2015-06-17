@@ -420,7 +420,7 @@ button.submit, input.submit, .attending-button button {
   box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
 }
 
-button.submit:hover, input.submit:hover, .attending-button button:hover {
+button.submit:hover, input.submit:hover, .attending-button button:hover, .submit-deletion:hover {
   color: black;
   transform: translate(3px,3px);
   box-shadow: 0px 0px 5px 3px rgba(255,255,153,1);
@@ -483,6 +483,69 @@ input#datetime.form-control {
   z-index: 10;
   color: white;
   // text-shadow: 0px 0px 20px black;
+}
+
+.group .group-delete-button {
+  // margin-top: 13px;
+  // float:left;
+  display: inline-block;
+  transform: translateY(-8px);
+  margin-right: 5px;
+}
+
+.group .group-delete-button.empty {
+  background-color: rgba(0, 0, 0, 1);;
+}
+
+.group .group-delete-button button {
+  border: none;
+  background-color: grey;
+  color: white;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.deletion-confirmation-backdrop {
+  // blur the screen instead!!
+  // filter: blur(1px);
+  position: fixed;
+  background-color: rgba(0, 0, 0, .2);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.deletion-confirmation {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 300px;
+  padding: 20px;
+  z-index: 101;
+  border-radius: 2px;
+  margin: 0;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 3px 3px 10px 0px rgba(0,0,0,1);
+}
+
+.deletion-confirmation .submit-deletion {
+  margin-top: 20px;
+  color: black;
+  background-color: red;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0px 0px rgba(0,0,0,1);
 }
 
 .group .group-edit-button {
@@ -550,7 +613,8 @@ input#datetime.form-control {
   // padding-top: 15px;
   padding: 20px;
   min-height: 88px;
-  overflow-y: scroll;
+  // need something here, but not scroll!
+  // overflow-y: scroll;
 }
 
 .group .subscribers img, .event-show .attenders img {

@@ -13,7 +13,6 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       model.fetch();
     });
     this.listenTo(SuperSocietyApp.currentUserManagedGroups, "sync", this.render);
-    $(window).on("resize", this.center);
   },
 
   render: function () {
@@ -31,17 +30,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       this.$("h3").text("Edit " + "\"" + this.model.get("title") + "\"");
     }
 
-    this.center();
-
     return this;
-  },
-
-  center: function () {
-    var $modal = this.$(".m-content");
-    var vOffset = ($(window).height() - $modal.height()) / 2;
-    var hOffset = ($(window).width() - $modal.width()) / 2;
-    $modal.css("margin-top", vOffset);
-    $modal.css("margin-left", hOffset);
   },
 
   submit: function () {
@@ -62,7 +51,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
         }
         var groupId = this.model.get("group_id");
         this.remove();
-        SuperSocietyApp.router.groupShow(groupId, this.model.id);
+        Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
       }.bind(this),
 
       error: function (model, response) {

@@ -17,7 +17,8 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   events: {
     "click .group-events .title": "addEventShowSubview",
     "click h2.groupname": "addEventsIndexSubview",
-    "click button.edit-group": "edit"
+    "click .group-edit-button": "edit",
+    "click .group-delete-button": "deleteConfirm",
   },
 
   addEventsIndexSubview: function () {
@@ -44,17 +45,26 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this._swapSubview(eventShowView);
   },
 
+  deleteConfirm: function () {
+    var confirmation = new SuperSocietyApp.Views.DeletionConfirmation({ model: this.model });
+    $("body").prepend(confirmation.render().$el);
+  },
+
   render: function () {
     this.$el.html(this.template({ group: this.model }));
     this.$(".subscription-button").html(this.button.render().$el);
 
     var $editButton = null;
+    var $deleteButton = null;
     if (CURRENT_USER_ID == this.model.get("creator_id")) {
       $editButton = "<button class=\"edit-group\">Edit</button>";
+      $deleteButton = "<button class=\"delete-group\">Delete</button>";
     } else {
       $editButton = $("<div>").addClass("empty").css("width", 100);
+      $deleteButton = $("<div>").addClass("empty").css("width", 100);
     }
     this.$(".group-edit-button").html($editButton);
+    this.$(".group-delete-button").html($deleteButton);
 
     if (this._subEventId !== 0) {
       var ssevent = this.collection.getOrFetch(this._subEventId);
@@ -93,6 +103,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     var form = new SuperSocietyApp.Views.GroupForm({ model: this.model });
 
     $("body").prepend(form.render().$el);
+    // is the below necessary?
     form.delegateEvents();
   },
 
