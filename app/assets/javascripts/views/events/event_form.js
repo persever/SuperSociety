@@ -51,7 +51,8 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
         }
         var groupId = this.model.get("group_id");
         this.remove();
-        Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
+        Backbone.history.navigate("groups/" + groupId);
+        SuperSocietyApp.router.groupShow(groupId, this.model.id);
       }.bind(this),
 
       error: function (model, response) {

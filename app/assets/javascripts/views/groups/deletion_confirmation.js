@@ -19,29 +19,39 @@ SuperSocietyApp.Views.DeletionConfirmation = Backbone.View.extend({
         $("<button>").addClass("submit-deletion").text("Yes")
       );
     this.$el.append($backdrop).append($modal);
-    $("#nav").addClass("blur");
-    $("#background").addClass("blur");
-    $("#content").addClass("blur");
+    // $("#nav").addClass("blur");
+    // $("#background").addClass("blur");
+    // $("#content").addClass("blur");
 
     return this;
   },
 
   removeView: function () {
     this.remove();
-    $("#nav").removeClass("blur");
-    $("#background").removeClass("blur");
-    $("#content").removeClass("blur");
+    // $("#nav").removeClass("blur");
+    // $("#background").removeClass("blur");
+    // $("#content").removeClass("blur");
   },
 
   submit: function (event) {
     event.preventDefault();
+    // var isEvent
+    if (this.model.constructor === SuperSocietyApp.Models.Event) {
+      var isEvent = true;
+      var groupId = this.model.get("group").id;
+    }
     this.model.destroy({
       success: function () {
-        SuperSocietyApp.groups.remove(this.model);
-        this.model.clear();
+        if (isEvent) {
+          SuperSocietyApp.events.remove(this.model);
+          SuperSocietyApp.router.groupShow(groupId);
+        } else {
+          SuperSocietyApp.groups.remove(this.model);
+          Backbone.history.navigate("", { trigger: true });
+        }
         this.removeView();
-        Backbone.history.navigate("", { trigger: true });
       }.bind(this)
     });
+    this.model.clear();
   }
 });

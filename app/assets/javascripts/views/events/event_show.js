@@ -25,8 +25,10 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     this.$(".attending-button").html(this.button.render().$el);
 
     if (CURRENT_USER_ID == this.group.get("creator_id")) {
-      var editButton = "<button class=\"edit\">Edit</button>";
-      this.$(".event-edit-button").html(editButton);
+      var $editButton = "<button class=\"edit\">Edit</button>";
+      var $deleteButton = "<button class=\"delete-group\">Delete</button>";
+      this.$(".event-edit-button").html($editButton);
+      this.$(".event-delete-button").html($deleteButton);
     }
 
     if (this.model.get("attenders")) {

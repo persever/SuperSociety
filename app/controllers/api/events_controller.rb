@@ -40,7 +40,7 @@ class Api::EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    render josn: @event
+    render json: @event
   end
 
   private
