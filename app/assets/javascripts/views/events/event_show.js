@@ -29,6 +29,9 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       var $deleteButton = "<button class=\"delete\">Delete</button>";
       this.$(".event-edit-button").html($editButton);
       this.$(".event-delete-button").html($deleteButton);
+    } else {
+      this.$(".event-edit-button").remove();
+      this.$(".event-delete-button").remove();
     }
 
     if (this.model.get("attenders")) {

@@ -25,17 +25,18 @@ Black
 
 WEDNESDAY:
 
+- make group name clickable now
+- fix eii join event render now
+
 - why is group search button adding border or width expanding or something on hover? see all "hover"s
 
 - add webkit and moz to scss as needed! radius, shadow, gradients, etc!
-- style buttons/inputs by color class names!
 
 - attenders min height
 - desc and events min width?
 - nicer fonts! (look at some fancy sites)
 - consider sharper edges on buttons... look at some sites
 - entry page one-liner!
-- event edit button!
 - subscribers div height??
 - too much space groups index right
 - make group show name swap in events index subview
@@ -110,6 +111,8 @@ THURSDAY:
 - texture background (comic book city? semi-transparent?)
 - shadows on all boxes
 - member/attender banner dimensions
+
+- lose button hover glow, just make buttons go dark
 
 EXTRA:
 
