@@ -33,6 +33,9 @@ class UsersController < ApplicationController
         flash.now[:errors] = ["Invalid login."]
         render :new
       end
+    elsif params[:submission] == "Guest Pass"
+      @user = User.find_by({ username: "Iron Man"})
+      sign_in(@user)
     end
 
   end

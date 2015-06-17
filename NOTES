@@ -13,6 +13,8 @@ Black
 
 TUESDAY:
 
+- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
+
 - ei on home needs bottom margin
 - center group name
 - too much space groups index right
@@ -29,15 +31,19 @@ TUESDAY:
 
 - switch colors with class toggle on attend/subscribe buttons
 
-
-- guest login
+- guest login autotype
 - style the signin page
 - search should exclude past events
 
 - eliminate code (models, colls, views!) not using
 - clean up controllers and routes
 
+- resize modals?
+- do you need to handle their centering on window resize??
+
 - custom button img (grey, red, yellow -- just background)
+
+- signin vieo or (later!) animate electricity
 
 ---
 

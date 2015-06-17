@@ -1,18 +1,30 @@
-<form class="user-form" action="<%= url %>" method="post">
-  <input type="hidden" name="authenticity_token"
-                       value="<%= form_authenticity_token %>" >
-  <label>Username</label>
-  <input type="text" class="form-control" name="<%= type %>[username]"
-         value="<%= instance.username %>"></input>
+<div class="signin">
+
+  <div id="signin-background">
+    <!-- <audio id="music" src="../../assets/audio/enter.mp3"></audio> -->
+    
+  </div>
+
+  <div class="backdrop"></div>
+
+  <form class="user-form" action="<%= url %>" method="post">
+    <input type="hidden" name="authenticity_token"
+                         value="<%= form_authenticity_token %>" >
+    <label>Username</label>
+    <input type="text" class="form-control" name="<%= type %>[username]"
+           value="<%= instance.username %>"></input>
+    <br>
+    <label>Password</label>
+    <input type="password" class="form-control"
+           name="<%= type %>[password]" value="<%= instance.password %>"></input>
+    <br>
+    <input type="submit" class="btn btn-danger form-control" value="Sign Up"
+           name="submission" id="sign-up"></input><input type="submit"
+           class="btn btn-danger form-control" value="Log In"
+           name="submission" id="log-in"></input>
+   <input type="submit" class="btn btn-danger form-control" value="Guest Pass"
+          name="submission" id="guest">
+  </form>
   <br>
-  <label>Password</label>
-  <input type="password" class="form-control"
-         name="<%= type %>[password]" value="<%= instance.password %>"></input>
-  <br>
-  <input type="submit" class="btn btn-danger form-control" value="Sign Up"
-         name="submission"></input><input type="submit"
-         class="btn btn-danger form-control" value="Log In"
-         name="submission"></input>
-</form>
-<br>
-<%= flash[:errors] if flash[:errors] %>
+  <%= flash[:errors] if flash[:errors] %>
+</div>

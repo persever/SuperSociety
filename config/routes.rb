@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
   resource :session, only: [:destroy]
-  resources :users, only: [:new, :create], path: "join-us"
+  resources :users, only: [:new, :create], path: "enter"
 end
