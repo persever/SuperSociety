@@ -13,8 +13,6 @@ Black
 
 TUESDAY:
 
-- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
-
 - ei on home needs bottom margin
 - center group name
 - too much space groups index right
@@ -32,7 +30,7 @@ TUESDAY:
 - switch colors with class toggle on attend/subscribe buttons
 
 - guest login autotype
-- style the signin page
+
 - search should exclude past events
 
 - eliminate code (models, colls, views!) not using
@@ -77,6 +75,8 @@ WEDNESDAY:
 - auto reset heroku db every single night!
 - a few more iron man seeds in case some employers delete a lot!!
 - clear new from cloudinary regularly too...
+
+- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
 
 WEDNESDAY-THURSDAY:
 

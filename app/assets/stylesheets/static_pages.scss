@@ -4,18 +4,26 @@
   src: url("sf-comic-script.ttf") format("truetype");
 }
 
+.signin {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .signin #signin-background {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434499994/heimdall_ilnv5l.jpg")
+  background-image: url("http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434499994/heimdall_ilnv5l.jpg");
 }
 
 .signin .backdrop {
   position: fixed;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   left: 0;
   right: 0;
   top: 0;
@@ -26,22 +34,17 @@
 
 .signin .user-form {
   position: absolute;
-  background-color: rgba(0,0,0,.5);
-  // background: radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,.5));
-  border-radius: 5px;
-  box-shadow: 0px 0px 30px 30px rgba(0,0,0,.5);
-  // border-width: 50px;
-  // border-image: radial-gradient(#000, none) 40% repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.6);
   color: white;
-  height: 350px;
-  width: 500px;
-  padding: 50px;
+  height: 250px;
+  width: 400px;
+  padding: 0px;
   z-index: 101;
-  // border-radius: 2px;
-  margin: 0;
-  top: 50vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  margin: auto;
+  top: 33vh;
+  left: 10%;
 }
 
 .user-form [id=sign-up] {
