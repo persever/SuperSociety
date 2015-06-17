@@ -39,7 +39,7 @@ SuperSocietyApp.Views.DeletionConfirmation = Backbone.View.extend({
       success: function () {
         SuperSocietyApp.groups.remove(this.model);
         this.model.clear();
-        this.remove();
+        this.removeView();
         Backbone.history.navigate("", { trigger: true });
       }.bind(this)
     });
