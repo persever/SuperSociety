@@ -14,7 +14,7 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.View.extend({
     this.delegateEvents();
 
     if (this.model.isNew()) {
-      this.$el.html("Not Subscribed");
+      this.$el.html("Subscribe!");
       // this.$el.addClass("not-subscribed");
     } else {
       this.$el.html("Subscribed");

@@ -48,12 +48,13 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({ group: this.model }));
     this.$(".subscription-button").html(this.button.render().$el);
 
+    var $editButton = null;
     if (CURRENT_USER_ID == this.model.get("creator_id")) {
-      var editButton = "<button class=\"edit-group\">Edit</button>";
-      this.$(".edit-button").html(editButton);
+      $editButton = "<button class=\"edit-group\">Edit</button>";
     } else {
-      this.$(".edit-button").html($("<div>").css("width", 100));
+      $editButton = $("<div>").addClass("empty").css("width", 100);
     }
+    this.$(".group-edit-button").html($editButton);
 
     if (this._subEventId !== 0) {
       var ssevent = this.collection.getOrFetch(this._subEventId);
@@ -75,7 +76,9 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
 
     var height = this.$(".desc-and-events").height() - this.$(".header-bar h3").outerHeight();
     // change to height of wrapped content!! in css file!!
-    this.$(".subscribers").css("height", height);
+    if (height > $(".subscribers").height()) {
+      this.$(".subscribers").css("height", height);
+    }
 
 
     this.stretch();
