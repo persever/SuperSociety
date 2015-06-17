@@ -501,6 +501,14 @@ input#datetime.form-control {
   margin-right: 5px;
 }
 
+.event-delete-button {
+  // margin-top: 13px;
+  // float:left;
+  color: black;
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .group-delete-button.empty {
   background-color: rgba(0, 0, 0, 1);;
 }
@@ -563,7 +571,7 @@ input#datetime.form-control {
 }
 
 .group .group-edit-button.empty {
-  background-color: rgba(0, 0, 0, 1);;
+  background: none;
 }
 
 .group .group-edit-button button {

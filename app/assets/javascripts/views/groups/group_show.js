@@ -61,7 +61,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       $deleteButton = "<button class=\"delete-group\">Delete</button>";
     } else {
       $editButton = $("<div>").addClass("empty").css("width", 100);
-      $deleteButton = $("<div>").addClass("empty").css("width", 100);
+      $deleteButton = $("<div>").addClass("empty");
     }
     this.$(".group-edit-button").html($editButton);
     this.$(".group-delete-button").html($deleteButton);
