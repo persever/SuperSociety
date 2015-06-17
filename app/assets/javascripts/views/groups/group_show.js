@@ -80,7 +80,6 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       this.$(".subscribers").css("height", height);
     }
 
-
     this.stretch();
 
     return this;

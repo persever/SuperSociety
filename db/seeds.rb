@@ -47,10 +47,10 @@ Event.create(group: Group.find_by({ name: "Antiheroes"}), title: "Vigilante Dinn
 
 Event.create(group: Group.find_by({ name: "Billionaire Heroes"}), title: "Dinner", datetime: "2015-08-14 20:00:00-07", location: "Wayne Manor", description: "+1 allowed. Formal attire please, leave the costumes at home.")
 
-Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-06-13 19:00:00-07", location: "Stark's Hosue", description: "Lego Marvel")
-Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-07-18 19:00:00-07", location: "Stark's Hosue", description: "Ultimate Alliance")
-Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-08-15 19:00:00-07", location: "Stark's Hosue", description: "Mario Kart")
-Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-09-19 19:00:00-07", location: "Stark's Hosue", description: "Mortal Kombat vs. DC Universe")
+Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-06-13 19:00:00-07", location: "Stark's House", description: "Lego Marvel")
+Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-07-18 19:00:00-07", location: "Stark's House", description: "Ultimate Alliance")
+Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-08-15 19:00:00-07", location: "Stark's House", description: "Mario Kart")
+Event.create(group: Group.find_by({ name: "Gamers"}), title: "Game Night", datetime: "2015-09-19 19:00:00-07", location: "Stark's House", description: "Mortal Kombat vs. DC Universe")
 
 Event.create(group: Group.find_by({ name: "Potluckers"}), title: "NY Potluck", datetime: "2015-07-18 13:00:00-07", location: "NY Central Park", description: "BYOP!")
 Event.create(group: Group.find_by({ name: "Potluckers"}), title: "SF Potluck", datetime: "2015-07-25 13:00:00-07", location: "SF Golden Gate Park", description: "BYOP!")
