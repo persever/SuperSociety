@@ -13,12 +13,13 @@ SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
   render: function () {
     this.delegateEvents();
 
+    this.$el.removeClass();
     if (this.model.isNew()) {
       this.$el.html("Join!");
-      // this.$el.addClass("not-joined");
+      this.$el.addClass("not-joined");
     } else {
       this.$el.html("Going");
-      // this.$el.addClass("joined");
+      this.$el.addClass("joined");
     }
 
     return this;

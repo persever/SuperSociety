@@ -25,14 +25,21 @@ Black
 
 PRIORITY:
 
+- consider button outlines, after new fonts
+
+- change home and group layouts
+
 - group show shadows
 - eii gii stronger shadows
 >>> NORMALIZE THE SHADOWS
 
-- min width!
+- remove event from upcoming list on toggle? (re-render subview on click of toggle?)
+
 - eii going offscreen when go back to group page from event show
 
-- join button post error (guest signin, on event page)
+- eii don't slide on search!
+
+- TA: join button toggle not carrying into event view?? (not listening to right events?)
 
 - make cloudinary do just photos
 
@@ -120,6 +127,8 @@ TO FINISH, SOMEWHAT IN ORDER:
 EXTRA:
 
 - signin video or (later!) animate electricity
+
+- infinite scroll
 
 - entry page one-liner!
 - nicer fonts! (look at some fancy sites)
