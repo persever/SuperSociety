@@ -23,6 +23,9 @@ User.create(username: "Superman", password: "supersecretpassword", photo_url: "h
 User.create(username: "Wolverine", password: "supersecretpassword", photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228250/wolverine_golwaw.jpg")
 User.create(username: "Wonder Woman", password: "supersecretpassword", photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/wonderwoman_ct9sxu.jpg")
 
+# Iron Man
+# Batman
+# Thor
 
 Group.create(name: "The Avengers", description: "We assemble. For battles, and parties.", creator: User.find_by({ username: "Captain America" }), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/avengers_joeenr.jpg")
 Group.create(name: "Asgardians", description: "The gods who guard the realms of men.", creator: User.find_by({ username: "Thor"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/asgardians_bz0th0.jpg")

@@ -34,11 +34,10 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   },
 
   submit: function () {
-    debugger
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();
-    attrs.event.datetime = moment(this.$("input#datetime").val(), "MM/DD/YYY HH:mm").format("YYYY-MM-DD HH:mm:ss");
+    attrs.event.datetime = moment(this.$("input#datetime").val(), "MM/DD/YYYY HH:mm").format("YYYY-MM-DD HH:mm:ss");
 
     var isNew = false;
     if (this.model.isNew()) {
