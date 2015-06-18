@@ -25,9 +25,6 @@ Black
 
 WEDNESDAY:
 
-- lose the tacky animation
-- fix eii join event render now
-
 - why is group search button adding border or width expanding or something on hover? see all "hover"s
 
 - add webkit and moz to scss as needed! radius, shadow, gradients, etc!
@@ -112,7 +109,7 @@ THURSDAY:
 - shadows on all boxes
 - member/attender banner dimensions
 
-- lose button hover glow, just make buttons go dark (except join and submit)
+- lose button hover glow, just make buttons go med-dark (except join and submit)
 - make logout symbol power down (unlight)
 
 EXTRA:

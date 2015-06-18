@@ -152,6 +152,9 @@ nav a.logo.navbar-brand:hover {
   color: #C60500;
 }
 
+.logo.navbar-brand:hover, .group .name:hover {}
+
+
 #nav button.navbar-btn {
   margin-top: 12px;
   margin-right: 5px;
@@ -162,13 +165,13 @@ nav a.logo.navbar-brand:hover {
 }
 
 #nav button.navbar-btn:hover {
-  // background: #363636;
-  width: 104px;
-  height: 27px;
-  margin-right: 3px;
-  margin-left: 3px;
-  margin-top: 11px;
-  font-size: 15.3px;
+  background: #6E6E6E;
+  // width: 104px;
+  // height: 27px;
+  // margin-right: 3px;
+  // margin-left: 3px;
+  // margin-top: 11px;
+  // font-size: 15.3px;
 }
 
 nav li.username {
@@ -279,6 +282,11 @@ input.search-query.form-control {
   border: none;
 }
 
+#searchbar #search-buttons .search-button.btn[data-id="group-search"] {
+  margin: 0;
+  z-index: 0;
+}
+
 .search-button.btn:hover {
   color: white;
   background: #C60500;
@@ -359,7 +367,6 @@ input.search-query.form-control {
   background: white;
   padding: 20px;
   position: relative;
-  height: 110px;
   margin-bottom: 20px;
   border-radius: 2px;
   box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
@@ -369,26 +376,15 @@ input.search-query.form-control {
   margin-bottom: 0px;
 }
 
-.event-index-item.search-view {
-  height: 150px;
-}
-
-.event-index-item .title-and-button{
-  margin-bottom: 10px;
-  position: relative;
-  height: 30px;
-}
-
 .event-index-item h3.heading {
-  // display: inline-block;
-  float: left;
-  margin: 0;
-  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .event-index-item .attending-button {
-  display: inline-block;
-  // float: left;
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(100% - 123px);
 }
 
 .event-index-item .when-and-where {
@@ -398,7 +394,6 @@ input.search-query.form-control {
 }
 
 .event-index-item .when, .event-index-item .where, .event-index-item.search-view .group-name {
-  // float: left;
   display: inline-block;
   font-size: 14px;
   background-color: #9B9B9B;
@@ -407,10 +402,6 @@ input.search-query.form-control {
   padding-right:10px;
   padding-left: 10px;
   border-radius: 2px;
-}
-
-.event-index-item.search-view .group-name {
-  margin-bottom: 10px;
 }
 
 .m-backdrop {
@@ -537,27 +528,31 @@ input#datetime.form-control {
   color: white;
 }
 
-.group .name:hover, .logo.navbar-brand:hover {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
+.group .name:hover {
+  color: #9B9B9B;
 }
 
-@-webkit-keyframes pulse {
-  0% { -webkit-transform: scale(1); }
-  50% { -webkit-transform: scale(1.1); }
-  100% { -webkit-transform: scale(1); }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
+// .group .name:hover, .logo.navbar-brand:hover {
+//   -webkit-animation-duration: 1s;
+//   animation-duration: 1s;
+//   -webkit-animation-fill-mode: both;
+//   animation-fill-mode: both;
+//
+//   -webkit-animation-name: pulse;
+//   animation-name: pulse;
+// }
+//
+// @-webkit-keyframes pulse {
+//   0% { -webkit-transform: scale(1); }
+//   50% { -webkit-transform: scale(1.1); }
+//   100% { -webkit-transform: scale(1); }
+// }
+//
+// @keyframes pulse {
+//   0% { transform: scale(1); }
+//   50% { transform: scale(1.1); }
+//   100% { transform: scale(1); }
+// }
 
 .group-delete-button {
   display: inline-block;

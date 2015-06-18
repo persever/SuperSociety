@@ -1,9 +1,9 @@
-<div class="group-name"></div>
-<div class="title-and-button">
+<div class="clickable">
+  <div class="group-name"></div>
   <h3 class="heading title"><%= event.escape("title") %></h3>
-  <span class="attending-button submit pull-right"></span>
+  <div class="when-and-where">
+    <div class="when"><%= moment(event.escape("datetime")).format("MMMM Do, h:mm A") %></div>
+    <div class="where"><%= event.escape("location") %></div>
+  </div>
 </div>
-<div class="when-and-where">
-  <div class="when"><%= moment(event.escape("datetime")).format("MMMM Do, h:mm A") %></div>
-  <div class="where"><%= event.escape("location") %></div>
-</div>
+<span class="attending-button submit pull-right"></span>

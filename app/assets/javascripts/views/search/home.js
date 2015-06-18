@@ -22,7 +22,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   events: {
     "click .search-button": "setSearchType",
     "click .results .group-index-item": "redirectToGroup",
-    "click .results .event-index-item": "redirectToEvent",
+    "click .results .event-index-item .clickable": "redirectToEvent",
     "submit #searchbar": "search",
     "input input.search-query": "search",
     "click .counter.groups": "retrieveUserGroups",
@@ -75,7 +75,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   redirectToEvent: function (event) {
-    var id = $(event.currentTarget).data("id");
+    var id = $(event.currentTarget.parentElement).data("id");
     var ssevent = this.ssevents.get(id);
     var groupId = ssevent.get("group").id;
     Backbone.history.navigate("groups/" + groupId);
@@ -89,13 +89,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     numEvents = this.userEvents.length;
     this.$el.html(this.template({ numGroups: numGroups, numEvents: numEvents }));
     this.addSearchSubview();
-
-    // if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
-    //   this.$("[data-id=\"event-search\"]").addClass("active");
-    //   this.renderEventsIndexSubview(this.ssevents);
-    // } else {
-    //   this.renderGroupsIndexSubview(this.groups);
-    // }
 
     if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
       this.renderEventsIndexSubview(this.ssevents);
