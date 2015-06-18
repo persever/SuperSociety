@@ -8,6 +8,10 @@
   // font-family: 'Josefin Sans', sans-serif;
 }
 
+body {
+  min-width: 700px;
+}
+
 h1, h2, h3 {
   font-family: "sf-comic-script" !important;
 }
@@ -19,6 +23,11 @@ button, .btn {
   font-size: 15px;
   border: none;
   border-radius: 2px;
+
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .signin {
@@ -76,7 +85,7 @@ button, .btn {
   font-size: 18px;
   color: black;
   border: none;
-  background: linear-gradient(to bottom right, #FFD839, #C69F00);
+  background: radial-gradient(#FFE064, #FFCD00);
   // border-radius: 2px;
   box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
@@ -116,7 +125,9 @@ button, .btn {
 
 #background {
   position: fixed;
-  background-color: #9B9B9B;
+  background-image: url("http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434649235/NY5-City_ihynpv.jpg");
+  background-size: 100%;
+  // background-color: #9B9B9B;
   left: 0;
   right: 0;
   top: 0;
@@ -149,7 +160,7 @@ nav a.logo.navbar-brand {
 }
 
 nav a.logo.navbar-brand:hover {
-  color: #C60500;
+  color: #FF0700;
 }
 
 .logo.navbar-brand:hover, .group .name:hover {}
@@ -159,19 +170,15 @@ nav a.logo.navbar-brand:hover {
   margin-top: 12px;
   margin-right: 5px;
   margin-left: 5px;
-  background: linear-gradient(to bottom right, #C6C6C6, #6E6E6E);
+  background: radial-gradient(#C6C6C6, #9B9B9B);
   color: white;
   border-radius: 2px;
 }
 
 #nav button.navbar-btn:hover {
-  background: #6E6E6E;
-  // width: 104px;
-  // height: 27px;
-  // margin-right: 3px;
-  // margin-left: 3px;
-  // margin-top: 11px;
-  // font-size: 15.3px;
+  background-position: 100px;
+  background: radial-gradient(#C6C6C6, #9B9B9B);
+  color: #363636;
 }
 
 nav li.username {
@@ -212,7 +219,7 @@ nav .glyphicon.glyphicon-log-out:hover {
 .home-header-background {
   position: absolute;
   // z-index: 10;
-  background-color: #6E6E6E;
+  background-color: #363636;
   left: 0;
   height: 172px;
   width: 100%;
@@ -243,7 +250,7 @@ nav .glyphicon.glyphicon-log-out:hover {
   // font-size: 20px;
   border: none;
   background-color: white;
-  color: #6E6E6E;
+  color: #363636;
   height: 50px;
   width: 50px;
   // border: 4px solid white;
@@ -276,9 +283,9 @@ input.search-query.form-control {
   width: 125px;
   height: 34.667px;
   line-height: 0px;
-  background: linear-gradient(to bottom right, #FF3E39, #C60500);
+  background: radial-gradient(#C6C6C6, #9B9B9B);
+  color: #363636;
   font-size: 20px;
-  color: white;
   border: none;
 }
 
@@ -287,26 +294,28 @@ input.search-query.form-control {
   z-index: 0;
 }
 
-.search-button.btn:hover {
+.search-button.btn:hover, {
   color: white;
-  background: #C60500;
+  background: radial-gradient(#FF0700, #C60500);
+  background-position: 100px;
 }
 
 .search-button.btn.active {
   color: white;
-  background: #9B0400;
+  background: radial-gradient(#FF3E39, #FF0700);
+  background-position: 100px;
 }
 
 .results {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
   padding-top: 15px;
   padding-bottom: 40px;
   overflow: auto;
 }
 
 .results .groups-index {
-  width: 100%;
+  width: calc(100% + 20px);
   text-align: center;
 }
 
@@ -399,7 +408,6 @@ input.search-query.form-control {
   animation-fill-mode: both;
 }
 
-
 .bounceInRight {
     -webkit-animation-name: bounceInRight;
     animation-name: bounceInRight;
@@ -491,7 +499,7 @@ input.search-query.form-control {
   z-index: 101;
   border-radius: 2px;
   margin: 0 !important;
-  top: 50vh;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -529,7 +537,7 @@ h3.heading {
 
 button.submit, input.submit.btn, .attending-button button {
   color: black;
-  background: linear-gradient(to bottom right, #FFD839, #C69F00);
+  background: radial-gradient(#FFE064, #FFCD00);
   border: none;
   padding: 0;
   border-radius: 2px;
@@ -664,8 +672,8 @@ input#datetime.form-control {
   padding: 20px;
   z-index: 101;
   border-radius: 2px;
-  top: 50vh;
-  left: 50%;
+  top: calc(50% - 65px);
+  left: calc(50% - 150px);
   transform: translate(-50%);
   text-align: center;
   // box-shadow: 3px 3px 20px 0px rgba(0,0,0,1);
@@ -691,7 +699,7 @@ input#datetime.form-control {
 .group-edit-button button, .group-delete-button button,
 .event-edit-button button, .event-delete-button button {
   border: none;
-  background: linear-gradient(to bottom right, #C6C6C6, #6E6E6E);
+  background: radial-gradient(#C6C6C6, #9B9B9B);
   color: white;
 }
 
@@ -708,7 +716,7 @@ input#datetime.form-control {
 .subscription-button button {
   border: none;
   color: white;
-  background: linear-gradient(to bottom right, #FF3E39, #C60500);
+  background: radial-gradient(#FF3E39, #FF0700);
 }
 
 .subscription-button button:hover {

@@ -25,10 +25,11 @@ Black
 
 PRIORITY:
 
+- group show shadows
+- eii gii stronger shadows
+>>> NORMALIZE THE SHADOWS
+
 - min width!
-
-- modal sitting at the top??
-
 - eii going offscreen when go back to group page from event show
 
 - join button post error (guest signin, on event page)
@@ -52,8 +53,6 @@ PRIORITY:
 - center the group index grid paragraph style
 - style giis like meetup does, they look awful right now
 - lose button hover glow, just make buttons go med-light (or med-dark?) (except join and submit) >> and make it animated fade-in!
-- lose gradient (except on gold?)
-- slide in event index items (jQuery UI show effect)
 
 TO FINISH, SOMEWHAT IN ORDER:
 
