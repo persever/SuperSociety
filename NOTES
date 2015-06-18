@@ -25,7 +25,7 @@ Black
 
 WEDNESDAY:
 
-- make group name clickable now
+- lose the tacky animation
 - fix eii join event render now
 
 - why is group search button adding border or width expanding or something on hover? see all "hover"s
