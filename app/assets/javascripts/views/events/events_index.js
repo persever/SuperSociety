@@ -18,6 +18,7 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
   },
 
   slideItems: function (ssevent) {
+    console.log("here");
     ssevent = ssevent || this.collection.models[0];
     var now = new Date().getTime();
     var time = new Date(now);
