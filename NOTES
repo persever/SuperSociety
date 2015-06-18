@@ -25,17 +25,35 @@ Black
 
 PRIORITY:
 
-- why are events saving to 2020???
+- min width!
+
+- modal sitting at the top??
+
+- eii going offscreen when go back to group page from event show
+
+- join button post error (guest signin, on event page)
+
+- make cloudinary do just photos
+
+- on login "cannot read property name of null" for index (group/group_id thing?)
+
+- one-liner on signin/up page to make clear what the site's use is
+- make guest signin more clear to first-time user
+- upload new group photo in place of old one!
+- background
+- navbar counter glow in and out -- direct guest user!!
+
+- "groups i manage" button
+- User profiles? name on hover at least
+
 - uncrowd group show... put the screen over images, not covering whole thing, semi-transparent, image behind blurred
 - guest login autotype
-- rotate guests between three set users!
-- more seeds for those users
+- rotate guests between three set users! more seeds for those users!
 - center the group index grid paragraph style
 - style giis like meetup does, they look awful right now
 - lose button hover glow, just make buttons go med-light (or med-dark?) (except join and submit) >> and make it animated fade-in!
 - lose gradient (except on gold?)
 - slide in event index items (jQuery UI show effect)
-
 
 TO FINISH, SOMEWHAT IN ORDER:
 
