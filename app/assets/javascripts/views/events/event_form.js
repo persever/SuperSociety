@@ -36,7 +36,6 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   submit: function () {
     event.preventDefault();
 
-
     var attrs = $(event.target).serializeJSON();
     attrs.event.datetime = moment(this.$("input#datetime").val(), "MM/DD/YYY HH:mm").format("YYYY-MM-DD HH:mm:ss");
 
@@ -48,6 +47,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       success: function () {
         if (isNew) {
           SuperSocietyApp.events.add(this.model);
+          this.model.fetch();
         }
         var groupId = this.model.get("group_id");
         this.remove();

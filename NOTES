@@ -25,7 +25,8 @@ Black
 
 WEDNESDAY:
 
-- sometimes need group_id, sometimes group??
+- how to access group after new event save? why only has event id?
+- why are events saving to 2020???
 
 - gradient on group name and nav logo (and signin logo?)
 - nicer fonts! (look at some fancy sites)

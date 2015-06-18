@@ -50,6 +50,7 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
       success: function () {
         if (isNew) {
           SuperSocietyApp.events.add(this.model);
+          this.model.fetch();
         }
         this.remove();
         Backbone.history.navigate("groups/" + this.model.id, { trigger: true });
