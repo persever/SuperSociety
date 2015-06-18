@@ -366,12 +366,12 @@ input.search-query.form-control {
 
 .group-index-item img.hoverable {
   height: 0px;
-  opacity: 0;
-  // background:none;
+  position: absolute;
   z-index: 99;
 }
 
 .group-index-item:hover .hoverable {
+  position: relative;
   height: 100px;
   opacity: 1;
 }
