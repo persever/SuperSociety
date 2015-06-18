@@ -214,7 +214,7 @@ nav .glyphicon.glyphicon-log-out:hover {
   // z-index: 10;
   background-color: #6E6E6E;
   left: 0;
-  height: 165px;
+  height: 172px;
   width: 100%;
   top: 0;
 }
@@ -297,22 +297,42 @@ input.search-query.form-control {
   background: #9B0400;
 }
 
-.group-index-item {
+.results {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  overflow: auto;
+}
+
+.results .group-index-item {
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 10px;
   width: 300px;
-  margin-bottom: 40px;
 }
 
 .group-index-item .img-container {
+  box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
   position: relative;
   height: 100px;
   width: 300px;
   overflow: hidden;
-  // justify-content: center;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .group-index-item img {
   height: 100px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .group-index-item .screen {
@@ -343,25 +363,6 @@ input.search-query.form-control {
   color: white;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
-
-// .group-index-item .heading.two-line {
-//   top: 20%;
-// }
-
-.results {
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-top: 15px;
-  padding-bottom: 40px;
-  // overflow: auto;
-  // height: 300px;
-  // overflow-y: scroll;
-}
-
-// .results ul {
-//   padding: none;
-//   margin: none
-// }
 
 .event-index-item {
   background: white;
@@ -575,14 +576,6 @@ input#datetime.form-control {
 .group-delete-button.empty {
   background-color: rgba(0, 0, 0, 1);;
 }
-
-// .blur {
-//   -webkit-filter: blur(10px);
-//   -moz-filter: blur(10px);
-//   -ms-filter: blur(10px);
-//   -o-filter: blur(10px);
-//   filter: blur(10px);
-// }
 
 .deletion-confirmation-backdrop {
   position: fixed;

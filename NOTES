@@ -25,16 +25,8 @@ Black
 
 WEDNESDAY:
 
-- why is group search button adding border or width expanding or something on hover? see all "hover"s
-
-- add webkit and moz to scss as needed! radius, shadow, gradients, etc!
-
-- attenders min height
-- desc and events min width?
 - nicer fonts! (look at some fancy sites)
-- consider sharper edges on buttons... look at some sites
 - entry page one-liner!
-- subscribers div height??
 - too much space groups index right
 - make group show name swap in events index subview
 - search should exclude past events
@@ -57,6 +49,7 @@ WEDNESDAY:
 - is the route ever saying "groups/undefined"? on back button?
 > no unintended effects! (like clicking join/leave from index also directing to show page! or clicks from something that shouldn't be clickable, or clicks to somewhere wrong or double-handled!)
 - check out app in firefox, on a aa computer!
+- add webkit and moz to scss as needed! radius, shadow, gradients, etc!
 
 - more iron man seeds!
 
