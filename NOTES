@@ -25,10 +25,13 @@ Black
 
 WEDNESDAY:
 
+- sometimes need group_id, sometimes group??
+
 - gradient on group name and nav logo (and signin logo?)
 - nicer fonts! (look at some fancy sites)
 - entry page one-liner!
 - search should exclude past events
+- fix submit button
 - resize modals
 - do you need to handle their centering on window resize??
 - gradient buttons

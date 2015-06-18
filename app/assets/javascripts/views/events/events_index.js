@@ -10,8 +10,13 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
   render: function () {
     this.$el.html(this.template());
     this.collection.forEach(function (ssevent) {
-      var item = new SuperSocietyApp.Views.EventsIndexItem({ model: ssevent });
-      this.$el.append(item.render().$el);
+      var now = new Date().getTime();
+      var time = new Date(now);
+      var datetime = new Date(ssevent.get("datetime"));
+      if (datetime > time) {
+        var item = new SuperSocietyApp.Views.EventsIndexItem({ model: ssevent });
+        this.$el.append(item.render().$el);
+      }
     }.bind(this));
 
     return this;
