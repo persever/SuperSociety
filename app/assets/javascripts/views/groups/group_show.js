@@ -101,7 +101,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   stretch: function () {
     this.$(".title-and-events").css("width", $("#content").width() - 340);
     this.$(".title-container").css("width", $("#content").width() - 340);
-    this.$(".creator-buttons-container").css("height", $(".title-container").height());
+    this.$(".creator-buttons-container").css("height", $(".title-container").height() + 40);
   },
 
   edit: function (event) {

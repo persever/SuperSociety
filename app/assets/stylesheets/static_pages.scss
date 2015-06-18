@@ -17,15 +17,17 @@ button, .btn {
   border: none;
   border-radius: 3px;
   // cursor:
-
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 
 h1, h2, h3 {
   font-family: "sf-comic-script" !important;
+}
+
+button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .signin {
@@ -173,13 +175,6 @@ nav a.logo.navbar-brand {
 
 nav a.logo.navbar-brand:hover {
   color: #FF0700;
-}
-
-.logo.navbar-brand, .group .name {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
 }
 
 #nav button.navbar-btn {
@@ -593,7 +588,6 @@ input#datetime.form-control {
 
 .group .creator-buttons-container {
   position: relative;
-  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -619,7 +613,6 @@ input#datetime.form-control {
 
 .group .title-container {
   text-align: center;
-  // padding-left: 100px;
   margin-bottom: 40px;
   position: relative;
 }
@@ -638,12 +631,12 @@ input#datetime.form-control {
   z-index: 10;
   color: white;
   border: 4px solid white;
-  border-radius: 3px
+  border-radius: 3px;
+  text-shadow: 5px 5px 20px rgba(0,0,0,1);
 }
 
 .group .name:hover {
-  // color: #C6C6C6;
-  // border-color: #C6C6C6;
+  box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
 
 .group-delete-button {
