@@ -34,6 +34,7 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   },
 
   submit: function () {
+    debugger
     event.preventDefault();
 
     var attrs = $(event.target).serializeJSON();

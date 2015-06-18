@@ -28,10 +28,12 @@ PRIORITY:
 - why are events saving to 2020???
 - uncrowd group show... put the screen over images, not covering whole thing, semi-transparent, image behind blurred
 - guest login autotype
-- rotate guests between three setup users!
+- rotate guests between three set users!
 - more seeds for those users
 - center the group index grid paragraph style
-- SHUT DOWN COMPUTER
+- style giis like meetup does, they look awful right now
+- lose button hover glow, just make buttons go med-light (or med-dark?) (except join and submit) >> and make it animated fade-in!
+- lose gradient (except on gold?)
 
 TO FINISH, SOMEWHAT IN ORDER:
 
@@ -41,7 +43,9 @@ TO FINISH, SOMEWHAT IN ORDER:
 - resize modals
 - switch colors with class toggle on attend/subscribe buttons
 - jQuery UI toggle class / color animation for smooth toggle button transitions
-- signin video or (later!) animate electricity
+- fixed nav event counter
+- pull homepage header counters right and make fancier
+- gii bigger font, wrap name
 
 - (ta help?) make logout button on nav work correctly
 
@@ -49,7 +53,6 @@ TO FINISH, SOMEWHAT IN ORDER:
 - custom (simple circle) cursor for button/a/other clickable hover
 - guest login autotype
 - slide in event index items (jQuery UI show effect)
-- fixed nav event counter
 - make errors on forms look a little nicer
 - handle "enter" key from description textarea to submit forms
 
@@ -94,10 +97,11 @@ TO FINISH, SOMEWHAT IN ORDER:
 - shadows on all boxes
 - member/attender banner dimensions
 
-- lose button hover glow, just make buttons go med-dark (except join and submit)
 - make logout symbol power down (unlight)
 
 EXTRA:
+
+- signin video or (later!) animate electricity
 
 - entry page one-liner!
 - nicer fonts! (look at some fancy sites)
