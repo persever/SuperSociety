@@ -22,7 +22,7 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
     var now = new Date().getTime();
     var time = new Date(now);
     var datetime = new Date(ssevent.get("datetime"));
-    if (datetime < time) {
+    if (datetime > time) {
       var item = new SuperSocietyApp.Views.EventsIndexItem({ model: ssevent });
       var $item = item.render().$el;
       $item.addClass("bounceInRight");
