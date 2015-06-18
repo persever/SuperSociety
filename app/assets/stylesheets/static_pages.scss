@@ -145,7 +145,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-#content, #nav {
+#content, #nav nav.navbar {
   margin: 0 auto;
   max-width: 1024px;
   min-width: 800px;
@@ -740,6 +740,12 @@ input#datetime.form-control {
   // animation-timing-function: ease-in-out;
   // animation-iteration-count:infinite;
   // -webkit-animation-iteration-count:infinite;
+}
+
+.subscription-button button.not-subscribed {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 0%;
 }
 
 .subscription-button button:hover {
