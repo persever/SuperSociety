@@ -52,7 +52,7 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   // onRender: function () {
-  //   var height = this.$(".desc-and-events").height() - this.$(".header-bar.members h3").outerHeight();
+  //   var height = this.$(".title-and-events").height() - this.$(".header-bar.members h3").outerHeight();
   //   if (height > $(".subscribers").height()) {
   //     this.$(".subscribers").css("height", height);
   //   }
@@ -99,7 +99,9 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
   },
 
   stretch: function () {
-    this.$(".desc-and-events").css("width", $("#content").width() - 340);
+    this.$(".title-and-events").css("width", $("#content").width() - 340);
+    this.$(".title-container").css("width", $("#content").width() - 340);
+    this.$(".creator-buttons-container").css("height", $(".title-container").height());
   },
 
   edit: function (event) {

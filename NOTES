@@ -25,6 +25,16 @@ Black
 
 PRIORITY:
 
+- organize css!!!! separate!!!
+
+- min width, fix bootstrap collapse width
+
+- description length vlaidation
+
+- fix modal close button alignment and size
+
+- background overlay
+
 - consider button outlines, after new fonts
 
 - change home and group layouts
@@ -125,6 +135,9 @@ TO FINISH, SOMEWHAT IN ORDER:
 - make logout symbol power down (unlight)
 
 EXTRA:
+
+- eii slide in on scroll down (when visible on screen)
+- resize group photos
 
 - signin video or (later!) animate electricity
 
