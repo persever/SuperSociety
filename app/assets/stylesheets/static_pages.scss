@@ -307,7 +307,7 @@ input.search-query.form-control {
 
 .results .group-index-item {
   float: left;
-  overflow: hidden;
+  // overflow: hidden;
   padding: 0;
   padding-right: 0px;
   padding-left: 0px;
@@ -316,7 +316,7 @@ input.search-query.form-control {
 }
 
 .group-index-item .img-container {
-  box-shadow: 2px 2px 10px 0px rgba(0,0,0,.7);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,.5);
   position: relative;
   height: 100px;
   width: 300px;
@@ -326,7 +326,7 @@ input.search-query.form-control {
   padding: 0;
 }
 
-.group-index-item img {
+.group-index-item img.not-hoverable {
   height: 100px;
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -362,6 +362,22 @@ input.search-query.form-control {
   z-index: 10;
   color: white;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.group-index-item img.hoverable {
+  height: 0px;
+  opacity: 0;
+  // background:none;
+  z-index: 99;
+}
+
+.group-index-item:hover .hoverable {
+  height: 100px;
+  opacity: 1;
+}
+
+.group-index-item:hover .hide-on-hover {
+  opacity: 0;
 }
 
 .event-index-item {

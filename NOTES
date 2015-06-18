@@ -25,10 +25,9 @@ Black
 
 WEDNESDAY:
 
+- gradient on group name and nav logo (and signin logo?)
 - nicer fonts! (look at some fancy sites)
 - entry page one-liner!
-- too much space groups index right
-- make group show name swap in events index subview
 - search should exclude past events
 - resize modals
 - do you need to handle their centering on window resize??
