@@ -305,8 +305,13 @@ input.search-query.form-control {
   overflow: auto;
 }
 
+.results .groups-index {
+  width: 100%;
+  text-align: center;
+}
+
 .results .group-index-item {
-  float: left;
+  display: inline-block;
   // overflow: hidden;
   padding: 0;
   padding-right: 0px;
@@ -344,7 +349,7 @@ input.search-query.form-control {
   // transform: translateY(-100px);
   height: 100px;
   width: 300px;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(255, 255, 255, .7);
   // z-index: 9;
 }
 

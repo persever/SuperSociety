@@ -23,23 +23,35 @@ Black
 
 ***
 
-WEDNESDAY:
+PRIORITY:
 
-- how to access group after new event save? why only has event id?
 - why are events saving to 2020???
+- uncrowd group show... put the screen over images, not covering whole thing, semi-transparent, image behind blurred
+- guest login autotype
+- rotate guests between three setup users!
+- more seeds for those users
+- center the group index grid paragraph style
+- SHUT DOWN COMPUTER
 
+TO FINISH, SOMEWHAT IN ORDER:
+
+- reconsider colors (white nav?)
 - gradient on group name and nav logo (and signin logo?)
-- nicer fonts! (look at some fancy sites)
-- entry page one-liner!
-- search should exclude past events
 - fix submit button
 - resize modals
-- do you need to handle their centering on window resize??
-- gradient buttons
 - switch colors with class toggle on attend/subscribe buttons
+- jQuery UI toggle class / color animation for smooth toggle button transitions
 - signin video or (later!) animate electricity
 
-- (ta help?) make logout button on nav work properly
+- (ta help?) make logout button on nav work correctly
+
+- stop cursor from turning into text indicator, make it just clickable or not
+- custom (simple circle) cursor for button/a/other clickable hover
+- guest login autotype
+- slide in event index items (jQuery UI show effect)
+- fixed nav event counter
+- make errors on forms look a little nicer
+- handle "enter" key from description textarea to submit forms
 
 - eliminate code (models, colls, views!) not using
 - clean up controllers and routes
@@ -54,8 +66,6 @@ WEDNESDAY:
 - check out app in firefox, on a aa computer!
 - add webkit and moz to scss as needed! radius, shadow, gradients, etc!
 
-- more iron man seeds!
-
 - db reset both (and migrate heroku) and push to both
 
 - BLOG POST
@@ -65,34 +75,13 @@ WEDNESDAY:
 - a few more iron man seeds in case some employers delete a lot!!
 - clear new from cloudinary regularly too...
 
-- reconsider colors (white nav?)
-- uncrowd group show... put the screen over images, not covering whole thing, semi-transparent, image behind blurred
-
-- rotate guests between three setup users!
-
-- SHUT DOWN COMPUTER
-
-THURSDAY:
-
-- guest login autotype
 - sound
 - garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
 
-- gii clear h3 and screen, and magnify (grid should allow this! just shrink the margin to compensate)
-- jQuery UI toggle class / color animation for smooth toggle button transitions
-- stop cursor from turning into text indicator, make it just clickable or not
-- custom (simple circle) cursor for button/a/other clickable hover
-- guest login autotype
-- slide in event index items (jQuery UI show effect)
-- make eii buttons float beside the rest of the eii content, pulled-right still, vertically centered
-- fixed nav event counter
+- change signout button to power symbol
 - tags for groups and events top priority bonuses, and calendar!
 - welcome screen video and epic music behind login/signup modal (heimdall + bridge video???)
-- make errors on forms look a little nicer
-- handle "enter" key from description textarea to submit forms
 - make bootstrap nav collapse at like 300px, no bigger
-- deletion confirmation modal
-- change signout button to power symbol
 - marvel-esque google font for other font
 
 - update readme, incl bonuses; check off boxes
@@ -110,13 +99,14 @@ THURSDAY:
 
 EXTRA:
 
+- entry page one-liner!
+- nicer fonts! (look at some fancy sites)
+
 - customize cloudinary a little (just colors and button!)
 
-- make events lag and settle sliding on scroll
 - 'no events' placeholder for groups with no events (like 'i have powers because science')
 - simple custom 404 pages
-- FriendlyId
-- dimensionality (diagonal slice on buttons, lighter above darker below -- same for logo)
+- dimensionality
 - mouse reactivity!! (gii clear h3 and screen!)
 
 - how to handle groups with long names? it'd be nicer to have bigger name fonts... back to h3, ellipses cutting off after 10 char?
@@ -133,12 +123,7 @@ EXTRA:
 
 - better looking select dropdown
 - make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
-- logo
-- reactive mouse
-- make cloudinary more stylistically coherent
-- infinite scroll
 - fade effect on every route change
 - group subscribe from index
-- click on any piece of information to edit it
 - reduce queries
 - at least a little responsiveness?
