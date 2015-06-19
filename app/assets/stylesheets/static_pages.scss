@@ -10,8 +10,8 @@
 }
 
 button, .btn {
-  height: 25px;
   width: 100px;
+  height: 25px;
   font-family: "sf-comic-script" !important;
   font-size: 15px;
   border: none;
@@ -181,15 +181,15 @@ nav a.logo.navbar-brand:hover {
   margin-top: 12px;
   margin-right: 5px;
   margin-left: 5px;
-  background: radial-gradient(#C6C6C6, #9B9B9B);
-  color: white;
+  height: 30px;
+  color: #C6C6C6;
+  border: 3px solid #C6C6C6;
+  background: none;
   border-radius: 3px;
 }
 
 #nav button.navbar-btn:hover {
-  background-position: 100px;
-  background: radial-gradient(#C6C6C6, #9B9B9B);
-  color: #363636;
+  box-shadow: 0px 0px 1px 1px rgba(198,198,198,1);
 }
 
 nav li.username {
@@ -202,7 +202,7 @@ nav img {
   margin-top: 3px;
   height: 43px;
   width: 43px;
-  // border: 4px solid white;
+  // border: 3px solid white;
   border-radius: 22px;
 }
 
@@ -264,7 +264,7 @@ nav .glyphicon.glyphicon-log-out:hover {
   color: #363636;
   height: 50px;
   width: 50px;
-  // border: 4px solid white;
+  // border: 3px solid white;
   border-radius: 25px;
   margin: 10px 10px;
 }
@@ -547,29 +547,45 @@ h3.heading {
 }
 
 button.submit, input.submit.btn, .attending-button button {
-  color: black;
-  background: linear-gradient(to bottom right, #FFE064, #FFCD00);
-  border: none;
-  padding: 0;
+  height: 30px;
+  color: #FFCD00;
+  border: 3px solid #FFCD00;
+  background: none;
   border-radius: 3px;
-  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  padding-top: 2px;
+  // border-image: linear-gradient(to bottom right, #FFE064, #FFCD00);
+  // border-image-slice: 1;
+  // color: black;
+  // background: linear-gradient(to bottom right, #FFE064, #FFCD00);
+  // border: none;
+  // padding: 0;
+  // box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 button.submit:hover, input.submit:hover, .attending-button button:hover, .submit-deletion:hover {
-  color: black;
-  transform: translate(2px,2px);
-  box-shadow: 0px 0px 1px 2px rgba(255,205,0,1);
-  background-position: 100px;
-  border: none;
+  // color: black;
+  // transform: translate(2px,2px);
+  box-shadow: 0px 0px 1px 1px rgba(255,205,0,1);
+  // background-position: 100px;
+  // border: none;
 }
 
-.attending-button button.joined, .subscription-button button.not-subscribed {
-  color: white;
-  background: radial-gradient(#FF3E39, #FF0700);
+.attending-button button.joined, .photo-upload {
+  color: #9B9B9B;
+  border: 3px solid #9B9B9B;
+  height: 30px;
+  padding-top: 2px;
+  background: none;
+  // color: white;
+  // background: radial-gradient(#FF3E39, #FF0700);
 }
 
-.attending-button button.joined:hover, .subscription-button button.not-subscribed:hover {
-  box-shadow: 0px 0px 1px 2px rgba(255,7,0,1);
+.photo-upload {
+  width: 100%;
+}
+
+.attending-button button.joined:hover, .photo-upload:hover {
+  box-shadow: 0px 0px 1px 1px rgba(198,198,198,1);
 }
 
 #datetimepicker1 {
@@ -630,7 +646,7 @@ input#datetime.form-control {
   padding-right: 20px;
   z-index: 10;
   color: white;
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 3px;
   text-shadow: 5px 5px 20px rgba(0,0,0,1);
 }
@@ -718,9 +734,16 @@ input#datetime.form-control {
 }
 
 .subscription-button button.subscribed {
-  border: none;
-  color: #363636;
-  background: radial-gradient(#C6C6C6, #9B9B9B);
+  height: 30px;
+  color: #C6C6C6;
+  border: 3px solid #C6C6C6;
+  background: none;
+  border-radius: 3px;
+
+  // border: none;
+  // color: #363636;
+  // background: radial-gradient(#C6C6C6, #9B9B9B);
+
   position: absolute;
   top: calc(50% - 12px);
   left: 0%;
@@ -736,13 +759,23 @@ input#datetime.form-control {
 }
 
 .subscription-button button.not-subscribed {
+  height: 30px;
+  color: #FF0700;
+  border: 3px solid #FF0700;
+  background: none;
+  border-radius: 3px;
+
   position: absolute;
   top: calc(50% - 12px);
   left: 0%;
 }
 
-.subscription-button button:hover {
-  box-shadow: 0px 0px 1px 2px rgba(198,198,198,1);
+.subscription-button button.not-subscribed:hover {
+  box-shadow: 0px 0px 1px 1px rgba(255,7,0,1);
+}
+
+.subscription-button button.subscribed:hover {
+  box-shadow: 0px 0px 1px 1px rgba(198,198,198,1);
 
   // border: 2px solid white;
   // background: none;
@@ -773,7 +806,7 @@ input#datetime.form-control {
 
 .group .header-bar {
   margin-top: 20px;
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 3px;
   height: 40px;
   width: 100%;
@@ -811,6 +844,7 @@ input#datetime.form-control {
   border-radius: 22px;
   text-align: center;
   margin: 5px;
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,.7);
 }
 
 // .group .subscribers img:nth-child(2) {
@@ -878,7 +912,7 @@ input#datetime.form-control {
 
 .event-show .header-bar {
   margin-top: 20px;
-  border: 4px solid white;
+  border: 3px solid white;
   border-radius: 3px;
   height: 30px;
   width: 100%;
