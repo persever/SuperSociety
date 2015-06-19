@@ -84,8 +84,18 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   render: function () {
     // this.delegateEvents();
 
+    var userEvents = [];
+    this.userEvents.forEach(function(ssevent) {
+      var now = new Date().getTime();
+      var time = new Date(now);
+      var datetime = new Date(ssevent.get("datetime"));
+      if (datetime > time) {
+        userEvents.push(ssevent);
+      }
+    });
+
     numGroups = this.userGroups.length;
-    numEvents = this.userEvents.length;
+    numEvents = userEvents.length;
     this.$el.html(this.template({ numGroups: numGroups, numEvents: numEvents }));
     this.addSearchSubview();
 

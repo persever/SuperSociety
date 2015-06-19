@@ -150,6 +150,7 @@ Attending.create(event: Event.find_by({ title: "AI Development" }), user: User.f
 
 Attending.create(event: Event.find_by({ title: "Graduation Ceremony" }), user: User.find_by({ username: "Rogue" }))
 Attending.create(event: Event.find_by({ title: "Graduation Ceremony" }), user: User.find_by({ username: "Storm" }))
+Attending.create(event: Event.find_by({ title: "Graduation Ceremony" }), user: User.find_by({ username: "Wolverine" }))
 
 Attending.create(event: Event.find_by({ title: "Graduation Party" }), user: User.find_by({ username: "Rogue" }))
 Attending.create(event: Event.find_by({ title: "Graduation Party" }), user: User.find_by({ username: "Storm" }))
