@@ -404,36 +404,36 @@ input.search-query.form-control {
   overflow: hidden;
   text-align: center;
   margin: auto;
-  // padding: 0;
 }
 
 .group-index-item img.not-hoverable {
   height: 100px;
 }
 
-.group-index-item .screen {
-  margin: 0;
-  position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 150px);
-  height: 100px;
-  width: 300px;
-  background-color: rgba(0, 0, 0, .4);
-}
-
 .group-index-item .heading {
-  font-family: "sf-comic-script";
   display: inline-block;
-  font-size: 20px;
-  z-index: 10;
-  color: white;
-  text-shadow: 5px 5px 20px rgba(0,0,0,1);
   position: absolute;
   left: 0px;
   margin: 10px;
   bottom: 0px;
   max-width: 180px;
   text-align: left;
+}
+
+.group-index-item .gii-name-screen {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  height: calc(100% + 20px);
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.group-index-item .group-name {
+  font-family: "sf-comic-script";
+  font-size: 20px;
+  color: white;
+  text-shadow: 5px 5px 20px rgba(0,0,0,1);
 }
 
 .group-index-item img.hoverable {

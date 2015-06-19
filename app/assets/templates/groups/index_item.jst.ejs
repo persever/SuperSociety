@@ -2,7 +2,9 @@
   <img src="<%= group.escape("photo_url") %>" class="hoverable"></img>
   <div class="hide-on-hover">
     <img src="<%= group.escape("photo_url") %>" class="not-hoverable"></img>
-    <div class="screen"></div>
-    <div class="heading"><%= group.escape("name") %></div>
+    <div class="heading">
+      <div class="gii-name-screen"></div>
+      <div class="group-name"><%= group.escape("name") %></div>
+    </div>
   </div>
 </div>
