@@ -26,16 +26,23 @@ User.create(username: "Diana Prince", password: "supersecretpassword", photo_url
 # Tony Stark
 # Bruce Wayne
 # Thor
+# Cap
 
 Group.create(name: "The Avengers", description: "We assemble. For battles, and parties.", creator: User.find_by({ username: "Steve Rogers" }), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/avengers_joeenr.jpg")
-Group.create(name: "Asgardians", description: "The gods who guard the realms of men.", creator: User.find_by({ username: "Thor"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/asgardians_bz0th0.jpg")
 Group.create(name: "Antiheroes", description: "We're dark and brooding. Yeah.", creator: User.find_by({ username: "Bruce Wayne"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228253/antiheroes_hqjoha.jpg")
+Group.create(name: "Archers", description: "Our skills defy basic laws of physics. We're just that badass.", creator: User.find_by({ username: "Hawkeye"}), photo_url: "")
+Group.create(name: "Asgardians", description: "The gods who guard the realms of men.", creator: User.find_by({ username: "Thor"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/asgardians_bz0th0.jpg")
+Group.create(name: "Blondes", description: "This group only exists because Thor likes calling attention to how pretty he is.", creator: User.find_by({ username: "Thor"}), photo_url: "")
 Group.create(name: "Billionaire Heroes", description: "The only thing bigger than our wallets is our egos.", creator: User.find_by({ username: "Tony Stark"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/billionaires_eudczj.jpg")
+Group.create(name: "Consequentialist Superheroes", description: "Superheroes who endeavour to do the greatest amount of good.", creator: User.find_by({ username: "Kal-El"}), photo_url: "")
 Group.create(name: "Gamers", description: "Because fictional fights can take the edge off the real ones. (And it's fun to play your teammates. I play Cap better than Cap does.)", creator: User.find_by({ username: "Wade Wilson"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/gamers_vjvzj9.jpg")
 Group.create(name: "I Have Powers Because Science", description: "Seems legit, right?", creator: User.find_by({ username: "Peter Parker"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434235810/mutant_ucqzsi.jpg")
 Group.create(name: "Potluckers", description: "Food to fuel your muscles, and friends to fuel your soul.", creator: User.find_by({ username: "Kara Zor-El"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434235811/potluckers_u63tco.jpg")
+Group.create(name: "Pub Crawlers", description: "Another!", creator: User.find_by({ username: "Thor"}), photo_url: "")
 Group.create(name: "Running Club", description: "Gotta stay in shape!", creator: User.find_by({ username: "Barbara Wilson"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228251/running_y4bqvm.jpg")
+Group.create(name: "Ski Club", description: "Yeah!", creator: User.find_by({ username: "Steve Rogers"}), photo_url: "")
 Group.create(name: "Superheroes in Tech", description: "Using innovative technology to look cool. Also to help people, but mostly to look cool.", creator: User.find_by({ username: "Tony Stark"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228252/superheroesintech_i9ioun.jpg")
+Group.create(name: "We Don't Need Super Powers", description: "We got this good through training, not a spider bite.", creator: User.find_by({ username: "Bruce Wayne"}), photo_url: "")
 Group.create(name: "X-Men", description: "Mutant and proud!", creator: User.find_by({ username: "Anna Marie"}), photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/xmen_hwpsch.jpg")
 
 Event.create(group: Group.find_by({ name: "The Avengers"}), title: "Assembly", datetime: "2015-08-10 10:00:00-07", location: "Avengers HQ", description: "The enemy is here, we must assemble!")
@@ -65,6 +72,20 @@ Event.create(group: Group.find_by({ name: "Superheroes in Tech"}), title: "AI De
 Event.create(group: Group.find_by({ name: "X-Men"}), title: "Graduation Setup", datetime: "2015-07-10 09:00:00-07", location: "Xavier School for Gifted Youngsters", description: "Today is an important day for these students. They finally get their costumes!")
 Event.create(group: Group.find_by({ name: "X-Men"}), title: "Graduation Ceremony", datetime: "2015-07-10 11:00:00-07", location: "Xavier School for Gifted Youngsters", description: "Logan Howlett, if you want to help, stick with lifting heavy objects okay? We don't want any shredded certificates this year.")
 Event.create(group: Group.find_by({ name: "X-Men"}), title: "Graduation Party", datetime: "2015-07-10 18:00:00-07", location: "Xavier School for Gifted Youngsters", description: "Congratulations grads!!")
+
+
+
+# Event.create(group: Group.find_by({ name: "Consequentialist Superheroes"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "Archers"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "Blondes"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "Pub Crawlers"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "Pub Crawlers"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "Ski Club"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "NAME"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "NAME"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+# Event.create(group: Group.find_by({ name: "NAME"}), title: "TITLE", datetime: "2015-MM-DD HOUR:00:00-07", location: "LOCATION", description: "DESCRIPTION")
+
+
 
 Attending.create(event: Event.find_by({ title: "Assembly" }), user: User.find_by({ username: "Natasha Romanoff" }))
 Attending.create(event: Event.find_by({ title: "Assembly" }), user: User.find_by({ username: "Steve Rogers" }))
@@ -157,13 +178,23 @@ Attending.create(event: Event.find_by({ title: "Graduation Party" }), user: User
 Attending.create(event: Event.find_by({ title: "Graduation Party" }), user: User.find_by({ username: "Logan Howlett" }))
 Attending.create(event: Event.find_by({ title: "Graduation Party" }), user: User.find_by({ username: "Wade Wilson" }))
 
+
+
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+# Attending.create(event: Event.find_by({ title: "" }), user: User.find_by({ username: ""}))
+
+
+
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Natasha Romanoff" }))
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Steve Rogers" }))
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Clint Barton" }))
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Bruce Banner" }))
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Tony Stark" }))
 Subscription.create(group: Group.find_by({ name: "The Avengers" }), user: User.find_by({ username: "Thor" }))
-
 
 Subscription.create(group: Group.find_by({ name: "Asgardians" }), user: User.find_by({ username: "Thor" }))
 Subscription.create(group: Group.find_by({ name: "Asgardians" }), user: User.find_by({ username: "Sif" }))
@@ -177,7 +208,6 @@ Subscription.create(group: Group.find_by({ name: "Antiheroes" }), user: User.fin
 Subscription.create(group: Group.find_by({ name: "Billionaire Heroes" }), user: User.find_by({ username: "Bruce Wayne" }))
 Subscription.create(group: Group.find_by({ name: "Billionaire Heroes" }), user: User.find_by({ username: "Oliver Queen" }))
 Subscription.create(group: Group.find_by({ name: "Billionaire Heroes" }), user: User.find_by({ username: "Tony Stark" }))
-
 
 Subscription.create(group: Group.find_by({ name: "Gamers" }), user: User.find_by({ username: "Wade Wilson" }))
 Subscription.create(group: Group.find_by({ name: "Gamers" }), user: User.find_by({ username: "Tony Stark" }))
@@ -201,10 +231,18 @@ Subscription.create(group: Group.find_by({ name: "Running Club" }), user: User.f
 Subscription.create(group: Group.find_by({ name: "Running Club" }), user: User.find_by({ username: "Steve Rogers" }))
 Subscription.create(group: Group.find_by({ name: "Running Club" }), user: User.find_by({ username: "Barbara Wilson" }))
 
-
 Subscription.create(group: Group.find_by({ name: "Superheroes in Tech" }), user: User.find_by({ username: "Tony Stark" }))
 Subscription.create(group: Group.find_by({ name: "Superheroes in Tech" }), user: User.find_by({ username: "Bruce Wayne" }))
 
 Subscription.create(group: Group.find_by({ name: "X-Men" }), user: User.find_by({ username: "Ororo Munroe" }))
 Subscription.create(group: Group.find_by({ name: "X-Men" }), user: User.find_by({ username: "Anna Marie" }))
 Subscription.create(group: Group.find_by({ name: "X-Men" }), user: User.find_by({ username: "Logan Howlett" }))
+
+
+
+# Subscription.create(group: Group.find_by({ name: "Consequentialist Superheroes" }), user: User.find_by({ username: ""}))
+# Subscription.create(group: Group.find_by({ name: "Archers" }), user: User.find_by({ username: ""}))
+# Subscription.create(group: Group.find_by({ name: "Blondes" }), user: User.find_by({ username: ""}))
+# Subscription.create(group: Group.find_by({ name: "Pub Crawlers" }), user: User.find_by({ username: ""}))
+# Subscription.create(group: Group.find_by({ name: "Ski Club" }), user: User.find_by({ username: ""}))
+# Subscription.create(group: Group.find_by({ name: "We Don't Need Super Powers" }), user: User.find_by({ username: ""}))

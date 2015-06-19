@@ -169,10 +169,9 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
       this.userEvents.remove(eventId);
     } else {
       this.userEvents.add({ id: eventId });
-      this.userEvents.fetch({ data: { attender: this.user.toJSON() } });
     }
 
-    this.$(".counter.events .counter-button").text(this.userEvents.length)
+    this.$(".counter.events .counter-button").text(this.userEvents.length);
   },
 
   _swapSubview: function (view) {

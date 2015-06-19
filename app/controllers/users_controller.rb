@@ -33,7 +33,13 @@ class UsersController < ApplicationController
         render :new
       end
     elsif params[:submission] == "Guest Pass"
-      @user = User.find_by({ username: "Iron Man"})
+      @users = [
+        User.find_by({ username: "Tony Stark"}),
+        User.find_by({ username: "Bruce Wayne"}),
+        User.find_by({ username: "Thor"}),
+        User.find_by({ username: "Captain America"})
+      ]
+      @user = @users.sample
       sign_in(@user)
     end
 

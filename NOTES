@@ -27,8 +27,6 @@ FRIDAY:
 
 - login buttons lighter gold
 
-- TA: join button toggle not carrying into event view?? (not listening to right events?)
-
 - one-liner on signin/up page to make clear what the site's use is
 - make guest signin more clear to first-time user
 - background
@@ -48,6 +46,8 @@ FRIDAY:
 - giis no border or image screen, just screen behind name
 - gii spacing on collapse...
 - lost member/attender borders, replace with centered lateral lines on either side of word
+- lose box around group name
+- maybe make group name fade in
 - clearner nav (white?? thin bottom border line?)
 - nav 100% width (no background??)
 
