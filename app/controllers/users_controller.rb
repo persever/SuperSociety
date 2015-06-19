@@ -5,15 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-
-    # @user = User.new(user_params)
-    # if @user.save
-    #   sign_in(@user)
-    # else
-    #   flash.now[:errors] = @user.errors.full_messages
-    #   render :new
-    # end
-
     if params[:submission] == "Sign Up"
       @user = User.new(user_params)
       @user.photo_url = "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434497946/avatar_pcwjvc.jpg"
@@ -42,7 +33,6 @@ class UsersController < ApplicationController
       @user = @users.sample
       sign_in(@user)
     end
-
   end
 
   private
