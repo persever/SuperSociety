@@ -375,21 +375,46 @@ input.search-query.form-control {
   // overflow: auto;
 }
 
-.results .groups-index {
-  // width: calc(100% + 20px);
+.group-index-item {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
 }
 
-.group-index-item {
-  // display: inline-block;
-  overflow: hidden;
-  // padding: 0;
-  // padding-right: 0px;
-  // padding-left: 0px;
-  // margin: 15px 10px;
-  margin-bottom: 15px;
-  // width: 270px;
-  // border: 3px solid white;
-  border-radius: 3px;
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
 }
 
 .group-index-item .img-container {
@@ -468,42 +493,42 @@ input.search-query.form-control {
 }
 
 .bounceInRight {
-    -webkit-animation-name: bounceInRight;
-    animation-name: bounceInRight;
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
 }
 
 @-webkit-keyframes bounceInRight {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateX(2000px);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: translateX(-30px);
-    }
-    80% {
-        -webkit-transform: translateX(10px);
-    }
-    100% {
-        -webkit-transform: translateX(0);
-    }
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(2000px);
+  }
+  60% {
+      opacity: 1;
+      -webkit-transform: translateX(-30px);
+  }
+  80% {
+      -webkit-transform: translateX(10px);
+  }
+  100% {
+      -webkit-transform: translateX(0);
+  }
 }
 
 @keyframes bounceInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(2000px);
-    }
-    60% {
-        opacity: 1;
-        transform: translateX(-30px);
-    }
-    80% {
-        transform: translateX(10px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+      opacity: 0;
+      transform: translateX(2000px);
+  }
+  60% {
+      opacity: 1;
+      transform: translateX(-30px);
+  }
+  80% {
+      transform: translateX(10px);
+  }
+  100% {
+      transform: translateX(0);
+  }
 }
 
 .event-index-item:last-child {

@@ -26,7 +26,6 @@ Black
 FRIDAY:
 
 - upload new group photo in place of old one! (check that this works on heroku)
-- center the group index grid paragraph style
 
 - border radius to 2?
 - thinner button borders
@@ -58,8 +57,10 @@ FRIDAY:
 - User profiles? name on hover at least
 
 - giis no border or image screen, just screen behind name
+- gii spacing on collapse...
 - lost member/attender borders, replace with centered lateral lines on either side of word
 - clearner nav (white?? thin bottom border line?)
+- nav 100% width (no background??)
 
 - logo (user superman sigil)
 
