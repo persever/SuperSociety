@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         sign_in(@user)
       else
         @user = User.new(user_params)
-        flash.now[:errors] = ["Invalid login."]
+        flash.now[:errors] = ["Invalid login"]
         render :new
       end
     elsif params[:submission] == "Guest Pass"

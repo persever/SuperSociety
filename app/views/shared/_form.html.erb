@@ -27,6 +27,6 @@
           name="submission" id="guest">
   </form>
   <div class="errors">
-    <%= flash[:errors] if flash[:errors] %>
+    <%= flash[:errors].first + "." if flash[:errors] %>
   </div>
 </div>
