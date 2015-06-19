@@ -46,7 +46,7 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   top: 0;
   bottom: 0;
   background-image: url("http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434499994/heimdall_ilnv5l.jpg");
-  // make it height 100%
+  background-size: auto 100%;
 }
 
 .signin .backdrop {
@@ -69,17 +69,9 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   color: #FFCD00;
 }
 
-// .signin .opener-container {
-//   position: relative;
-//   height: 100px;
-// }
-
 .signin .opener {
-  // position: absolute;
   font-family: "sf-comic-script";
   font-size: 20px;
-  // height: 100px;
-  // top: 50%;
   margin-bottom: 20px;
 }
 
