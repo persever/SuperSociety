@@ -17,6 +17,8 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   // home/search, composite view
   root: function () {
+    this.events.fetch();
+    this.groups.fetch();
     var home = new SuperSocietyApp.Views.Home({
       groups: this.groups,
       ssevents: this.events,

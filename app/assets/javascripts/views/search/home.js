@@ -13,9 +13,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     //refactor
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
-    this.listenTo(this.userEvents, "sync", this.render);
-    this.listenTo(this.userGroups, "sync", this.render);
-
   },
 
   events: {
@@ -25,7 +22,8 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     "submit #searchbar": "search",
     "input input.search-query": "search",
     "click .counter.groups": "retrieveUserGroups",
-    "click .counter.events": "retrieveUserEvents"
+    "click .counter.events": "retrieveUserEvents",
+    "click .attending-button button": "updateUserEvents"
   },
 
   addSearchSubview: function () {
@@ -126,6 +124,14 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this._swapSubview(groupsIdxView);
   },
 
+  retrieveUserEvents: function () {
+    this.renderEventsIndexSubview(this.userEvents);
+  },
+
+  retrieveUserGroups: function () {
+    this.renderGroupsIndexSubview(this.userGroups);
+  },
+
   search: function (event) {
     if (event && event.type !== "input") {
       event.preventDefault();
@@ -157,12 +163,16 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.search();
   },
 
-  retrieveUserEvents: function () {
-    this.renderEventsIndexSubview(this.userEvents);
-  },
+  updateUserEvents: function (event) {
+    var eventId = $(event.currentTarget).data("event-id");
+    if (this.userEvents.findWhere({ id: eventId })) {
+      this.userEvents.remove(eventId);
+    } else {
+      this.userEvents.add({ id: eventId });
+      this.userEvents.fetch({ data: { attender: this.user.toJSON() } });
+    }
 
-  retrieveUserGroups: function () {
-    this.renderGroupsIndexSubview(this.userGroups);
+    this.$(".counter.events .counter-button").text(this.userEvents.length)
   },
 
   _swapSubview: function (view) {

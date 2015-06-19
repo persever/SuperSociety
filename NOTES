@@ -25,7 +25,8 @@ Black
 
 FRIDAY:
 
-- remove event from upcoming list on toggle? (re-render subview on click of toggle?)
+- login buttons lighter gold
+
 - TA: join button toggle not carrying into event view?? (not listening to right events?)
 
 - one-liner on signin/up page to make clear what the site's use is
@@ -43,6 +44,7 @@ FRIDAY:
 
 - User profiles? name on hover at least
 
+- gii animation easing
 - giis no border or image screen, just screen behind name
 - gii spacing on collapse...
 - lost member/attender borders, replace with centered lateral lines on either side of word
@@ -59,6 +61,10 @@ FRIDAY:
 
 - fix authorship!
 - organize css!!!! separate and require!!!
+
+- make iis only fade/slide on new/change fragment??? (to group show or root)
+
+- grey buttons on back (searchbar, nav) lighter grey?
 
 WEEKEND:
 
@@ -124,6 +130,9 @@ WEEKEND:
 - member/attender banner dimensions
 
 - make logout symbol power down (unlight)
+
+- more seeds
+- reset seed dates every month
 
 EXTRA:
 

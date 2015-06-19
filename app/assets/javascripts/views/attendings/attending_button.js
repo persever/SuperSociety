@@ -13,6 +13,8 @@ SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
   render: function () {
     this.delegateEvents();
 
+    this.$el.attr("data-event-id", this.event_id);
+
     this.$el.removeClass();
     if (this.model.isNew()) {
       this.$el.html("Join!");
@@ -27,10 +29,16 @@ SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
 
   toggle: function () {
     if (this.model.isNew()) {
-      this.model.save({ event_id: this.event_id });
+      this.model.save({ event_id: this.event_id }, {
+        success: function(model) {
+          console.log("saved " + model.id);
+        }
+      });
       // render on success?
+      // console.log("saved");
       this.render();
     } else {
+      console.log("destroyed " + this.model.id);
       this.model.destroy();
       this.model.clear();
       this.render();

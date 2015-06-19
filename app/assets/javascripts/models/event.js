@@ -21,6 +21,8 @@ SuperSocietyApp.Models.Event = Backbone.Model.extend({
     if (response.attending) {
       this.currentUserAttending().set(response.attending, { parse: true });
       delete response.attending;
+    } else {
+      this._currentUserAttending = undefined; // to ensure deleted attendings stay deleted
     }
    return response;
   }
