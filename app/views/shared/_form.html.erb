@@ -12,15 +12,15 @@
                          value="<%= form_authenticity_token %>" >
 
     <div class="signin-logo">SuperSociety</div>
+    <div class="opener-container">
+      <div class="opener">Your exclusive access to the hottest events in the superhero community.</div>
+    </div>
 
-    <label>Username</label>
     <input type="text" class="form-control" name="<%= type %>[username]"
-           value="<%= instance.username %>"></input>
-    <br>
-    <label>Password</label>
-    <input type="password" class="form-control"
-           name="<%= type %>[password]" value="<%= instance.password %>"></input>
-    <br>
+           value="<%= instance.username %>" placeholder="username"></input>
+    <input type="password" class="form-control" name="<%= type %>[password]"
+           value="<%= instance.password %>" placeholder="password"></input>
+
     <input type="submit" class="btn form-control" value="Log In"
            name="submission" id="log-in"></input><input type="submit"
            class="btn form-control" value="Sign Up"
@@ -28,6 +28,7 @@
    <input type="submit" class="btn form-control" value="Guest Pass"
           name="submission" id="guest">
   </form>
-  <br>
-  <%= flash[:errors] if flash[:errors] %>
+  <div class="errors">
+    <%= flash[:errors] if flash[:errors] %>
+  </div>
 </div>

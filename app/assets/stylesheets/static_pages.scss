@@ -46,6 +46,7 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   top: 0;
   bottom: 0;
   background-image: url("http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434499994/heimdall_ilnv5l.jpg");
+  // make it height 100%
 }
 
 .signin .backdrop {
@@ -68,6 +69,20 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   color: #FFCD00;
 }
 
+// .signin .opener-container {
+//   position: relative;
+//   height: 100px;
+// }
+
+.signin .opener {
+  // position: absolute;
+  font-family: "sf-comic-script";
+  font-size: 20px;
+  // height: 100px;
+  // top: 50%;
+  margin-bottom: 20px;
+}
+
 .signin .user-form {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
@@ -83,32 +98,48 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   left: 10%;
 }
 
+.signin input {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .signin input.btn {
   font-size: 20px;
   height: 35px;
-  color: #FFCD00;
+  color: #FFD839;
   border: 2px solid #FFCD00;
   background: black;
   border-radius: 2px;
   padding-top: 2px;
+  // margin-top: 10px;
 }
 
 .signin input.btn:hover {
-  box-shadow: 0px 0px 1px 1px rgba(255,205,0,1);
+  box-shadow: 0px 0px 1px 1px #FFD839;
 }
 
-.user-form [id=sign-up] {
+.user-form #sign-up {
   width: calc(50% - 5px);
   margin-left: 5px;
 }
 
-.user-form [id=log-in] {
+.user-form #log-in {
   width: calc(50% - 5px);
   margin-right: 5px;
 }
 
-.user-form [id=guest] {
-  margin-top: 15px;
+.signin .user-form input#guest {
+  margin-top: 0px;
+  background: radial-gradient(#FFE064, #FFCD00);
+  color: black;
+  border: none;
+}
+
+.user-form .errors {
+  font-family: "sf-comic-script" !important;
+  font-size: 15px;
+  color: white;
 }
 
 #background {
