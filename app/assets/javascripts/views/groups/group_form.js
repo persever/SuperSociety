@@ -28,6 +28,7 @@ SuperSocietyApp.Views.GroupForm = Backbone.View.extend({
 
   uploadPhoto: function (event) {
     event.preventDefault();
+    debugger
     cloudinary.openUploadWidget(
       CLOUDINARY_SETTINGS,
       function (error, result) {

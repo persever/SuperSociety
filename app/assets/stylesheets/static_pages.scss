@@ -645,6 +645,12 @@ input#datetime.form-control {
   height: 34.667px;
 }
 
+.group .close, .event .close {
+  font-size: 40px;
+  width: auto;
+  height: auto;
+}
+
 .group .pull-left {
   width: 200px;
   margin: 40px;

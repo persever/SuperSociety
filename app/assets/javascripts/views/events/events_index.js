@@ -24,16 +24,22 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
     var datetime = new Date(ssevent.get("datetime"));
     var item = new SuperSocietyApp.Views.EventsIndexItem({ model: ssevent });
     var $item = item.render().$el;
-    $item.addClass("bounceInRight");
-    if (datetime > time) {
-      setTimeout(function () {
-        this.$el.append($item);
-      }.bind(this), 100);
+
+    if ($(".search-query").val()) {
+      this.$el.append($item);
+    } else {
+      $item.addClass("bounceInRight");
+      if (datetime > time) {
+        setTimeout(function () {
+          this.$el.append($item);
+        }.bind(this), 100);
+      }
+      if (ssevent !== this.collection.models[this.collection.length - 1]) {
+        setTimeout(function () {
+          this.slideItems(this.collection.models[this.collection.models.indexOf(ssevent) + 1]);
+        }.bind(this), 100);
+      }
     }
-    if (ssevent !== this.collection.models[this.collection.length - 1]) {
-      setTimeout(function () {
-        this.slideItems(this.collection.models[this.collection.models.indexOf(ssevent) + 1]);
-      }.bind(this), 100);
-    }
+
   }
 });

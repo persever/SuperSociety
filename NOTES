@@ -25,12 +25,11 @@ Black
 
 FRIDAY:
 
-- heroku scheduler addon!!
-
-- eii don't slide on search!
 - fix modal close button alignment and size
 - upload new group photo in place of old one!
 - center the group index grid paragraph style
+
+- gii fade or pop in
 
 - organize css!!!! separate!!!
 
@@ -62,6 +61,8 @@ FRIDAY:
 - logo (user superman sigil)
 
 - make everything smaller
+
+- fix authorship!
 
 WEEKEND:
 
@@ -130,6 +131,7 @@ WEEKEND:
 
 EXTRA:
 
+- eii don't slide on backspace from search input (set a truth var if render was just called from search? make false on page render?)
 - eii slide in on scroll down (when visible on screen)
 - resize group photos
 
