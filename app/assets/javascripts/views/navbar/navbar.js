@@ -64,7 +64,6 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     form.delegateEvents();
   },
 
-
   uploadPhoto: function (event) {
     event.preventDefault();
     cloudinary.openUploadWidget(

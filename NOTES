@@ -25,9 +25,12 @@ Black
 
 FRIDAY:
 
-- fix modal close button alignment and size
-- upload new group photo in place of old one!
+- upload new group photo in place of old one! (check that this works on heroku)
 - center the group index grid paragraph style
+
+- border radius to 2?
+- thinner button borders
+- fix searchbar button spacing again
 
 - gii fade or pop in
 

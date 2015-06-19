@@ -19,7 +19,8 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     "click h2.groupname": "addEventsIndexSubview",
     "click .group-edit-button": "edit",
     "click .group-delete-button": "deleteConfirm",
-    "click .name": "addEventsIndexSubview"
+    "click .name": "addEventsIndexSubview",
+    "click .img-container": "uploadPhoto"
   },
 
   addEventsIndexSubview: function () {
@@ -111,5 +112,16 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this._currentSubview = view;
 
     this.addSubview(".group-events", view);
+  },
+
+  uploadPhoto: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget(
+      CLOUDINARY_SETTINGS,
+      function (error, result) {
+        var url = result[0].url;
+        this.model.save({ "photo_url": url });
+      }.bind(this)
+    );
   }
 });

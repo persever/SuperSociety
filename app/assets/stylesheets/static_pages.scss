@@ -372,23 +372,23 @@ input.search-query.form-control {
   padding-left: 40px;
   padding-top: 15px;
   padding-bottom: 40px;
-  overflow: auto;
+  // overflow: auto;
 }
 
 .results .groups-index {
-  width: calc(100% + 20px);
-  text-align: center;
+  // width: calc(100% + 20px);
 }
 
 .group-index-item {
-  display: inline-block;
+  // display: inline-block;
   overflow: hidden;
-  padding: 0;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin: 10px;
-  width: 300px;
-  border: 3px solid white;
+  // padding: 0;
+  // padding-right: 0px;
+  // padding-left: 0px;
+  // margin: 15px 10px;
+  margin-bottom: 15px;
+  // width: 270px;
+  // border: 3px solid white;
   border-radius: 3px;
 }
 
@@ -399,8 +399,8 @@ input.search-query.form-control {
   width: 300px;
   overflow: hidden;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  // padding: 0;
 }
 
 .group-index-item img.not-hoverable {
