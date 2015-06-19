@@ -25,11 +25,7 @@ Black
 
 FRIDAY:
 
-- description length vlaidation
 - heroku scheduler addon!!
-
-- new fonts
-- create and normalize shadows
 
 - eii don't slide on search!
 - fix modal close button alignment and size
@@ -49,15 +45,21 @@ FRIDAY:
 - background
 - navbar counter glow in and out
 
+- new fonts
+- create and normalize shadows
+
 - "groups i manage" button
-- User profiles? name on hover at least
 
 - rotate guests between three set users!
 - more seeds for those users!
 
+- User profiles? name on hover at least
+
 WEEKEND:
 
 - logo
+- improve event index items styling
+- increase lateral margins giis
 - reconsider colors
 - gradient on group name and nav logo (and signin logo?)
 - fix submit button
