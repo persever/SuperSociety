@@ -225,48 +225,74 @@ nav .glyphicon.glyphicon-log-out:hover {
 
 .home-header {
   position: relative;
+  height: 125px;
 }
 
-.home-header-background {
-  position: absolute;
-  z-index: -1;
-  background-color: #363636;
-  left: 0;
-  height: 172px;
-  width: 100%;
-  top: 0;
+.home-header::after {
+  content: "";
 }
+// .home-header-background {
+//   position: absolute;
+//   z-index: -1;
+//   // background-color: #363636;
+//   background: none;
+//   left: 0;
+//   height: 172px;
+//   width: 100%;
+//   top: 0;
+//   overflow: auto;
+// }
 
 .counter-buttons {
+  // position: relative;
+  // font-size: 40px;
+  // display: table;
+  // margin-left: auto;
+  // margin-right: auto;
+  // padding-top: 25px;
+  // transform: translateX(-30px);
+  // float: right;
   position: relative;
-  font-size: 40px;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 25px;
-  transform: translateX(-30px);
+  height: 100%;
 }
 
 .counter {
-  float: left;
-  color: white;
+  // float: left;
+  color: #FAFAFA;
   font-family: "sf-comic-script";
   font-size: 20px;
-  text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
+  // text-align: center;
+  // margin-right: 10px;
+  // margin-left: 10px;
+  position: absolute;
+  right: calc(0% + 40px);
 }
 
-.home-button {
-  // font-size: 20px;
-  border: none;
-  background-color: white;
-  color: #363636;
-  height: 50px;
-  width: 50px;
-  // border: 3px solid white;
-  border-radius: 25px;
-  margin: 10px 10px;
+.counter.groups {
+  top: calc(50% - 25px);
+}
+
+.counter.events {
+  top: calc(50% + 25px);
+}
+
+.counter-button {
+  // border: none;
+  background-color: #FAFAFA;
+  color: #000000;
+  // height: 50px;
+  // width: 50px;
+  // border-radius: 25px;
+  margin: 0px 10px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  transform: translateY(-6px);
+}
+
+.counter-title {
+  float: left;
 }
 
 #searchbar {
@@ -313,7 +339,7 @@ input.search-query.form-control {
 #searchbar #search-buttons .search-button.btn[data-id="event-search"] {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
-  margin-left: -3px;
+  // margin-left: -4px;
 }
 
 .search-button.btn:hover, {

@@ -16,7 +16,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.listenTo(this.userEvents, "sync", this.render);
     this.listenTo(this.userGroups, "sync", this.render);
 
-    // init to user's upcoming events?
   },
 
   events: {

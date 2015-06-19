@@ -25,6 +25,8 @@ Black
 
 PRIORITY:
 
+- limit user events count to future!!
+
 - heroku scheduler addon!!
 
 - make subscribe button lighter
