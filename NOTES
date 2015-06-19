@@ -25,13 +25,8 @@ Black
 
 FRIDAY:
 
-- fix searchbar button spacing again
-
 - remove event from upcoming list on toggle? (re-render subview on click of toggle?)
 - TA: join button toggle not carrying into event view?? (not listening to right events?)
-
-- make cloudinary do just photos
-- customize cloudinary
 
 - one-liner on signin/up page to make clear what the site's use is
 - make guest signin more clear to first-time user
@@ -56,10 +51,12 @@ FRIDAY:
 
 - logo (user superman sigil)
 
-- make everything smaller
-
+- make everything smaller??
 
 - upload new group photo in place of old one! (check that this works on heroku)
+- make cloudinary do just photos
+- customize cloudinary
+
 - fix authorship!
 - organize css!!!! separate and require!!!
 
