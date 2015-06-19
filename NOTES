@@ -25,15 +25,9 @@ Black
 
 FRIDAY:
 
-- upload new group photo in place of old one! (check that this works on heroku)
-
 - border radius to 2?
 - thinner button borders
 - fix searchbar button spacing again
-
-- gii fade or pop in
-
-- organize css!!!! separate!!!
 
 - remove event from upcoming list on toggle? (re-render subview on click of toggle?)
 - TA: join button toggle not carrying into event view?? (not listening to right events?)
@@ -66,7 +60,10 @@ FRIDAY:
 
 - make everything smaller
 
+
+- upload new group photo in place of old one! (check that this works on heroku)
 - fix authorship!
+- organize css!!!! separate and require!!!
 
 WEEKEND:
 
