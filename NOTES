@@ -27,6 +27,8 @@ FRIDAY:
 
 - login button transitions not happening to hover...
 
+- ensure index item always rendering properly, no "cannot read property name of undefined" eii view 224
+
 - navbar counter glow in and out
 
 - new fonts
@@ -133,6 +135,8 @@ WEEKEND:
 - reset seed dates every month
 
 EXTRA:
+
+- refactor counter mess, just look at the global in the home view (lose this.cUEs - and don't alter global because button does that)
 
 - eii don't slide on backspace from search input (set a truth var if render was just called from search? make false on page render?)
 - eii slide in on scroll down (when visible on screen)

@@ -6,7 +6,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     this.$el = options.$el;
     this.user = options.user;
     this.listenTo(this.user, "sync change", this.render);
-    // this.listenTo(this.router, "route", this.activate);
+    this.listenTo(SuperSocietyApp.currentUserEvents, "sync change add remove", function () { console.log("event fired"); this.render();} );
   },
 
   events: {
@@ -28,6 +28,8 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
       username: this.user.get("username")
       })
     );
+
+    this.updateEventsCounter();
 
     return this;
   },
@@ -62,6 +64,12 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
     $("body").prepend(form.render().$el);
     form.delegateEvents();
+  },
+
+  updateEventsCounter: function () {
+    var numEvents = SuperSocietyApp.currentUserEvents.length;
+    console.log(numEvents);
+    this.$("#nav-events-counter").text(numEvents);
   },
 
   uploadPhoto: function (event) {

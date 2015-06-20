@@ -15,7 +15,12 @@ window.SuperSocietyApp = {
     SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
       id: CURRENT_USER_ID
     });
-    SuperSocietyApp.currentUser.fetch();
+    SuperSocietyApp.currentUserEvents = new SuperSocietyApp.Collections.Events();
+    SuperSocietyApp.currentUser.fetch({ success: function () {
+      SuperSocietyApp.currentUserEvents.fetch({
+        data: { attender: SuperSocietyApp.currentUser.toJSON() }
+      });
+    }});
 
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
       $rootEl: $("#content"),
