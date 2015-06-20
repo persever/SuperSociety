@@ -10,11 +10,11 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
     this.currentUserManagedGroups = SuperSocietyApp.currentUser.get("managed_groups").managed_groups;
-    if (this.currentUserManagedGroups) {
+    // if (this.currentUserManagedGroups) {
       this.currentUserManagedGroups.forEach(function (model) {
         SuperSocietyApp.groups.getOrFetch(model.id);
       });
-    }
+    // }
   },
 
   render: function () {

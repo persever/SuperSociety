@@ -25,11 +25,12 @@ Black
 
 MUST COMPLETE:
 
+- "groups i manage" button
 - be so sure that the counters are working
 - ensure index item always rendering properly, no "cannot read property name of undefined" eii view 24
-- "groups i manage" button
+- log in with users who have nothing
 
-- clean up code
+- clean up code (comments, lines, mess)
 
 NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 
@@ -161,9 +162,6 @@ EXTRA:
 - mouse reactivity!! (gii clear h3 and screen!)
 
 - how to handle groups with long names? it'd be nicer to have bigger name fonts... back to h3, ellipses cutting off after 10 char?
-
-- get rid of currentUserManagedGroups assoc and any other related mess
-- clean up associations!!!
 
 - can't make event if don't have group!
 

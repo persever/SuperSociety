@@ -19,14 +19,6 @@ SuperSocietyApp.Models.Group = Backbone.Model.extend({
     return this._currentUserSubscription;
   },
 
-  // subscribers: function () {
-  //   if (!this._subscribers) {
-  //     this._subscribers = new SuperSocietyApp.Collections.Users([], { subscribed_group: this });
-  //   }
-  //
-  //   return this._subscribers;
-  // },
-
   parse: function (response) {
     if (response.events) {
       this.ssevents().set(response.events, { parse: true });
@@ -36,6 +28,7 @@ SuperSocietyApp.Models.Group = Backbone.Model.extend({
       this.currentUserSubscription().set(response.subscription, { parse: true });
       delete response.subscription;
     }
+  
    return response;
   }
 });
