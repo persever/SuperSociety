@@ -751,7 +751,7 @@ input#datetime.form-control {
 
 .group .creator-buttons {
   position: absolute;
-  top: calc(50% - 12px);
+  top: calc(50% - 32px);
 }
 
 .group .img-container {
@@ -965,69 +965,50 @@ input#datetime.form-control {
 
 .subscription-button button.subscribed:hover {
   box-shadow: 0px 0px 1px 1px rgba(198,198,198,1);
-
-  // border: 2px solid white;
-  // background: none;
-
-  // -webkit-animation-name: pulse;
-  // animation-name: pulse;
-}
-//
-// @-webkit-keyframes pulse {
-//     0% { -webkit-transform: scale(1); }
-//     50% { -webkit-transform: scale(1.1); }
-//     100% { -webkit-transform: scale(1); }
-// }
-//
-// @keyframes pulse {
-//     0% { transform: scale(1); }
-//     50% { transform: scale(1.1); }
-//     100% { transform: scale(1); }
-// }
-
-.group .subscribers-container {
-  // float: left;
-  // width: 200px;
-  // margin-left: 40px;
-  // margin-top:40px;
-  // margin-bottom: 40px;
 }
 
-.group .header-bar {
+
+.header-bar {
   margin-top: 20px;
-  border: 2px solid white;
   border-radius: 2px;
   height: 40px;
   width: 100%;
 }
 
-.group .header-bar.members h3 {
-  width: 100%;
-  height: 100%;
+.header-bar h3 {
+  float: left;
   text-align: center;
-  color: white;
-  padding: 5px;
+  margin: auto;
+  color: #FAFAFA;
+  padding: 10px;
   font-size: 20px;
-  margin: 0;
   text-shadow: 5px 5px 20px black;
 }
 
+.group .header-line-container {
+  height: 100%;
+  width: calc(50% - 50px);
+  margin: 0;
+  margin: 0;
+}
+
+.header-line {
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  background: #FAFAFA;
+}
+
 .group .subscribers {
-  // justify-content: center;
-  // do the smae bootstrap grid thing you did with giis!
   background: none;
   border-radius: 2px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  // padding-top: 15px;
   padding: 20px;
   min-height: 88px;
-  // need something here, but not scroll!
-  // overflow-y: scroll;
 }
 
 .group .subscribers img, .event-show .attenders img {
-  // min height wrap contents
   display: inline-block;
   height: 43px;
   border-radius: 22px;
@@ -1036,18 +1017,10 @@ input#datetime.form-control {
   box-shadow: 3px 3px 15px 3px rgba(0,0,0,.7);
 }
 
-// .group .subscribers img:nth-child(2) {
-//   margin-right: 20px;
-//   margin-left: 20px;
-// }
-
 .group .title-and-events {
   float: left;
   margin: 40px;
   margin-left: 0px;
-  // margin-right: 40px;
-  // margin-left: 40px;
-  // margin-bottom: 40px;
 }
 
 .group .group-description {
@@ -1058,10 +1031,6 @@ input#datetime.form-control {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px
 }
-
-// .group .group-events {
-//   overflow-y: scroll;
-// }
 
 .event-show .main-content {
   background-color: white;
@@ -1094,28 +1063,16 @@ input#datetime.form-control {
   margin-bottom: 20px;
 }
 
+.event-show .header-line-container {
+  height: 100%;
+  width: calc(50% - 61px);
+  margin: 0;
+  margin: 0;
+}
+
 .event-show .attenders-container {
   width: 100%;
   margin-top: 20px;
-}
-
-.event-show .header-bar {
-  margin-top: 20px;
-  border: 2px solid white;
-  border-radius: 2px;
-  height: 30px;
-  width: 100%;
-}
-
-.event-show .header-bar h3 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  padding: 2px;
-  font-size: 15px;
-  margin: 0;
-  text-shadow: 5px 5px 20px black;
 }
 
 .event-show .attenders {

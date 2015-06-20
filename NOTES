@@ -25,6 +25,8 @@ Black
 
 MUST COMPLETE:
 
+- nav counter events clickable
+
 - group show delete/edit buttons vertical centering
 
 - make cloudinary do just photos
@@ -34,7 +36,7 @@ MUST COMPLETE:
 
 - update readme!!
 
-- indicate clickability of logo and group name
+- CURSOR OVER CLICKABLE
 
 - new fonts
 - create and normalize shadows
