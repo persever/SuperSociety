@@ -23,7 +23,11 @@ Black
 
 ***
 
-FRIDAY:
+MUST COMPLETE:
+
+- attending button bug when reloading main -_- see get request issue on load
+
+- subscriptions counter same issue? sometimes?? (when you click away -- opposite issue)
 
 - login button transitions not happening to hover...
 
@@ -63,7 +67,9 @@ FRIDAY:
 
 - grey buttons on back (searchbar, nav) lighter grey?
 
-WEEKEND:
+- make errors look nicer
+
+AFTER:
 
 - improve event index items styling
 - increase lateral margins giis
