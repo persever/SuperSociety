@@ -13,6 +13,8 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     //refactor
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
+    this.listenTo(this.userGroups, "sync", this.updateUserGroups);
+    this.listenTo(this.userEvents, "sync", this.updateUserEvents);
   },
 
   events: {
@@ -94,6 +96,9 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
     numGroups = this.userGroups.length;
     numEvents = userEvents.length;
+
+    console.log("numGroups: " + numGroups);
+
     this.$el.html(this.template({ numGroups: numGroups, numEvents: numEvents }));
     this.addSearchSubview();
 
@@ -172,6 +177,10 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     }
 
     this.$(".counter.events .counter-button").text(this.userEvents.length);
+  },
+
+  updateUserGroups: function (event) {
+    this.$(".counter.groups .counter-button").text(this.userGroups.length);
   },
 
   _swapSubview: function (view) {
