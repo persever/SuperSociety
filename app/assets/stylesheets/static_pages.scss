@@ -168,6 +168,9 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   text-align: center;
 }
 
+#content::after {
+  content: "";
+}
 #content, #nav nav.navbar {
   margin: 0 auto;
   max-width: 1024px;
@@ -179,10 +182,17 @@ nav.navbar {
   height: 60px;
   width: 100%;
   color: white;
-  background-color: black;
+  background: none;
   margin-bottom: 0px;
   border: none;
   border-radius: 0px;
+}
+
+nav.navbar .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 nav a.logo.navbar-brand {
@@ -203,14 +213,14 @@ nav a.logo.navbar-brand:hover {
   margin-right: 5px;
   margin-left: 5px;
   height: 30px;
-  color: #C6C6C6;
-  border: 2px solid #C6C6C6;
+  color: #FAFAFA;
+  border: 2px solid #FAFAFA;
   background: none;
   border-radius: 2px;
 }
 
 #nav button.navbar-btn:hover {
-  box-shadow: 0px 0px 1px 1px #C6C6C6;
+  box-shadow: 0px 0px 1px 1px #FAFAFA;
 }
 
 #nav-events-counter-container {
@@ -222,7 +232,7 @@ nav a.logo.navbar-brand:hover {
   border: none;
   padding: 2px;
   color: black;
-  background-color: #FAFAFA;
+  background-color: #FFCD00;
   position: absolute;
   width: 25px;
   height: 25px;
@@ -246,19 +256,19 @@ nav a.logo.navbar-brand:hover {
 }
 
 @-webkit-keyframes pulseGlow {
-  0% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
-  50% { box-shadow: 0px 0px 2px 2px #FAFAFA; }
-  100% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
+  0% { box-shadow: 0px 0px 0px 0px #FFCD00; }
+  50% { box-shadow: 0px 0px 2px 2px #FFCD00; }
+  100% { box-shadow: 0px 0px 0px 0px #FFCD00; }
 }
 @keyframes pulseGlow {
-    0% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
-    50% { box-shadow: 0px 0px 2px 2px #FAFAFA; }
-    100% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
+    0% { box-shadow: 0px 0px 0px 0px #FFCD00; }
+    50% { box-shadow: 0px 0px 2px 2px #FFCD00; }
+    100% { box-shadow: 0px 0px 0px 0px #FFCD00; }
 }
 
 #nav-events-counter:hover {
-  background-color: white;
-  box-shadow: 0px 0px 2px 2px #FAFAFA;
+  background-color: #FFCD00;
+  box-shadow: 0px 0px 2px 2px #FFCD00;
   -webkit-animation: none;
   animation: none;
 }
@@ -280,6 +290,7 @@ nav img {
 
 nav a.form-button.btn {
   width: auto;
+  background: none !important;
 }
 
 nav .glyphicon.glyphicon-log-out {
@@ -777,8 +788,8 @@ input#datetime.form-control {
   border-radius: 2px;
   text-shadow: 5px 5px 20px rgba(0,0,0,1);
 
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 

@@ -18,7 +18,7 @@ Excluding authorization, the app is a single-page Backbone app.
 - [x] jQuery
 - [x] HTML
 - [x] CSS
-- [x] Bootstrap
+- [x] Bootstrap (To start with, then heavily customized CSS.)
 
 #Plan
 
