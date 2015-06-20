@@ -88,6 +88,7 @@ their upcoming events.
 Touch up code, seed data, style the UI, and implement bonus features!
 
 ### Bonus Features (TBD)
+- [x] Original design, implemented in mostly custom CSS
 - [x] Modal forms
 - [x] Some responsiveness
 - [ ] Handle enter keys on forms and search
