@@ -28,9 +28,6 @@ FRIDAY:
 - login button transitions not happening to hover...
 
 - ensure index item always rendering properly, no "cannot read property name of undefined" eii view 224
-
-- navbar counter glow in and out
-
 - new fonts
 - create and normalize shadows
 

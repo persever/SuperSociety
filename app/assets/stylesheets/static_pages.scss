@@ -24,7 +24,8 @@ h1, h2, h3 {
 }
 
 button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
-.group-index-item .hoverable, .group-index-item .hide-on-hover {
+.group-index-item .hoverable, .group-index-item .hide-on-hover,
+#nav-events-counter {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -216,7 +217,7 @@ nav a.logo.navbar-brand:hover {
   height: 50px;
 }
 
-nav #nav-events-counter {
+#nav-events-counter {
   border: none;
   padding: 2px;
   color: black;
@@ -229,11 +230,36 @@ nav #nav-events-counter {
   text-align: center;
   right: 0;
   top: calc(50% - 13px);
+
+  -webkit-animation-name: pulseGlow;
+  animation-name: pulseGlow;
+
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes pulseGlow {
+  0% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
+  50% { box-shadow: 0px 0px 2px 2px #FAFAFA; }
+  100% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
+}
+@keyframes pulseGlow {
+    0% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
+    50% { box-shadow: 0px 0px 2px 2px #FAFAFA; }
+    100% { box-shadow: 0px 0px 0px 0px #FAFAFA; }
 }
 
 #nav-events-counter:hover {
   background-color: white;
-  box-shadow: 0px 0px 1px 1px #FAFAFA;
+  box-shadow: 0px 0px 2px 2px #FAFAFA;
+  -webkit-animation: none;
+  animation: none;
 }
 
 nav li.username {
