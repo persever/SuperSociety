@@ -6,7 +6,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     this.$el = options.$el;
     this.user = options.user;
     this.listenTo(this.user, "sync change", this.render);
-    this.listenTo(SuperSocietyApp.currentUserEvents, "sync change add remove", function () { console.log("event fired"); this.render();} );
+    this.listenTo(SuperSocietyApp.currentUserEvents, "sync add remove", this.updateEventsCounter);
   },
 
   events: {
@@ -68,7 +68,6 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
   updateEventsCounter: function () {
     var numEvents = SuperSocietyApp.currentUserEvents.length;
-    console.log(numEvents);
     this.$("#nav-events-counter").text(numEvents);
   },
 

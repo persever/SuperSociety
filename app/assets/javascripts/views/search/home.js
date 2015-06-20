@@ -14,7 +14,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.userGroups, "sync", this.updateUserGroups);
-    this.listenTo(this.userEvents, "sync", this.updateUserEvents);
+    this.listenTo(SuperSocietyApp.currentUserEvents, "sync add remove", this.updateUserEvents);
   },
 
   events: {
@@ -167,14 +167,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   updateUserEvents: function (event) {
-    var eventId = $(event.currentTarget).data("event-id");
-    if (this.userEvents.findWhere({ id: eventId })) {
-      this.userEvents.remove(eventId);
-    } else {
-      this.userEvents.add({ id: eventId });
-    }
-
-    this.$(".counter.events .counter-button").text(this.userEvents.length);
+    this.$(".counter.events .counter-button").text(SuperSocietyApp.currentUserEvents.length);
   },
 
   updateUserGroups: function (event) {
