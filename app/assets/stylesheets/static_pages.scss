@@ -355,7 +355,7 @@ input.search-query.form-control {
 }
 
 .group-index-item {
-  overflow: hidden;
+  // overflow: hidden;
   margin-bottom: 15px;
   border-radius: 2px;
   -webkit-animation-name: zoomIn;
@@ -410,30 +410,43 @@ input.search-query.form-control {
   height: 100px;
 }
 
+.group-index-item .img-container {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 100px;
+  width: 300px;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+.group-index-item img.not-hoverable {
+  height: 100px;
+}
+
 .group-index-item .heading {
   display: inline-block;
   position: absolute;
   left: 0px;
-  margin: 10px;
   bottom: 0px;
-  max-width: 180px;
+  height: 100%;
+  width: 100%;
   text-align: left;
 }
 
 .group-index-item .gii-name-screen {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  height: calc(100% + 20px);
+  bottom: 0;
   width: 300px;
-  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .group-index-item .group-name {
   font-family: "sf-comic-script";
   font-size: 20px;
   color: white;
-  text-shadow: 5px 5px 20px rgba(0,0,0,1);
+  text-shadow: 5px 5px 20px black;
 }
 
 .group-index-item img.hoverable {
@@ -456,6 +469,7 @@ input.search-query.form-control {
 .group-index-item:hover .hide-on-hover {
   opacity: 0;
 }
+
 
 .event-index-item {
   background: white;
