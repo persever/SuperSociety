@@ -16,6 +16,7 @@ button, .btn {
   font-size: 15px;
   border: none;
   border-radius: 2px;
+  overflow: hidden;
   // cursor:
 }
 
@@ -552,12 +553,12 @@ input.search-query.form-control {
 }
 
 .event-index-item {
-  background: rgba(0,0,0,.6);
+  background: rgba(255,255,255, 1);
   padding: 10px;
   position: relative;
   margin-bottom: 20px;
   border-radius: 2px;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 1);
+  box-shadow: 3px 3px 10px 2px black;
 
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -605,9 +606,9 @@ input.search-query.form-control {
 }
 
 .event-index-item h3.heading {
-  color: white;
-  margin-top: 5px;
-  margin-bottom: 7px;
+  color: #363636;
+  margin-top: 0px;
+  margin-bottom: 2px;
   margin-left: 5px;
 }
 
@@ -617,12 +618,17 @@ input.search-query.form-control {
   left: calc(100% - 123px);
 }
 
+.event-index-item .attending-button button {
+  background: black;
+  overflow: hidden;
+}
+
 .event-index-item .when-and-where {
   margin: 0;
 }
 
 .event-index-item .when, .event-index-item .where, .event-index-item.search-view .group-name {
-  color: #C6C6C6;
+  color: #6E6E6E;
   display: inline-block;
   font-size: 14px;
   margin-right: 5px;
@@ -927,7 +933,6 @@ input#datetime.form-control {
 }
 
 .group .subscription-button {
-  margin-right: 20px;
   height: 70px;
   width: 100px;
   position: relative;
@@ -1070,8 +1075,10 @@ input#datetime.form-control {
   font-weight: bold;
 }
 
-.event-show .event-description {
-  margin-bottom: 20px;
+.event-show .attending-button {
+  margin-top: 40px;
+  background: none;
+  text-align: right;
 }
 
 .event-show .header-line-container {
@@ -1083,7 +1090,6 @@ input#datetime.form-control {
 
 .event-show .attenders-container {
   width: 100%;
-  margin-top: 20px;
 }
 
 .event-show .attenders {
