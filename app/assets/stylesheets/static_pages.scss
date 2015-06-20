@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
-.group-index-item .hoverable, .group-index-item .hide-on-hover,
+.group-index-item .hoverable, .group-index-item .hide-on-hover, .hover-glow,
 #nav-events-counter {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -764,21 +764,68 @@ input#datetime.form-control {
   display: inline-block;
   max-width: 400px;
   font-size: 40px;
-  margin-top: 0px;
+  margin-top: 2px;
   margin-right: 40px;
   margin-left: 40px;
+  margin-bottom: 8px;
   padding-top: 9px;
   padding-bottom: 11px;
   padding-left: 20px;
   padding-right: 20px;
   z-index: 10;
   color: white;
-  border: 2px solid white;
   border-radius: 2px;
   text-shadow: 5px 5px 20px rgba(0,0,0,1);
+
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
 
 .group .name:hover {
+  -webkit-box-shadow:inset 0px 0px 0px 2px white;
+  -moz-box-shadow:inset 0px 0px 0px 2px white;
+  box-shadow:inset 0px 0px 0px 2px white;
+}
+
+.group .hover-glow {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.group .hover-glow::after {
+  content:"";
+}
+
+.group .name:hover .hover-glow {
   box-shadow: 0px 0px 10px 0px rgba(255,255,255,1);
 }
 
