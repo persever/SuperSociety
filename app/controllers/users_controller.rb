@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         User.find_by({ username: "Tony Stark"}),
         User.find_by({ username: "Bruce Wayne"}),
         User.find_by({ username: "Thor"}),
-        User.find_by({ username: "Captain America"})
+        User.find_by({ username: "Steve Rogers"})
       ]
       @user = @users.sample
       sign_in(@user)
