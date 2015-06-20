@@ -25,12 +25,10 @@ Black
 
 MUST COMPLETE:
 
-- ensure index item always rendering properly, no "cannot read property name of undefined" eii view 24
-- log in with users who have nothing
-
+- make cloudinary do just photos
+- cloudinary colors at least, font if possible
 - clean up code (comments, lines, mess)
-
-NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
+- organize css!!!! separate and require!!!
 
 - new fonts
 - create and normalize shadows
@@ -39,12 +37,9 @@ NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 - a few more attendings
 - more subscriptions!
 
-- User profiles? name on hover at least?
-
 - gii animation easing
 - giis no border or image screen, just screen behind name
-- gii spacing on collapse...
-- lost member/attender borders, replace with centered lateral lines on either side of word
+- lose member/attender borders, replace with centered lateral lines on either side of word
 - lose box around group name
 - maybe make group name fade in
 - clearner nav (white?? thin bottom border line?)
@@ -55,24 +50,13 @@ NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 
 - make everything smaller??
 
-- upload new group photo in place of old one! (check that this works on heroku)
-- make cloudinary do just photos
-- customize cloudinary
-
 - fix authorship!
-- organize css!!!! separate and require!!!
 
 - make eiis thinner, restyle how you show the smaller info
 
-- make iis only fade/slide on new/change fragment??? (to group show or root)
+- make iis only fade/slide on new/change fragment (to group show or root)
 
 - grey buttons on back (searchbar, nav) lighter grey?
-
-- make errors look nicer
-
-- cloudinary colors at least, font if possible
-
-- does login enter key hit guest pass?? make it hit login!!
 
 AFTER, AS IN AFTER GAME, AS IN JUST NOT DOING BECAUSE OTHER THINGS ARE A BETTER USE OF TIME:
 

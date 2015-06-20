@@ -55,8 +55,8 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
       error: function (model, response) {
         $(".errors").empty();
         response.responseJSON.forEach(function (message) {
-          var $messageLi = $("<li>").text(message);
-          $(".errors").append($messageLi);
+          var $message = $("<div>").text(message + ".");
+          $(".errors").append($message);
         });
       }
     });

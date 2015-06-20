@@ -30,7 +30,7 @@ SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
     if ($(".search-query").val()) {
       this.$el.append($item);
     } else {
-      $item.addClass("slideInUp");
+      $item.addClass("bounceInBottom");
       setTimeout(function () {
         this.$el.append($item);
       }.bind(this), 100);

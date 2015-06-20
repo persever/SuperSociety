@@ -412,45 +412,52 @@ input.search-query.form-control {
 }
 
 .group-index-item {
-  // overflow: hidden;
   margin-bottom: 15px;
   border-radius: 2px;
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
 
-  -webkit-animation-duration: .3s;
-  animation-duration: .3s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-@-webkit-keyframes slideInUp {
+.bounceInBottom {
+  -webkit-animation-name: bounceInBottom;
+  animation-name: bounceInBottom;
+}
+
+@-webkit-keyframes bounceInBottom {
   0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
+      opacity: 0;
+      -webkit-transform: translateY(1000px);
   }
-
+  60% {
+      opacity: 1;
+      -webkit-transform: translateY(-30px);
+  }
+  80% {
+      -webkit-transform: translateY(10px);
+  }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+      -webkit-transform: translateY(0);
   }
 }
 
-@keyframes slideInUp {
+@keyframes bounceInBottom {
   0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
+      opacity: 0;
+      transform: translateY(1000px);
   }
-
+  60% {
+      opacity: 1;
+      transform: translateY(-30px);
+  }
+  80% {
+      transform: translateY(10px);
+  }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+      transform: translateY(0);
   }
-}
-
-.slideInUp {
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
 }
 
 .group-index-item .img-container {
@@ -627,7 +634,7 @@ input.search-query.form-control {
 .m-content {
   position: absolute;
   background-color: white;
-  height: 600px;
+  min-height: 600px;
   width: 500px;
   padding: 50px;
   z-index: 101;
@@ -638,8 +645,12 @@ input.search-query.form-control {
   transform: translate(-50%, -50%);
 }
 
+.m-content .errors {
+  color: #FF0700
+}
+
 .m-content.group {
-  height: 450px;
+  min-height: 450px;
 }
 
 .m-content.group button.upload {
