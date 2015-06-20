@@ -25,8 +25,6 @@ Black
 
 MUST COMPLETE:
 
-- "groups i manage" button
-- be so sure that the counters are working
 - ensure index item always rendering properly, no "cannot read property name of undefined" eii view 24
 - log in with users who have nothing
 
@@ -53,6 +51,7 @@ NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 - nav 100% width (no background??)
 
 - logo (user superman sigil)
+- logo in tab
 
 - make everything smaller??
 
@@ -71,7 +70,11 @@ NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 
 - make errors look nicer
 
-AFTER:
+- cloudinary colors at least, font if possible
+
+- does login enter key hit guest pass?? make it hit login!!
+
+AFTER, AS IN AFTER GAME, AS IN JUST NOT DOING BECAUSE OTHER THINGS ARE A BETTER USE OF TIME:
 
 - improve event index items styling
 - increase lateral margins giis
