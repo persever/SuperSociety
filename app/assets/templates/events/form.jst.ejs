@@ -9,11 +9,11 @@
   <form>
     <label>Group</label>
     <select name="event[group_id]">
-      <% groups.each(function (group) { %>
+      <% groups.forEach(function (group) { %>
         <% if (group.id != ssevent.escape("group_id")) { %>
-          <option value="<%= group.id %>"><%= group.escape("name") %></option>
+          <option value="<%= group.id %>"><%= group.name %></option>
         <% } else { %>
-          <option value="<%= group.id %>" selected><%= group.escape("name") %></option>
+          <option value="<%= group.id %>" selected><%= group.name %></option>
         <% } %>
       <% }) %>
     </select>

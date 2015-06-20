@@ -9,18 +9,20 @@ SuperSocietyApp.Views.EventForm = Backbone.View.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
-    SuperSocietyApp.currentUserManagedGroups.each(function (model) {
-      model.fetch();
-    });
-    this.listenTo(SuperSocietyApp.currentUserManagedGroups, "sync", this.render);
+    this.currentUserManagedGroups = SuperSocietyApp.currentUser.get("managed_groups").managed_groups;
+    if (this.currentUserManagedGroups) {
+      this.currentUserManagedGroups.forEach(function (model) {
+        SuperSocietyApp.groups.getOrFetch(model.id);
+      });
+    }
   },
 
   render: function () {
     this.$el.html(this.template({
       ssevent: this.model,
-      groups: SuperSocietyApp.currentUserManagedGroups
+      groups: this.currentUserManagedGroups
       }));
-    if (SuperSocietyApp.currentUserManagedGroups.length === 0) {
+    if (this.currentUserManagedGroups.length === 0) {
       this.$(".errors").text("Events can only be added to groups you manage. Start a group!");
     }
 

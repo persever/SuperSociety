@@ -123,6 +123,7 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
 }
 
 .signin .user-form input#guest {
+  width: 100%;
   margin-top: 0px;
   background: radial-gradient(#FFE064, #FFCD00);
   color: black;
@@ -263,6 +264,7 @@ nav a.logo.navbar-brand:hover {
 }
 
 nav li.username {
+  font-family: "sf-comic-script";
   color: #FAFAFA;
   margin: 15px;
   margin-right: 20px;

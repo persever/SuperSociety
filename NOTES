@@ -25,23 +25,22 @@ Black
 
 MUST COMPLETE:
 
-- attending button bug when reloading main -_- see get request issue on load
+- be so sure that the counters are working
+- ensure index item always rendering properly, no "cannot read property name of undefined" eii view 24
+- "groups i manage" button
 
-- subscriptions counter same issue? sometimes?? (when you click away -- opposite issue)
+- clean up code
 
-- login button transitions not happening to hover...
+NO MORE TOUCHING THE BACKEND, UNTIL TOTALLY SATISFIED WITH UI
 
-- ensure index item always rendering properly, no "cannot read property name of undefined" eii view 224
 - new fonts
 - create and normalize shadows
-
-- "groups i manage" button
 
 - fill out place-held seeds!
 - a few more attendings
 - more subscriptions!
 
-- User profiles? name on hover at least
+- User profiles? name on hover at least?
 
 - gii animation easing
 - giis no border or image screen, just screen behind name
@@ -62,6 +61,8 @@ MUST COMPLETE:
 
 - fix authorship!
 - organize css!!!! separate and require!!!
+
+- make eiis thinner, restyle how you show the smaller info
 
 - make iis only fade/slide on new/change fragment??? (to group show or root)
 

@@ -20,24 +20,8 @@
   <% if current_user %>
     <script type="text/javascript">
         window.CURRENT_USER_ID = "<%= current_user.id %>"
-        window.currentUserManagedGroupIds = "<%= current_user.managed_group_ids %>"
-    </script>
-  <% else %>
-    <script type="text/javascript">
-        window.currentUserManagedGroupIds = "<%= [] %>"
     </script>
   <% end %>
-
-  <script>
-      if (window.currentUserManagedGroupIds !== undefined) {
-        SuperSocietyApp.currentUserManagedGroups = new SuperSocietyApp.Collections.Groups();
-        var groupIds = JSON.parse(currentUserManagedGroupIds);
-        groupIds.forEach(function (id) {
-          var groupModel = new SuperSocietyApp.Models.Group({ id: id });
-          SuperSocietyApp.currentUserManagedGroups.add(groupModel);
-        });
-      }
-  </script>
 
   <%= yield %>
 

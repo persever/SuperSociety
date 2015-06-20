@@ -6,14 +6,13 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.groups = options.groups;
     this.searchType = "event-search";
     this.user = options.user;
-    // this.userEvents = new SuperSocietyApp.Collections.Events();
-    // this.userEvents.fetch({ data: { attender: this.user.toJSON() } });
-    this.userGroups = new SuperSocietyApp.Collections.Groups();
-    this.userGroups.fetch({ data: { subscriber: this.user.toJSON() } });
+    this.userSubscribedGroups = new SuperSocietyApp.Collections.Groups();
+    this.userSubscribedGroups.fetch({ data: { subscriber: this.user.toJSON() } });
+    // this.userManagedGroups = 
     //refactor
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
-    this.listenTo(this.userGroups, "sync", this.updateUserGroups);
+    this.listenTo(this.userSubscribedGroups, "sync", this.updateUserGroups);
     this.listenTo(SuperSocietyApp.currentUserEvents, "sync add remove", this.updateUserEvents);
   },
 
@@ -94,7 +93,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
       }
     });
 
-    numGroups = this.userGroups.length;
+    numGroups = this.userSubscribedGroups.length;
     numEvents = SuperSocietyApp.currentUserEvents.length;
 
     this.$el.html(this.template({ numGroups: numGroups, numEvents: numEvents }));
@@ -132,7 +131,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   retrieveUserGroups: function () {
-    this.renderGroupsIndexSubview(this.userGroups);
+    this.renderGroupsIndexSubview(this.userSubscribedGroups);
   },
 
   search: function (event) {
@@ -171,7 +170,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   updateUserGroups: function (event) {
-    this.$(".counter.groups .counter-button").text(this.userGroups.length);
+    this.$(".counter.groups .counter-button").text(this.userSubscribedGroups.length);
   },
 
   _swapSubview: function (view) {
