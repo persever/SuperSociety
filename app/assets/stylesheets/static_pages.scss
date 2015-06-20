@@ -325,12 +325,16 @@ nav .glyphicon.glyphicon-log-out:hover {
   box-shadow: 0px 0px 1px 1px #FAFAFA;
 }
 
+.counter.managed-groups {
+  top: calc(50% - 40px);
+}
+
 .counter.groups {
-  top: calc(50% - 20px);
+  top: calc(50% - 0px);
 }
 
 .counter.events {
-  top: calc(50% + 30px);
+  top: calc(50% + 40px);
 }
 
 .counter-button {
