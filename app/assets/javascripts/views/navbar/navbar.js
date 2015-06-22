@@ -77,7 +77,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
 
   userEvents: function () {
     Backbone.history.navigate("");
-    SuperSocietyApp.router.retrieveUserEvents();
+    SuperSocietyApp.router.rootUserEvents();
   }
 
 });

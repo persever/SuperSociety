@@ -16,7 +16,8 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   },
 
   // home/search, composite view
-  root: function () {
+  root: function (ssevents) {
+    var rootEvents = ssevents ? ssevents : this.events;
     this.events.fetch();
     SuperSocietyApp.currentUserEvents.fetch({
       data: { attender: SuperSocietyApp.currentUser.toJSON() }
@@ -24,10 +25,14 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.groups.fetch();
     var home = new SuperSocietyApp.Views.Home({
       groups: this.groups,
-      ssevents: this.events,
+      ssevents: rootEvents,
       user: this.user
     });
     this.$rootEl.html(home.render().$el);
+  },
+
+  rootUserEvents: function () {
+    this.root(SuperSocietyApp.currentUserEvents);
   },
 
   // composite view

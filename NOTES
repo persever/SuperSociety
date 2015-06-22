@@ -40,6 +40,6 @@ MUST COMPLETE:
 
 - update readme!! incl snippets
 
-- fix authorship!
+- push to heroku, pg reset and migrate and seed
 
 - make sure every button is working!! incl editing and deleting!!
