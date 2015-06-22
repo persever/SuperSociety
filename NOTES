@@ -25,18 +25,6 @@ Black
 
 MUST COMPLETE:
 
-
-
-git filter-branch --commit-filter '
-                GIT_COMMITTER_NAME="Kelly Witwicki Faddegon";
-                GIT_AUTHOR_NAME="Kelly Witwicki Faddegon";
-                GIT_COMMITTER_EMAIL="kelly.witwickifaddegon@gmail.com";
-                GIT_AUTHOR_EMAIL="kelly.witwickifaddegon@gmail.com";
-                git commit-tree "$@";
-        fi' HEAD
-
-
-
 - nav counter events clickable
 
 - CURSOR OVER CLICKABLE
