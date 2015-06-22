@@ -480,15 +480,20 @@ input.search-query.form-control {
 .group-index-item .img-container {
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,.5);
   position: relative;
-  height: 100px;
-  width: 300px;
+  min-height: 100px;
+  width: 100%;
   overflow: hidden;
   text-align: center;
   margin: auto;
 }
 
-.group-index-item img.not-hoverable {
-  height: 100px;
+.group-index-item img {
+  min-height: 100px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .group-index-item .img-container {
@@ -499,11 +504,6 @@ input.search-query.form-control {
   overflow: hidden;
   text-align: center;
   margin: auto;
-}
-
-.group-index-item img.not-hoverable {
-  height: 100px;
-  min-width: 100%;
 }
 
 .group-index-item .heading {
@@ -532,7 +532,6 @@ input.search-query.form-control {
 }
 
 .group-index-item img.hoverable {
-  height: 100px;
   z-index: 99;
   opacity: 0;
 }
@@ -545,6 +544,7 @@ input.search-query.form-control {
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 150px);
+  height: 100px;
   width: 300px;
 }
 

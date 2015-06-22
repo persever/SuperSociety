@@ -1,4 +1,4 @@
-CONSISTENT COLOR SCHEME:
+COLOR SCHEME:
 
 Light Red: #FF6864
 FF3E39
@@ -25,138 +25,21 @@ Black
 
 MUST COMPLETE:
 
-
-- update who's going with cU image...
+- why is logout cut off
 
 - nav counter events clickable
 
-- make eiis thinner, restyle how you show the smaller info
-- make iis only fade/slide on new/change fragment (to group show or root)
-
-- make cloudinary do just photos
-- cloudinary colors at least, font if possible
-- clean up code (comments, lines, mess)
-- organize css!!!! separate and require!!!
-
-- update readme!!
-
 - CURSOR OVER CLICKABLE
-
-- new fonts
+- es/eii styling back to how it was with the full white
+- make iis only fade/slide on new/change fragment (to group show or root -- on init?)
 - create and normalize shadows
 
-- fill out place-held seeds!
-- a few more attendings
-- more subscriptions!
+- make cloudinary do just photos
+- update who's going with cU image...
+- clean up code (comments, lines, mess)
 
-- logo (user superman sigil)
-- logo in tab
+- update readme!! incl snippets
 
 - fix authorship!
 
-
-AFTER, AS IN AFTER GAME, AS IN JUST NOT DOING BECAUSE OTHER THINGS ARE A BETTER USE OF TIME:
-
-- improve event index items styling
-- increase lateral margins giis
-- reconsider colors
-- gradient on group name and nav logo (and signin logo?)
-- fix submit button
-- resize modals
-- switch colors with class toggle on attend/subscribe buttons
-- jQuery UI toggle class / color animation for smooth toggle button transitions
-- fixed nav event counter
-- pull homepage header counters right and make fancier
-- gii bigger font, wrap name
-
-- (ta help?) make logout button on nav work correctly
-
-- stop cursor from turning into text indicator, make it just clickable or not
-- custom (simple circle) cursor for button/a/other clickable hover
-- guest login autotype
-- make errors on forms look a little nicer
-- handle "enter" key from description textarea to submit forms
-
-- eliminate code (models, colls, views!) not using
-- clean up controllers and routes
-- clean up all comments
-- refactor long and messy things, and any logic that should be in a different file
-- organize methods alphabetically
-- KEEP LINES WITHIN LENGTH LIMIT
-
-- Heroku walkthrough: MAKE ALL CLICKABLES WORK, BE ABLE TO WALK THROUGH EVERY SINGLE ASPECT, IN AND OUT, SMOOTHLY
-- is the route ever saying "groups/undefined"? on back button?
-> no unintended effects! (like clicking join/leave from index also directing to show page! or clicks from something that shouldn't be clickable, or clicks to somewhere wrong or double-handled!)
-- check out app in firefox, on a aa computer!
-- add webkit and moz to scss as needed! radius, shadow, gradients, etc!
-
-- db reset both (and migrate heroku) and push to both
-
-- BLOG POST
-- add snippets to readme
-
-- auto reset heroku db every single night!
-- a few more iron man seeds in case some employers delete a lot!!
-- clear new from cloudinary regularly too...
-
-- sound
-- garageband clip and fade the audio! rails can handle the audio right? if not can link to youtube vid but that's less reliable (do that first though).
-
-- change signout button to power symbol
-- tags for groups and events top priority bonuses, and calendar!
-- welcome screen video and epic music behind login/signup modal (heimdall + bridge video???)
-- make bootstrap nav collapse at like 300px, no bigger
-- marvel-esque google font for other font
-
-- update readme, incl bonuses; check off boxes
-
-- center things properly, with t/l:calc(50% - [].h/w / 2)
-- change all ssevent(s)/event(s) to their appropriate respective names so code is not confusing
-
-- remove button blue glow
-- texture background (comic book city? semi-transparent?)
-- shadows on all boxes
-- member/attender banner dimensions
-
-- make logout symbol power down (unlight)
-
-- more seeds
-- reset seed dates every month
-
-EXTRA:
-
-- refactor counter mess, just look at the global in the home view (lose this.cUEs - and don't alter global because button does that)
-
-- eii don't slide on backspace from search input (set a truth var if render was just called from search? make false on page render?)
-- eii slide in on scroll down (when visible on screen)
-- resize group photos
-
-- signin video or (later!) animate electricity
-
-- internal scroll
-
-- entry page one-liner!
-- nicer fonts! (look at some fancy sites)
-
-- customize cloudinary a little (just colors and button!)
-
-- 'no events' placeholder for groups with no events (like 'i have powers because science')
-- simple custom 404 pages
-- dimensionality
-- mouse reactivity!! (gii clear h3 and screen!)
-
-- how to handle groups with long names? it'd be nicer to have bigger name fonts... back to h3, ellipses cutting off after 10 char?
-
-- can't make event if don't have group!
-
-- footer (stuck below bottom!)
-- homepage button for user's past events index
-- tab on group page for past events index
-- past event views should have a frozen attending button
-
-- better looking select dropdown
-- make form error messages appear inside offending inputs? with red glow around offending box (that goes away on new input!)!
-- fade effect on every route change
-- group subscribe from index
-- reduce queries
-- at least a little responsiveness?
+- make sure every button is working!! incl editing and deleting!!
