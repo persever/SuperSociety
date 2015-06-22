@@ -25,9 +25,8 @@ Black
 
 MUST COMPLETE:
 
-- fuck me the attending toggle might not be working
-
-- nav counter events clickable
+- your search is not working
+- the attending toggle might not be working.... (button not re-rendering on first delete? whole index reinitializing on add...)
 
 - CURSOR OVER CLICKABLE
 - es/eii styling back to how it was with the full white
@@ -35,6 +34,7 @@ MUST COMPLETE:
 - create and normalize shadows
 
 - make cloudinary do just photos
+
 - update who's going with cU image...
 - clean up code (comments, lines, mess)
 

@@ -9,7 +9,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.userSubscribedGroups = new SuperSocietyApp.Collections.Groups();
     this.userSubscribedGroups.fetch({ data: { subscriber: this.user.toJSON() } });
     this.userManagedGroups = this.user.managedGroups();
-    
+
     this.listenTo(this.user, "sync", this.render);
     this.listenTo(this.ssevents, "sync", this.render);
     this.listenTo(this.groups, "sync", this.render);
@@ -135,7 +135,8 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   retrieveUserEvents: function () {
-    this.renderEventsIndexSubview(SuperSocietyApp.currentUserEvents);
+    var collection = SuperSocietyApp.currentUserEvents.clone()
+    this.renderEventsIndexSubview(collection);
   },
 
   retrieveUserGroups: function () {
