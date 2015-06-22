@@ -13,13 +13,9 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     "click li button.navbar-btn": "loadForm",
     "click .glyphicon-log-out": "logOut",
     "click .logo.navbar-brand": "home",
+    "click #nav-events-counter": "userEvents",
     "click img": "uploadPhoto"
   },
-
-  // activate: function (router, route, params) {
-  //   this.$(".active").removeClass("active");
-  //   this.$("." + router).addClass("active");
-  // },
 
   render: function () {
     this.delegateEvents();
@@ -44,9 +40,6 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     $.ajax({
       url: "session",
       type: "DELETE",
-      // success: function () {
-      //   window.location.assign("http://supersociety.us");
-      // }
     });
     window.location.assign("http://supersociety.us");
   },
@@ -80,6 +73,11 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
         this.user.save({ "photo_url": url });
       }.bind(this)
     );
+  },
+
+  userEvents: function () {
+    Backbone.history.navigate("");
+    SuperSocietyApp.router.retrieveUserEvents();
   }
 
 });

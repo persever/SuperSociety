@@ -2,7 +2,7 @@ SuperSocietyApp.Views.DeletionConfirmation = Backbone.View.extend({
   events: {
     "click .submit-deletion": "submit",
     "click .close": "removeView",
-    "click .deletion-confirmation-backdrop": "removeView",
+    "click .deletion-confirmation-backdrop": "remove"
   },
 
   render: function () {
@@ -19,23 +19,14 @@ SuperSocietyApp.Views.DeletionConfirmation = Backbone.View.extend({
         $("<button>").addClass("submit-deletion").text("Yes")
       );
     this.$el.append($backdrop).append($modal);
-    // $("#nav").addClass("blur");
-    // $("#background").addClass("blur");
-    // $("#content").addClass("blur");
 
     return this;
   },
 
-  removeView: function () {
-    this.remove();
-    // $("#nav").removeClass("blur");
-    // $("#background").removeClass("blur");
-    // $("#content").removeClass("blur");
-  },
-
   submit: function (event) {
     event.preventDefault();
-    // var isEvent
+    // can accept event (click) or event model
+    // (note, never call something in the db an "event")
     if (this.model.constructor === SuperSocietyApp.Models.Event) {
       var isEvent = true;
       var groupId = this.model.get("group").id;
