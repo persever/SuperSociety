@@ -50,7 +50,7 @@ I will implement user authentication in Rails, and enable users to create groups
 and events with simple Rails view forms. The splash page will be a single-page
 signin/signup.
 
-    _users_controller.rb_
+    # users_controller.rb
 
     def create
       if params[:submission] == "Sign Up"
@@ -92,7 +92,7 @@ will be a composite view, and the event show view will be nested inside of that
 group view. Excepting auth, the app will now be a single page Backbone app.
 Groups and events will have "subscribe" and "attend" toggle buttons.
 
-    _attending_button.js_
+    // attending_button.js
 
     toggle: function () {
       if (this.model.isNew()) {
@@ -115,7 +115,7 @@ will also add toggle buttons to the group show view, event show view, and event
 index item, enabling users to subscribe or unsubscribe to a group, and join or
 leave events. I will need to create a frontend user model.
 
-    _events_index.js_
+    // events_index.js
 
     slideItems: function (ssevent) {
       ssevent = ssevent || this.collection.models[0];
@@ -151,7 +151,7 @@ leave events. I will need to create a frontend user model.
 I will create modal forms for groups and events. Filepicker will be integrated.
 Filepicker will also be integrated with the user signup.
 
-    _event_form.js_
+    // event_form.js
 
     submit: function () {
       event.preventDefault();
@@ -196,7 +196,7 @@ group index view will show the user's subscribed groups, and its default event
 index view will show the user's joined events. After login the user will see
 their upcoming events.
 
-    _router.js_
+    // router.js
 
     SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
       id: CURRENT_USER_ID
@@ -208,7 +208,7 @@ their upcoming events.
       });
     }});
 
-    _home.js_
+    // home.js
 
     retrieveUserEvents: function () {
       this.renderEventsIndexSubview(SuperSocietyApp.currentUserEvents);
@@ -249,7 +249,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Upcoming events counter in nav, and counters on home page
 - [x] Home view counters and show view member/attender images update instantly
 
-    _static_pages.scss_ 
+    // static_pages.scss  
 
     .group-index-item img.hoverable {
       z-index: 99;
