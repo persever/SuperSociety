@@ -1,11 +1,7 @@
 SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
   tagName: "div",
 
-  template: JST["events/index"],
-
   render: function () {
-    this.$el.html(this.template());
-
     if (this.collection.length > 0) {
       this.slideItems();
     }
@@ -39,6 +35,5 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
         }.bind(this), 100);
       }
     }
-
   }
 });

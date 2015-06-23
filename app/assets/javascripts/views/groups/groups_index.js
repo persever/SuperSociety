@@ -2,14 +2,11 @@ SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
   tagName: "div",
   className: "groups-index",
 
-  template: JST["groups/index"],
-
   initialize: function () {
     this.listenTo(this.collection, "sync", this.render);
   },
 
   render: function () {
-    this.$el.html(this.template());
     if (this.collection.length > 0) {
       this.renderItems();
     }

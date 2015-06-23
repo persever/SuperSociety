@@ -20,15 +20,3 @@ Dark Grey: #363636
 
 White
 Black
-
-***
-
-MUST COMPLETE:
-
-- put snippets in readme
-
-- push to heroku, pg reset and migrate and seed
-- submit
-
-- make cloudinary do just photos
-- make sure every button is working!! incl editing and deleting!! and cloudinary, for user and groups (make sure restricted)!
