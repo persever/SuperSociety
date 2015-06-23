@@ -25,7 +25,7 @@ SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
     if ($(".search-query").val()) {
       this.$el.append($item);
       if (group !== this.collection.models[this.collection.length - 1]) {
-          this.renderItems(this.collection.models[this.collection.models.indexOf(group) + 1]);
+        this.renderItems(this.collection.models[this.collection.models.indexOf(group) + 1]);
       }
     } else {
       $item.addClass("bounceInBottom");

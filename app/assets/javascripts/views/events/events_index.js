@@ -27,6 +27,9 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
 
     if ($(".search-query").val()) {
       this.$el.append($item);
+      if (ssevent !== this.collection.models[this.collection.length - 1]) {
+        this.slideItems(this.collection.models[this.collection.models.indexOf(ssevent) + 1]);
+      }
     } else {
       $item.addClass("bounceInRight");
       if (datetime > time) {
