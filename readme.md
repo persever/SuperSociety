@@ -250,6 +250,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Home view counters and show view member/attender images update instantly
 
 '''
+
     // static_pages.scss  
 
     .group-index-item img.hoverable {
