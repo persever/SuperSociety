@@ -196,6 +196,8 @@ group index view will show the user's subscribed groups, and its default event
 index view will show the user's joined events. After login the user will see
 their upcoming events.
 
+'''javascript
+
     // router.js
 
       SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
@@ -232,6 +234,7 @@ their upcoming events.
         this.view = view;
         this.addSubview(".results", view);
       }
+'''
 
 [Details][phase-five]
 
@@ -249,7 +252,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Upcoming events counter in nav, and counters on home page
 - [x] Home view counters and show view member/attender images update instantly
 
-'''
+'''css
 
     // static_pages.scss  
 
