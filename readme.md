@@ -28,11 +28,11 @@ SuperSociety is a clone of Meetup built on Rails and Backbone. Users can:
 - [x] Create accounts
 - [x] Create sessions (log in)
 - [x] Create groups
-- [x] Create events for the groups they created
-- [ ] Delete groups and events they created
+- [x] Create events for the groups they manage
+- [x] Edit and delete groups and events they created
 - [x] View groups and events
-- [x] Subscribe to and unsubscribe from groups
-- [x] Join and leave events
+- [x] Subscribe to and unsubscribe from groups, via toggle buttons
+- [x] Join and leave events, via toggle buttons
 - [x] View their subscribed groups and upcoming events
 - [x] Search for groups by name, and for events by title and location
 
@@ -51,11 +51,12 @@ and events with simple Rails view forms.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Group and Event Shows (~1 day)
+### Phase 2: Viewing Group and Event Shows (~2 days)
 I will add API routes to serve group and event data as JSON, then add Backbone
 models and collections that fetch data from those routes. The group show view
 will be a composite view, and the event show view will be nested inside of that
 group view. Excepting auth, the app will now be a single page Backbone app.
+Groups and events will have "subscribe" and "attend" toggle buttons.
 
 [Details][phase-two]
 
@@ -84,7 +85,7 @@ their upcoming events.
 
 [Details][phase-five]
 
-### Phase 6: Frosting (3+ days)
+### Phase 6: Frosting (4+ days)
 Touch up code, seed data, style the UI, and implement bonus features!
 
 ### Bonus Features (TBD)
@@ -94,8 +95,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Slide in index items
 - [x] Mouse reactivity
 - [x] Upcoming events counter in nav
-- [x] Counters and member/attender images update on toggle of buttons
-
+- [x] Home view counters and show view member/attender images update with toggles
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
