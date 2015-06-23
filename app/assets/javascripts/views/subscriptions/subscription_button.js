@@ -29,10 +29,12 @@ SuperSocietyApp.Views.SubscriptionButton = Backbone.View.extend({
     if (this.model.isNew()) {
       this.model.save({ group_id: this.group_id });
       this.render();
+      this.model.trigger("joined")
     } else {
       this.model.destroy();
       this.model.clear();
       this.render();
+      this.model.trigger("left")
     }
   }
 });

@@ -25,13 +25,13 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
   addUser: function () {
     var $img = $("<img>").attr(
       "src", SuperSocietyApp.currentUser.get("photo_url")).attr(
-      "id", "current-user-photo"
+      "id", "current-user-attending-photo"
     );
     this.$(".attenders").append($img);
   },
 
   removeUser: function () {
-    var $img = $("#current-user-photo").remove();
+    $("#current-user-attending-photo").remove();
   },
 
   render: function () {
@@ -53,7 +53,7 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       attenders.forEach(function(attender) {
         var $img = $("<img>").attr("src", attender.photo_url);
         if (attender.id == CURRENT_USER_ID) {
-          $img.attr("id", "current-user-photo");
+          $img.attr("id", "current-user-attending-photo");
         }
         this.$(".attenders").append($img);
       });

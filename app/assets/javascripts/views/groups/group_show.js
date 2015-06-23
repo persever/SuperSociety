@@ -8,6 +8,8 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     this.collection = this.model.ssevents();
     this._subEventId = options.subEventId;
     this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model.currentUserSubscription(), "joined", this.addUser);
+    this.listenTo(this.model.currentUserSubscription(), "left", this.removeUser);
     $(window).on("resize", this.stretch.bind(this));
 
     var subscription = this.model.currentUserSubscription();
@@ -21,6 +23,18 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     "click .group-delete-button": "deleteConfirm",
     "click .name": "addEventsIndexSubview",
     "click .img-container": "uploadPhoto"
+  },
+
+  addUser: function () {
+    var $img = $("<img>").attr(
+      "src", SuperSocietyApp.currentUser.get("photo_url")).attr(
+      "id", "current-user-subscription-photo"
+    );
+    this.$(".subscribers").append($img);
+  },
+
+  removeUser: function () {
+    $("#current-user-subscription-photo").remove();
   },
 
   addEventsIndexSubview: function () {
@@ -81,7 +95,9 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
       var subscribers = this.model.get("subscribers");
       subscribers.forEach(function(subscriber) {
         var $img = $("<img>").attr("src", subscriber.photo_url);
-        // var $imgDiv = $("<div>").html($img).addClass("col-sm-4");
+        if (subscriber.id == CURRENT_USER_ID) {
+          $img.attr("id", "current-user-subscription-photo");
+        }
         this.$(".subscribers").append($img);
       });
     }

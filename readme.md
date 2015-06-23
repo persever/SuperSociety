@@ -90,13 +90,10 @@ Touch up code, seed data, style the UI, and implement bonus features!
 ### Bonus Features (TBD)
 - [x] Original design, implemented in mostly custom CSS
 - [x] Modal forms
-- [x] Some responsiveness
-- [ ] Handle enter keys on forms and search
 - [x] Automatic search response to input
-- [ ] User calendar
-- [ ] Tags for groups and events
-- [ ] Slide in event index items
-- [ ] Button effects
+- [x] Slide in event index items
+- [x] Mouse reactivity
+- [x] Counters and member/attender images update on toggle of buttons
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
