@@ -77,7 +77,7 @@ Event.create(group: Group.find_by({ name: "Archers"}), title: "Archery Practice"
 Event.create(group: Group.find_by({ name: "Pub Crawlers"}), title: "Pub Crawl!", datetime: "2015-07-14 21:00:00-07", location: "SF Mission District", description: "Come have some fun with us!!")
 Event.create(group: Group.find_by({ name: "Pub Crawlers"}), title: "Karaoke Pub Crawl", datetime: "2015-08-11 21:00:00-07", location: "Oakland", description: "Prepare to sing like you're in a Disney movie!")
 Event.create(group: Group.find_by({ name: "Pub Crawlers"}), title: "Irish Pub Crawl!", datetime: "2015-09-22 21:00:00-07", location: "SF", description: "Wear green or Wade will pinch you.")
-Event.create(group: Group.find_by({ name: "Ski Club"}), title: "Whistler", datetime: "2016-01-01 08:00:00-07", location: "Whsitler", description: "Don't forget your passport!")
+Event.create(group: Group.find_by({ name: "Ski Club"}), title: "Whistler", datetime: "2016-01-01 08:00:00-07", location: "Whistler", description: "Don't forget your passport!")
 
 Attending.create(event: Event.find_by({ title: "Assembly" }), user: User.find_by({ username: "Natasha Romanoff" }))
 Attending.create(event: Event.find_by({ title: "Assembly" }), user: User.find_by({ username: "Steve Rogers" }))
