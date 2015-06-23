@@ -8,6 +8,8 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     this.model.fetch();
     this.group = options.group;
     this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model._currentUserAttending, "joined", this.addUser);
+    this.listenTo(this.model._currentUserAttending, "left", this.removeUser);
     this.listenTo(this.group, "sync", this.render);
 
     var attending = this.model.currentUserAttending();
@@ -18,6 +20,18 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
     "click button.eventsIdx": "switchToEventsIndexSubview",
     "click .event-edit-button": "edit",
     "click .event-delete-button": "deleteConfirm",
+  },
+
+  addUser: function () {
+    var $img = $("<img>").attr(
+      "src", SuperSocietyApp.currentUser.get("photo_url")).attr(
+      "id", "current-user-photo"
+    );
+    this.$(".attenders").append($img);
+  },
+
+  removeUser: function () {
+    var $img = $("#current-user-photo").remove();
   },
 
   render: function () {
@@ -38,6 +52,9 @@ SuperSocietyApp.Views.EventShow = Backbone.View.extend({
       var attenders = this.model.get("attenders");
       attenders.forEach(function(attender) {
         var $img = $("<img>").attr("src", attender.photo_url);
+        if (attender.id == CURRENT_USER_ID) {
+          $img.attr("id", "current-user-photo");
+        }
         this.$(".attenders").append($img);
       });
     }

@@ -34,11 +34,13 @@ SuperSocietyApp.Views.AttendingButton = Backbone.View.extend({
       ssevent.fetch();
       SuperSocietyApp.currentUserEvents.add(ssevent)
       this.render();
+      this.model.trigger("joined")
     } else {
       SuperSocietyApp.currentUserEvents.remove(this.event_id)
       this.model.destroy();
       this.model.clear();
       this.render();
+      this.model.trigger("left")
     }
   }
 });
