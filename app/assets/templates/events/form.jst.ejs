@@ -10,10 +10,10 @@
     <label>Group</label>
     <select name="event[group_id]">
       <% groups.forEach(function (group) { %>
-        <% if (group.id != ssevent.escape("group_id")) { %>
-          <option value="<%= group.id %>"><%= group.name %></option>
+        <% if (group != ssevent.escape("group")) { %>
+          <option value="<%= group.id %>"><%= group.get("name") %></option>
         <% } else { %>
-          <option value="<%= group.id %>" selected><%= group.name %></option>
+          <option value="<%= group.id %>" selected><%= group.get("name") %></option>
         <% } %>
       <% }) %>
     </select>

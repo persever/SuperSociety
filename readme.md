@@ -91,9 +91,11 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Original design, implemented in mostly custom CSS
 - [x] Modal forms
 - [x] Automatic search response to input
-- [x] Slide in event index items
+- [x] Slide in index items
 - [x] Mouse reactivity
+- [x] Upcoming events counter in nav
 - [x] Counters and member/attender images update on toggle of buttons
+
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
