@@ -23,6 +23,7 @@ User.create(username: "Kal-El", password: "supersecretpassword", photo_url: "htt
 User.create(username: "Logan Howlett", password: "supersecretpassword", photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228250/wolverine_golwaw.jpg")
 User.create(username: "Diana Prince", password: "supersecretpassword", photo_url: "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434228249/wonderwoman_ct9sxu.jpg")
 
+# Guest logins:
 # Tony Stark
 # Bruce Wayne
 # Thor

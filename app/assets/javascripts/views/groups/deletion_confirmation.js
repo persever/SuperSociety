@@ -25,8 +25,7 @@ SuperSocietyApp.Views.DeletionConfirmation = Backbone.View.extend({
 
   submit: function (event) {
     event.preventDefault();
-    // can accept event (click) or event model
-    // (note, never call something in the db an "event")
+
     if (this.model.constructor === SuperSocietyApp.Models.Event) {
       var isEvent = true;
       var groupId = this.model.get("group").id;

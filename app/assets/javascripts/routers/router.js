@@ -15,7 +15,6 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.user = options.user;
   },
 
-  // home/search, composite view
   root: function (ssevents) {
     var rootEvents = ssevents ? ssevents : this.events;
     this.events.fetch();
@@ -35,7 +34,6 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.root(SuperSocietyApp.currentUserEvents);
   },
 
-  // composite view
   groupShow: function (id, eventId) {
     var group = this.groups.getOrFetch(id);
     var groupShow = null;
@@ -47,7 +45,6 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl.html(groupShow.render().$el);
   },
 
-  // subview
   groupsIndex: function () {
     var groups = this.groups;
     groups.fetch();
@@ -55,14 +52,11 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.$rootEl.html(groupsIdx.render().$el);
   },
 
-  // subview
   eventShow: function (id) {
 
     var successF = function () {
       var groupId = ssevent.escape("group_id");
       this.groupShow(groupId, id);
-      // var eventShow = new SuperSocietyApp.Views.EventShow({ model: ssevent, groupId: groupId });
-      // this.$rootEl.html(eventShow.render().$el);
     }.bind(this);
 
     var ssevent = this.events.get(id);
@@ -82,7 +76,6 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     }
   },
 
-  // subview
   eventsIndex: function () {
     var events = this.events;
     events.fetch();

@@ -115,7 +115,6 @@ nav img, #nav-events-counter {
   background: black;
   border-radius: 2px;
   padding-top: 2px;
-  // margin-top: 10px;
 }
 
 .signin input.btn:hover {
@@ -299,7 +298,6 @@ nav img {
   margin-top: 3px;
   height: 43px;
   width: 43px;
-  // border: 2px solid white;
   border-radius: 22px;
 }
 
@@ -919,7 +917,6 @@ input#datetime.form-control {
   left: calc(50% - 150px);
   transform: translate(-50%);
   text-align: center;
-  // box-shadow: 3px 3px 20px 0px rgba(0,0,0,1);
 }
 
 .deletion-confirmation .submit-deletion {
@@ -960,22 +957,9 @@ input#datetime.form-control {
   background: none;
   border-radius: 2px;
 
-  // border: none;
-  // color: #363636;
-  // background: radial-gradient(#C6C6C6, #9B9B9B);
-
   position: absolute;
   top: calc(50% - 12px);
   left: 0%;
-
-  // -webkit-animation-duration: 1.5s;
-  // animation-duration: 1.5s;
-  // -webkit-animation-fill-mode: both;
-  // animation-fill-mode: both;
-  // -webkit-animation-timing-function: ease-in-out;
-  // animation-timing-function: ease-in-out;
-  // animation-iteration-count:infinite;
-  // -webkit-animation-iteration-count:infinite;
 }
 
 .subscription-button button.not-subscribed {

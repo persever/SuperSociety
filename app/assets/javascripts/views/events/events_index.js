@@ -3,10 +3,6 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
 
   template: JST["events/index"],
 
-  initialize: function () {
-    // this.listenTo(this.collection, "sync", this.render);
-  },
-
   render: function () {
     this.$el.html(this.template());
 

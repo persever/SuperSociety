@@ -25,7 +25,6 @@ Black
 
 MUST COMPLETE:
 
-- go through every js and rb file, removing unused files, cutting comments, and shortening lines
 - put snippets in readme
 
 - push to heroku, pg reset and migrate and seed

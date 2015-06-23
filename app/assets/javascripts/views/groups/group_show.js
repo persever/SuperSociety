@@ -117,7 +117,6 @@ SuperSocietyApp.Views.GroupShow = Backbone.CompositeView.extend({
     var form = new SuperSocietyApp.Views.GroupForm({ model: this.model });
 
     $("body").prepend(form.render().$el);
-    // is the below necessary?
     form.delegateEvents();
   },
 

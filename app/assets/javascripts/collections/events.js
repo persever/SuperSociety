@@ -3,7 +3,6 @@ SuperSocietyApp.Collections.Events = Backbone.Collection.extend({
 
   url: "/api/events",
 
-  // is this necessary??
   initialize: function (models, options) {
     if (options) {
       this.group = options.group;

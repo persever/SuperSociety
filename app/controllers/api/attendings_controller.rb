@@ -15,11 +15,7 @@ class Api::AttendingsController < ApplicationController
     attending.destroy
     render json: {}
   end
-
-  # def index
-  #   render json: @attendings
-  # end
-
+  
   private
 
     def attending_params

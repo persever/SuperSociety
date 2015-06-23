@@ -84,8 +84,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    // this.delegateEvents();
-
     var userEvents = [];
     SuperSocietyApp.currentUserEvents.forEach(function(ssevent) {
       var now = new Date().getTime();
