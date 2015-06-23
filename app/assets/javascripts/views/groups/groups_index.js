@@ -10,25 +10,23 @@ SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template());
-    // this.collection.forEach(function (group) {
-    //   var item = new SuperSocietyApp.Views.GroupsIndexItem({ model: group });
-    //   this.$el.append(item.render().$el);
-    // }.bind(this));
-
     if (this.collection.length > 0) {
-      this.fadeIn();
+      this.renderItems();
     }
 
     return this;
   },
 
-  fadeIn: function (group) {
+  renderItems: function (group) {
     group = group || this.collection.models[0];
     var item = new SuperSocietyApp.Views.GroupsIndexItem({ model: group });
     var $item = item.render().$el;
 
     if ($(".search-query").val()) {
       this.$el.append($item);
+      if (group !== this.collection.models[this.collection.length - 1]) {
+          this.renderItems(this.collection.models[this.collection.models.indexOf(group) + 1]);
+      }
     } else {
       $item.addClass("bounceInBottom");
       setTimeout(function () {
@@ -36,7 +34,7 @@ SuperSocietyApp.Views.GroupsIndex = Backbone.View.extend({
       }.bind(this), 100);
       if (group !== this.collection.models[this.collection.length - 1]) {
         setTimeout(function () {
-          this.fadeIn(this.collection.models[this.collection.models.indexOf(group) + 1]);
+          this.renderItems(this.collection.models[this.collection.models.indexOf(group) + 1]);
         }.bind(this), 100);
       }
     }

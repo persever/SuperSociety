@@ -26,7 +26,6 @@ Black
 MUST COMPLETE:
 
 - your search is not working (only showing first one)
-- the attending toggle might not be working.... (button not re-rendering on first delete? whole index reinitializing on add...)
 
 - why is it initing the events index so many times???
 
@@ -45,6 +44,8 @@ MUST COMPLETE:
 - update readme!! incl snippets
 
 - search for console.log and # and // and <!--
+
+- make giis and eiis only slide in on init, not search clear!
 
 - push to heroku, pg reset and migrate and seed
 
