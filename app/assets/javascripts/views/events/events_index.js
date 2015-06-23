@@ -5,7 +5,7 @@ SuperSocietyApp.Views.EventsIndex = Backbone.View.extend({
     if (this.collection.length > 0) {
       setTimeout(function () {
         this.slideItems();
-      }, 100)
+      }.bind(this), 100)
     }
 
     return this;
