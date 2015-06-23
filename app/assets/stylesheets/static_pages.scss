@@ -8,7 +8,7 @@
   cursor: default;
 }
 
-button:not(.bootstrap-datetimepicker-widget) {
+button:not(.bootstrap-datetimepicker-widget), input.submit, .signin .btn {
   width: 100px;
   height: 25px;
   font-family: "sf-comic-script" !important;
@@ -364,7 +364,7 @@ nav .glyphicon.glyphicon-log-out:hover {
   top: calc(50% + 40px);
 }
 
-.counter-button {
+.counter .counter-button {
   background-color: #FAFAFA;
   color: #000000;
   margin: 0px 10px;
