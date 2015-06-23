@@ -25,18 +25,11 @@ Black
 
 MUST COMPLETE:
 
-- fix event claendar time button -_-
-
-- make cloudinary do just photos
-
 - go through every js and rb file, removing unused files, cutting comments, and shortening lines
 - put snippets in readme
-
-- create and normalize shadows?
-- make giis and eiis only slide in on init, not search clear?
-- better secondary font?
 
 - push to heroku, pg reset and migrate and seed
 - submit
 
+- make cloudinary do just photos
 - make sure every button is working!! incl editing and deleting!! and cloudinary, for user and groups (make sure restricted)!
