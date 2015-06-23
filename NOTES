@@ -25,28 +25,20 @@ Black
 
 MUST COMPLETE:
 
-- your search is not working (only showing first one)
-
-- why is it initing the events index so many times???
-
 - group and event search view buttons should have same glow/bordershrink or whatever, just be the same
-
-- CURSOR OVER CLICKABLE
-- es/eii styling back to how it was with the full white
-- make iis only fade/slide on new/change fragment (to group show or root -- on init?)
-- create and normalize shadows
-
 - make cloudinary do just photos
 
 - update who's going with cU image...
+
 - clean up code (comments, lines, mess)
+- search for console.log and # and // and <!--
 
 - update readme!! incl snippets
 
-- search for console.log and # and // and <!--
-
-- make giis and eiis only slide in on init, not search clear!
+- create and normalize shadows?
+- make giis and eiis only slide in on init, not search clear?
+- better secondary font?
 
 - push to heroku, pg reset and migrate and seed
 
-- make sure every button is working!! incl editing and deleting!!
+- make sure every button is working!! incl editing and deleting!! and cloudinary, for user and groups (make sure restricted)!
