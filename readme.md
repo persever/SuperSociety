@@ -249,7 +249,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Upcoming events counter in nav, and counters on home page
 - [x] Home view counters and show view member/attender images update instantly
 
-
+'''
     // static_pages.scss  
 
     .group-index-item img.hoverable {
@@ -273,7 +273,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
     .group-index-item:hover .hide-on-hover {
       opacity: 0;
     }
-    
+'''
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
