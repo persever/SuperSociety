@@ -5,11 +5,10 @@
 }
 
 * {
-  // font-family: 'Josefin Sans', sans-serif;
   cursor: default;
 }
 
-button, .btn {
+button:not(.bootstrap-datetimepicker-widget) {
   width: 100px;
   height: 25px;
   font-family: "sf-comic-script" !important;
@@ -17,7 +16,12 @@ button, .btn {
   border: none;
   border-radius: 2px;
   overflow: hidden;
-  // cursor:
+}
+
+.m-content .container .input-group.date .bootstrap-datetimepicker-widget.dropdown-menu.bottom button {
+  width: auto;
+  padding-top: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 h1, h2, h3 {
