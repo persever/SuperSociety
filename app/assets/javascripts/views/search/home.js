@@ -135,8 +135,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   retrieveUserEvents: function () {
-    var collection = SuperSocietyApp.currentUserEvents.clone()
-    this.renderEventsIndexSubview(collection);
+    this.renderEventsIndexSubview(SuperSocietyApp.currentUserEvents);
   },
 
   retrieveUserGroups: function () {
@@ -179,7 +178,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   updateUserEvents: function (event) {
-    this.$(".counter.events .counter-button").text(SuperSocietyApp.currentUserEvents.length);
+    this.$(".counter.events .counter-button").text(SuperSocietyApp.currentUserEvents.models.length);
   },
 
   updateUserGroups: function (event) {

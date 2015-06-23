@@ -25,8 +25,12 @@ Black
 
 MUST COMPLETE:
 
-- your search is not working
+- your search is not working (only showing first one)
 - the attending toggle might not be working.... (button not re-rendering on first delete? whole index reinitializing on add...)
+
+- why is it initing the events index so many times???
+
+- group and event search view buttons should have same glow/bordershrink or whatever, just be the same
 
 - CURSOR OVER CLICKABLE
 - es/eii styling back to how it was with the full white
@@ -39,6 +43,8 @@ MUST COMPLETE:
 - clean up code (comments, lines, mess)
 
 - update readme!! incl snippets
+
+- search for console.log and # and // and <!--
 
 - push to heroku, pg reset and migrate and seed
 
