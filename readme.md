@@ -196,7 +196,7 @@ group index view will show the user's subscribed groups, and its default event
 index view will show the user's joined events. After login the user will see
 their upcoming events.
 
-'''javascript
+```javascript
 
     // router.js
 
@@ -234,7 +234,7 @@ their upcoming events.
         this.view = view;
         this.addSubview(".results", view);
       }
-'''
+```
 
 [Details][phase-five]
 
@@ -252,7 +252,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Upcoming events counter in nav, and counters on home page
 - [x] Home view counters and show view member/attender images update instantly
 
-'''css
+```css
 
     // static_pages.scss  
 
@@ -277,7 +277,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
     .group-index-item:hover .hide-on-hover {
       opacity: 0;
     }
-'''
+```
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
