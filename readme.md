@@ -252,6 +252,7 @@ Touch up code, seed data, style the UI, and implement bonus features!
 - [x] Original design, implemented in almost entirely custom CSS
 - [x] Mouse reactivity
 - [x] Slide in index items
+- [x] Event index and switchable section of group show composite resize responsively
 - [x] Smooth hover transitions
 - [x] Automatic search response to input
 - [x] Modal forms
