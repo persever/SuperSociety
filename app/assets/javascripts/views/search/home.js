@@ -104,7 +104,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.addSearchSubview();
 
     if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
-      console.log("here");
       this.renderEventsIndexSubview(this.ssevents);
     } else {
       this.renderGroupsIndexSubview(this.groups);
@@ -114,6 +113,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   renderEventsIndexSubview: function (collection) {
+    console.log(collection);
     this.$(".active").removeClass("active");
     this.$("[data-id=\"event-search\"]").addClass("active");
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
