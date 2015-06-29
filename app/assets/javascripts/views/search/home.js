@@ -165,6 +165,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   setSearchType: function (event) {
+    this.ssevents = SuperSocietyApp.events;
     this.searchType = $(event.currentTarget).data("id");
     this.$(".active").removeClass("active");
     this.$("[data-id=\"" + this.searchType + "\"]").addClass("active");

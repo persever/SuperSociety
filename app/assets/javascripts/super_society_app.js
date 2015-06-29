@@ -9,6 +9,7 @@ window.SuperSocietyApp = {
     SuperSocietyApp.groups = new SuperSocietyApp.Collections.Groups();
 
     SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
+    SuperSocietyApp.events.fetch();
 
     SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
       id: CURRENT_USER_ID

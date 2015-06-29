@@ -15,7 +15,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   root: function (ssevents) {
     var rootEvents = ssevents ? ssevents : this.ssevents;
-    this.ssevents.fetch();
+    // this.ssevents.fetch();
     SuperSocietyApp.currentUserEvents.fetch({
       data: { attender: SuperSocietyApp.currentUser.toJSON() }
     });
