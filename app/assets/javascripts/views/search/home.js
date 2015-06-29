@@ -148,6 +148,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
     if (this.searchType === "event-search") {
       if (query === "" || !query) {
+        console.log("here");
         this.renderEventsIndexSubview(this.ssevents);
       } else {
         var events = this.filter(this.ssevents, query);
