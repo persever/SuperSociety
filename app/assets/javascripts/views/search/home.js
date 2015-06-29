@@ -106,6 +106,12 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
     this.search();
 
+    // if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
+    //   this.renderEventsIndexSubview(this.ssevents);
+    // } else {
+    //   this.renderGroupsIndexSubview(this.groups);
+    // }
+
     return this;
   },
 
@@ -141,9 +147,10 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   search: function (event) {
-    if (event && event.type !== "input") {
-      event.preventDefault();
-    }
+    // console.log(event);
+    // if (event && event.type !== "input") {
+    //   event.preventDefault();
+    // }
 
     var query = $(".search-query").val();
 
