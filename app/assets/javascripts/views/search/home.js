@@ -102,21 +102,15 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
       numGroups: numGroups,
       numEvents: numEvents
     }));
+
     this.addSearchSubview();
 
     this.search();
-
-    // if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
-    //   this.renderEventsIndexSubview(this.ssevents);
-    // } else {
-    //   this.renderGroupsIndexSubview(this.groups);
-    // }
 
     return this;
   },
 
   renderEventsIndexSubview: function (collection) {
-    console.log(collection);
     this.$(".active").removeClass("active");
     this.$("[data-id=\"event-search\"]").addClass("active");
     var eventsIdxView = new SuperSocietyApp.Views.EventsIndex({
@@ -147,16 +141,14 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
   },
 
   search: function (event) {
-    // console.log(event);
-    // if (event && event.type !== "input") {
-    //   event.preventDefault();
-    // }
+    if (event && event.type === "submit") {
+      event.preventDefault();
+    }
 
     var query = $(".search-query").val();
 
     if (this.searchType === "event-search") {
       if (query === "" || !query) {
-        console.log(this.ssevents);
         this.renderEventsIndexSubview(this.ssevents);
       } else {
         var events = this.filter(this.ssevents, query);
