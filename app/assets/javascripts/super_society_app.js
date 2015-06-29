@@ -14,8 +14,7 @@ window.SuperSocietyApp = {
       id: CURRENT_USER_ID
     });
     SuperSocietyApp.currentUserEvents = new SuperSocietyApp.Collections.Events();
-    SuperSocietyApp.currentUser.fetch({ success: function () {
-    }});
+    SuperSocietyApp.currentUser.fetch();
 
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
       $rootEl: $("#content"),
