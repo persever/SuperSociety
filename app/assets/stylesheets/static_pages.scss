@@ -434,10 +434,29 @@ input.search-query.form-control {
 }
 
 .results {
+  position: relative;
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 15px;
   padding-bottom: 40px;
+}
+
+.group-events {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  background-color: white;
+  height: 100px;
+  width: 300px;
+  top: calc(50% + 50px);
+  left: calc(50% - 150px);
+  padding: 20px;
+  text-align: center;
+  color: black;
+  font-family: "sf-comic-script";
+  font-size: 20px;
 }
 
 .group-index-item {
