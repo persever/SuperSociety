@@ -2,9 +2,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "root",
-    "groups": "groupsIndex",
     "groups/:id": "groupShow",
-    "events": "eventsIndex",
     "events/:id": "eventShow",
   },
 
