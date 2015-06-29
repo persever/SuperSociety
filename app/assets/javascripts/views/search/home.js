@@ -11,8 +11,6 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.userManagedGroups = this.user.managedGroups();
 
     this.listenTo(this.user, "sync", this.render);
-    this.listenTo(this.ssevents, "sync", this.render);
-    this.listenTo(this.groups, "sync", this.render);
     this.listenTo(this.userManagedGroups, "sync", this.updateUserMangedGroups);
     this.listenTo(this.userSubscribedGroups, "sync", this.updateUserGroups);
     this.listenTo(SuperSocietyApp.currentUserEvents, "sync add remove", this.updateUserEvents);
