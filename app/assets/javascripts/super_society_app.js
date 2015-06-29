@@ -7,19 +7,14 @@ window.SuperSocietyApp = {
   initialize: function() {
 
     SuperSocietyApp.groups = new SuperSocietyApp.Collections.Groups();
-    SuperSocietyApp.groups.fetch({ reset: true });
 
     SuperSocietyApp.events = new SuperSocietyApp.Collections.Events();
-    SuperSocietyApp.events.fetch({ reset: true });
 
     SuperSocietyApp.currentUser = new SuperSocietyApp.Models.User({
       id: CURRENT_USER_ID
     });
     SuperSocietyApp.currentUserEvents = new SuperSocietyApp.Collections.Events();
     SuperSocietyApp.currentUser.fetch({ success: function () {
-      SuperSocietyApp.currentUserEvents.fetch({
-        data: { attender: SuperSocietyApp.currentUser.toJSON() }
-      });
     }});
 
     SuperSocietyApp.router = new SuperSocietyApp.Routers.Router({
