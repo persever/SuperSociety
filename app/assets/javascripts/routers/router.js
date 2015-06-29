@@ -9,13 +9,13 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
     this.groups = options.groups;
-    this.events = options.events;
+    this.ssevents = options.events;
     this.user = options.user;
   },
 
   root: function (ssevents) {
-    var rootEvents = ssevents ? ssevents : this.events;
-    this.events.fetch();
+    var rootEvents = ssevents ? ssevents : this.ssevents;
+    this.ssevents.fetch();
     SuperSocietyApp.currentUserEvents.fetch({
       data: { attender: SuperSocietyApp.currentUser.toJSON() }
     });
@@ -57,7 +57,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
       this.groupShow(groupId, id);
     }.bind(this);
 
-    var ssevent = this.events.get(id);
+    var ssevent = this.ssevents.get(id);
     var events = this;
     if (ssevent) {
       ssevent.fetch({
@@ -67,7 +67,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
       ssevent = new SuperSocietyApp.Models.Event({ id: id });
       ssevent.fetch({
         success: function () {
-          this.events.add(ssevent);
+          this.ssevents.add(ssevent);
           successF();
         }.bind(this)
       });
@@ -75,7 +75,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   },
 
   eventsIndex: function () {
-    var events = this.events;
+    var events = this.ssevents;
     events.fetch();
     var eventsIdx = new SuperSocietyApp.Views.EventsIndex({ collection: events });
     this.$rootEl.html(eventsIdx.render().$el);
