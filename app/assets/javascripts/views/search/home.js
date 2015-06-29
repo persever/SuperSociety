@@ -147,14 +147,14 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     var query = $(".search-query").val();
 
     if (this.searchType === "event-search") {
-      if (query === "") {
+      if (query === "" || !query) {
         this.renderEventsIndexSubview(this.ssevents);
       } else {
         var events = this.filter(this.ssevents, query);
         this.renderEventsIndexSubview(events);
       }
     } else if (this.searchType === "group-search") {
-      if (query === "") {
+      if (query === "" || !query) {
         this.renderGroupsIndexSubview(this.groups);
       } else {
         var groups = this.filter(this.groups, query);
