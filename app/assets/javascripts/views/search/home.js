@@ -103,13 +103,12 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     }));
     this.addSearchSubview();
 
-    setTimeout((function () {
-      if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
-        this.renderEventsIndexSubview(this.ssevents);
-      } else {
-        this.renderGroupsIndexSubview(this.groups);
-      }
-    }.bind(this)), 0);
+    if (this.view === undefined || this.view.constructor === SuperSocietyApp.Views.EventsIndex) {
+      console.log("here");
+      this.renderEventsIndexSubview(this.ssevents);
+    } else {
+      this.renderGroupsIndexSubview(this.groups);
+    }
 
     return this;
   },
