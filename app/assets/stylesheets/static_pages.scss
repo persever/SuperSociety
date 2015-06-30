@@ -443,6 +443,13 @@ input.search-query.form-control {
   padding-bottom: 40px;
 }
 
+.results::after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+}
+
 .group-events {
   position: relative;
 }
