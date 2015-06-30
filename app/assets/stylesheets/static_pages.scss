@@ -37,9 +37,10 @@ button, .btn, input, .glyphicon-log-out, .logo.navbar-brand, .group .name,
   transition: all 0.2s linear;
 }
 
-button, .btn, .glyphicon-log-out, .logo.navbar-brand, .group-index-item,
-nav img, #nav-events-counter {
-  cursor: pointer;
+button, .btn, .glyphicon-log-out, .logo.navbar-brand, .group-index-item img.hoverable,
+.event-index-item .title, .event-index-item .group-name, .event-index-item .when,
+.event-index-item .where, nav img, #nav-events-counter,  {
+  cursor: pointer !important;
 }
 
 .signin {
