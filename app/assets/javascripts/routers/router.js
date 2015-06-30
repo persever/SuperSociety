@@ -16,7 +16,7 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
   root: function (showUserEvents) {
     var showUserEvents = showUserEvents ? showUserEvents : false;
     SuperSocietyApp.currentUserEvents.fetch({
-      data: { attender: SuperSocietyApp.currentUser.toJSON() }
+      data: { attender: { id: SuperSocietyApp.currentUser.id } }
     });
     this.groups.fetch();
     var home = new SuperSocietyApp.Views.Home({

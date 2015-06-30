@@ -7,7 +7,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.searchType = "event-search";
     this.user = options.user;
     this.userSubscribedGroups = new SuperSocietyApp.Collections.Groups();
-    this.userSubscribedGroups.fetch({ data: { subscriber: this.user.toJSON() } });
+    this.userSubscribedGroups.fetch({ data: { subscriber: { id: this.user.id }}});
     this.userManagedGroups = this.user.managedGroups();
     this.showUserEvents = options.showUserEvents;
 

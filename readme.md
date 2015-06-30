@@ -213,7 +213,7 @@ their upcoming events.
   SuperSocietyApp.currentUserEvents = new SuperSocietyApp.Collections.Events();
   SuperSocietyApp.currentUser.fetch({ success: function () {
     SuperSocietyApp.currentUserEvents.fetch({
-      data: { attender: SuperSocietyApp.currentUser.toJSON() }
+      data: { attender: { id: SuperSocietyApp.currentUser.id } }
     });
   }});
 
