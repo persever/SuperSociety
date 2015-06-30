@@ -9,6 +9,7 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
     this.userSubscribedGroups = new SuperSocietyApp.Collections.Groups();
     this.userSubscribedGroups.fetch({ data: { subscriber: this.user.toJSON() } });
     this.userManagedGroups = this.user.managedGroups();
+    this.showUserEvents = options.showUserEvents;
 
     this.listenTo(this.user, "sync", this.updateCounters);
     this.listenTo(this.ssevents, "sync", this.search);
@@ -105,7 +106,12 @@ SuperSocietyApp.Views.Home = Backbone.CompositeView.extend({
 
     this.addSearchSubview();
 
-    this.search();
+    if (this.showUserEvents) {
+      this.retrieveUserEvents();
+      this.showUserEvents = false;
+    } else {
+      this.search();
+    }
 
     return this;
   },

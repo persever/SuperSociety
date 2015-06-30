@@ -13,23 +13,23 @@ SuperSocietyApp.Routers.Router = Backbone.Router.extend({
     this.user = options.user;
   },
 
-  root: function (ssevents) {
-    var rootEvents = ssevents ? ssevents : this.ssevents;
-    // this.ssevents.fetch();
+  root: function (showUserEvents) {
+    var showUserEvents = showUserEvents ? showUserEvents : false;
     SuperSocietyApp.currentUserEvents.fetch({
       data: { attender: SuperSocietyApp.currentUser.toJSON() }
     });
     this.groups.fetch();
     var home = new SuperSocietyApp.Views.Home({
       groups: this.groups,
-      ssevents: rootEvents,
-      user: this.user
+      ssevents: this.ssevents,
+      user: this.user,
+      showUserEvents: showUserEvents
     });
     this.$rootEl.html(home.render().$el);
   },
 
   rootUserEvents: function () {
-    this.root(SuperSocietyApp.currentUserEvents);
+    this.root(true);
   },
 
   groupShow: function (id, eventId) {
