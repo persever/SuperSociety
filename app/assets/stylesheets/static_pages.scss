@@ -8,6 +8,10 @@
   cursor: default;
 }
 
+button:focus {
+  outline:0;
+}
+
 button:not(.bootstrap-datetimepicker-widget), input.submit, .signin .btn {
   width: 100px;
   height: 25px;
