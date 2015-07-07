@@ -9,7 +9,7 @@
 SuperSociety is a social event planning site for the superhero community.
 Excluding authorization, the app is a single-page Backbone app.
 
-![Screen Shot](screenshot.jpg)
+![Screen Shot](screenshot.png)
 
 ## Technologies
 
