@@ -19,6 +19,14 @@ class User < ActiveRecord::Base
     user
   end
 
+  def self.guest_user=(guest_user)
+    @@guest_user = guest_user
+  end
+
+  def self.guest_user
+    @@guest_user
+  end
+
   def managed_group_ids
     ids = []
     self.managed_groups.each { |group| ids << group.id }
@@ -30,14 +38,14 @@ class User < ActiveRecord::Base
     self.password_digest = BCrypt::Password.create(password)
   end
 
-  def valid_password?(password)
-    BCrypt::Password.new(self.password_digest).is_password?(password)
-  end
-
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+  def valid_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
   private

@@ -2,6 +2,13 @@ class UsersController < ApplicationController
   def new
     redirect_to root_url if current_user
     @user = User.new
+    guest_users = [
+      User.find_by({ username: "Tony Stark"}),
+      User.find_by({ username: "Bruce Wayne"}),
+      User.find_by({ username: "Thor"}),
+      User.find_by({ username: "Steve Rogers"})
+    ]
+    User.guest_user = guest_users.sample
   end
 
   def create
@@ -24,14 +31,7 @@ class UsersController < ApplicationController
         render :new
       end
     elsif params[:submission] == "Guest Pass"
-      @users = [
-        User.find_by({ username: "Tony Stark"}),
-        User.find_by({ username: "Bruce Wayne"}),
-        User.find_by({ username: "Thor"}),
-        User.find_by({ username: "Steve Rogers"})
-      ]
-      @user = @users.sample
-      sign_in(@user)
+      sign_in(User.guest_user)
     end
   end
 

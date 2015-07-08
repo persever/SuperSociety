@@ -22,10 +22,65 @@
            name="submission" id="log-in"></input><input type="submit"
            class="btn" value="Sign Up"
            name="submission" id="sign-up"></input>
-   <input type="submit" class="btn" value="Guest Pass"
-          name="submission" id="guest">
+    <input type="submit" class="btn" value="Guest Pass"
+           name="submission" id="guest">
   </form>
   <div class="errors">
     <%= flash[:errors].first + "." if flash[:errors] %>
   </div>
 </div>
+
+<%= javascript_tag do %>
+  window.guestUsername = "<%= j User.guest_user.username %>";
+  window.rootURL = "<%= j root_url %>";
+<% end %>
+
+<script>
+  (function () {
+    $("input#guest").on("click", function (event) {
+
+      event.preventDefault();
+
+      function autoFill(name, idx) {
+        idx = idx || 1;
+        if (idx > name.length) {
+          typePassword();
+          return null;
+        }
+        setTimeout(function () {
+          $("[name=\"user[username]\"]").val(guestUsername.slice(0,idx));
+          autoFill(name, idx + 1);
+        }, 75);
+      };
+
+      function typePassword(idx) {
+        idx = idx || 1;
+        if (idx > 10) {
+          submitGuest();
+          return null;
+        }
+        setTimeout(function () {
+          var pw = "aaaaaaaaaa";
+          $("[name=\"user[password]\"]").val(pw.slice(0,idx));
+          typePassword(idx + 1);
+        }, 50);
+      };
+
+      function submitGuest() {
+        $.ajax({
+          url: $("input#guest").parent()[0].action,
+          type: "POST",
+          data: {
+            "submission": "Guest Pass",
+            "authenticity_token": $("[name=\"authenticity_token\"]").val()
+          },
+          success: function () {
+            window.location.href = rootURL;
+          }
+        });
+      };
+
+      autoFill(guestUsername);
+    });
+  })();
+</script>

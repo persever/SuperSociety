@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def sign_out
     current_user.reset_session_token! if current_user
     session[:token] = nil
+    User.guest_user = nil
     redirect_to root_url
   end
 
