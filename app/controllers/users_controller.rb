@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def create
     if params[:submission] == "Sign Up"
       @user = User.new(user_params)
-      @user.photo_url = "http://res.cloudinary.com/dgzqgdlmj/image/upload/v1434497946/avatar_pcwjvc.jpg"
+      @user.photo_url = "https://res.cloudinary.com/dgzqgdlmj/image/upload/v1434497946/avatar_pcwjvc.jpg"
       if @user.save
         sign_in(@user)
       else

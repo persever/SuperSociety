@@ -4,8 +4,8 @@
   version 2.5.0 (Mar, 2015)
 
   Copyright (c) 2012, 2015 Mario Izquierdo
-  Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
-  and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
+  Dual licensed under the MIT (https://www.opensource.org/licenses/mit-license.php)
+  and GPL (https://www.opensource.org/licenses/gpl-license.php) licenses.
 */
 (function ($) {
   "use strict";

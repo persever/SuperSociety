@@ -41,7 +41,7 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
       url: "session",
       type: "DELETE",
     });
-    window.location.assign("http://supersociety.us");
+    window.location.assign("https://supersociety.us");
   },
 
   loadForm: function (event) {
