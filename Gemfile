@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
+
 gem 'newrelic_rpm'
 gem 'backbone-on-rails'
 gem 'rails', '4.2.1'
