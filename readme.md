@@ -2,7 +2,7 @@
 
 [Live Demo][site]
 
-[site]: https://supersociety.us
+[site]: https://supersociety.herokuapp.com
 
 ## Description
 
