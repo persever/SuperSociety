@@ -40,8 +40,10 @@ SuperSocietyApp.Views.Navbar = Backbone.View.extend({
     $.ajax({
       url: "session",
       type: "DELETE"
+    }).done(function() {
+      window.location.assign("https://supersociety.herokuapp.com");
     });
-    window.location.assign("https://supersociety.herokuapp.com");
+    // window.location.assign("https://supersociety.herokuapp.com");
   },
 
   loadForm: function (event) {
