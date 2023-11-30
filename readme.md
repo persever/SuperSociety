@@ -1,9 +1,5 @@
 # SuperSociety
 
-[Live Demo][site]
-
-[site]: https://supersociety.herokuapp.com
-
 ## Description
 
 SuperSociety is a social event planning site for the superhero community.
